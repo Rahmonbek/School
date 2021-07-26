@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cl{
+    clear: both;
+}
+.mat{
+    width: 100%;
+}
+@media(min-width:648px){
+.header{
+    width: 100%;
+    height: 675px;
+    background-image: url('../img/kamera.jpg');
+    background-size: cover;
+	background-position: center center;
+    box-shadow: 0xp 0px 24px black;
+}
+.parda{
+
+    width: 100%;
+    height: 100%;
+    background-color: #000000cb;
+}
+.sarlavha{
+    width: 640px;
+    height: 80px;
+    text-shadow: 0px 0px 4px black;
+    text-align: right;
+    padding-right: 10px;
+    border-right: 3px solid white;
+    letter-spacing: 3px;
+float: right;
+margin: 540px 30px 0px 0px;
+}
+.sarlavha h2{
+  color: white !important;
+  line-height: 22px;
+}
+.sarlavha h1{
+    font-size: 35px;
+    font-family: serif;
+    color: white !important;
+}
+.gal{
+    width: calc(100%-40px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+}
+
+  
+  .bor {
+      margin: 44px 10px;
+    /* overflow: hidden; */
+    width: 390px;
+    height: 280px;
+    border: 5px solid rgb(33, 78, 2);
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+  }
+  
+  .bor::before, .bor::after {
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  
+  .bor::before {
+    height: 290px;
+    width: 340px;
+  }
+  
+  .bor::after {
+    width: 400px;
+    height: 230px;
+  }
+  
+  .rasm {
+      width: 99%;
+      height: 99%;
+      overflow: hidden;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+  .rasm img{
+    height: 120%;
+    width: auto;
+  }
+  .bor:hover::before {
+    width: 32px;
+    background: #fff;
+  }
+  
+  .bor:hover::after {
+    height: 32px;
+    background: #fff;
+  }
+  
+  .bor:hover {
+    background: #fff;
+  }
+}
+@media(max-width:648px){
+    .header{
+        width: 100%;
+        height: 420px;
+        background-image: url('../img/kamera.jpg');
+        background-size: auto 100%;
+        background-position: 15% center;
+        box-shadow: 0xp 0px 24px black;
+    }
+    .parda{
+    
+        width: 100%;
+        height: 100%;
+        background-color: #000000be;
+    }
+    .sarlavha{
+      padding-top: 10px;
+        width: 98%;
+        text-shadow: 0px 0px 4px black;
+        color: white;
+        text-align: right;
+        padding-right: 5px;
+        border-right: 3px solid white;
+        letter-spacing: 2px;
+    float: right;
+    margin: 290px 1.5% 10px 2px;
+    }
+    .sarlavha h2{
+        font-size: 16px;
+        margin-bottom: 7px;
+        color: white !important;
+    }
+    .sarlavha h1{
+        font-size: 28px;
+        font-family: serif;
+    color: white !important;
+    }
+    .gal{
+        width: calc(100%-6px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 3px;
+    }
+    
+      
+      .bor {
+          margin: 44px 10px;
+        /* overflow: hidden; */
+        max-width: 390px;
+       box-shadow: 0px 0px 21px rgb(25, 26, 25);
+        border: 5px dashed rgb(33, 78, 2);
+        -webkit-tap-highlight-color: transparent;
+
+      }
+      
+      .bor::before, .bor::after {
+display: none;
+      }
+      
+
+      
+      .rasm {
+          width: 99%;
+          height: 99%;
+          margin: 0.5%;
+        -webkit-touch-callout: none;
+          -webkit-user-select: none;
+           -khtml-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+      }
+      .rasm img{
+        /* height: 100vh; */
+        width: 100%;
+      }
+}
