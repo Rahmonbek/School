@@ -136,7 +136,10 @@ html {
 }
 .loaderT{
   width:100%;
-  height:600px;
+  height:100vh;
+  position:fixed;
+  top:0px;
+  left:0px;
   background-color: white;
   z-index: 5534434; 
   display:flex;

@@ -31,24 +31,24 @@ export default class Yangiliklar extends Component {
   
   getNews=()=>{
     getNews().then(res=>{
-      if(this.props.id){
-        for(let i=0; i<res.data.length; i++){
-          if(this.props.id===res.data.id){
-            this.setState({
-              news:res.data,
-              id:i,
-              loader:false
-            })
-  // console.log('g');
-           
-      
-          }
-        }
-      }
-      else{
+   
+      if(window.location.href.indexOf('id=')===-1){
+        
+       
         
         this.setState({
           news:res.data,
+          loader:false
+        })
+       
+        }
+          
+      
+      else{
+       
+        this.setState({
+          news:res.data,
+          id:window.location.href.slice(window.location.href.indexOf('=')+1),
           loader:false
         })
         
@@ -171,7 +171,7 @@ export default class Yangiliklar extends Component {
                                      this.state.news.map((item, key)=>{
                                        return(
 <Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
-                                     <MDBCard style={{ maxWidth: '540px' }}>
+                                     <MDBCard onClick={()=>{this.setState({id:key})}} style={{ maxWidth: '540px' }}>
                                       <MDBRow className='g-0'>
                                       <MDBCol md='4'>
                                       <MDBCardImage src={item.image} alt='...' fluid style={{margin:'7px'}}/>
