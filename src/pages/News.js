@@ -9,7 +9,12 @@ import new4 from '../img/new4.jpg'
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 export default class News extends Component {
-    render() {
+  state={
+    news:[]
+}
+
+
+  render() {
         return (
             <div style={{position:'sticky', top:'0px', right:'0px', paddingRight:'5px', borderLeft:'solid 1px #02024E', paddingLeft:'3px'}}>
     
