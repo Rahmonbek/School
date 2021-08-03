@@ -8,6 +8,7 @@ export const getNews=()=>{
 }
 
 export const createParent=(config)=>{
+   console.log(config)
     var configs={
         url: `${url}/parent/`,
         method: 'post',

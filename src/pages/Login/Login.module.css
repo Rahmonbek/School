@@ -128,7 +128,7 @@
     margin-top: 40px;
     letter-spacing: 4px
   }
-  
+  .redText{font-size: 14px; color:red; display: none; margin-top:-20px; margin-bottom: 20px;}
   .container{
     background-image: url('../../img/loginBg.jpg');
   }

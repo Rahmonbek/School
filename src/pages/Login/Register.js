@@ -15,24 +15,24 @@ export default class Register extends Component {
         var password = document.getElementById('password').value
         var phone = document.getElementById('phone').value
         var description = document.getElementById('description').value
-        var user = {
-            first_name: firstname,
-            last_name: lastname,
-            username: username,
-            email: email,
-            password: password,
-        }
+     
         var parent = {
-            user: user,
+            user : {
+                first_name: firstname,
+                last_name: lastname,
+                username: username,
+                email: email,
+                password: password,
+            },
             phone: phone,
             description: description,
         }
-        console.log(parent);
-        let formData=new FormData()
-        formData.append("user", user ?? "")
-        formData.append("phone", phone ?? "")
-        formData.append("description", description ?? "")
-        createParent(formData)
+      
+        createParent(parent).then(res=>{console.log(res);
+            document.querySelector('#redText').style.display="none"}).catch(err=>{
+        document.querySelector('#redText').style.display="block"
+            
+        })
     }
     render() {
         return (
@@ -61,6 +61,7 @@ export default class Register extends Component {
                         <div className={style.userBox}>
                             <input type='text' id="username" name='' required />
                             <label>Username</label>
+                            <p className={style.redText} id="redText">Bu login avval ishlatilgan o'zgartiring<br/></p>
                         </div>
                         <div className={style.userBox}>
                             <input type='password' id="password" name='' required />
