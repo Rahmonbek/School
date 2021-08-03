@@ -1,4 +1,4 @@
-import { faDoorOpen, faEnvelope, faNewspaper, faPhone, faSchool, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faDoorOpen, faEnvelope, faNewspaper, faPhone, faSchool, faSearch, faSignInAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import React, { Component } from 'react'
 import { ContainerDashboard, XushKelibsiz} from './StyleBoshSahifa'
 import style from './BoshSahifa.module.css'
@@ -69,6 +69,7 @@ loader:true
                             <a href='+1-3435-2356-222' style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' style={{color:'#FFF'}} />+1-3435-2356-222</a>
                             
                         </div>
+                        <Link to='/register/uz'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link>
                         <Link to='/login/uz'><FontAwesomeIcon icon={faUserCircle} className={style.usericon} /></Link>
                     </Container>
                 </div>

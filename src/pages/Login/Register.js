@@ -52,24 +52,24 @@ export default class Register extends Component {
                     <form>
                         <div className={style.userBox}>
                             <input type='text' id="firstname" name='' required />
-                            <label>Firstname</label>
+                            <label>Ism</label>
                         </div>
                         <div className={style.userBox}>
                             <input type='text' id="lastname" name='' required />
-                            <label>Lastname</label>
+                            <label>Familya</label>
                         </div>
                         <div className={style.userBox}>
                             <input type='text' id="username" name='' required />
-                            <label>Username</label>
+                            <label>Login</label>
                             <p className={style.redText} id="redText">Bu login avval ishlatilgan o'zgartiring<br/></p>
                         </div>
                         <div className={style.userBox}>
                             <input type='password' id="password" name='' required />
-                            <label>Password</label>
+                            <label>Parol</label>
                         </div>
                         <div className={style.userBox}>
                             <input type='password' id="confirmPassword" name='' required />
-                            <label>Confirm password</label>
+                            <label>Parolni tekshirish</label>
                         </div>
                         <div className={style.userBox}>
                             <input type='email' id="email" name='' required />
@@ -77,11 +77,11 @@ export default class Register extends Component {
                         </div>
                         <div className={style.userBox}>
                             <input type='text' id="phone" name='' required />
-                            <label>Phone</label>
+                            <label>Telefon raqam</label>
                         </div>
                         <div className={style.userBox}>
                             <input type='text' id="description" name='' required />
-                            <label>Description</label>
+                            <label>Izoh</label>
                         </div>
                         <a style={{color:'white'}} onClick={this.register}>
                             <span></span>
