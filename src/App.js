@@ -19,6 +19,7 @@ import TeacherCabinet from './pages/TeacherCabinet'
 import Main from './pages/Rahbar/Main'
 import Maktabmamuriyati from './pages/maktabmamuriyati'
 import MaktabTadbirlari from './pages/MaktabTadbirlari'
+import Register from './pages/Login/Register'
 export default class componentName extends Component {
   componentDidMount(){
     window.scrollTo(0, 0)
@@ -31,7 +32,9 @@ export default class componentName extends Component {
       <BrowserRouter>
      
       <Switch>
-      
+        <Route exact path="/register/uz">
+          <Register/>
+        </Route>
       <Route exact path="/login/uz">
 
       <Login/>

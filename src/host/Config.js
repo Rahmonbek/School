@@ -6,3 +6,12 @@ export const getNews=()=>{
         method:'get',    }
     return(httpRequest(config))
 }
+
+export const createParent=(config)=>{
+    var configs={
+        url: `${url}/parent/`,
+        method: 'post',
+        data: config,
+    }
+    return (httpRequest(configs))
+}
