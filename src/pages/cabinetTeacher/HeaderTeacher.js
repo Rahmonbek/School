@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "../../css/HeaderParent.module.css";
-import student from "../../img/student.jpg";
+// import student from "../../img/student.jpg";
 import { Col, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Menu, Dropdown, message } from "antd";
@@ -14,11 +14,6 @@ export default class HeaderTeacher extends Component {
     teacher: [],
   };
   getTeacher = () => {
-    getStaffBySchool().then((res) =>
-      res.data.map((item) => {
-        return item.user === Global.teacherId ? (Global.staffId = item.id) : "";
-      })
-    );
     getStaff().then((res) => this.setState({ teacher: res.data }));
   };
   logout = () => {};
@@ -50,7 +45,7 @@ export default class HeaderTeacher extends Component {
             <Col>
               <div className={style.img}>
                 <div>
-                  <img alt="" src={student} />
+                  <img alt="" src={this.state.teacher.image} />
                 </div>
                 <p>
                   {" "}

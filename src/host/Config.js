@@ -42,3 +42,20 @@ export const getStaff = () => {
   };
   return httpRequest(config);
 };
+
+export const getSpec = () => {
+  var config = {
+    url: `${url}/spec/`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
+export const editStaff = (configs, id) => {
+  var config = {
+    url: `${url}/staff/${id}/`,
+    method: "put",
+    data: configs,
+  };
+  return httpRequest(config);
+};
