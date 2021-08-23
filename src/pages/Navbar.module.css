@@ -2,7 +2,8 @@
     width: 120px;
     z-index: 50000;
     display: block;
-    margin:auto;
+    margin:10px;
+    margin-left: 20px !important;
 }
 .bayroqlar img{
     position: relative;
@@ -10,14 +11,43 @@
     height: 30px;
     padding: 5px;
     border-radius: 50%;
+
 }
 
 .userIcon{margin-left:20px; font-size: 18px; transform: translate(0px, 5px);}
 .maktabLogo {
-    color: #FFF !important;
+    color: white !important;
 }
 @media screen and (max-width:566px) {
     .bayroqlar{
-        margin:auto;
+        margin-left: 175px !important;
     }
+    .maktabLogo{
+margin-left: 10px;
+    }
+}
+@media screen and (min-width:567px) {
+    .bayroqlar{
+        margin-left: 200px !important;
+    }
+}
+@media screen and (min-width:768px) {
+    .bayroqlar{
+        margin-left: 280px !important;
+    }
+}
+@media screen and (min-width:992px) {
+    .maktabLogo{
+        margin-top: -190px !important;
+    }
+    .bayroqlar{
+        margin-left: 0px !important;
+    }
+}
+@media screen and (min-width:1200px) {
+    .bayroqlar{
+        margin-left: 50px !important;
+        margin-top: 5px !important;
+    }
+
 }

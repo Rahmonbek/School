@@ -21,7 +21,7 @@ export const NavbarContainer = styled.div`
         width:100%;
         height:400px;
         background-color:rgba(0,0,0,0.7);
-        margin-left: 0%;
+        margin-left: 15%;
         text-align:center;
         .navLink{
             display: inline-block;
@@ -85,8 +85,16 @@ export const NavbarContainer = styled.div`
             margin-right: 20px;
             font-size: 2rem;
         }
+        .me-auto{
+            margin-top:30px;
+            margin-left:0;
+        }
     }
     @media (max-width: 992px){
+        .kirish{
+            margin-top:-15px;
+            margin-left:-60px;
+        }
         .userIcon{
             margin-left: 20px;
             font-size: 2rem;
@@ -96,5 +104,31 @@ export const NavbarContainer = styled.div`
             margin-right: 20px;
             font-size: 2rem;
         }
+        .me-auto{
+            margin-top:30px;
+            margin-left:0;
+        }
+    }
+    @media (min-width:993px){
+        .me-auto{
+            background-color:transparent;
+            margin-top:9px;
+            margin-left:-20px;
+        }
+        .kirish{
+            margin-top:-20px;
+
+        }
+    }
+    @media (min-width:1200px){
+        .me-auto{
+            margin-left:50px;
+            margin-top:15px;
+        }
+        .kirish{
+            margin-top:-15px;
+            margin-right:-40px;
+        }
+
     }
 `;
