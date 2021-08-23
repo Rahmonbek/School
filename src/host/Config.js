@@ -26,3 +26,19 @@ export const getClasses = () => {
   };
   return httpRequest(config);
 };
+
+export const getStaffBySchool = () => {
+  var config = {
+    url: `${url}/staff-by-school/${Global.schoolId}`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
+export const getStaff = () => {
+  var config = {
+    url: `${url}/staff/${Global.staffId}`,
+    method: "get",
+  };
+  return httpRequest(config);
+};

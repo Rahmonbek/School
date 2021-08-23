@@ -8,7 +8,9 @@ import baholar from "../../img/baholar.png";
 import yutuqlar from "../../img/yutuqlar.png";
 import sinfdoshlar from "../../img/sinfdoshlar.png";
 import RingLoader from "react-spinners/RingLoader";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Global from "../../host/Global";
+
 export default class Box extends Component {
   state = {
     loading: true,
@@ -19,25 +21,6 @@ export default class Box extends Component {
       loading: false,
     });
   }
-
-  goBox = (linke) => {
-    window.location.href = window.location.href + linke;
-  };
-
-  goRahbar = () => {
-    var a = window.location.href.split("/");
-    a[a.length - 1] = "rahbar";
-    var str = "";
-    for (let i = 0; i < a.length; i++) {
-      if (i === a.length - 1) {
-        str += a[i];
-      } else {
-        str += a[i] + "/";
-      }
-    }
-
-    window.location.href = str;
-  };
 
   render() {
     return (
@@ -59,14 +42,19 @@ export default class Box extends Component {
                   </Link>
                 </Col>
 
-                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
-                  <Link to="/cabinet/teacher/bolim/rahbar">
-                    <div className={style.card}>
-                      <img alt="..." src={baholar} />
-                      <p>Sinf Rahbar</p>
-                    </div>
-                  </Link>
-                </Col>
+                {Global.classId !== null ? (
+                  <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                    <Link to="/cabinet/teacher/bolim/rahbar">
+                      <div className={style.card}>
+                        <img alt="..." src={baholar} />
+                        <p>Sinf Rahbar</p>
+                      </div>
+                    </Link>
+                  </Col>
+                ) : (
+                  ""
+                )}
+
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
                   <Link to="/cabinet/teacher/bolim/rahbar/students">
                     <div className={style.card}>
@@ -84,21 +72,23 @@ export default class Box extends Component {
                     </div>
                   </Link>
                 </Col>
+
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
-                  <Link to="/cabinet/teacher/bolim/yutuqlar">
-                    <div className={style.card}>
-                      <img alt="..." src={yutuqlar} />
-                      <p>Yutuqlar</p>
-                    </div>
-                  </Link>
+                  {/* <Link to="/cabinet/teacher/bolim/yutuqlar"> */}
+                  <div className={style.card}>
+                    <img alt="..." src={yutuqlar} />
+                    <p>Yutuqlar</p>
+                  </div>
+                  {/* </Link> */}
                 </Col>
+
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
-                  <Link to="/cabinet/teacher/bolim/chat">
-                    <div className={style.card}>
-                      <img alt="..." src={chat} />
-                      <p>Yozishmalar</p>
-                    </div>
-                  </Link>
+                  {/* <Link to="/cabinet/teacher/bolim/chat"> */}
+                  <div className={style.card}>
+                    <img alt="..." src={chat} />
+                    <p>Yozishmalar</p>
+                  </div>
+                  {/* </Link> */}
                 </Col>
               </Row>
             </div>

@@ -22,7 +22,10 @@ export default class Login extends Component {
       .then((res) => {
         axios.get(`${url}/staff/`).then((res1) => {
           res1.data.map((item1) => {
-            return item1.user === res.data.id ? (GLOBAL.schoolId = item1.school) : "";
+            if (item1.user === res.data.id) {
+              GLOBAL.schoolId = item1.school;
+              GLOBAL.staffId = item1.id;
+            }
           });
           if (GLOBAL.schoolId !== null) {
             axios.get(`${url}/class-by-school/${GLOBAL.schoolId}`).then((res2) =>
