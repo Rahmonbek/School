@@ -1,66 +1,76 @@
-import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
-import style from './Login.module.css'
+import axios from "axios";
+import React, { Component } from "react";
+import { Button, Form } from "react-bootstrap";
+import style from "../../css/Verify.module.css";
+import { url } from "../../host/Host";
+import { message } from "antd";
+import GLOBAL from "../../host/Global";
+import { Link, Redirect } from "react-router-dom";
 
 export default class Login extends Component {
-   state={
-       type:""
-   }
-   
-    login=()=>{
-   var username=document.getElementById('username').value
-    var password=document.getElementById('password').value
-
-    if(password==='parent' && username==='parent'){
-        this.setState({ 
-            type:"parent"
-        })
-            }
-            
-    if(password==='teacher' && username==='teacher'){
-        this.setState({ 
-            type:"teacher"
-        })
-            }
-   }
-    render() {
-        return (
-            <div>
-                {
-                    this.state.type==='parent'?<Redirect to="/cabinet/parents"/>:
-                    this.state.type==='teacher'?<Redirect to="/cabinet/teacher/bolim"/>:
-            <div className={style.container} >
-                <div className={style.loginBox}>
-                    <div style={{display: 'flex'}}>
-                        <h2>Login</h2>
-                        <Link to='/uz'>
-                            <div className={style.mdiv}>
-                                <div className={style.div}>
-                                    <div className={style.md}></div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                    <form>
-                        <div className={style.userBox}>
-                            <input type='text' id="username" name='' required />
-                            <label>Username</label>
-                        </div>
-                        <div className={style.userBox}>
-                            <input type='password' id="password" name='' required />
-                            <label>Password</label>
-                        </div>
-                        <a style={{color:'white'}} onClick={this.login}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Submit
-                        </a>
-                    </form>
-                </div>
-            </div>
-                }            </div>
-        )
-    }
+  state = {
+    login: false,
+    id: null,
+    classes: [],
+  };
+  loginVeb = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target),
+      formDataObj = Object.fromEntries(formData.entries());
+    axios
+      .post(`${url}/login/`, formDataObj)
+      .then((res) => {
+        axios.get(`${url}/staff/`).then((res1) => {
+          res1.data.map((item1) => {
+            return item1.user === res.data.id ? (GLOBAL.schoolId = item1.school) : "";
+          });
+          if (GLOBAL.schoolId !== null) {
+            axios.get(`${url}/class-by-school/${GLOBAL.schoolId}`).then((res2) =>
+              res2.data.map((item) => {
+                return item.curator === res.data.id ? (GLOBAL.classId = item.id) : "";
+              })
+            );
+          }
+        });
+        if (GLOBAL.classId !== null || GLOBAL.schoolId !== null) {
+          GLOBAL.teacherId = res.data.id;
+          window.localStorage.setItem("token", res.data.token);
+          this.setState({ login: true });
+        } else {
+          message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
+        }
+      })
+      .catch((err) => {
+        message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
+      });
+  };
+  render() {
+    return this.state.login === false ? (
+      <div className={style.formDiv}>
+        <div className={style.loginBox}>
+          <h2>Tizimga kirish</h2>
+          <Form className={style.From} onSubmit={this.loginVeb}>
+            <Form.Group className={style.userBox}>
+              <Form.Control style={{ outline: "none" }} className={style.Forminput} type="text" name="username" required={true} />
+              <Form.Label className={style.formLabel}>Login</Form.Label>
+            </Form.Group>
+            <Form.Group className={style.userBox}>
+              <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
+              <Form.Label className={style.formLabel}>Parol</Form.Label>
+            </Form.Group>
+            {/* <Link to="/verify">Emailni tasdiqlash</Link> */}
+            <Button className={style.sub} type="submit">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Kirish
+            </Button>
+          </Form>
+        </div>
+      </div>
+    ) : (
+      <Redirect to="/cabinet/teacher/bolim" />
+    );
+  }
 }

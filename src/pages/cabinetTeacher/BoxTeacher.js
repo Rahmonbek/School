@@ -1,101 +1,147 @@
-import React, { Component } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import style from '../../css/TeacherCss/BoxTeacher.module.css'
-import oqituvchi from "../../img/o'qituvchi.jpg"
-import davomad from "../../img/davomad.png"
-import chat from "../../img/chat.png"
-import baholar from "../../img/baholar.png"
-import yutuqlar from "../../img/yutuqlar.png"
-import sinfdoshlar from "../../img/sinfdoshlar.png"
+import React, { Component } from "react";
+import { Col, Row } from "react-bootstrap";
+import style from "../../css/TeacherCss/BoxTeacher.module.css";
+import oqituvchi from "../../img/o'qituvchi.jpg";
+import davomad from "../../img/davomad.png";
+import chat from "../../img/chat.png";
+import baholar from "../../img/baholar.png";
+import yutuqlar from "../../img/yutuqlar.png";
+import sinfdoshlar from "../../img/sinfdoshlar.png";
 import RingLoader from "react-spinners/RingLoader";
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 export default class Box extends Component {
-    state={
-        loading:true
+  state = {
+    loading: true,
+  };
+
+  componentDidMount() {
+    this.setState({
+      loading: false,
+    });
+  }
+
+  goBox = (linke) => {
+    window.location.href = window.location.href + linke;
+  };
+
+  goRahbar = () => {
+    var a = window.location.href.split("/");
+    a[a.length - 1] = "rahbar";
+    var str = "";
+    for (let i = 0; i < a.length; i++) {
+      if (i === a.length - 1) {
+        str += a[i];
+      } else {
+        str += a[i] + "/";
+      }
     }
 
-    componentDidMount(){
-        this.setState({
-            loading:false
-        })
-    }
- 
-    goBox=(linke)=>{
-        window.location.href=window.location.href+linke
-    }   
-     
- goRahbar=()=>{
-    var a=window.location.href.split('/')
-    a[a.length-1]='rahbar'
-    var str=''
-    for(let i=0; i<a.length; i++){
-        if(i===a.length-1){
-            str+=a[i]    
-        }
-        else{
-            str+=a[i]+'/'
-    
-        }
-        }
-    
-    window.location.href=str
-}  
-    render() {
-        return (
-            <div>
-{
-    this.state.loading?<div className="load">
-      <RingLoader color="green" loading={this.state.loading} size={150} /> 
-        
-    </div>:
-              
-              <div className={style.box}>
-                  <div className={style.cards}>
-                      <BrowserRouter>
-                      <Row>
-                          <Col style={{padding:'30px'}} lg={4} md={6} sm={6} onClick={()=>{this.goBox('/oqituvchilar')}}>
-                              <div className={style.card}>
-                                  <img alt="..." src={oqituvchi}/>
-                                  <p>O'qituvchilar</p>
-                              </div>
-                          </Col>
-                          
-                          <Col style={{padding:'30px'}} lg={4} md={6} sm={6} onClick={()=>{this.goRahbar()}}>
-                              <div className={style.card}>
-                                  <img alt="..." src={baholar}/>
-                                  <p>Sinf Rahbar</p>
-                              </div>
-                          </Col>
-                          <Col style={{padding:'30px'}} lg={4} md={6} sm={6} onClick={()=>{this.goBox('/students')}}>
-                              <div className={style.card}>
-                                  <img alt="..." src={sinfdoshlar}/>
-                                  <p>O'quvchilar</p>
-                              </div>
-                          </Col>
-                      
-                            <Col style={{padding:'30px'}} lg={4} md={6} sm={6} onClick={()=>{this.goBox('/dars_jadval')}}>
-                              <div className={style.card}>
-                                  <img alt="..." src={davomad}/>
-                                  <p>Dars jadvali</p>
-                              </div>
-                            </Col>
-                          <Col style={{padding:'30px'}} lg={4} md={6} sm={6} onClick={()=>{this.goBox('/yutuqlar')}}>
-                            <div className={style.card}>
-                                  <img alt="..." src={yutuqlar}/>
-                                  <p>Yutuqlar</p>
-                              </div>
-                          </Col>
-                           <Col style={{padding:'30px'}} lg={4} md={6} sm={6}  onClick={()=>{this.goBox('/chat')}}>
-                                  <div className={style.card}>
-                                  <img alt="..." src={chat}/>
-                                  <p>Yozishmalar</p>
-                              </div>
-                          </Col>
-                      </Row></BrowserRouter>
-                  </div>
-                  </div>  
-}
-</div>  
-            )
-    }
+    window.location.href = str;
+  };
+  render() {
+    return (
+      <div>
+        {this.state.loading ? (
+          <div className="load">
+            <RingLoader color="green" loading={this.state.loading} size={150} />
+          </div>
+        ) : (
+          <div className={style.box}>
+            <div className={style.cards}>
+              <BrowserRouter>
+                <Row>
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goBox("/oqituvchilar");
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={oqituvchi} />
+                      <p>O'qituvchilar</p>
+                    </div>
+                  </Col>
+
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goRahbar();
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={baholar} />
+                      <p>Sinf Rahbar</p>
+                    </div>
+                  </Col>
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goBox("/students");
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={sinfdoshlar} />
+                      <p>O'quvchilar</p>
+                    </div>
+                  </Col>
+
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goBox("/dars_jadval");
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={davomad} />
+                      <p>Dars jadvali</p>
+                    </div>
+                  </Col>
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goBox("/yutuqlar");
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={yutuqlar} />
+                      <p>Yutuqlar</p>
+                    </div>
+                  </Col>
+                  <Col
+                    style={{ padding: "30px" }}
+                    lg={4}
+                    md={6}
+                    sm={6}
+                    onClick={() => {
+                      this.goBox("/chat");
+                    }}
+                  >
+                    <div className={style.card}>
+                      <img alt="..." src={chat} />
+                      <p>Yozishmalar</p>
+                    </div>
+                  </Col>
+                </Row>
+              </BrowserRouter>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 }
