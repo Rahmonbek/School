@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from  '../css/maktaboshxonasi.module.css'
 import styless from  '../css/sport.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import sport1 from '../img/sport1.jpg'
 import sport2 from '../img/sport2.jpg'
 import sport3 from '../img/sport3.jfif'
@@ -76,7 +76,7 @@ export default class Sport extends Component {
                 <div className={styles.top}>
                     <br /> <br /> <br /> <br />
                     <h1>Sport mashg'ulotlari</h1>
-                     <Carousel
+                     <div
                      responsive={responsive} infinite={true}
                      autoPlay={this.props.deviceType !== "mobile" ? true : false}
                      autoPlaySpeed={3000}
@@ -101,7 +101,7 @@ export default class Sport extends Component {
                        <div>
                            <img src={sport6}/>
                        </div>
-                    </Carousel>
+                    </div>
                     
                 </div>
                 

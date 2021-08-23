@@ -20,8 +20,8 @@ import {BiStop,BiRightArrowAlt} from "react-icons/bi";
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import PannellumReactRu  from '../pages/panolleumRu'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 
 
 export default class MaktabHayotiRu extends Component {
@@ -60,13 +60,13 @@ export default class MaktabHayotiRu extends Component {
                         <a href="#1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
                         </div>
                         </div>
-                <Carousel
-                       className={styles.sliderHeader}
-                       responsive={responsive} infinite={true}
-                       autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                       autoPlaySpeed={3000}
-                       keyBoardControl={true}
-                          showDots={false}
+                <div
+                    //    className={styles.sliderHeader}
+                    //    responsive={responsive} infinite={true}
+                    //    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                    //    autoPlaySpeed={3000}
+                    //    keyBoardControl={true}
+                    //       showDots={false}
                         >
                        <div>
                        <img src={school1} className={styles.headerImage}/>                   
@@ -83,7 +83,7 @@ export default class MaktabHayotiRu extends Component {
                        <div>
                            <img src={school5} className={styles.headerImage}/>
                        </div>
-                    </Carousel>
+                    </div>
                 </div>
                 
                 <Container fluid className={styles.secondContainer} id="1">

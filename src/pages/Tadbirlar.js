@@ -17,8 +17,8 @@ import tadbir2 from '../img/tadbir2.jfif'
 import tadbir3 from '../img/tadbir3.jfif'
 import tadbir4 from '../img/tadbir4.jfif'
 import styles from '../css/yangiliklar.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';

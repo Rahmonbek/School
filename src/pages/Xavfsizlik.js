@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from  '../css/maktaboshxonasi.module.css'
 import styless from  '../css/sport.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import sport1 from '../img/xavfsizlik1.jpg'
 import sport2 from '../img/xavfsizlik2.jpg'
 import sport3 from '../img/xavfsizlik3.jpeg'
@@ -87,12 +87,12 @@ export default class Xavfsizlik extends Component {
                 <div className={styles.top}>
                     <br /> <br /> <br /> <br />
                     <h1>Xavfsizlik va Qo'riqlash</h1>
-                     <Carousel
-                     responsive={responsive} infinite={true}
-                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                     autoPlaySpeed={3000}
-                     keyBoardControl={true}
-                        showDots={false}
+                     <div
+                    //  responsive={responsive} infinite={true}
+                    //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                    //  autoPlaySpeed={3000}
+                    //  keyBoardControl={true}
+                    //     showDots={false}
                         >
                        <div>
                            <img src={sport1}/>
@@ -112,7 +112,7 @@ export default class Xavfsizlik extends Component {
                        <div>
                            <img src={sport6}/>
                        </div>
-                    </Carousel>
+                    </div>
                     
                 </div>
                 

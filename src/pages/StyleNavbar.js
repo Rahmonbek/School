@@ -18,7 +18,11 @@ export const NavbarContainer = styled.div`
 
    
     .me-auto{
-        margin-left: 3%;
+        width:100%;
+        height:400px;
+        background-color:rgba(0,0,0,0.7);
+        margin-left: 0%;
+        text-align:center;
         .navLink{
             display: inline-block;
             color: white;
@@ -53,7 +57,7 @@ export const NavbarContainer = styled.div`
         color: white;
         font-size: 1.3rem;
         cursor: pointer;
-        margin-left: 3px;
+        margin-left: 3px;0
         transform:translate(0px, 2px);
         transition: 0.5s ease;
     }
@@ -62,14 +66,26 @@ export const NavbarContainer = styled.div`
         font-size: 1.2rem;
         margin-left: 10px;
         transform:translate(30px, -5px);
-        border-top: 2px solid white;
-       
+        display:inline-block;
     }
     .kirish:hover{
         border-top: 0;
-        border-bottom: 2px solid white;
     }
     
+    @media (max-width: 786px){
+        .kirish{
+            margin-left: -60px;
+        }
+        .userIcon{
+            margin-left: 20px;
+            font-size: 2rem;
+        }
+        .searchIcon{
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 2rem;
+        }
+    }
     @media (max-width: 992px){
         .userIcon{
             margin-left: 20px;

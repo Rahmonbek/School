@@ -103,8 +103,8 @@ loader:true
                 </XushKelibsiz>
 
                 <div className={style.bayroqlar}>
-                    <Link to='/uz'><img src={flagUZ} /></Link>
-                    <Link to='/ru'><img src={flagRU} /></Link>
+                    <Link to='/uz'><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
+                    <Link to='/ru'><img style={{marginTop:'7px'}} src={flagRU} /></Link>
                 </div>
                 </div>
             </div>

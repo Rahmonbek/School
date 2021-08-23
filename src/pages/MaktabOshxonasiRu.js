@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from  '../css/maktaboshxonasi.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import school1 from '../img/school14.jpg'
 import school2 from '../img/school15.jpg'
 import school3 from '../img/school16.jpg'
@@ -42,12 +42,12 @@ export default class MaktabOshxonasiRu extends Component {
             <div>
                 <div className={styles.top}>
                     <h1>Школьная Кухня</h1>
-                     <Carousel
-                     responsive={responsive} infinite={true}
-                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                     autoPlaySpeed={3000}
-                     keyBoardControl={true}
-                        showDots={false}
+                     <div
+                    //  responsive={responsive} infinite={true}
+                    //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                    //  autoPlaySpeed={3000}
+                    //  keyBoardControl={true}
+                    //     showDots={false}
                         >
                        <div>
                            <img src={school1}/>
@@ -67,7 +67,7 @@ export default class MaktabOshxonasiRu extends Component {
                        <div>
                            <img src={school6}/>
                        </div>
-                    </Carousel>
+                    </div>
                     
                 </div>
                 <Container fluid style={{marginTop:'50px'}}>

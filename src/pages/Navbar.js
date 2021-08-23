@@ -25,7 +25,7 @@ export default class NavBar extends Component {
                     <Navbar collapseOnSelect expand="lg">
                         <Container>
                             <Navbar.Brand><p className={'maktabLogo'} style={{cursor:'pointer', marginTop:'8px', }}><Link to='/uz'>Maktab logosi</Link></p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{backgroundColor: 'white'}} />
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'-10px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
                                     <NavLink style={{marginLeft:'20px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
@@ -34,12 +34,13 @@ export default class NavBar extends Component {
                                     <NavLink style={{marginLeft:'20px'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
                                     <NavLink style={{marginLeft:'20px'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
                                     <NavLink style={{marginLeft:'20px'}} to="/alochilar/uz"><p className='navLink'>Maktab alochilari</p></NavLink>
-                                </Nav>
-                                <div className={style.bayroqlar}>
-                              <Link to='/uz'><img src={flagUZ} /></Link>
+                                    <div className={style.bayroqlar}>
+                              <Link to='/uz'><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
                           </div>
-                                <Link to='/login/uz' className='kirish'><FontAwesomeIcon icon={faUserCircle} className='userIcon' />  Kirish</Link>
+                                <Link to='/login/uz' className='kirish'><FontAwesomeIcon style={{display:'inline-block',marginTop:'30px'}} icon={faUserCircle} className='userIcon' />  Kirish</Link>
+</Nav>
+                                
                             </Navbar.Collapse>
                           
                         </Container>

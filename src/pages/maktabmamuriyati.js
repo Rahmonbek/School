@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
 import school3 from '../img/school25.jpg'
@@ -40,13 +40,13 @@ export default class Maktabmamuriyati extends Component {
         return (
             <div>
               <br/><br/><br/>
-             <Carousel
-                       className={styles.sliderHeader}
-                       responsive={responsive} infinite={true}
-                       autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                       autoPlaySpeed={3000}
-                       keyBoardControl={true}
-                        showDots={false}
+             <div
+                      //  className={styles.sliderHeader}
+                      //  responsive={responsive} infinite={true}
+                      //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                      //  autoPlaySpeed={3000}
+                      //  keyBoardControl={true}
+                      //   showDots={false}
                         >
                        <div>
                        <img src={school1} className={styles.headerImage}/>  
@@ -72,7 +72,7 @@ export default class Maktabmamuriyati extends Component {
                            <p data-aos="zoom-in-up">Maktab mai'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
                            </div>                 
                        </div>                       
-                    </Carousel>
+                    </div>
                 <Container>
                     <Row>
                         <Col lg={12}>
@@ -164,13 +164,13 @@ export default class Maktabmamuriyati extends Component {
                             </div>
                         </Col>
                         <Col lg={12}>
-                        <Carousel
-                       className={styles.sliderComment}
-                       responsive={responsive} infinite={true}
-                       autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                       autoPlaySpeed={3000}
-                       keyBoardControl={true}
-                          showDots={false}
+                        <div
+                      //  className={styles.sliderComment}
+                      //  responsive={responsive} infinite={true}
+                      //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                      //  autoPlaySpeed={3000}
+                      //  keyBoardControl={true}
+                      //     showDots={false}
                         >
                        <div>
                        <article className='review' data-aos="zoom-in-up">
@@ -227,7 +227,7 @@ export default class Maktabmamuriyati extends Component {
     </article>       
          
                        </div>   
-                    </Carousel>
+                    </div>
                         </Col>
 
                     </Row>

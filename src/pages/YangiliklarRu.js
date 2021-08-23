@@ -8,14 +8,15 @@ import new2 from '../img/new2.jpg'
 import new3 from '../img/new3.jpg'
 import new4 from '../img/new4.jpg'
 import styles from '../css/yangiliklar.module.css'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
+import { FaDivide } from 'react-icons/fa'
 // import {DownCircleOutlined} from '@ant-design/icons'
 
 
@@ -61,13 +62,13 @@ export default class YangiliklarRu extends Component {
                         <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
                         </div> */}
                         </div>
-                <Carousel
-                       className={styles.sliderHeader}
-                      responsive={responsive} infinite={true}
-                      autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                      autoPlaySpeed={3000}
-                      keyBoardControl={false}
-                        showDots={false}
+                <div
+                      //  className={styles.sliderHeader}
+                      // responsive={responsive} infinite={true}
+                      // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                      // autoPlaySpeed={3000}
+                      // keyBoardControl={false}
+                      //   showDots={false}
                         >
                        <div>
                        <img src={yangilik1} className={styles.headerImage}/>                   
@@ -84,7 +85,7 @@ export default class YangiliklarRu extends Component {
                        <div>
                            <img src={school5} className={styles.headerImage}/>
                        </div> */}
-                    </Carousel>
+                    </div>
                 </div>
 
                 {/* ==================Section===================== */}
