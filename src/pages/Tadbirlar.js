@@ -27,13 +27,52 @@ import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
 // import {DownCircleOutlined} from '@ant-design/icons'
 import { Carousel } from 'antd';
+import { getEvents } from '../host/Config'
+import FadeLoader from "react-spinners/FadeLoader";
 
 
 export default class Yangiliklar extends Component {
+  state={
+    events:[],
+    id:0,
+    loader:true
+  }  
+  
+  getEvents=()=>{
+    getEvents().then(res=>{
+   
+      console.log(res.data)
+      if(window.location.href.indexOf('id=')===-1){
+        
+       
+        
+        this.setState({
+          events:res.data,
+          loader:false
+        })
+       
+        }
+          
+      
+      else{
+       
+        this.setState({
+          events:res.data,
+          id:window.location.href.slice(window.location.href.indexOf('=')+1),
+          loader:false
+        })
+        
+      }
+      
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
     componentDidMount(){
         Aos.init({
             duration:2000
         })
+     this.getEvents();
     }
 
     // onclick_new=(link)=>{
@@ -42,7 +81,7 @@ export default class Yangiliklar extends Component {
     render() {
       const contentStyle = {
         width: '100%',
-        height: '100vh',
+        height: '97vh',
         objectFit: 'cover',
         color: '#fff',
         lineHeight: '90vh',
@@ -71,23 +110,35 @@ export default class Yangiliklar extends Component {
         //     }
         //   }
         return (
+          
             <div>
+              { this.state.loader?<div className="loaderT">
+<FadeLoader
+
+ color='blue' loading={this.state.loader} size={120} />        
+
+    </div>:<div>
 
                 {/* ============Header============== */}
 
-                
+                <div className={styles.headerSliderText}>
+                        <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
+                        {/* <div className={styles.headerIcons}>
+                        <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
+                        </div> */}
+                        </div>
                 <Carousel autoplay>
     <div >
-      <h3 style={contentStyle} className={styles.carusel1} >Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
+      <h3 style={contentStyle} className={styles.carusel1} ></h3>
     </div>
     <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel2}>Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
+      <h3 style={contentStyle} className={styles.carusel2}></h3>
     </div>
     <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel3}>Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
+      <h3 style={contentStyle} className={styles.carusel3}></h3>
     </div>
     <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel4}>Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
+      <h3 style={contentStyle} className={styles.carusel4}></h3>
     </div>
   </Carousel>
  
@@ -99,6 +150,17 @@ export default class Yangiliklar extends Component {
                       keyBoardControl={false}
                         showDots={false}
                         >
+
+                         {
+                            this.state.events.map(item=>{
+                              return(
+                                <div>
+                                <img src={item.image} style={{width:'100%', height:'100vh'}} className={styles.headerImage}/>                   
+                                </div>
+                                
+                              )
+                            })
+                          }
                        
                        <div>
                            <img src={yangilik2} className={styles.headerImage}/>                         
@@ -139,22 +201,19 @@ export default class Yangiliklar extends Component {
                     <div className={styles.yangi}><h1 style={{fontSize:'60px'}} data-aos="fade-up">Tadbirlar</h1></div>
                     <div className={styles.line} style={{borderColor:'#0F4C81'}} data-aos="fade-up"></div>
                     <Row>
-                        <Col lg={7}>
-                            <div className={styles.news} data-aos="zoom-in-right">
-                               <img src={new5} alt='Foto lavha' />
-                               <h3>Moliya va investitsiya</h3>
-                               
-                               <p className={styles.date}><i class="far fa-calendar-alt"></i> 04.06.2021</p> 
-                               <p>
-                               Joriy yilning 3-iyun kuni HUAWEI kompaniyasining O‘zbekistondagi vakili Liu Jiaxin ishtirokida “Al-Xorazmiy avlodlari” festivali bo'lib o'tdi.
-                               </p>
-                               <p>
-                               Prezident, Ijod va ixtisoslashtirilgan maktablarni rivojlantirish agentligi  direktori Hilola Umarova festivalni ochib berib,  ishtirokchilarni  tabrikladi:
-                               </p>
-                               <p>
-                               - Tashkil etilgan mazkur festivalda  Prezident, ijod va ixtisoslashtirilgan maktablar o‘quvchilari o‘zlarining loyihalari bilan qatnashishmoqda. O’ylaymanki, bugungi festival  o‘quvchilarimizning  nafaqat o‘z mehnat va iqtidorlarini namoyish etish, balki o‘zaro fikr almashishlariga ham imkon yaratdi. Aytib o‘tish kerakki, Huawei kompaniyasi yoshlarni axborot-texnologiyalari sohasiga qiziqtirishni doimo  rag‘batlantirib kelmoqda. Bu kabi hamkorlikda olib borilayotgan ishlarimiz yoshlarni zamonaviy kasblarga yo‘naltirishda katta ahamiyatga ega. Ushbu festival ishtirokchilarini tabriklayman, kelgusidagi yangidan yangi loyihalarida omad tilayman.
-                               </p>
-                            </div>
+                        <Col lg={7} >
+                        {
+                                 this.state.events.length!==0?
+                                 <div className={styles.news} data-aos="zoom-in-right">
+                                 
+                                 <img src= {this.state.events[this.state.id].image} alt='Foto lavha' />
+                                 <h3>{this.state.events[this.state.id].title}</h3>
+                                 
+                                 <p className={styles.date}><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{this.state.events[this.state.id].published_time.substring(0, 10)}</p> 
+                                 <p>
+                                 {this.state.events[this.state.id].text}
+                                 </p></div>:''
+                               }
                         </Col>
                         <Col lg={5}>
                             <div className={styles.recent_news}  style={{backgroundColor:'#0F4C81'}} data-aos="zoom-in-left">
@@ -163,92 +222,31 @@ export default class Yangiliklar extends Component {
                               </div>
                               <div className={styles.body}>
                                  <Row>
-                                    <Link to="/tadbirlar/uz">
-                                    <Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
-                                     <MDBCard style={{ maxWidth: '540px' }}>
+                                 {
+                                     this.state.events.map((item, key)=>{
+                                       return(
+                                     <Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
+                                     <MDBCard onClick={()=>{this.setState({id:key})}} style={{ maxWidth: '540px' }}>
                                       <MDBRow className='g-0'>
                                       <MDBCol md='4'>
-                                      <MDBCardImage src={new5} alt='...' fluid style={{margin:'7px', width:'max-component'}}/>
+                                      <MDBCardImage src={item.image} alt='...' fluid style={{margin:'7px'}}/>
                                       </MDBCol>
                                       <MDBCol md='8'>
                                       <MDBCardBody>
-                                      <MDBCardTitle>Moliya va investitsiya</MDBCardTitle>
+                                      <MDBCardTitle>{item.title}</MDBCardTitle>
                                       
                                       <MDBCardText>
-                                      <small className='text-muted'><p className={styles.date}><i class="far fa-calendar-alt"></i> 04.06.2021   </p> </small>
+                                      <small className='text-muted'><p className={styles.date}><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}  </p> </small>
                                       </MDBCardText>
                                       </MDBCardBody>
                                       </MDBCol>
                                       </MDBRow>
                                       </MDBCard>
                                      </Col>
-                                    </Link>
+                                       )
+                                       })
+                                   }
                                     
-
-                                    <Link to="/tadbirlar/uz">
-                                    <Col lg={12} style={{marginBottom:'10px'}} className={styles.body_card}>
-                                       <MDBCard style={{ maxWidth: '540px' }}>
-                                       <MDBRow className='g-0'>
-                                       <MDBCol md='4'>
-                                       <MDBCardImage src={new6} alt='...' fluid style={{margin:'7px'}} />
-                                       </MDBCol>
-                                       <MDBCol md='8'>
-                                       <MDBCardBody>
-                                       <MDBCardTitle>Moliya va investitsiya</MDBCardTitle>
-                                       
-                                       <MDBCardText>
-                                       <small className='text-muted'><p className={styles.date}><i class="far fa-calendar-alt"></i> 04.06.2021</p> </small>
-                                       </MDBCardText>
-                                       </MDBCardBody>
-                                       </MDBCol>
-                                       </MDBRow>
-                                       </MDBCard>
-                                     </Col>
-                                    </Link>
-                                     
-
-                                     <Link to="/tadbirlar/uz">
-                                     <Col lg={12} style={{marginBottom:'10px'}} className={styles.body_card} >
-                                       <MDBCard style={{ maxWidth: '540px' }}>
-                                       <MDBRow className='g-0'>
-                                       <MDBCol md='4'>
-                                       <MDBCardImage src={new7} alt='...' fluid style={{margin:'7px', height:'110px'}}/>
-                                       </MDBCol>
-                                       <MDBCol md='8'>
-                                       <MDBCardBody>
-                                       <MDBCardTitle>Moliya va investitsiya</MDBCardTitle>
-                                      
-                                       <MDBCardText>
-                                       <small className='text-muted'><p className={styles.date}><i class="far fa-calendar-alt"></i> 04.06.2021</p> </small>
-                                       </MDBCardText>
-                                       </MDBCardBody>
-                                       </MDBCol>
-                                       </MDBRow>
-                                       </MDBCard>
-                                     </Col>
-                                     </Link>
-                                    
-
-                                    <Link to="/tadbirlar/uz">
-                                    <Col lg={12} style={{marginBottom:'10px'}} className={styles.body_card}>
-                                     <MDBCard style={{ maxWidth: '540px' }}>
-      <MDBRow className='g-0'>
-        <MDBCol md='4'>
-          <MDBCardImage src={new5} alt='...' fluid style={{margin:'7px'}}/>
-        </MDBCol>
-        <MDBCol md='8'>
-          <MDBCardBody>
-            <MDBCardTitle>Moliya va investitsiya</MDBCardTitle>
-            
-            <MDBCardText>
-              <small className='text-muted'><p className={styles.date}><i class="far fa-calendar-alt"></i> 04.06.2021</p> </small>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCol>
-      </MDBRow>
-    </MDBCard>
-                                     </Col>
-                                    </Link>
                                  </Row>
                               </div>
                               
@@ -257,7 +255,7 @@ export default class Yangiliklar extends Component {
                     </Row>
 
                    
-                </Container>
+                </Container></div>}
             </div>
         )
     }

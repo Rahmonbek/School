@@ -73,35 +73,15 @@ export default class Yangiliklar extends Component {
     render() {
       const contentStyle = {
         width: '100%',
-        height: '100vh',
+        height: '97vh',
         objectFit: 'cover',
         color: '#fff',
-        lineHeight: '90vh',
+        lineHeight: '30vh',
         textAlign: 'center',
         fontFamily: 'Lobster',
         // marginBottom:'-200px',
         // fontSize:'50px',
       };
-
-        // const responsive = {
-        //     superLargeDesktop: {
-        //       // the naming can be any, depends on you.
-        //       breakpoint: { max: 4000, min: 993 },
-        //       items: 1
-        //     },
-        //     desktop: {
-        //       breakpoint: { max: 992, min: 769 },
-        //       items: 1
-        //     },
-        //     tablet: {
-        //       breakpoint: { max: 768, min: 567 },
-        //       items: 1
-        //     },
-        //     mobile: {
-        //       breakpoint: { max: 566, min: 0 },
-        //       items: 1
-        //     }
-        //   }
         return (
 
             <div>
@@ -113,29 +93,31 @@ export default class Yangiliklar extends Component {
     </div>:<>
                 {/* ============Header============== */}
 
-                <Carousel autoplay>
+                
+                <div className={styles.headerSliderText}>
+                        <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+                        {/* <div className={styles.headerIcons}>
+                        <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
+                        </div> */}
+                        </div>
+
+                        <Carousel autoplay>
     <div >
-      <h3 style={contentStyle} className={styles.carusel1} >Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+      <h3 style={contentStyle} className={styles.carusel1} ></h3>
     </div>
-    <div>
-      <h3 style={contentStyle} className={styles.carusel2}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    <div >
+      <h3 style={contentStyle} className={styles.carusel2}></h3>
     </div>
-    <div>
-      <h3 style={contentStyle} className={styles.carusel3}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    <div >
+      <h3 style={contentStyle} className={styles.carusel3}></h3>
     </div>
-    <div>
-      <h3 style={contentStyle} className={styles.carusel4}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    <div >
+      <h3 style={contentStyle} className={styles.carusel4}></h3>
     </div>
   </Carousel>
 
-{/*                 
-                <div className={styles.headerSliderText}>
-                        <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
-                        <div className={styles.headerIcons}>
-                        <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
-                        </div>
-                        </div>
-                <div
+
+                {/* <Carousel
                        className={styles.sliderHeader}
                       responsive={responsive} infinite={true}
                       autoPlay={this.props.deviceType !== "mobile" ? true : false}
@@ -162,7 +144,7 @@ export default class Yangiliklar extends Component {
                        <div>
                            <img src={school5} className={styles.headerImage}/>
                        </div>
-                    </div> */}
+                    </Carousel> */}
                 
 
                 {/* ==================Section===================== */}
@@ -180,7 +162,7 @@ export default class Yangiliklar extends Component {
                                  <img src= {this.state.news[this.state.id].image} alt='Foto lavha' />
                                  <h3>{this.state.news[this.state.id].title}</h3>
                                  
-                                 <p className={styles.date}><i class="far fa-calendar-alt"></i>{this.state.news[this.state.id].published_time.substring(0, 10)}</p> 
+                                 <p className={styles.date}><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{this.state.news[this.state.id].published_time.substring(0, 10)}</p> 
                                  <p>
                                  {this.state.news[this.state.id].text}
                                  </p></div>:''
@@ -198,7 +180,7 @@ export default class Yangiliklar extends Component {
                                    {
                                      this.state.news.map((item, key)=>{
                                        return(
-<Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
+                                     <Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
                                      <MDBCard onClick={()=>{this.setState({id:key})}} style={{ maxWidth: '540px' }}>
                                       <MDBRow className='g-0'>
                                       <MDBCol md='4'>
@@ -209,7 +191,7 @@ export default class Yangiliklar extends Component {
                                       <MDBCardTitle>{item.title}</MDBCardTitle>
                                       
                                       <MDBCardText>
-                                      <small className='text-muted'><p className={styles.date}><i class="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}  </p> </small>
+                                      <small className='text-muted'><p className={styles.date}><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}  </p> </small>
                                       </MDBCardText>
                                       </MDBCardBody>
                                       </MDBCol>

@@ -6,102 +6,94 @@ import style from './MaktabTadbirlari.module.css'
 import rasm1 from '../img/11.jpg'
 import rasm2 from '../img/12.jpg'
 import rasm3 from '../img/13.jpg'
-import { faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-
+import { faClock, faMapMarkerAlt, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import {getEvents} from '../host/Config'
 export default class MaktabTadbirlari extends Component {
+    state={
+        events:[],
+        id:0,
+        number:[1,2,3]
+      }  
+      
+      getEvents=()=>{
+        getEvents().then(res=>{
+       
+          console.log(res.data)
+          if(window.location.href.indexOf('id=')===-1){
+            
+           
+            
+            this.setState({
+              events:res.data,
+              
+            })
+           
+            }
+              
+          
+          else{
+           
+            this.setState({
+              events:res.data,
+              id:window.location.href.slice(window.location.href.indexOf('=')+1),
+            
+            })
+            
+          }
+          
+        }).catch(err=>{
+          console.log(err)
+        })
+      }
+        componentDidMount(){
+           
+         this.getEvents();
+        }
     render() {
         return (
             <div>
                 <div className={style.container}>
                     <h2>Maktab tadbirlari</h2>
                     <Row style={{textAlign: 'center'}}>
-                        <Col xs={12} sm={12} md={4} lg={4} style={{marginTop: '15px'}}>
+                        {
+                            this.state.events.map((item, key)=>{
+                                return(
+                                key<3?(
+                                        <Col xs={12} sm={12} md={4} lg={4} style={{marginTop: '15px'}}>
                             <div className={style.flipBox}>
                                 <div class={style.flipBoxInner}>
                                     <div class={style.flipBoxFront}>
-                                        <img src={rasm1} alt="Paris" />
+                                        <img src={item.image} alt="Paris" />
                                     </div>
                                     <div className={style.flipBoxBack}>
-                                        <p>Moliya va investitsiya</p>
+                                        <p>{item.title}</p>
                                     </div>
                                 </div>
                             </div>
                             <Row className={style.map}>
-                                <Col xs={2} sm={2} md={2} lg={2}>
-                                    <h1>17</h1>
-                                    <p>JUN</p>
-                                </Col>
+                             
                                 <Col xs={10} sm={10} md={10} lg={10}>
-                                    <h3>Moliya va investitsiya</h3>
+                                    <h3>{item.title}</h3>
+                                    <div className={style.innerMap}>
+                                        <FontAwesomeIcon className={style.redIcon1} icon={faCalendarAlt} />
+                                        <span>{item.date}</span>
+                                    </div>
                                     <div className={style.innerMap}>
                                         <FontAwesomeIcon className={style.redIcon1} icon={faClock} />
-                                        <span>1.00pm-2.00pm</span>
+                                        <span>{item.time}</span>
                                     </div>
                                     <div className={style.innerMap}>
                                         <FontAwesomeIcon className={style.redIcon2} icon={faMapMarkerAlt} />
-                                        <span>Kingster Grand Hall</span>
+                                        <span>{item.address}</span>
                                     </div>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs={12} sm={12} md={4} lg={4} style={{marginTop: '15px'}}>
-                            <div className={style.flipBox}>
-                                <div class={style.flipBoxInner}>
-                                    <div class={style.flipBoxFront}>
-                                        <img src={rasm2} alt="Paris" />
-                                    </div>
-                                    <div className={style.flipBoxBack}>
-                                        <p>Moliya va investitsiya</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <Row className={style.map}>
-                                <Col xs={2} sm={2} md={2} lg={2}>
-                                    <h1>16</h1>
-                                    <p>FEB</p>
-                                </Col>
-                                <Col xs={10} sm={10} md={10} lg={10}>
-                                    <h3>Moliya va investitsiya</h3>
-                                    <div className={style.innerMap}>
-                                        <FontAwesomeIcon className={style.redIcon1} icon={faClock} />
-                                        <span>1.00pm-2.00pm</span>
-                                    </div>
-                                    <div className={style.innerMap}>
-                                        <FontAwesomeIcon className={style.redIcon2} icon={faMapMarkerAlt} />
-                                        <span>Kingster Grand Hall</span>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col xs={12} sm={12} md={4} lg={4} style={{marginTop: '15px'}}>
-                            <div className={style.flipBox}>
-                                <div class={style.flipBoxInner}>
-                                    <div class={style.flipBoxFront}>
-                                        <img src={rasm3} alt="Paris" />
-                                    </div>
-                                    <div className={style.flipBoxBack}>
-                                        <p>Moliya va investitsiya</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <Row className={style.map}>
-                                <Col xs={2} sm={2} md={2} lg={2}>
-                                    <h1>08</h1>
-                                    <p>DEC</p>
-                                </Col>
-                                <Col xs={10} sm={10} md={10} lg={10}>
-                                    <h3>Moliya va investitsiya</h3>
-                                    <div className={style.innerMap}>
-                                        <FontAwesomeIcon className={style.redIcon1} icon={faClock} />
-                                        <span>1.00pm-2.00pm</span>
-                                    </div>
-                                    <div className={style.innerMap}>
-                                        <FontAwesomeIcon className={style.redIcon2} icon={faMapMarkerAlt} />
-                                        <span>Kingster Grand Hall</span>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Col>
+                                    ):""
+                                )
+                            })
+                        }
+                        
                     </Row>
                     <Link to='/tadbirlar/uz' className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     

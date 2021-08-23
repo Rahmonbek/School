@@ -26,13 +26,48 @@ import MaktabTadbirlari from './MaktabTadbirlari'
 import Footer from './Footer'
 import NavBar from './Navbar'
 import FadeLoader from "react-spinners/FadeLoader";
+import { getNews } from '../host/Config'
 
 
 
 
 export default class BoshSahifa extends Component {
+
   state={
-loader:true
+loader:true,
+news:[],
+id:0,
+  }
+
+  getNews=()=>{
+    getNews().then(res=>{
+   
+       
+
+      if(window.location.href.indexOf('id=')===-1){
+        
+       
+        
+        this.setState({
+          news:res.data,
+          loader:false
+        })
+        }   
+      else{
+       
+        this.setState({
+          news:res.data,
+          id:window.location.href.slice(window.location.href.indexOf('=')+1),
+          loader:false
+        })
+    
+      }
+      
+    }).catch(err=>{
+      console.log(err)
+    })
+
+
   }
 
   componentDidMount(){
@@ -41,6 +76,7 @@ loader:true
               loader:false
           })
       },2000)
+      this.getNews()
   }
     render() {
     
@@ -158,67 +194,33 @@ loader:true
 
                     <Col xs={12} sm={12} md={8} lg={8} className={style.col}>
                         <h3>Maktab yangiliklari va o'zgarishlar</h3>
-                        <Row>
-                            <Col xs={12} sm={12} md={12} lg={6}>
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm41} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Maktabimiz chet ellik professorlar bilan shartnoma imzoladi</p>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm42} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Professor Albert xalqaro konferensiyada nutq so'zladi</p>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm43} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Professor Albert xalqaro konferensiyada nutq so'zladi</p>
-                                    </Col>
-                                </Row>
-                            </Col>
 
-                            <Col xs={12} sm={12} md={12} lg={6} >
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm44} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Maktabimiz chet ellik professorlar bilan shartnoma imzoladi</p>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm45} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Maktabimiz chet ellik professorlar bilan shartnoma imzoladi</p>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
-                                        <img src={rasm46} className={style.rasm}/>
-                                    </Col>
-                                    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
-                                        <h5>Iyun 6, 2016 /BY/ JAMES SMITH</h5>
-                                        <p>Maktabimiz chet ellik professorlar bilan shartnoma imzoladi</p>
-                                    </Col>
-                                </Row>
+                        <Row>
+                            <Col xs={12} sm={12} md={12} lg={12}>
+                               <Row>
+                               {this.state.news.map((item,key)=>{
+return(
+   key<6?(
+    <Col lg={6}>
+    <Row>
+    <Col xs={3} sm={3} md={3} lg={3} className={style.colNews}>
+        <img src={item.image} className={style.rasm}/>
+    </Col>
+    <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
+        <p>{item.title}</p>
+        <h5><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}</h5>
+        
+    </Col>
+    </Row>
+  </Col>
+   ):''
+)
+                               })}
+                                   </Row> 
+                              
                             </Col>
                         </Row>
+
                         <Link to="/yangiliklar/uz"><button className={style.buttoncha}><span>Barchasini o'qish</span></button></Link>
                     </Col>
                 </Row>

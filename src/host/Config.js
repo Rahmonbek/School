@@ -9,6 +9,14 @@ export const getNews = () => {
   return httpRequest(config);
 };
 
+export const getEvents = () => {
+  var config = {
+    url: `${url}/event/${idMaktab}`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
 export const createParent = (config) => {
   console.log(config);
   var configs = {
