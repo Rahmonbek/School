@@ -13,6 +13,7 @@ import sport7 from '../img/sport7.jpg'
 import {Container,Row,Col, Button, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Carousel } from 'antd';
 import { Link } from 'react-router-dom';
 export default class Xavfsizlik extends Component {
     componentDidMount(){
@@ -87,12 +88,8 @@ export default class Xavfsizlik extends Component {
                 <div className={styles.top}>
                     <br /> <br /> <br /> <br />
                     <h1>Xavfsizlik va Qo'riqlash</h1>
-                     <div
-                    //  responsive={responsive} infinite={true}
-                    //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    //  autoPlaySpeed={3000}
-                    //  keyBoardControl={true}
-                    //     showDots={false}
+                     <Carousel autoplay
+                    
                         >
                        <div>
                            <img src={sport1}/>
@@ -112,7 +109,7 @@ export default class Xavfsizlik extends Component {
                        <div>
                            <img src={sport6}/>
                        </div>
-                    </div>
+                    </Carousel>
                     
                 </div>
                 

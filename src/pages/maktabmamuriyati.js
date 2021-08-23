@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
+import { Carousel } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
 import school3 from '../img/school25.jpg'
@@ -18,61 +19,47 @@ export default class Maktabmamuriyati extends Component {
     })
 }
     render() {
-        const responsive = {
-            superLargeDesktop: {
-              // the naming can be any, depends on you.
-              breakpoint: { max: 4000, min: 993 },
-              items: 1
-            },
-            desktop: {
-              breakpoint: { max: 992, min: 769 },
-              items: 1
-            },
-            tablet: {
-              breakpoint: { max: 768, min: 567 },
-              items: 1
-            },
-            mobile: {
-              breakpoint: { max: 566, min: 0 },
-              items: 1
-            }
-          }
+      const contentStyle = {
+        height: '160px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+      };
+        
         return (
             <div>
               <br/><br/><br/>
-             <div
-                      //  className={styles.sliderHeader}
-                      //  responsive={responsive} infinite={true}
-                      //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                      //  autoPlaySpeed={3000}
-                      //  keyBoardControl={true}
-                      //   showDots={false}
-                        >
+             <Carousel autoplay
+                       className={styles.sliderHeader} >
                        <div>
                        <img src={school1} className={styles.headerImage}/>  
-                       <div className={styles.slidertext}>
-                           <p >Maktab direktori</p>
-                           </div>                 
+                       {/* <div className={styles.slidertext}>
+                           <p>Maktab direktori</p>
+                           </div>                  */}
                        </div>
+
                        <div>
                        <img src={school2} className={styles.headerImage}/>  
-                       <div className={styles.slidertext}>
-                           <p data-aos="zoom-in-up">Maktab direktori o'rinbosari</p>
-                           </div>                 
+                       {/* <div className={styles.slidertext}>
+                           <p>Maktab direktori o'rinbosari</p>
+                           </div>                  */}
                        </div>
+
                        <div>
                        <img src={school3} className={styles.headerImage}/>  
-                       <div className={styles.slidertext}>
-                           <p data-aos="zoom-in-up">Maktab tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-                           </div>                 
+                       {/* <div className={styles.slidertext}>
+                           <p>Maktab tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
+                           </div>                  */}
                        </div>
+
                        <div>
                        <img src={school4} className={styles.headerImage}/>  
-                       <div className={styles.slidertext}>
-                           <p data-aos="zoom-in-up">Maktab mai'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-                           </div>                 
+                       {/* <div className={styles.slidertext}>
+                           <p>Maktab mai'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
+                           </div>                  */}
                        </div>                       
-                    </div>
+                    </Carousel>
                 <Container>
                     <Row>
                         <Col lg={12}>
@@ -164,13 +151,8 @@ export default class Maktabmamuriyati extends Component {
                             </div>
                         </Col>
                         <Col lg={12}>
-                        <div
-                      //  className={styles.sliderComment}
-                      //  responsive={responsive} infinite={true}
-                      //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                      //  autoPlaySpeed={3000}
-                      //  keyBoardControl={true}
-                      //     showDots={false}
+                        <Carousel autoplay
+                       className={styles.sliderComment}
                         >
                        <div>
                        <article className='review' data-aos="zoom-in-up">
@@ -227,7 +209,7 @@ export default class Maktabmamuriyati extends Component {
     </article>       
          
                        </div>   
-                    </div>
+                    </Carousel>
                         </Col>
 
                     </Row>
