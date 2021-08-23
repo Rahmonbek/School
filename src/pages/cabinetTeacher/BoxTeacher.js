@@ -8,7 +8,7 @@ import baholar from "../../img/baholar.png";
 import yutuqlar from "../../img/yutuqlar.png";
 import sinfdoshlar from "../../img/sinfdoshlar.png";
 import RingLoader from "react-spinners/RingLoader";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 export default class Box extends Component {
   state = {
     loading: true,
@@ -38,6 +38,7 @@ export default class Box extends Component {
 
     window.location.href = str;
   };
+
   render() {
     return (
       <div>
@@ -48,96 +49,58 @@ export default class Box extends Component {
         ) : (
           <div className={style.box}>
             <div className={style.cards}>
-              <BrowserRouter>
-                <Row>
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goBox("/oqituvchilar");
-                    }}
-                  >
+              <Row>
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/oqituvchilar">
                     <div className={style.card}>
                       <img alt="..." src={oqituvchi} />
                       <p>O'qituvchilar</p>
                     </div>
-                  </Col>
+                  </Link>
+                </Col>
 
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goRahbar();
-                    }}
-                  >
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/rahbar">
                     <div className={style.card}>
                       <img alt="..." src={baholar} />
                       <p>Sinf Rahbar</p>
                     </div>
-                  </Col>
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goBox("/students");
-                    }}
-                  >
+                  </Link>
+                </Col>
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/rahbar/students">
                     <div className={style.card}>
                       <img alt="..." src={sinfdoshlar} />
                       <p>O'quvchilar</p>
                     </div>
-                  </Col>
+                  </Link>
+                </Col>
 
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goBox("/dars_jadval");
-                    }}
-                  >
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/dars_reja">
                     <div className={style.card}>
                       <img alt="..." src={davomad} />
                       <p>Dars jadvali</p>
                     </div>
-                  </Col>
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goBox("/yutuqlar");
-                    }}
-                  >
+                  </Link>
+                </Col>
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/yutuqlar">
                     <div className={style.card}>
                       <img alt="..." src={yutuqlar} />
                       <p>Yutuqlar</p>
                     </div>
-                  </Col>
-                  <Col
-                    style={{ padding: "30px" }}
-                    lg={4}
-                    md={6}
-                    sm={6}
-                    onClick={() => {
-                      this.goBox("/chat");
-                    }}
-                  >
+                  </Link>
+                </Col>
+                <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
+                  <Link to="/cabinet/teacher/bolim/chat">
                     <div className={style.card}>
                       <img alt="..." src={chat} />
                       <p>Yozishmalar</p>
                     </div>
-                  </Col>
-                </Row>
-              </BrowserRouter>
+                  </Link>
+                </Col>
+              </Row>
             </div>
           </div>
         )}
