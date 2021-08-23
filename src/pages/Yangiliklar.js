@@ -18,6 +18,7 @@ import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
 import { getNews } from '../host/Config'
 import FadeLoader from "react-spinners/FadeLoader";
+import { Carousel } from 'antd'
 
 // import {DownCircleOutlined} from '@ant-design/icons'
 
@@ -70,25 +71,37 @@ export default class Yangiliklar extends Component {
     //       <Link to="/${link}/uz"></Link>
     // }
     render() {
-        const responsive = {
-            superLargeDesktop: {
-              // the naming can be any, depends on you.
-              breakpoint: { max: 4000, min: 993 },
-              items: 1
-            },
-            desktop: {
-              breakpoint: { max: 992, min: 769 },
-              items: 1
-            },
-            tablet: {
-              breakpoint: { max: 768, min: 567 },
-              items: 1
-            },
-            mobile: {
-              breakpoint: { max: 566, min: 0 },
-              items: 1
-            }
-          }
+      const contentStyle = {
+        width: '100%',
+        height: '100vh',
+        objectFit: 'cover',
+        color: '#fff',
+        lineHeight: '90vh',
+        textAlign: 'center',
+        fontFamily: 'Lobster',
+        // marginBottom:'-200px',
+        // fontSize:'50px',
+      };
+
+        // const responsive = {
+        //     superLargeDesktop: {
+        //       // the naming can be any, depends on you.
+        //       breakpoint: { max: 4000, min: 993 },
+        //       items: 1
+        //     },
+        //     desktop: {
+        //       breakpoint: { max: 992, min: 769 },
+        //       items: 1
+        //     },
+        //     tablet: {
+        //       breakpoint: { max: 768, min: 567 },
+        //       items: 1
+        //     },
+        //     mobile: {
+        //       breakpoint: { max: 566, min: 0 },
+        //       items: 1
+        //     }
+        //   }
         return (
 
             <div>
@@ -100,20 +113,35 @@ export default class Yangiliklar extends Component {
     </div>:<>
                 {/* ============Header============== */}
 
-                
+                <Carousel autoplay>
+    <div >
+      <h3 style={contentStyle} className={styles.carusel1} >Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    </div>
+    <div>
+      <h3 style={contentStyle} className={styles.carusel2}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    </div>
+    <div>
+      <h3 style={contentStyle} className={styles.carusel3}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    </div>
+    <div>
+      <h3 style={contentStyle} className={styles.carusel4}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
+    </div>
+  </Carousel>
+
+{/*                 
                 <div className={styles.headerSliderText}>
                         <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
-                        {/* <div className={styles.headerIcons}>
+                        <div className={styles.headerIcons}>
                         <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
-                        </div> */}
+                        </div>
                         </div>
                 <div
-                      //  className={styles.sliderHeader}
-                      // responsive={responsive} infinite={true}
-                      // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                      // autoPlaySpeed={3000}
-                      // keyBoardControl={false}
-                      //   showDots={false}
+                       className={styles.sliderHeader}
+                      responsive={responsive} infinite={true}
+                      autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                      autoPlaySpeed={3000}
+                      keyBoardControl={false}
+                        showDots={false}
                         >
                           {
                             this.state.news.map(item=>{
@@ -125,7 +153,7 @@ export default class Yangiliklar extends Component {
                               )
                             })
                           }
-                       {/* <div>
+                       <div>
                            <img src={school3} className={styles.headerImage}/>                
                        </div>
                        <div>
@@ -133,8 +161,8 @@ export default class Yangiliklar extends Component {
                        </div>
                        <div>
                            <img src={school5} className={styles.headerImage}/>
-                       </div> */}
-                    </div>
+                       </div>
+                    </div> */}
                 
 
                 {/* ==================Section===================== */}
