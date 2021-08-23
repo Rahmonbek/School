@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                     <Navbar collapseOnSelect expand="lg">
                         <Container>
                             <Navbar.Brand><p className={style.maktabLogo} style={{color:'white', cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'white'}}>Maktab logosi</Link></p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'10px',padding:'0',width:'50px',backgroundColor: 'white'}} />
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
                                     <NavLink style={{marginLeft:'20px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
