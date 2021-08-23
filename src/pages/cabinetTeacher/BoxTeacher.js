@@ -65,12 +65,12 @@ export default class Box extends Component {
                 </Col>
 
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
-                  <Link to="/cabinet/teacher/bolim/dars_reja">
-                    <div className={style.card}>
-                      <img alt="..." src={davomad} />
-                      <p>Dars jadvali</p>
-                    </div>
-                  </Link>
+                  {/* <Link to="/cabinet/teacher/bolim/dars_reja"> */}
+                  <div className={style.card}>
+                    <img alt="..." src={davomad} />
+                    <p>Dars jadvali</p>
+                  </div>
+                  {/* </Link> */}
                 </Col>
 
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
