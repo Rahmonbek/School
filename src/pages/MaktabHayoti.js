@@ -20,8 +20,8 @@ import {BiStop,BiRightArrowAlt} from "react-icons/bi";
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import PannellumReact  from '../pages/panolleum'
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
+import { Carousel } from 'antd';
+
 
 
 export default class MaktabHayoti extends Component {
@@ -32,25 +32,14 @@ export default class MaktabHayoti extends Component {
     }
     
     render() {
-        const responsive = {
-            superLargeDesktop: {
-              // the naming can be any, depends on you.
-              breakpoint: { max: 4000, min: 993 },
-              items: 1
-            },
-            desktop: {
-              breakpoint: { max: 992, min: 769 },
-              items: 1
-            },
-            tablet: {
-              breakpoint: { max: 768, min: 567 },
-              items: 1
-            },
-            mobile: {
-              breakpoint: { max: 566, min: 0 },
-              items: 1
-            }
-          }
+        const contentStyle = {
+            height: '160px',
+            color: '#fff',
+            lineHeight: '160px',
+            textAlign: 'center',
+            background: '#364d79',
+          };
+        
         return (
             <div>
                 <div className={styles.headerSliderText}>
@@ -59,14 +48,7 @@ export default class MaktabHayoti extends Component {
                         <a href="#1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
                         </div>
                 </div>
-                <div
-                    //    className={styles.sliderHeader}
-                    //    responsive={responsive} infinite={true}
-                    //    autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    //    autoPlaySpeed={3000}
-                    //    keyBoardControl={true}
-                    //       showDots={false}
-                        >
+                <Carousel autoplay>
                        <div>
                        <img src={school1} className={styles.headerImage}/>                   
                        </div>
@@ -82,7 +64,7 @@ export default class MaktabHayoti extends Component {
                        <div>
                            <img src={school5} className={styles.headerImage}/>
                        </div>
-                    </div>
+                    </Carousel>
                 
                 <Container fluid className={styles.secondContainer} id="1">
                     <Row>
