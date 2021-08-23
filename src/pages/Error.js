@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import "../css/Error.css";
 import { data } from "./../server";
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
 
-function SelectMap(props) {
-  // const [data, setData] = useState(Informations);
+function SelectMap() {
   const [cities, setCities] = useState([]);
   const [neighborhoods, setNeighborhood] = useState([]);
   const [bool, setBool] = useState([true, false, false]);
@@ -87,7 +86,7 @@ function SelectMap(props) {
         {bool[2] ? (
           <>
             <h4>Maktablar</h4>
-            <ul className="school_ul2">
+            <ul className="school_ul3">
               {neighborhoods.map((item) => (
                 <li key={item}>
                   <Button

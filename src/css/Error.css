@@ -1,15 +1,13 @@
 .map_select {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #262626;
 }
 .map_item {
-  width: 55%;
-  margin: 0 auto;
-  min-height: 60%;
+  width: 65%;
 }
 .map_item h4 {
   color: #fff;
@@ -28,6 +26,9 @@
 }
 .map_item button {
   border-radius: 5px;
+}
+.school_ul3 {
+  column-count: 3;
 }
 
 /* 
