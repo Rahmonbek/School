@@ -128,7 +128,17 @@ export const NavbarContainer = styled.div`
         .kirish{
             margin-top:-15px;
             margin-right:-40px;
+            
         }
-
+        @media (min-width:1300px){
+            .me-auto{
+                margin-left:120px;
+                margin-top:15px;
+            }
+            .kirish{
+                margin-top:-15px;
+                margin-right:-70px;
+                
+            }
     }
 `;

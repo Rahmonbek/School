@@ -51,3 +51,10 @@ margin-left: 10px;
     }
 
 }
+@media screen and (min-width:1300px) {
+    .bayroqlar{
+        margin-left: 150px !important;
+        margin-top: 5px !important;
+    }
+
+}
