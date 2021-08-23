@@ -1,11 +1,36 @@
+.map_select {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+}
+.map_item {
+  width: 55%;
+  margin: 0 auto;
+  min-height: 60%;
+}
+.map_item h4 {
+  color: #fff;
+}
+.map_item ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-self: start;
+  flex-wrap: wrap;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.map_item ul li {
+  margin: 10px 10px 10px 0;
+}
+.map_item button {
+  border-radius: 5px;
+}
 
-
-
-/***********************************
-			/* 1. BODY */
-/***********************************/
-
-
+/* 
 .errorT {
   padding: 0;
 
@@ -148,13 +173,6 @@ small,.errorT strike,.errorT strong,.errorT sub,.errorT sup,.errorT tt,.errorT v
   zoom: 1;
 }
 
-			/* 1. END BODY */
-/***********************************/
-
-/***********************************
-			/* 2. CONTENT */
-/***********************************/
-/* 2.1. Section error */
 .error {
   min-height: 100vh;
   position: relative;
@@ -264,9 +282,6 @@ small,.errorT strike,.errorT strong,.errorT sub,.errorT sup,.errorT tt,.errorT v
   border-color:blue
 }
 
-/* 2.1. END Section Error */
-
-/* 2.2. Social style */
 .errorT .error__social {
   position: absolute;
   top: 50%;
@@ -300,9 +315,6 @@ small,.errorT strike,.errorT strong,.errorT sub,.errorT sup,.errorT tt,.errorT v
 .errorT .e-social__link:hover {
   opacity: .7;
 }
-/* 2.2. END Social style */
-
-/* 2.3. Lamp */
 .errorT .lamp {
   position: absolute;
   left: 0px;
@@ -388,14 +400,6 @@ small,.errorT strike,.errorT strong,.errorT sub,.errorT sup,.errorT tt,.errorT v
     z-index: 1;
     border-radius: 90px 90px 0px 0px;
 }
-/* 2.3. END Lamp */
-/***********************************
-			/* 2. END CONTENT */
-/***********************************/
-
-/***********************************
-			/* 3. RESPONSIVE */
-/***********************************/
 .error {
   overflow: hidden;
   max-height: 100vh;
@@ -490,4 +494,4 @@ small,.errorT strike,.errorT strong,.errorT sub,.errorT sup,.errorT tt,.errorT v
   .errorT .error__nav {
     margin-top: 20px;
   }
-}
+} */

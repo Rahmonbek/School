@@ -12,7 +12,7 @@ import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
 import {BiStop} from "react-icons/bi";
 import { Link } from 'react-router-dom';
-
+import { Carousel } from 'antd';
 export default class MaktabOshxonasi extends Component {
     componentDidMount(){
         Aos.init({
@@ -20,36 +20,20 @@ export default class MaktabOshxonasi extends Component {
         })
     }
     render() {
-        const responsive = {
-            superLargeDesktop: {
-              // the naming can be any, depends on you.
-              breakpoint: { max: 4000, min: 993 },
-              items: 4
-            },
-            desktop: {
-              breakpoint: { max: 992, min: 769 },
-              items: 3
-            },
-            tablet: {
-              breakpoint: { max: 768, min: 567 },
-              items: 2
-            },
-            mobile: {
-              breakpoint: { max: 566, min: 0 },
-              items: 1
-            }
-          }
+        const contentStyle = {
+            height: '160px',
+            color: '#fff',
+            lineHeight: '160px',
+            textAlign: 'center',
+            background: '#364d79',
+          };
         return (
             <div>
                 <div className={styles.top}>
                     <br /> <br /> <br /><br />
                     <h1>Maktab Oshxonasi</h1>
-                     <div
-                    //  responsive={responsive} infinite={true}
-                    //  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    //  autoPlaySpeed={3000}
-                    //  keyBoardControl={true}
-                    //     showDots={false}
+                     <Carousel autoplay
+                    //  
                         >
                        <div>
                            <img src={school1}/>
@@ -69,7 +53,7 @@ export default class MaktabOshxonasi extends Component {
                        <div>
                            <img src={school6}/>
                        </div>
-                    </div>
+                    </Carousel>
                     
                 </div>
                 <Container fluid style={{marginTop:'50px'}}>

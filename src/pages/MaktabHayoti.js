@@ -48,7 +48,7 @@ export default class MaktabHayoti extends Component {
                         <a href="#1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
                         </div>
                 </div>
-                <Carousel autoplay>
+                <Carousel autoplay className={styles.sliderHeader}>
                        <div>
                        <img src={school1} className={styles.headerImage}/>                   
                        </div>
