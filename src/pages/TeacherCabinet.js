@@ -17,6 +17,8 @@ import { editStaff, getSpec, getStaff, getStaffBySchool } from "../host/Config";
 import { Input, message, Select } from "antd";
 import { Option } from "antd/lib/mentions";
 import Rahbar from "./cabinetTeacher/Rahbar";
+import axios from "axios";
+import { url } from "../host/Host";
 
 export default class ParentCabinet extends Component {
   state = {
@@ -44,11 +46,11 @@ export default class ParentCabinet extends Component {
   };
   editStaff = () => {
     let formData = new FormData();
-    formData.append("position", document.getElementById("position") ?? "");
-    formData.append("full_name", document.getElementById("full_name") ?? "");
-    formData.append("phone", document.getElementById("phone") ?? "");
+    formData.append("position", document.getElementById("position").value ?? "");
+    formData.append("full_name", document.getElementById("fullname").value ?? "");
+    formData.append("phone", document.getElementById("phone").value ?? "");
     formData.append("school", Global.schoolId ?? "");
-    formData.append("description", document.getElementById("description") ?? "");
+    formData.append("description", document.getElementById("description").value ?? "");
     if (this.state.image !== null) {
       formData.append("image", this.state.image ?? "");
     }
@@ -63,6 +65,28 @@ export default class ParentCabinet extends Component {
   };
   customRequest = (e) => {
     this.setState({ image: e.target.files[0] });
+  };
+  addLesson = (e) => {
+    // console.log(document.getElementById("pass").value);
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    formData.append("id", Global.teacherId);
+    var formDataObj = Object.fromEntries(formData.entries());
+    formDataObj.id = Number(formDataObj.id);
+
+    var config = {
+      user_id: Global.teacherId,
+      password: document.getElementById("pass").value,
+    };
+    // formDataObj.school=Number(formDataObj.school)
+    axios
+      .post(`${url}/reset-password/`, config)
+      .then((res) => {
+        message.success("Parol saqlandi");
+      })
+      .catch((err) => {
+        message.error("Parol saqlanmadi");
+      });
   };
   componentDidMount() {
     this.getTeacher();
@@ -159,7 +183,7 @@ export default class ParentCabinet extends Component {
                                 <Form onSubmit={this.addLesson} style={{ backgroundColor: "white", padding: "20px", marginBottom: "30px" }}>
                                   <Row>
                                     <Col lg={7}>
-                                      <Form.Group controlId="formFile" className="mb-3">
+                                      <Form.Group controlId="pass" className="mb-3">
                                         <Form.Label style={{ borderBottom: "1px solid black", marginBottom: "20px", fontSize: "16px" }}>Yangi parol kiriting</Form.Label>
                                         <Form.Control name="password" type={this.state.input ? "password" : "text"} required={true} />
                                       </Form.Group>
