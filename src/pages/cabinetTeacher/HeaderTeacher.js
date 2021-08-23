@@ -3,11 +3,11 @@ import style from "../../css/HeaderParent.module.css";
 // import student from "../../img/student.jpg";
 import { Col, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { Menu, Dropdown, message } from "antd";
+import { Menu, Dropdown } from "antd";
 
 import { DownOutlined, LogoutOutlined } from "@ant-design/icons";
-import { getStaff, getStaffBySchool } from "../../host/Config";
-import Global from "../../host/Global";
+import { getStaff } from "../../host/Config";
+// import Global from "../../host/Global";
 
 export default class HeaderTeacher extends Component {
   state = {

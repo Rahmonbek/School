@@ -21,27 +21,26 @@ export default class Login extends Component {
       .post(`${url}/login/`, formDataObj)
       .then((res) => {
         axios.get(`${url}/staff/`).then((res1) => {
-          res1.data.map((item1) => {
-            if (item1.user === res.data.id) {
-              GLOBAL.schoolId = item1.school;
-              GLOBAL.staffId = item1.id;
-            }
+          res1.data.map((item1, key) => {
+            return item1.user === res.data.id ? (GLOBAL.schoolId = key) : "";
           });
+          GLOBAL.staffId = res1.data[GLOBAL.schoolId].id;
+          GLOBAL.schoolId = res1.data[GLOBAL.schoolId].school;
           if (GLOBAL.schoolId !== null) {
-            axios.get(`${url}/class-by-school/${GLOBAL.schoolId}`).then((res2) =>
+            axios.get(`${url}/class-by-school/${GLOBAL.schoolId}`).then((res2) => {
               res2.data.map((item) => {
-                return item.curator === res.data.id ? (GLOBAL.classId = item.id) : "";
-              })
-            );
+                return item.curator === GLOBAL.staffId ? (GLOBAL.classId = item.id) : "";
+              });
+              if (GLOBAL.classId !== null || GLOBAL.schoolId !== null) {
+                GLOBAL.teacherId = res.data.id;
+                window.localStorage.setItem("token", res.data.token);
+                this.setState({ login: true });
+              } else {
+                message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
+              }
+            });
           }
         });
-        if (GLOBAL.classId !== null || GLOBAL.schoolId !== null) {
-          GLOBAL.teacherId = res.data.id;
-          window.localStorage.setItem("token", res.data.token);
-          this.setState({ login: true });
-        } else {
-          message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
-        }
       })
       .catch((err) => {
         message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
@@ -61,7 +60,8 @@ export default class Login extends Component {
               <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
               <Form.Label className={style.formLabel}>Parol</Form.Label>
             </Form.Group>
-            {/* <Link to="/verify">Emailni tasdiqlash</Link> */}
+            <Link to="/verify">Emailni tasdiqlash</Link>
+            <br />
             <Button className={style.sub} type="submit">
               <span></span>
               <span></span>

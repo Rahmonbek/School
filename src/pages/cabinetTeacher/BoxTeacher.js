@@ -56,7 +56,7 @@ export default class Box extends Component {
                 )}
 
                 <Col style={{ padding: "30px" }} lg={4} md={6} sm={6}>
-                  <Link to="/cabinet/teacher/bolim/rahbar/students">
+                  <Link to="/cabinet/teacher/bolim/students">
                     <div className={style.card}>
                       <img alt="..." src={sinfdoshlar} />
                       <p>O'quvchilar</p>
