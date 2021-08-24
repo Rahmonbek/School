@@ -145,7 +145,7 @@ getSchool=()=>{
                     <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
                      <Link to="/hayot/uz"><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
-                    <img src={this.state.school!==null?this.state.school.b_r1:headerT} className={style.temur}/>
+                    <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
 {/* 
                 <div className={style.bayroqlar}>
@@ -158,7 +158,7 @@ getSchool=()=>{
             <div className={style.container}>
                 <div className={style.bir}>
                     <div className={style.containercha}>
-                        <img src={this.state.school!==null?this.state.school.b_c1:rasm1} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm1:rasm1} className={style.image} />
                         <div className={style.overlay}>
                             <Link style={{color:'white'}} to="/yutuqlar/uz">
                             <FontAwesomeIcon icon={faSchool} className={style.icon} />
@@ -170,7 +170,7 @@ getSchool=()=>{
 
                 <div className={style.ikki}>
                     <div className={style.containercha}>
-                        <img src={this.state.school!==null?this.state.school.b_c1:rasm2} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm2:rasm2} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to="/yangiliklar/uz">
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
@@ -182,7 +182,7 @@ getSchool=()=>{
                 </div>
                 <div className={style.uch}>
                     <div className={style.containercha}>
-                        <img src={this.state.school!==null?this.state.school.b_c1:rasm3} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm3:rasm3} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to="/gallery/uz">
                             <FontAwesomeIcon icon={faDoorOpen} className={style.icon} />
