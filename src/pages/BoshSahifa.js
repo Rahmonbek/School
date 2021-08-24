@@ -27,7 +27,10 @@ import Footer from './Footer'
 import NavBar from './Navbar'
 import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from '../host/Config'
-
+import { url, user } from '../host/Host'
+import axios from 'axios'
+import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
+import YouTube from 'react-youtube'
 
 
 
@@ -37,8 +40,17 @@ export default class BoshSahifa extends Component {
 loader:true,
 news:[],
 id:0,
+school:null,
   }
-
+getSchool=()=>{
+    axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+        this.setState({
+            school:res.data,
+      loader:false,
+        })
+        console.log(res.data)
+    })
+}
   getNews=()=>{
     getNews().then(res=>{
    
@@ -50,16 +62,14 @@ id:0,
         
         this.setState({
           news:res.data,
-          loader:false
-        })
+          })
         }   
       else{
        
         this.setState({
           news:res.data,
           id:window.location.href.slice(window.location.href.indexOf('=')+1),
-          loader:false
-        })
+          })
     
       }
       
@@ -71,12 +81,9 @@ id:0,
   }
 
   componentDidMount(){
-      setInterval(()=>{
-          this.setState({
-              loader:false
-          })
-      },2000)
+      
       this.getNews()
+      this.getSchool()
   }
     render() {
     
@@ -97,15 +104,15 @@ id:0,
                     <Container>
                         <div className="first" style={{ marginTop:'5px'}}>
                         <FontAwesomeIcon icon={faEnvelope} className='iconEmail' />
-                            <a href='contact@KingsterKids.edu' style={{color:'#FFF', fontSize:'20px'}}>contact@KingsterKids.edu</a>
+                            <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
                         </div>
 
                         <div className="second" style={{ marginTop:'5px'}}>
                            
-                            <a href='+1-3435-2356-222' style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' style={{color:'#FFF'}} />+1-3435-2356-222</a>
+                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' style={{color:'#FFF'}} />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
                         </div>
-                        <Link to='/register/uz'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link>
+                        {/* <Link to='/register/uz'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
                         <Link to='/login/uz'><FontAwesomeIcon icon={faUserCircle} className={style.usericon} /></Link>
                     </Container>
                 </div>
@@ -116,7 +123,7 @@ id:0,
                 <NavbarContainer>
                     <Navbar collapseOnSelect expand="lg" >
                         <Container>
-                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>Maktab logosi</p></Navbar.Brand>
+                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
@@ -132,24 +139,26 @@ id:0,
                     </Navbar>
                 </NavbarContainer>
                 
-                <XushKelibsiz>
+                <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
                     <Container>
-                     <h1>Maktab Nomi</h1>                        
+                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name+' '+this.state.school.school_number+' - maktab ':""}</h1>                        
+                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
                      <Link to="/hayot/uz"><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
+                    <img src={this.state.school!==null?this.state.school.b_r1:headerT} className={style.temur}/>
                 </XushKelibsiz>
-
+{/* 
                 <div className={style.bayroqlar}>
                     <Link to='/uz'><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
                     <Link to='/ru'><img style={{marginTop:'7px'}} src={flagRU} /></Link>
-                </div>
+                </div> */}
                 </div>
             </div>
 
             <div className={style.container}>
                 <div className={style.bir}>
                     <div className={style.containercha}>
-                        <img src={rasm1} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1:rasm1} className={style.image} />
                         <div className={style.overlay}>
                             <Link style={{color:'white'}} to="/yutuqlar/uz">
                             <FontAwesomeIcon icon={faSchool} className={style.icon} />
@@ -161,7 +170,7 @@ id:0,
 
                 <div className={style.ikki}>
                     <div className={style.containercha}>
-                        <img src={rasm2} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1:rasm2} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to="/yangiliklar/uz">
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
@@ -173,7 +182,7 @@ id:0,
                 </div>
                 <div className={style.uch}>
                     <div className={style.containercha}>
-                        <img src={rasm3} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c1:rasm3} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to="/gallery/uz">
                             <FontAwesomeIcon icon={faDoorOpen} className={style.icon} />
@@ -189,7 +198,12 @@ id:0,
                     <Col xs={12} sm={12} md={4} lg={4} className={style.col}>
                         <h3>Maktabga video sayohat</h3>
                         {/* <img src={rasm1} className={style.img}/> */}
-                        <video controls={true} src={video1} className={style.video}  />
+                        <YouTube videoId={this.state.school!==null?this.state.school.video.slice(this.state.school.video.indexOf("youtu.be/")+9):''} opts={{ 
+      width: '100%',
+      height:"100%",
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,}}} className={style.video}  />
                         <p className={style.pp}>Maktabimizga virtual sayohat qiling va siz bizning maktab shahardagi eng yaxshilaridan biri ekanligiga ishonch hosil qilasiz. Videoni ko'ring!</p>
                     </Col>
 
