@@ -9,17 +9,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { AOS } from "aos";
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
+import axios from "axios";
+import { url, user } from "../host/Host";
 export default class NavBar extends Component {
   state={
     school:null,
   }
-// getSchool=()=>{
-//     axios.get(`${url}/school-by-admin/${user}`).then(res=>{
-//         this.setState({
-//             school:res.data,
-//         })
-//     })
-// }
+getSchool=()=>{
+    axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+        this.setState({
+            school:res.data,
+        })
+    })
+}
+componentDidMount(){
+  this.getSchool()
+}
   render() {
     return (
       <div>
@@ -27,7 +32,7 @@ export default class NavBar extends Component {
         <NavbarContainer>
                     <Navbar collapseOnSelect expand="lg">
                         <Container>
-                            <Navbar.Brand><p className={style.maktabLogo} style={{color:'white', cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'white'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
+                            <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'gold', fontSize:"24px", }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
