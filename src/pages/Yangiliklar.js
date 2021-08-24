@@ -79,29 +79,34 @@ export default class Yangiliklar extends Component {
         lineHeight: '30vh',
         textAlign: 'center',
         fontFamily: 'Lobster',
-        // marginBottom:'-200px',
-        // fontSize:'50px',
       };
         return (
 
             <div>
 { this.state.loader?<div className="loaderT">
 <FadeLoader
-
  color='blue' loading={this.state.loader} size={120} />        
 
     </div>:<>
                 {/* ============Header============== */}
 
                 
-                <div className={styles.headerSliderText}>
-                        <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
-                        {/* <div className={styles.headerIcons}>
-                        <a href="1"><DownCircleOutlined style={{fontSize:'40px',color:'white'}} className={styles.headerIcon}/></a>
-                        </div> */}
-                        </div>
+                <div className={styles.headerSliderText} style={{fontFamily: 'Lobster', zIndex:'100'}}>
+                        <h3 style={{fontFamily: 'Lobster', zIndex:'100'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3> 
+                        </div>   
 
                         <Carousel autoplay>
+                        {/* {
+                            this.state.news.map(item=>{
+                              return(
+                                <div>
+                                <img src={item.image} style={{width:'100%', height:'100vh',zIndex:'-100'}} className={styles.headerImage}/> 
+                                             
+                                </div>
+                                
+                              )
+                            })
+                          } */}
     <div >
       <h3 style={contentStyle} className={styles.carusel1} ></h3>
     </div>
@@ -115,38 +120,6 @@ export default class Yangiliklar extends Component {
       <h3 style={contentStyle} className={styles.carusel4}></h3>
     </div>
   </Carousel>
-
-
-                {/* <Carousel
-                       className={styles.sliderHeader}
-                      responsive={responsive} infinite={true}
-                      autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                      autoPlaySpeed={3000}
-                      keyBoardControl={false}
-                        showDots={false}
-                        >
-                          {
-                            this.state.news.map(item=>{
-                              return(
-                                <div>
-                                <img src={item.image} style={{width:'100%', height:'100vh'}} className={styles.headerImage}/>                   
-                                </div>
-                                
-                              )
-                            })
-                          }
-                       <div>
-                           <img src={school3} className={styles.headerImage}/>                
-                       </div>
-                       <div>
-                           <img src={school4} className={styles.headerImage}/>                          
-                       </div>
-                       <div>
-                           <img src={school5} className={styles.headerImage}/>
-                       </div>
-                    </Carousel> */}
-                
-
                 {/* ==================Section===================== */}
 
                 <Container fluid >
@@ -201,9 +174,6 @@ export default class Yangiliklar extends Component {
                                        )
                                        })
                                    }
-                                    
-                                    
-
                                  </Row>
                               </div>
                               
