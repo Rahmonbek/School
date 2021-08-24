@@ -109,11 +109,11 @@ getSchool=()=>{
 
                         <div className="second" style={{ marginTop:'5px'}}>
                            
-                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' style={{color:'#FFF'}} />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
+                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
                         </div>
                         {/* <Link to='/register/uz'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
-                        <Link to='/login/uz'><FontAwesomeIcon icon={faUserCircle} className={style.usericon} /></Link>
+                        <Link to='/login/uz'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link>
                     </Container>
                 </div>
             </ContainerDashboard>
@@ -141,8 +141,8 @@ getSchool=()=>{
                 
                 <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
                     <Container>
-                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name+' '+this.state.school.school_number+' - maktab ':""}</h1>                        
-                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
+                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
+                    <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
                      <Link to="/hayot/uz"><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
                     <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
