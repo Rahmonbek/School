@@ -36,8 +36,6 @@ export default class Login extends Component {
                 GLOBAL.teacherId = res.data.id;
                 window.localStorage.setItem("token", res.data.token);
                 this.setState({ login: true });
-              } else {
-                message.error("Login yoki parolni xato kiritdingiz. Iltimos tekshirib qaytatdan kiriting.");
               }
             });
           } else {
@@ -63,7 +61,7 @@ export default class Login extends Component {
               <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
               <Form.Label className={style.formLabel}>Parol</Form.Label>
             </Form.Group>
-            <Link to="/verify">Emailni tasdiqlash</Link>
+            {/* <Link to="/verify">Emailni tasdiqlash</Link> */}
             <br />
             <Button className={style.sub} type="submit">
               <span></span>
