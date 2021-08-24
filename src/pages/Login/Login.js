@@ -20,7 +20,6 @@ export default class Login extends Component {
     axios
       .post(`${url}/login/`, formDataObj)
       .then((res) => {
-        console.log(res.data);
         axios.get(`${url}/staff/`).then((res1) => {
           res1.data.map((item1, key) => {
             return item1.user === res.data.id ? (GLOBAL.schoolId = key) : "";
