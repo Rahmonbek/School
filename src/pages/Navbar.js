@@ -27,7 +27,7 @@ export default class NavBar extends Component {
         <NavbarContainer>
                     <Navbar collapseOnSelect expand="lg">
                         <Container>
-                            <Navbar.Brand><p className={style.maktabLogo} style={{color:'white', cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'white'}}>{}</Link></p></Navbar.Brand>
+                            <Navbar.Brand><p className={style.maktabLogo} style={{color:'white', cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'white'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
