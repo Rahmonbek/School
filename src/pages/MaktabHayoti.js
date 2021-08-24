@@ -20,14 +20,15 @@ import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import {FadeLoader} from 'react-spinners'
 import PannellumReact from "../pages/panolleum";
 import { Carousel } from "antd";
 import axios from "axios";
 
 export default class MaktabHayoti extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { data: [] };
+  state={
+    loading:true,
+    data:[],
   }
   componentDidMount() {
     Aos.init({
@@ -36,12 +37,11 @@ export default class MaktabHayoti extends Component {
     axios
       .get("http://maktab2.herokuapp.com/school-by-admin/137/")
       .then((res) => {
-        this.setState({ data: res.data });
+        this.setState({loading:false, data: res.data });
       });
   }
 
   render() {
-    console.log(this.state.data);
     // const contentStyle = {
     //   height: "160px",
     //   color: "#fff",
@@ -53,6 +53,13 @@ export default class MaktabHayoti extends Component {
     const { data } = this.state;
     return (
       <div>
+        {
+    this.state.loader?<div className="loaderT">
+<FadeLoader
+
+ color='blue' loading={this.state.loader} size={120} />        
+
+    </div>:<>
         <div className={styles.headerSliderText}>
           <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
             Maktab Hayoti
@@ -583,7 +590,7 @@ export default class MaktabHayoti extends Component {
               </Row>
             </Col>
           </Row>
-        </Container>
+        </Container></>}
       </div>
     );
   }
