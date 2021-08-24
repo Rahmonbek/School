@@ -92,20 +92,20 @@ export default class Yutuqlar extends Component {
             <Modal title={`Yutuq haqida ma'lumot`} centered width="70%" visible={this.state.show} onCancel={this.handleCancel} footer={false}>
               <Form>
                 <Form.Group>
-                  <Form.Label>Yutuq sarlavhasi</Form.Label>
-                  <Form.Control value={this.state.achiv.competition} />
+                  <Form.Label>Yutuq nomi</Form.Label>
+                  <Form.Control readOnly value={this.state.achiv.competition} />
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>O'rin</Form.Label>
-                  <Form.Control value={this.state.achiv.result} />
+                  <Form.Control readOnly value={this.state.achiv.result} />
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>O'quvchilar</Form.Label>
-                  <Form.Control value={this.state.achivPupils} />
+                  <Form.Control readOnly value={this.state.achivPupils} />
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Yutuq matni</Form.Label>
-                  <Form.Control as="textarea" rows={4} value={this.state.achiv.text} />
+                  <Form.Control readOnly as="textarea" rows={4} value={this.state.achiv.text} />
                 </Form.Group>
                 <br />
                 <Button type="primary" onClick={() => this.handleCancel()}>
