@@ -290,7 +290,8 @@ componentDidMount(){
                                 {/* 3/4 Rasm (jpg/png/jpeg-formatida). */}
                             </p>
                             <p style={{color:'darkgray', marginTop:'30px'}}>
-                            Toshkent shahar, Yashnabod tumani, Mahtumquli ko’chasi Call-Center: 1206 (Ish vaqti 08:00dan – 20:00gacha)
+                            {this.state.school!==null?this.state.school.address!==null?this.state.school.address:"Maktab manzili":"Maktab manzili"}
+                            {/* Toshkent shahar, Yashnabod tumani, Mahtumquli ko’chasi Call-Center: 1206 (Ish vaqti 08:00dan – 20:00gacha) */}
                             </p>
                         </div>
                     </div>
