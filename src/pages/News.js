@@ -64,7 +64,6 @@ componentDidMount(){
                                <div onClick={()=>{
                                this.loginNews(key)
                                }} className={styles.text}>
-                               <p><i class="far fa-calendar-alt"></i> {item.published_time.substring(0, 10)}   </p>
                                <h6>{item.title}</h6>
                                  </div> 
                                 

@@ -32,21 +32,21 @@ componentDidMount(){
         <NavbarContainer>
                     <Navbar collapseOnSelect expand="lg">
                         <Container>
-                            <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'gold', fontSize:"24px", }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
+                            <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'gold', fontSize:"24px",fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px'}} to="/hayot/uz"><p className='navLink'>Maktab hayoti</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px'}} to="/qabul/uz"><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px'}} to="/alochilar/uz"><p className='navLink'>Maktab alochilari</p></NavLink>
-                                    <div className={style.bayroqlar}>
-                              {/* <Link to='/uz'><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
-                              <Link to='/ru'><img src={flagRU} /></Link> */}
-                          </div>
-                                <Link to='/login/uz' className='kirish'><FontAwesomeIcon style={{display:'inline-block',marginTop:'30px'}} icon={faUserCircle} className='userIcon' />  Kirish</Link>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/hayot/uz"><p className='navLink'>Maktab hayoti</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/qabul/uz"><p className='navLink'>Qabul</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/alochilar/uz"><p className='navLink'>Maktab alochilari</p></NavLink>
+                                    {/* <div className={style.bayroqlar}>
+                               <Link to='/uz'><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
+                              <Link to='/ru'><img src={flagRU} /></Link>
+                          </div> */}
+                                <Link  style={{marginLeft:'100px'}}  to='/login/uz' className='kirish'><FontAwesomeIcon style={{display:'inline-block',marginTop:'30px'}} icon={faUserCircle} className='userIcon' />  Kirish</Link>
 </Nav>
                                 
                             </Navbar.Collapse>
