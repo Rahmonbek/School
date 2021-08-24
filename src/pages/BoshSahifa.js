@@ -134,7 +134,8 @@ id:0,
                 
                 <XushKelibsiz>
                     <Container>
-                     <h1>Maktab Nomi</h1>                        <Button className='buttonn'>Maktab hayoti</Button>
+                     <h1>Maktab Nomi</h1>                        
+                     <Link to="/hayot/uz"><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
                 </XushKelibsiz>
 
