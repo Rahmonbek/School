@@ -1,6 +1,13 @@
 import Global from "./Global";
 import { httpRequest, idMaktab, url } from "./Host";
 
+export const getSchool = () => {
+  var config = {
+    url: `${url}/school/`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
 export const getNews = () => {
   var config = {
     url: `${url}/new/${idMaktab}/`,
