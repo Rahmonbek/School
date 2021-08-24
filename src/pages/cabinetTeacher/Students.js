@@ -75,13 +75,25 @@ export default class Students extends Component {
                         <div className={style.cardBody}>
                           <h3>{item.full_name}</h3>
                           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", height: "100%" }}>
-                            <p style={{ marginTop: "10px" }}>
+                            <p style={{ marginTop: "10px", width: "100%" }}>
                               <b>Tug'ilgan sanasi: </b>
                               {item.birth_day}
                             </p>
-                            <p style={{ marginTop: "-10px" }}>
-                              <b>Otasi yoki onasi: </b>
-                              {item.parent}
+                            <p style={{ marginTop: "-10px", width: "100%" }}>
+                              <b>Otasi: </b>
+                              {item.father_name}
+                            </p>
+                            <p style={{ marginTop: "-10px", width: "100%" }}>
+                              <b>Otasining telefon raqami: </b>
+                              {item.father_tel}
+                            </p>
+                            <p style={{ marginTop: "-10px", width: "100%" }}>
+                              <b>Onasi: </b>
+                              {item.mother_name}
+                            </p>
+                            <p style={{ marginTop: "-10px", width: "100%" }}>
+                              <b>Onasining telefon raqami: </b>
+                              {item.mother_tel}
                             </p>
                           </div>
                         </div>

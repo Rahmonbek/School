@@ -16,7 +16,9 @@ export default class HeaderTeacher extends Component {
   getTeacher = () => {
     getStaff().then((res) => this.setState({ teacher: res.data }));
   };
-  logout = () => {};
+  logout = () => {
+    window.location.href = "/uz";
+  };
 
   componentDidMount() {
     this.getTeacher();
