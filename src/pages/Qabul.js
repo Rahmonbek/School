@@ -8,17 +8,46 @@ import jarayon from '../img/jarayon.png'
 import tav_img from '../img/tav_img.jpg'
 import talab from '../img/talab.jpg'
 import {Container, Row, Col} from 'react-bootstrap';
+import axios from 'axios';
+import { url, user } from '../host/Host';
+import FadeLoader from "react-spinners/FadeLoader";
 
 class Qabul extends React.Component {
+        state={
+        loader:true,
+        qabul:[],
+        id:0,
+        school:null,
+          }
    
+          getSchool=()=>{
+            axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+                this.setState({
+                    school:res.data,
+              loader:false,
+                })
+                console.log(res.data)
+            })
+        }
+
 componentDidMount(){
     Aos.init({
         duration:2000
     })
+    this.getSchool();
 }
     render() {
         return (
             <div>
+                {
+                    this.state.loader?<div className="loaderT">
+                    <FadeLoader
+                     color='blue' loading={this.state.loader} size={120} />        
+                    
+                        </div>:<> 
+                
+
+
                <div style={{backgroundColor:'#318CE7', width:'100%', }}>
                            <Container>
                     <div style={{width:'100%', height:'100vh', position:'relative'}} >
@@ -42,16 +71,19 @@ componentDidMount(){
                <Container>
                     <Row>
                     <Col lg={4} md={12} sm={12} className={styles.tavsilot}>
-            <img src={tav_img}  data-aos="zoom-in-up"/>
+            <img src={this.state.school!==null?this.state.school.q!==null?this.state.school.q: tav_img:tav_img}  data-aos="zoom-in-up"/>
             </Col>
             <Col lg={8} md={12} sm={12} className={styles.tavsilottext} data-aos="zoom-in-up" >
             <h3>Qabul jarayoni bo'yicha tafsilotlar</h3>
-                            <p>
+                        
+                        <p>{this.state.school!==null?this.state.school.q_t!==null?this.state.school.q_t:"Qabul jarayonlari bo'yicha tavsilotlar":"Qabul jarayonlari bo'yicha tavsilotlar"}</p>
+
+                            {/* <p>
                             Agar siz ertangi kun uchun dunyoni tarannum etishga qaratilgan shahar markazidagi universitetda o'qishni istasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir talabnoma beruvchining ilmiy va shaxsiy arizalarini ko'rib chiqamiz, har xil ma'lumotlarga ega bo'lgan jamoamizga mos talabalarni tanlash uchun.
                             </p>
                             <p>
                             Agar siz shaharning qoq markazida joylashgan universitetda o'qishni xohlasangiz, agar siz ertangi kun uchun dunyoni tarannum etishga e'tibor qaratadigan shahar markazidagi universitetda o'qishni xohlasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir abituriyentning ilmiy va shaxsiy arizasini ko'rib chiqamiz, bu bizning jamoamizga to'liq mos keladigan talabalarni tanlash uchun
-                            </p>
+                            </p> */}
             </Col>
                     </Row>
                 </Container>
@@ -66,7 +98,8 @@ componentDidMount(){
                             </div>
                                 <h3>Ta'lim shakli</h3>
                                 <p style={{fontSize:'18px'}}>
-                                Bizning maktab ta’lim shakli kunduzgi bo’lib ta’lim jarayonlari 8:30 dan 16:00 gacha belgilangan.
+                                {this.state.school!==null?this.state.school.q_talim!==null?this.state.school.q_talim:"Ta'lim shakli to'g'risida ma'lumot":"Ta'lim shakli to'g'risida ma'lumot"}  
+                                {/* Bizning maktab ta’lim shakli kunduzgi bo’lib ta’lim jarayonlari 8:30 dan 16:00 gacha belgilangan. */}
                                 </p>
                                 </div></Col>
 
@@ -77,7 +110,9 @@ componentDidMount(){
                             </div>
                             <h3>Bitiruvchilar</h3>
                                 <p style={{fontSize:'18px'}}>
-                                2019-2020 o‘quv yili yakuniga ko‘ra 106 nafar 11-sinf o‘quvchilari maktabni tamomlashdi va ulardan 42 nafar o‘quvchi Xalqaro Universitetlarga kirish imtihonlaridan muvaffaqiyatli o‘tishdi.
+                                {this.state.school!==null?this.state.school.q_bitiruv!==null?this.state.school.q_bitiruv:"Bitiruv to'g'risida ma'lumotlar":"Bitiruv to'g'risida ma'lumotlar"} 
+
+                                {/* 2019-2020 o‘quv yili yakuniga ko‘ra 106 nafar 11-sinf o‘quvchilari maktabni tamomlashdi va ulardan 42 nafar o‘quvchi Xalqaro Universitetlarga kirish imtihonlaridan muvaffaqiyatli o‘tishdi. */}
                                 </p>
                                 </div></Col>
                             <Col lg={4} md={12} sm={12}><div className={styles.info} style={{backgroundColor:'white'}} data-aos="zoom-in-up">    
@@ -86,7 +121,9 @@ componentDidMount(){
                             </div>
                             <h3>O'quvchilar</h3>
                                 <p style={{fontSize:'18px'}}>
-                                2019-2020 o‘quv yilida 5- sinfdan 11-sinfgacha bo’lgan 656 nafar o‘quvchi ta’lim oldi.
+
+                                {this.state.school!==null?this.state.school.q_oquvchi!==null?this.state.school.q_oquvchi:"O'quvchilar to'g'risida ma'lumot":"O'quvchilar to'g'risida ma'lumot"} 
+                                {/* 2019-2020 o‘quv yilida 5- sinfdan 11-sinfgacha bo’lgan 656 nafar o‘quvchi ta’lim oldi. */}
                                 </p>
                                 </div></Col>
 
@@ -105,7 +142,10 @@ componentDidMount(){
                          <h3>1. Onlayn royxatdan o'ting</h3>
                          <div className={styles.line}></div>
                          <p>
-                         Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+                             
+                         {this.state.school!==null?this.state.school.q_j_online!==null?this.state.school.q_j_online:"O'nline ro'yxatdan o'tish haqida":"O'nline ro'yxatdan o'tish haqida"} 
+
+                         {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                          </p>
                       </div>
                       
@@ -113,7 +153,10 @@ componentDidMount(){
                           <h3>2. Formani to'ldiring</h3>
                           <div className={styles.line}></div>
                           <p>
-                          Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+
+                              {this.state.school!==null?this.state.school.q_j_forma!==null?this.state.school.q_j_forma:"Ro'yxatdan o'tishdagi formani to'ldirish haqida ma'lumot":"Ro'yxatdan o'tishdagi formani to'ldirish haqida ma'lumot"} 
+
+                          {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
                       </div>
 
@@ -121,7 +164,10 @@ componentDidMount(){
                           <h3>3. Ro'yxatdan o'tishni ko'zdan kechiring</h3>
                           <div className={styles.line}></div>
                           <p>
-                          Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+
+                          {this.state.school!==null?this.state.school.q_j_koz!==null?this.state.school.q_j_koz:"Ro'yxatdan o'tishni ko'zdan kechirish haqida ma'lumot":"Ro'yxatdan o'tishni ko'zdan kechirish haqida ma'lumot"} 
+
+                          {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
                       </div>
                       </Col>
@@ -131,7 +177,9 @@ componentDidMount(){
                          <h3>4. Kerakli hujjatlarni to'plang</h3>
                          <div className={styles.line}></div>
                          <p>
-                         Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+
+                         {this.state.school!==null?this.state.school.q_j_hujjat!==null?this.state.school.q_j_hujjat:"Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot":"Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"} 
+                         {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                          </p>
                       </div>
                       
@@ -139,7 +187,10 @@ componentDidMount(){
                           <h3>5. Intervyu jarayoni</h3>
                           <div className={styles.line}></div>
                           <p>
-                          Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+
+                          {this.state.school!==null?this.state.school.q_j_intervyu!==null?this.state.school.q_j_intervyu:"Intervyu jarayoni haqida ma'lumot":"Intervyu jarayoni haqida ma'lumot"} 
+
+                          {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
                       </div>
 
@@ -147,7 +198,10 @@ componentDidMount(){
                           <h3>6. So'nggi qaror</h3>
                           <div className={styles.line}></div>
                           <p>
-                          Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman.
+
+                             {this.state.school!==null?this.state.school.q_j_qaror!==null?this.state.school.q_j_qaror:"So'ngi qaror haqida ma'lumot":"So'ngi qaror haqida ma'lumot"}
+
+                          {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
                       </div>
                       </Col>
@@ -160,11 +214,14 @@ componentDidMount(){
                 <Container>
                     <Row>
                     <Col lg={4} md={12} sm={12} className={styles.tavsilot}>
-            <img src={talab}  data-aos="zoom-in-up"/>
+            <img src={this.state.school!==null?this.state.school.q_imtihon_r!==null?this.state.school.q_imtihon_r: talab:talab}  data-aos="zoom-in-up"/>
             </Col>
             <Col lg={8} md={12} sm={12} className={styles.tavsilottext} data-aos="zoom-in-up" style={{height:'570px'}}>
             <h3 style={{fontSize:'30px'}}>Imtihonda ishtirok etish talablari</h3>
-                            <p>
+                           <p>
+                           {this.state.school!==null?this.state.school.q_imtihon_t!==null?this.state.school.q_imtihon_t:"Imtixonda ishtirok etish talablari haqida ma'lumot":"Imtixonda ishtirok etish talablari haqida ma'lumot"}
+                           </p>
+                            {/* <p>
                             O‘quvchilarning ota-onasi yoki ota-onasining o‘rnini bosuvchi shaxslar quyidagi talablarni bajarishi shart:
                             – ro‘yxatdan o‘tish vaqtida o‘quvchining ID ko‘rsatib yuborilgan SMS xabarni qabul qiluvchi telefon raqamni aniq ko‘rsatilishi; – veb-ilova orqali uydan yoki infrastruktura mavjud bo‘lgan istalgan joydan o‘quvchi imtihonga qatnasha olishi uchun Internet tarmog‘i bo‘lgan hamda ZOOM ilovasi o‘rnatilgan kompyuter yoki planshet yoki smartfon bilan ta’minlashi; – o‘quvchiga tarmoq orqali sinovlarda qatnashishga tayyorlashi.
                             </p>
@@ -173,7 +230,7 @@ componentDidMount(){
                             </p>
                             <p>
                             O‘quvchining taqdim etgan hujjatlari haqqoniyligi va farzandining sinovlarda shaffof ishtirokini taʼminlash ota-ona zimmasiga yuklatiladi.
-                            </p>
+                            </p> */}
             </Col>
                     </Row>
                 </Container>
@@ -187,9 +244,24 @@ componentDidMount(){
                        <div className={styles.line} style={{marginLeft:'auto', marginRight:'auto'}}></div>
                        <Row>
                            <div className={styles.muddat_item}>
-                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text1} ><div ><h3>O'quv yili</h3><p>2020/2021</p></div></div></Col>
-                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text2}><div ><h3>Hujjat topshirish muddati</h3><p>10-20-sentabr kunlari</p></div></div></Col>
-                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text3}><div ><h3>Imtihon kuni</h3><p>25-sentabrdan 9-oktabrgacha</p></div></div></Col>
+                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text1} ><div ><h3>O'quv yili</h3>
+                           <p>
+                           {this.state.school!==null?this.state.school.q_oquv_yili!==null?this.state.school.q_oquv_yili:"O'quv yili":"O'quv yili"}
+                               {/* 2020/2021 */}
+                               </p>
+                           </div></div></Col>
+                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text2}><div ><h3>Hujjat topshirish muddati</h3>
+                           <p>
+                           {this.state.school!==null?this.state.school.q_muddat!==null?this.state.school.q_muddat:"Muddati haqida ma'lumot":"Muddati haqida ma'lumot"}
+                               {/* 10-20-sentabr kunlari */}
+                               </p>
+                           </div></div></Col>
+                           <Col lg={4} md={12} sm={12}><div className={styles.muddat_text3}><div ><h3>Imtihon kuni</h3>
+                           <p>
+                           {this.state.school!==null?this.state.school.q_imtihon!==null?this.state.school.q_imtihon:"Imtixon kuni":"Imtixon kuni"}
+                               {/* 25-sentabrdan 9-oktabrgacha */}
+                               </p>
+                           </div></div></Col>
                            </div>
                        </Row>
                    </Container>
@@ -203,22 +275,29 @@ componentDidMount(){
                             <h3>Kerakli hujjatlar</h3>
                             <div className={styles.line} ></div>
                             <p>
-                            <b>1.</b> O‘quvchining tug‘ilganligi haqida guvohnoma (pdf-10Mb oshmagan holatda).
+                            <b>1.</b> 
+                            {this.state.school!==null?this.state.school.q_hujjat_t1!==null?this.state.school.q_hujjat_t1:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
+                            {/* O‘quvchining tug‘ilganligi haqida guvohnoma (pdf-10Mb oshmagan holatda). */}
                             </p>
                             <p>
-                                <b>2.</b> 2019-2020 o‘quv yilini “4”va “5” baholarga bitirganligini tasdiqlovchi o‘quvchining tabeli. Maktab direktori tomonidan tasdiqlangan bo‘lishi kerak (pdf-10Mb oshmagan holatda).
+                                <b>2.</b> 
+                                {this.state.school!==null?this.state.school.q_hujjat_t2!==null?this.state.school.q_hujjat_t2:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
+                                {/* 2019-2020 o‘quv yilini “4”va “5” baholarga bitirganligini tasdiqlovchi o‘quvchining tabeli. Maktab direktori tomonidan tasdiqlangan bo‘lishi kerak (pdf-10Mb oshmagan holatda). */}
                             </p>
                             <p>
-                                <b>3.</b>  3/4 Rasm (jpg/png/jpeg-formatida).
+                                <b>3.</b>  
+                                {this.state.school!==null?this.state.school.q_hujjat_t3!==null?this.state.school.q_hujjat_t3:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
+                                {/* 3/4 Rasm (jpg/png/jpeg-formatida). */}
                             </p>
                             <p style={{color:'darkgray', marginTop:'30px'}}>
-                            Toshkent shahar, Yashnabod tumani, Mahtumquli ko’chasi Call-Center: 1206 (Ish vaqti 08:00dan – 20:00gacha)
+                            {this.state.school!==null?this.state.school.address!==null?this.state.school.address:"Maktab manzili":"Maktab manzili"}
+                            {/* Toshkent shahar, Yashnabod tumani, Mahtumquli ko’chasi Call-Center: 1206 (Ish vaqti 08:00dan – 20:00gacha) */}
                             </p>
                         </div>
                     </div>
                 </Container>
-            </div>
-        );
+                </>    }</div>
+        )
     }
 }
 
