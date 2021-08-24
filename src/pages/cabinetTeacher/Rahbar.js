@@ -20,6 +20,8 @@ export default class Rahbar extends Component {
       title: "T/r",
       dataIndex: "key",
       key: "key",
+      fixed: "left",
+      width: 50,
     },
     {
       title: "Rasm",
@@ -40,9 +42,30 @@ export default class Rahbar extends Component {
       key: "birth_day",
     },
     {
+      title: "Otasi",
+      dataIndex: "father_name",
+      key: "father_name",
+    },
+    {
+      title: "Otasining telefon raqami",
+      dataIndex: "father_tel",
+      key: "father_tel",
+    },
+    {
+      title: "Onasi",
+      dataIndex: "mother_name",
+      key: "mother_name",
+    },
+    {
+      title: "Onasining telefon raqami",
+      dataIndex: "mother_tel",
+      key: "mother_tel",
+    },
+    {
       title: "O'zgartirish",
       dataIndex: "key",
       key: "key",
+      fixed: "right",
       render: (key) => {
         return (
           <Button variant="primary" onClick={() => this.editPupil(key - 1)}>
@@ -55,6 +78,7 @@ export default class Rahbar extends Component {
       title: "O'chirish",
       dataIndex: "id",
       key: "id",
+      fixed: "right",
       render: (id) => {
         return (
           <Button variant="danger" onClick={() => this.deletePupil(id)}>
@@ -84,7 +108,26 @@ export default class Rahbar extends Component {
     });
   };
   editPupil = (id) => {
-    this.setState({ edit: this.state.pupils[id].id, pupil: this.state.pupils[id], imageUrl: this.state.pupils[id].image });
+    getPupils(Global.classId).then((res) => {
+      var pupils = res.data.sort((a, b) => {
+        let x = a.full_name.toLowerCase();
+        let y = b.full_name.toLowerCase();
+        if (x < y) {
+          return -1;
+        }
+        if (x > y) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ edit: pupils[id].id, imageUrl: pupils[id].image });
+      document.getElementById("fullname").value = pupils[id].full_name;
+      document.getElementById("birthday").value = pupils[id].birth_day;
+      document.getElementById("fathername").value = pupils[id].father_name;
+      document.getElementById("fathertel").value = pupils[id].father_tel;
+      document.getElementById("mothername").value = pupils[id].mother_name;
+      document.getElementById("mothertel").value = pupils[id].mother_tel;
+    });
     this.openModal();
   };
   deletePupil = (id) => {
@@ -100,12 +143,19 @@ export default class Rahbar extends Component {
       full_name: document.getElementById("fullname").value,
       birth_day: document.getElementById("birthday").value,
       clas: Global.classId,
+      father_name: document.getElementById("fathername").value,
+      father_tel: document.getElementById("fathertel").value,
+      mother_name: document.getElementById("mothername").value,
+      mother_tel: document.getElementById("mothertel").value,
     };
     let formData = new FormData();
     formData.append("full_name", data.full_name ?? "");
     formData.append("birth_day", data.birth_day ?? null);
     formData.append("clas", data.clas ?? null);
-    formData.append("parent", null);
+    formData.append("father_name", data.father_name ?? null);
+    formData.append("father_tel", data.father_tel ?? null);
+    formData.append("mother_name", data.mother_name ?? null);
+    formData.append("mother_tel", data.mother_tel ?? null);
     if (this.state.edit !== null) {
       if (this.state.image !== "") {
         formData.append("image", this.state.image ?? null);
@@ -137,7 +187,13 @@ export default class Rahbar extends Component {
     this.setState({ show: true });
   };
   handleCancel = () => {
-    this.setState({ show: false, edit: null, imageUrl: "", image: "", pupil: [] });
+    this.setState({ show: false, edit: null, imageUrl: "", image: "" });
+    document.getElementById("fullname").value = "";
+    document.getElementById("birthday").value = "";
+    document.getElementById("fathername").value = "";
+    document.getElementById("fathertel").value = "";
+    document.getElementById("mothername").value = "";
+    document.getElementById("mothertel").value = "";
   };
   customRequest = (e) => {
     this.setState({ image: e.target.files[0] });
@@ -152,24 +208,45 @@ export default class Rahbar extends Component {
           <Button variant="primary" style={{ margin: "20px 0" }} onClick={this.openModal}>
             O'quvchi qo'shish
           </Button>
-          {this.state.pupils !== [] ? <Table columns={this.columns} dataSource={this.state.pupils} style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "5px" }} /> : ""}
-          <Modal title="Sinf yaratish" visible={this.state.show} onCancel={this.handleCancel} footer={false}>
+          {this.state.pupils !== [] ? <Table columns={this.columns} dataSource={this.state.pupils} size="small" scroll={{ x: 1366 }} bordered style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "5px", width: "100%" }} /> : ""}
+          <Modal title="O'quvchi yaratish" visible={this.state.show} onCancel={this.handleCancel} footer={false}>
             <Form>
               <Form.Group className="mb-3" controlId="fullname">
-                <Form.Label>F.I.Sh.</Form.Label>
-                <Form.Control placeholder="F.I.Sh." defaultValue={this.state.pupil !== [] ? this.state.pupil.full_name : ""} />
+                <Form.Label>O'quvchining f.i.sh.</Form.Label>
+                <Form.Control placeholder="O'quvchining f.i.sh." />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="birthday">
                 <Form.Label>Tug'ilgan kun</Form.Label>
-                <Form.Control type="date" defaultValue={this.state.pupil !== [] ? this.state.pupil.birth_day : ""} />
+                <Form.Control type="date" />
               </Form.Group>
+
               <Form.Group className="mb-3">
                 <Form.Label>Rasm</Form.Label>
                 <Input type="file" id="rasmlar" required={this.state.edit === null ? true : false} style={{ marginBottom: "20px" }} onChange={this.customRequest} />
                 {this.state.image === "" && this.state.imageUrl !== "" ? ImageDemo(this.state.imageUrl) : ""}
               </Form.Group>
               <br />
+
+              <Form.Group className="mb-3" controlId="fathername">
+                <Form.Label>Otasining f.i.sh.</Form.Label>
+                <Form.Control placeholder="Otasining f.i.sh." />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="fathertel">
+                <Form.Label>Otasining telefon raqami</Form.Label>
+                <Form.Control placeholder="Otasining telefon raqami" />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="mothername">
+                <Form.Label>Onasining f.i.sh.</Form.Label>
+                <Form.Control placeholder="Onasining f.i.sh." />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="mothertel">
+                <Form.Label>Onasining telefon raqami</Form.Label>
+                <Form.Control placeholder="Onasining telefon raqami" />
+              </Form.Group>
 
               <Button variant="danger" style={{ marginRight: "10px" }} onClick={this.handleCancel}>
                 Bekor qilish

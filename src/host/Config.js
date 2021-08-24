@@ -91,6 +91,14 @@ export const getPupils = (id) => {
   return httpRequest(config);
 };
 
+export const getExcellent = (id) => {
+  var config = {
+    url: `${url}/excellent/${idMaktab}/`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
 export const createPupil = (configs) => {
   var config = {
     url: `${url}/pupil/`,
