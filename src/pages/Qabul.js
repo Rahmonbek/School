@@ -166,7 +166,7 @@ componentDidMount(){
             <h3 style={{fontSize:'30px'}}>Imtihonda ishtirok etish talablari</h3>
                             <p>
                             O‘quvchilarning ota-onasi yoki ota-onasining o‘rnini bosuvchi shaxslar quyidagi talablarni bajarishi shart:
-– ro‘yxatdan o‘tish vaqtida o‘quvchining ID ko‘rsatib yuborilgan SMS xabarni qabul qiluvchi telefon raqamni aniq ko‘rsatilishi; – veb-ilova orqali uydan yoki infrastruktura mavjud bo‘lgan istalgan joydan o‘quvchi imtihonga qatnasha olishi uchun Internet tarmog‘i bo‘lgan hamda ZOOM ilovasi o‘rnatilgan kompyuter yoki planshet yoki smartfon bilan ta’minlashi; – o‘quvchiga tarmoq orqali sinovlarda qatnashishga tayyorlashi.
+                            – ro‘yxatdan o‘tish vaqtida o‘quvchining ID ko‘rsatib yuborilgan SMS xabarni qabul qiluvchi telefon raqamni aniq ko‘rsatilishi; – veb-ilova orqali uydan yoki infrastruktura mavjud bo‘lgan istalgan joydan o‘quvchi imtihonga qatnasha olishi uchun Internet tarmog‘i bo‘lgan hamda ZOOM ilovasi o‘rnatilgan kompyuter yoki planshet yoki smartfon bilan ta’minlashi; – o‘quvchiga tarmoq orqali sinovlarda qatnashishga tayyorlashi.
                             </p>
                             <p>
                             Ixtisoslashtirilgan maktabga saralash imtihonlarida ishtirok etish uchun hujjatlar davlat va nodavlat umumiy o‘rta ta’lim muassasalarining tartibli bosqichdagi sinflarini muvaffaqiyatli “4” va “5” baholariga tamomlagan o‘quvchilardan qabul qilinadi.
