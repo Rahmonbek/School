@@ -3,7 +3,7 @@ import { httpRequest, idMaktab, url } from "./Host";
 
 export const getNews = () => {
   var config = {
-    url: `${url}/new/${idMaktab}`,
+    url: `${url}/new/${idMaktab}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -11,7 +11,7 @@ export const getNews = () => {
 
 export const getEvents = () => {
   var config = {
-    url: `${url}/event/${idMaktab}`,
+    url: `${url}/event/${idMaktab}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -35,9 +35,17 @@ export const getClasses = () => {
   return httpRequest(config);
 };
 
+export const getClassesBySchool = (id) => {
+  var config = {
+    url: `${url}/class-by-school/${id}`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
 export const getStaffBySchool = () => {
   var config = {
-    url: `${url}/staff-by-school/${Global.schoolId}`,
+    url: `${url}/staff-by-school/${Global.schoolId}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -45,7 +53,7 @@ export const getStaffBySchool = () => {
 
 export const getStaff = () => {
   var config = {
-    url: `${url}/staff/${Global.staffId}`,
+    url: `${url}/staff/${Global.staffId}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -64,6 +72,40 @@ export const editStaff = (configs, id) => {
     url: `${url}/staff/${id}/`,
     method: "put",
     data: configs,
+  };
+  return httpRequest(config);
+};
+
+export const getPupils = (id) => {
+  var config = {
+    url: `${url}/pupil/${id}/`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
+export const createPupil = (configs) => {
+  var config = {
+    url: `${url}/pupil/`,
+    method: "post",
+    data: configs,
+  };
+  return httpRequest(config);
+};
+
+export const editPupils = (configs, id) => {
+  var config = {
+    url: `${url}/pupil/${id}/`,
+    method: "put",
+    data: configs,
+  };
+  return httpRequest(config);
+};
+
+export const deletePupils = (id) => {
+  var config = {
+    url: `${url}/pupil/${id}/`,
+    method: "delete",
   };
   return httpRequest(config);
 };
