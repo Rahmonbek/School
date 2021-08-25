@@ -42,7 +42,7 @@ function SelectMap() {
         console.log(data[i]);
         for (let j = 0; j < school.length; j++) {
           if (data[i].id === school[j].region) {
-            g.push(school[i]);
+            g.push(school[j]);
           }
         }
       }
