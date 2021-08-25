@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HeaderTeacher from "./cabinetTeacher/HeaderTeacher";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Box from "./cabinetTeacher/BoxTeacher";
 import Yutuqlar from "./cabinetTeacher/Yutuqlar";
 import Chat from "./cabinetTeacher/Chat";
@@ -96,8 +96,7 @@ export default class ParentCabinet extends Component {
       <div>
         <BrowserRouter>
           <HeaderTeacher />
-          <Row>
-            <Col lg={9} md={12}>
+         
               <Switch>
                 <Route exact path="/cabinet/teacher/bolim/chat">
                   <Chat />
@@ -180,7 +179,18 @@ export default class ParentCabinet extends Component {
                                     Saqlash
                                   </Button>
                                 </Form>
-                                <Form onSubmit={this.addLesson} style={{ backgroundColor: "white", padding: "20px", marginBottom: "30px" }}>
+                             
+                              </div>
+                           
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{width:"86%", marginTop:'50px', marginLeft:'7%' }}>
+                    <Container>
+                  
+                            <Form onSubmit={this.addLesson}  style={{backgroundColor:'white', padding:'20px', boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px', marginBottom:'30px'}}>
                                   <Row>
                                     <Col lg={7}>
                                       <Form.Group controlId="pass" className="mb-3">
@@ -204,21 +214,13 @@ export default class ParentCabinet extends Component {
                                     </Col>
                                   </Row>
                                 </Form>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                           
+                            </Container> </div>
                   </div>
                 </Route>
               </Switch>
-            </Col>
-
-            <Col lg={3} md={12} style={{ transform: "translate(-10px, 0px)" }}>
-              <News />
-            </Col>
-          </Row>
+           
+           
         </BrowserRouter>
       </div>
     ) : (

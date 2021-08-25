@@ -39,7 +39,7 @@ export default class HeaderTeacher extends Component {
             <Col>
               <div className={style.h1}>
                 <NavLink style={{ textDecoration: "none" }} to="/cabinet/teacher/bolim">
-                  <h1 style={{ fontSize: "40px" }}>Bosh bo'lim</h1>
+                  <h1 style={{ fontSize: "26px" }}>Bosh bo'lim</h1>
                 </NavLink>
               </div>
             </Col>
