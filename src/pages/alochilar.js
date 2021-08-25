@@ -1,200 +1,183 @@
-import React, { Component } from 'react'
-import style from '../css/alochilar.module.css'
-import img from '../img/pl.jpg'
+import React, { Component } from "react";
+import style from "../css/alochilar.module.css";
+import img from "../img/pl.jpg";
 import styles from "../css/maktabHayoti.module.css";
 import { DownCircleOutlined } from "@ant-design/icons";
-import { Carousel } from 'antd';
+import { Carousel } from "antd";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import axios from 'axios';
-import Aos from 'aos';
+import axios from "axios";
+import Aos from "aos";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
 import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
-import { getPupils, getExcellent } from '../host/Config';
-import { idMaktab, url,  } from '../host/Host';
+import { getExcellent, getPupil } from "../host/Config";
+import { idMaktab, url } from "../host/Host";
 
+export default class Alochilar extends Component {
+  state = {
+    loader: true,
+    excellent: [],
+    pupil: [],
+    pupils: [],
+    data: null,
+    id: 0,
+    school: null,
+    class: [],
+  };
 
-export default class Alochilar extends Component{
-    state={
-        loader:true,
-        excellent:[],
-        pupil:[],
-        id:0,
-        school:null,
-          }
-         
-    constructor(props) {
-        super(props);
-        this.state = { data: [] };
-       
-      }
-
-      getExcellents=()=>{
-        axios.get(`${url}/excellent/${idMaktab}/`).then(res=>{
-            this.setState({
-                excellent :res.data,
-          loader:false,
-            })
-            console.log(res.data)
-        })
-      }
-
-      getPupil=()=>{
-        getPupils().then(res=>{
-            this.setState({
-               pupil:res.data
-            })
-            console.log(res.data)
-        })
-       
-      }
-
-      
-
-    
-
-      componentDidMount() {
-     
-        Aos.init({
-          duration: 2000,
+  getExcellents = () => {
+    axios
+      .get(`${url}/excellent/${idMaktab}/`)
+      .then((res) => {
+        this.setState({
+          excellent: res.data,
         });
-        axios
-          .get("http://maktab2.herokuapp.com/school-by-admin/137/")
-          .then((res) => {
-            this.setState({ data: res.data });
-          });
-        
-         this.getExcellents() ;
-         this.getPupil();
-      }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios.get("http://maktab2.herokuapp.com/school-by-admin/137/").then((res) => {
+      this.setState({ data: res.data });
+    });
+    axios
+      .get(`${url}/class-by-school/${idMaktab}/`)
+      .then((res) => {
+        this.setState({
+          class: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-      
-    render(){
-        const { data } = this.state;
-        return(
-<div>
-            <div className={styles.headerSliderText}>
-          <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
-            Maktab Hayoti
-          </h3>
+  getPupil = () => {
+    getPupil()
+      .then((res) => {
+        this.setState({
+          pupils: res.data,
+        });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  setPupils = (id) => {
+    var pupil = {};
+    if (this.state.pupils !== []) {
+      this.state.pupils.map((item1) => {
+        if (item1.id === id) {
+          pupil = item1;
+        }
+      });
+    }
+    return pupil;
+  };
+
+  echoClasses = (id) => {
+    var classes = {};
+    if (this.state.class !== []) {
+      this.state.class.map((item1) => {
+        if (item1.id === id) {
+          classes = item1;
+        }
+      });
+    }
+    return classes;
+  };
+
+  componentDidMount() {
+    Aos.init({
+      duration: 2000,
+    });
+    this.getExcellents();
+    this.getPupil();
+    this.setState({ loader: false });
+  }
+
+  render() {
+    return (
+      <div>
+        <div className={styles.headerSliderText}>
+          <h3 style={{ fontFamily: "font", fontWeight: "900" }}>Maktab Hayoti</h3>
           <div className={styles.headerIcons}>
             <a href="#1">
-              <DownCircleOutlined
-                style={{ fontSize: "40px", color: "white" }}
-                className={styles.headerIcon}
-              />
+              <DownCircleOutlined style={{ fontSize: "40px", color: "white" }} className={styles.headerIcon} />
             </a>
           </div>
         </div>
         <Carousel autoplay className={styles.sliderHeader}>
           <div>
-            <Image
-              src={
-                data !== null && data.m_h_h1 !== null ? data.m_h_h1 : school1
-              }
-              className={styles.headerImage}
-            />
+            <Image src={this.state.data !== null && this.state.data.m_h_h1 !== null ? this.state.data.m_h_h1 : school1} className={styles.headerImage} />
           </div>
           <div>
-            <Image
-              src={
-                data !== null && data.m_h_h2 !== null ? data.m_h_h2 : school1
-              }
-              className={styles.headerImage}
-            />
+            <Image src={this.state.data !== null && this.state.data.m_h_h2 !== null ? this.state.data.m_h_h2 : school1} className={styles.headerImage} />
           </div>
           <div>
-            <Image
-              src={
-                data !== null && data.m_h_h3 !== null ? data.m_h_h3 : school3
-              }
-              className={styles.headerImage}
-            />
+            <Image src={this.state.data !== null && this.state.data.m_h_h3 !== null ? this.state.data.m_h_h3 : school3} className={styles.headerImage} />
           </div>
           <div>
-            <Image
-              src={
-                data !== null && data.m_h_h4 !== null ? data.m_h_h4 : school4
-              }
-              className={styles.headerImage}
-            />
+            <Image src={this.state.data !== null && this.state.data.m_h_h4 !== null ? this.state.data.m_h_h4 : school4} className={styles.headerImage} />
           </div>
           <div>
-            <Image
-              src={
-                data !== null && data.m_h_h5 !== null ? data.m_h_h5 : school5
-              }
-              className={styles.headerImage}
-            />
+            <Image src={this.state.data !== null && this.state.data.m_h_h5 !== null ? this.state.data.m_h_h5 : school5} className={styles.headerImage} />
           </div>
         </Carousel>
-<div style={{width:"100%" ,backgroundColor:'white'}}>
-<br/><br/><br/><br />
-    <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
-<div className={style.line}></div>
-<div className={style.tana}>
-    
-            <div className={style.card}>
-                <div className={style.image}><img src={img}/></div>
-                <div className={style.content}>
-                    <p>Familiyasi:<b> Eshmatov</b></p>
-                    <p>Ismi:<b> Toshmat</b></p>
-                    <p>Otasining ismi:<b> G'ishmat o'g'li</b></p>
-                    <p>Tug'ulgan sanasi: <b>01.01.2005</b></p>
-                    <p>Sinfi: <b>10-B sinf</b></p>
-                    <div style={{cursor:'pointer'}}>Baholarini ko'rish</div>
-                </div>
-            </div>
-            <div className={style.card}>
-                <div className={style.image}><img src={img}/></div>
-                <div className={style.content}>
-                    <p>Familiyasi:<b> Eshmatov</b></p>
-                    <p>Ismi:<b> Toshmat</b></p>
-                    <p>Otasining ismi:<b> G'ishmat o'g'li</b></p>
-                    <p>Tug'ulgan sanasi: <b>01.01.2005</b></p>
-                    <p>Sinfi: <b>10-B sinf</b></p>
-                    <div style={{cursor:'pointer'}}>Baholarini ko'rish</div>
-                </div>
-            </div>
-            <div className={style.card}>
-                <div className={style.image}><img src={img}/></div>
-                <div className={style.content}>
-                    <p>Familiyasi:<b> Eshmatov</b></p>
-                    <p>Ismi:<b> Toshmat</b></p>
-                    <p>Otasining ismi:<b> G'ishmat o'g'li</b></p>
-                    <p>Tug'ulgan sanasi: <b>01.01.2005</b></p>
-                    <p>Sinfi: <b>10-B sinf</b></p>
-                    <div style={{cursor:'pointer'}}>Baholarini ko'rish</div>
-                </div>
-            </div>
-            <div className={style.card}>
-                <div className={style.image}><img src={img}/></div>
-                <div className={style.content}>
-                    <p>Familiyasi:<b> Eshmatov</b></p>
-                    <p>Ismi:<b> Toshmat</b></p>
-                    <p>Otasining ismi:<b> G'ishmat o'g'li</b></p>
-                    <p>Tug'ulgan sanasi: <b>01.01.2005</b></p>
-                    <p>Sinfi: <b>10-B sinf</b></p>
-                    <div style={{cursor:'pointer'}}>Baholarini ko'rish</div>
-                </div>
-            </div>
-            <div className={style.card}>
-                <div className={style.image}><img src={img}/></div>
-                <div className={style.content}>
-                    <p>Familiyasi:<b> Eshmatov</b></p>
-                    <p>Ismi:<b> Toshmat</b></p>
-                    <p>Otasining ismi:<b> G'ishmat o'g'li</b></p>
-                    <p>Tug'ulgan sanasi: <b>01.01.2005</b></p>
-                    <p>Sinfi: <b>10-B sinf</b></p>
-                    <div style={{cursor:'pointer'}}>Baholarini ko'rish</div>
-                </div>
-            </div>
-</div>
-</div>
-
-</div>
-)
-    }
+        <div style={{ width: "100%", backgroundColor: "white" }}>
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
+          <div className={style.line}></div>
+          <div className={style.tana}>
+            {this.state.excellent !== []
+              ? this.state.excellent.map((item) => {
+                  var pupil = this.setPupils(item.pupil);
+                  var classes = this.echoClasses(pupil.clas);
+                  return (
+                    <div className={style.card}>
+                      <div className={style.image}>
+                        <img src={pupil.image !== null ? pupil.image : school2} alt="" />
+                      </div>
+                      <div className={style.content}>
+                        <p>
+                          <b>O'quvchi: </b> {pupil.full_name}
+                        </p>
+                        <p>
+                          <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
+                        </p>
+                        <p>
+                          <b>Sinfi: </b>
+                          {classes.class_number}-{classes.class_char} sinf
+                        </p>
+                        <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div>
+                      </div>
+                    </div>
+                  );
+                })
+              : ""}
+            {/* <div className={style.card}>
+              <div className={style.image}>
+                <img src={item.image} alt="" />
+              </div>
+              <div className={style.content}>
+                <p>
+                  <b>O'quvchi: </b> {item.full_name}
+                </p>
+                <p>
+                  <b>Tug'ulgan sanasi: </b> {item.birth_day}
+                </p>
+                <p>
+                  Sinfi: <b>10-B sinf</b>
+                </p>
+                <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div>
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
