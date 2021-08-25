@@ -124,3 +124,19 @@ export const deletePupils = (id) => {
   };
   return httpRequest(config);
 };
+
+export const getAchivement = (id) => {
+  var config = {
+    url: `${url}/achiviment/${id}`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
+
+export const getPupil = (id) => {
+  var config = {
+    url: `${url}/pupil/`,
+    method: "get",
+  };
+  return httpRequest(config);
+};
