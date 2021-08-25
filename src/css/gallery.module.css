@@ -10,38 +10,35 @@
 }
 @media(min-width:648px){
 .header{
+  position: relative;
     width: 100%;
     height: 675px;
-    background-image: url('../img/kamera.jpg');
-    background-size: cover;
-	background-position: center center;
-    box-shadow: 0xp 0px 24px black;
 }
-.parda{
 
-    width: 100%;
-    height: 100%;
-    background-color: #000000cb;
-}
 .sarlavha{
-    width: 640px;
-    height: 80px;
+  position: absolute;
+   opacity: 1;
+    z-index: 3124356;
+    background-color: rgba(0, 0, 0, 0.281);
     text-shadow: 0px 0px 4px black;
-    text-align: right;
-    padding-right: 10px;
-    border-right: 3px solid white;
+    float: center;
+    right: 30px;
     letter-spacing: 3px;
-float: right;
-margin: 540px 30px 0px 0px;
+bottom:120px;
 }
 .sarlavha h2{
-  color: white !important;
+  opacity: none;
+  color: white ;
   line-height: 22px;
+  margin: 30px 30px;
+  opacity: 1.0;
 }
 .sarlavha h1{
+  opacity: 1.0;
     font-size: 35px;
     font-family: serif;
-    color: white !important;
+    color: white ;
+    margin: 20px 20px;
 }
 .gal{
     width: calc(100%-40px);
@@ -118,55 +115,42 @@ margin: 540px 30px 0px 0px;
 }
 @media(max-width:648px){
     .header{
+      position: relative;
         width: 100%;
         height: 420px;
-        background-image: url('../img/kamera.jpg');
-        background-size: auto 100%;
-        background-position: 15% center;
-        box-shadow: 0xp 0px 24px black;
-    }
-    .parda{
-    
-        width: 100%;
-        height: 100%;
-        background-color: #000000be;
     }
     .sarlavha{
-      padding-top: 10px;
-        width: 98%;
+      opacity: 1;
+     position: absolute;
+        background-color:  rgba(0, 0, 0, 0.281);
         text-shadow: 0px 0px 4px black;
         color: white;
-        text-align: right;
-        padding-right: 5px;
-        border-right: 3px solid white;
-        letter-spacing: 2px;
-    float: right;
-    margin: 290px 1.5% 10px 2px;
+    right: 20px;
+      left:50px;
+      bottom: 100px;
+   
     }
     .sarlavha h2{
+      opacity: 1.0;
+      padding: 30px 30px;
         font-size: 16px;
         margin-bottom: 7px;
-        color: white !important;
+        color: white ;
     }
     .sarlavha h1{
+      opacity: 1.4;
+      padding: 20px 20px;
         font-size: 28px;
         font-family: serif;
-    color: white !important;
+    color: white ;
     }
-    .gal{
-        width: calc(100%-6px);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 3px;
-    }
+    
     
       
       .bor {
-          margin: 44px 10px;
+          /* margin: 44px 10px; */
         /* overflow: hidden; */
-        max-width: 390px;
+ width:100%;       
        box-shadow: 0px 0px 21px rgb(25, 26, 25);
         border: 5px dashed rgb(33, 78, 2);
         -webkit-tap-highlight-color: transparent;
@@ -194,4 +178,68 @@ display: none;
         /* height: 100vh; */
         width: 100%;
       }
+}
+
+
+
+
+
+.imagewrapper {
+  background-color: rgba(0, 0, 0, 0.205);
+  width: 30vw;
+  box-shadow: 4px 4px 40px rgb(105, 98, 98);
+  height: 30vh;
+  border-radius: 5px;
+  position: relative;
+  margin: 10vh auto;
+}
+.imagewrapper img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+.image1 {
+  clip-path: polygon(0 0, 0 32%, 28% 0);
+  transform: translate(-10px, -10px);
+  transition: transform 600ms ease;
+  transform-origin: top;
+}
+.imagewrapper:hover .image1 {
+  transform: translate(0, 0);
+}
+.image2 {
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  transform: translate(-30px, 5px);
+  transition: transform 600ms ease;
+}
+.imagewrapper:hover .image2 {
+  transform: translate(0, 0);
+}
+.image3 {
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  transform: translate(-15px, -10px);
+  transition: transform 600ms ease;
+}
+.imagewrapper:hover .image3 {
+  transform: translate(0, 0);
+}
+.image4 {
+  clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  transform: translate(-32px, 5px);
+  transition: transform 600ms ease;
+  transform-origin: top;
+}
+.imagewrapper:hover .image4 {
+  transform: translate(0, 0);
+}
+@media(max-width:767px){
+  .imagewrapper{
+    width: 70vw;
+  
+  }
+
 }
