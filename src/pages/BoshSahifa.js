@@ -113,8 +113,8 @@ getSchool=()=>{
                             <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
                         </div>
-                        {/* <Link to='/register/uz'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
-                        <Link to='/login/uz'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link>
+                        {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
+                        <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link>
                     </Container>
                 </div>
             </ContainerDashboard>
@@ -128,12 +128,12 @@ getSchool=()=>{
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/uz/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/uz/${Global.user}`}><p className='navLink'>Maktab haqida</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/uz/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/yangiliklar/uz/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/rahbariyat/uz/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/alochilar/uz/${Global.user}`}><p className='navLink'>Maktab alochilari</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab haqida</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/yangiliklar/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/rahbariyat/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/alochilar/${Global.user}`}><p className='navLink'>Maktab alochilari</p></NavLink>
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
@@ -144,13 +144,13 @@ getSchool=()=>{
                     <Container>
                     <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
                     <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
-                     <Link to={`/hayot/uz/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
+                     <Link to={`/hayot/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
                     <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
 {/* 
                 <div className={style.bayroqlar}>
-                    <Link to='/uz'><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
+                    <Link to=''><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
                     <Link to='/ru'><img style={{marginTop:'7px'}} src={flagRU} /></Link>
                 </div> */}
                 </div>
@@ -161,7 +161,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm1:rasm1} className={style.image} />
                         <div className={style.overlay}>
-                            <Link style={{color:'white'}} to={`/yutuqlar/uz/${Global.user}`}>
+                            <Link style={{color:'white'}} to={`/yutuqlar/${Global.user}`}>
                             <FontAwesomeIcon icon={faSchool} className={style.icon} />
                             <h3>Yutuqlarimiz</h3>
                             <p>Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish uchun qulay imkoniyat bor</p>
@@ -173,7 +173,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm2:rasm2} className={style.image} />
                         <div className={style.overlay}>
-                        <Link style={{color:'white'}} to={`/yangiliklar/uz/${Global.user}`}>
+                        <Link style={{color:'white'}} to={`/yangiliklar/${Global.user}`}>
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
                             <h3>Yangiliklar</h3>
                             <p>Maktabimizga doir bo'lgan yangiliklardan xabardor bo'ling</p>
@@ -185,7 +185,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm3:rasm3} className={style.image} />
                         <div className={style.overlay}>
-                        <Link style={{color:'white'}} to={`/gallery/uz/${Global.user}`}>
+                        <Link style={{color:'white'}} to={`/gallery/${Global.user}`}>
                             <FontAwesomeIcon icon={faDoorOpen} className={style.icon} />
                             <h3>Fotolavhalar</h3>
                             <p>Endi siz maktabimizning fotolavhalarini ko'rishingiz mumkin</p>
@@ -237,7 +237,7 @@ return(
                             </Col>
                         </Row>
 
-                        <Link to={`/yangiliklar/uz/${Global.user}`}><button className={style.buttoncha}><span>Barchasini o'qish</span></button></Link>
+                        <Link to={`/yangiliklar/${Global.user}`}><button className={style.buttoncha}><span>Barchasini o'qish</span></button></Link>
                     </Col>
                 </Row>
             </div>

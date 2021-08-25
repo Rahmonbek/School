@@ -6,6 +6,7 @@ import { url } from "../../host/Host";
 import { message } from "antd";
 import GLOBAL from "../../host/Global";
 import { Link, Redirect } from "react-router-dom";
+import Global from "../../host/Global";
 
 export default class Login extends Component {
   state = {
@@ -60,7 +61,7 @@ export default class Login extends Component {
               <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
               <Form.Label className={style.formLabel}>Parol</Form.Label>
             </Form.Group>
-            <Link to="/uz">Bosh sahifaga qaytish</Link>
+            <Link to={`/${Global.user}`}>Bosh sahifaga qaytish</Link>
             <br />
             <Button className={style.sub} type="submit">
               <span></span>

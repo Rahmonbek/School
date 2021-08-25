@@ -40,9 +40,10 @@ export default class MaktabHayoti extends Component {
     Aos.init({
       duration: 2000,
     });
-    axios
-      .get("http://maktab2.herokuapp.com/school-by-admin/137/")
-      .then((res) => {
+          
+  var a=window.location.href.split('/')
+  var v=a[a.length-1]
+            axios.get(`${url}/school-by-admin/${v}`).then(res=>{
         this.setState({ loading: false, data: res.data });
       });
   }

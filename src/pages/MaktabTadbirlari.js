@@ -8,6 +8,7 @@ import rasm2 from '../img/12.jpg'
 import rasm3 from '../img/13.jpg'
 import { faClock, faMapMarkerAlt, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import {getEvents} from '../host/Config'
+import Global from '../host/Global'
 export default class MaktabTadbirlari extends Component {
     state={
         events:[],
@@ -95,7 +96,7 @@ export default class MaktabTadbirlari extends Component {
                         }
                         
                     </Row>
-                    <Link to='/tadbirlar/uz' className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
+                    <Link to={`/tadbirlar/uz/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     
                 </div>
             </div>

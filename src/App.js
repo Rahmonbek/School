@@ -24,14 +24,17 @@ import Global from "./host/Global";
 import axios from "axios";
 import { url } from "./host/Host";
 import { FadeLoader } from "react-spinners";
+import SelectMap from "./pages/Error";
 export default class App extends Component {
 state={
-  loader:true
+  loader:true,
+  error:false
 }
   componentDidMount() {
     window.scrollTo(0, 0);
   var a=window.location.href.split('/')
   var v=a[a.length-1]
+
 axios.get(`${url}/school-by-admin/${v}`).then(res=>{
 
   Global.schoolId=res.data.id
@@ -40,6 +43,8 @@ axios.get(`${url}/school-by-admin/${v}`).then(res=>{
     loader:false
   })
   console.log(Global.user, Global.schoolId)
+}).catch(err=>{
+  this.setState({error:true})
 })
  
   
@@ -55,13 +60,13 @@ axios.get(`${url}/school-by-admin/${v}`).then(res=>{
  color='blue' loading={this.state.loader} size={120} />        
 
     </div>:
-
+this.state.error?<SelectMap/>:
         <BrowserRouter>
           <Switch>
-            {/* <Route exact path="/register/uz/">
+            {/* <Route exact path="/register/">
               <Register />
             </Route> */}
-            <Route exact path="/login/uz">
+            <Route path="/login/uz">
               <Login />
             </Route>
             {/* <Route path="/cabinet/parents/">
@@ -75,63 +80,61 @@ axios.get(`${url}/school-by-admin/${v}`).then(res=>{
               <Main />
             </Route>
 
-            <Route exact path="/qabul/uz/:id">
+            <Route exact path="/qabul/:id">
               <NavBar />
               <Qabul />
               <Footer />
             </Route>
 
-            <Route exact path="/rahbariyat/uz/:id">
+            <Route exact path="/rahbariyat/:id">
               <NavBar />
               <Maktabmamuriyati />
               <Footer />
             </Route>
 
-            <Route exact path="/yangiliklar/uz/:id">
+            <Route exact path="/yangiliklar/:id">
               <NavBar />
               <Yangiliklar />
               <Footer />
             </Route>
 
-            <Route exact path="/hayot/uz/:id">
+            <Route exact path="/hayot/:id">
               <NavBar />
               <MaktabHayoti />
               <Footer />
             </Route>
 
-            <Route exact path="/alochilar/uz/:id">
+            <Route exact path="/alochilar/:id">
               <NavBar />
               <Alochilar />
               <Footer />
             </Route>
 
-            <Route exact path="/gallery/uz/:id">
+            <Route exact path="/gallery/:id">
               <NavBar />
               <Gallery />
               <Footer />
             </Route>
 
-            <Route exact path="/yutuqlar/uz/:id">
+            <Route exact path="/yutuqlar/:id">
               <NavBar />
               <Yutuqlarimiz />
               <Footer />
             </Route>
 
-            <Route exact path="/maktaboshxonasi/uz/:id">
+            <Route exact path="/maktaboshxonasi/:id">
               <NavBar />
               <MaktabOshxonasi />
               <Footer />
             </Route>
-            <Route exact path="/tadbirlar/uz/:id">
+            <Route exact path="/tadbirlar/:id">
               <NavBar />
               <Tadbirlar />
               <Footer />
             </Route>
 
+         
             <Route exact path="/:id">
-              <BoshSahifa />
-            </Route>
-            <Route exact path="/uz/:id">
               <BoshSahifa />
             </Route>
             <Route path="*">
