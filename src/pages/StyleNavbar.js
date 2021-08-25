@@ -19,7 +19,6 @@ export const NavbarContainer = styled.div`
    
     .me-auto{
         width:100%;
-        height:400px;
         background-color:rgba(0,0,0,0.7);
         margin-left: 15%;
         text-align:center;
