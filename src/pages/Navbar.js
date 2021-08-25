@@ -25,7 +25,9 @@ getSchool=()=>{
             school:res.data,
             id:v
         })
-    })
+    }).catch(err=>{window.location.href=window.location.href+'/error';
+  }
+    )
 }
 componentDidMount(){
   this.getSchool()

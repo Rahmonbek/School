@@ -44,7 +44,9 @@ axios.get(`${url}/school-by-admin/${v}`).then(res=>{
   })
   console.log(Global.user, Global.schoolId)
 }).catch(err=>{
-  this.setState({error:true})
+ console.log('scmkscmskcm')
+ 
+  this.setState({error:true, loader:false})
 })
  
   

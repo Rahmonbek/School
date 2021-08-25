@@ -19,8 +19,8 @@ body{
     top:70% !important;
     left: 50%;
     transform: translate(-50%,-60%);
-   z-index: 2;
-   background-color: rgba(0,0,0,0.3);
+   z-index: 28;
+  
    text-align: center;
    padding:0 15px;
   
@@ -29,6 +29,7 @@ body{
     color:rgba(255,255,255,0.7);
     font-size: 30px;
     margin-top: 10px;
+    background-color:rgba(0, 0, 0, 0.371);
 }
 .carddirektor{
     margin-left: 10%;
@@ -42,6 +43,7 @@ body{
     margin-bottom: 50px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
+
 .carddirektor img{
     width:250px;
     height: 250px;
@@ -66,112 +68,28 @@ body{
 .direktor{
     text-align: left;
     font-size: 20px;
-    font-family: 'Lobster',cursive;
+    font-family: 'Lobster';
 }
 .cardwrap{
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    height:400px;
     background-image:url('../img/schoolpattern.png');
     background-position:center;
     background-size:100% 100%;
     background-attachment: fixed;
 }
 
-
-.cardwrap::before{
-    content:'2019-yil "Eng yaxshi yil rahbari';
-    position: absolute;
-    top: 0%;
-    left: -100%;
-    width:100%;
-    height: 100%;
-    font-size: 35px;
-    font-weight: 900;
-    color:rgba(255,255,255,0.7);
-    padding:33% 9%;
-    transition: all 0.7s;
-    z-index: 2;
-}
-.cardwrap::after{
-    content:'';
-    background-image:url(../img/school24.jpg);
-    background-position:center;
-    background-size:cover; 
-    filter: brightness(60%);
-    position: absolute;
-    top: 0%;
-    left: -100%;
-    width:100%;
-    height: 100%;
-    font-size: 30px;
-    font-weight: 900;
-    color:rgba(255,255,255,0.7);
-    padding:10%;
-    transition: all 0.5s;
-    z-index: 1;
-}
-.cardwrap:hover::before{
-left: 0;
-}
-.cardwrap:hover::after{
-    left: 0;
-    }
-
-    .cardwrap1{
-        position: relative;
-        overflow: hidden;
-        background-image:url('../img/schoolpattern.png');
-        background-position:center;
-        background-size:100% 100%;
-        background-attachment: fixed;
-    }
-    .cardwrap1::before{
-        content:'2018-yil "Eng yaxshi yil rahbari"';
-        position: absolute;
-        top: 0%;
-        right: -100%;
-        width:100%;
-        height: 100%;
-        font-size: 35px;
-        font-weight: 900;
-        color:rgba(255,255,255,0.7);
-        padding:33% 10%;
-        transition: all 0.7s;
-        z-index: 2;
-    }
-    .cardwrap1::after{
-        content:'';
-        background-image: url(../img/school23.jpg);
-        position: absolute;
-        filter:brightness(60%);
-        top: 0%;
-        right: -100%;
-        width:100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        object-fit: cover !important;
-        color:rgba(255,255,255,0.7);
-        padding:0%;
-        transition: all 0.5s;
-        z-index: 1;
-    }
-    .cardwrap1:hover::before{
-    right: 0;
-    }
-    .cardwrap1:hover::after{
-        right: 0;
-    }
 .sliderComment{
     width:80%;
-    margin-left: 10%;
+    margin-left:10%;
     padding-top: 3%;
     margin-top:100px;
     border:solid 7px #0F4C81;
     margin-bottom: 50px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background: hsl(210, 36%, 96%);
+   
+    background-color:white;
     color:  hsl(209, 61%, 16%);
     line-height: 1.5;
     font-size: 0.875rem;
@@ -270,37 +188,6 @@ left: 0;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .cardwrap::before{
-        top: -100%;
-        left: 0;
-        text-align: center;
-    }
-    .cardwrap::after{
-        top: -100%;
-        left: 0%;
-    }
-    .cardwrap:hover::before{
-    top: 0;
-    }
-    .cardwrap:hover::after{
-        top: 0; 
-        }
-         .cardwrap1::before{
-            position: absolute;
-            top: -100%;
-            right: 0%;
-            text-align: center;
-        }
-        .cardwrap1::after{
-            top: -100%;
-            right: 0%;
-        } 
-        .cardwrap1:hover::before{
-        top: 0;
-        }
-        .cardwrap1:hover::after{
-            top: 0;
-        }
 }
 @media screen and (min-width:567px) {
     .sliderHeader{
@@ -320,37 +207,6 @@ left: 0;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .cardwrap::before{
-        top: -100%;
-        left: 0;
-        text-align: center;
-    }
-    .cardwrap::after{
-        top: -100%;
-        left: 0%;
-    }
-    .cardwrap:hover::before{
-    top: 0;
-    }
-    .cardwrap:hover::after{
-        top: 0;
-        }
-        .cardwrap1::before{
-            position: absolute;
-            top: -100%;
-            right: 0%;
-            text-align: center;
-        }
-        .cardwrap1::after{
-            top: -100%;
-            right: 0%;
-        }
-        .cardwrap1:hover::before{
-        top: 0;
-        }
-        .cardwrap1:hover::after{
-            top: 0;
-        }
 }
 @media screen and (min-width:768px) {
     .sliderHeader{
@@ -370,37 +226,6 @@ left: 0;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .cardwrap::before{
-        top: -100%;
-        left: 0;
-        text-align: center;
-    }
-    .cardwrap::after{
-        top: -100%;
-        left: 0%;
-    }
-    .cardwrap:hover::before{
-    top: 0;
-    }
-    .cardwrap:hover::after{
-        top: 0;
-    }
-    .cardwrap1::before{
-           position: absolute;
-            top: -100%;
-            right: 0%;
-            text-align: center;
-    }
-    .cardwrap1::after{
-            top: -100%;
-            right: 0%;
-    }
-    .cardwrap1:hover::before{
-        top: 0;
-     }
-    .cardwrap1:hover::after{
-            top: 0;
-    }
 }
 @media screen and (min-width:992px) {
     .slidertext{
@@ -416,36 +241,6 @@ left: 0;
     .direktorbr{
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .cardwrap::before{
-        top: -100%;
-        left: 0;
-        text-align: center;
-    }
-    .cardwrap::after{
-        top: -100%;
-        left: 0%;
-    }
-    .cardwrap:hover::before{
-    top: 0;
-    }
-    .cardwrap:hover::after{
-        top: 0;
-        }
-    .cardwrap1::before{
-            top: -100%;
-            right: 0%;
-            text-align: center;
-    }
-    .cardwrap1::after{
-            top: -100%;
-            right: 0%;
-    }
-    .cardwrap1:hover::before{
-        top: 0;
-    }
-    .cardwrap1:hover::after{
-            top: 0;
     }
 }
 @media screen and (min-width:1200px) {
@@ -467,34 +262,5 @@ left: 0;
     .direktorbr{
         margin-left: 30px; 
         margin-right: 30px;
-    }
-    .cardwrap::before{
-        top: 0%;
-        left: -100%;
-    }
-    .cardwrap::after{
-        top: 0%;
-        left: -100%;
-    }
-    .cardwrap:hover::before{
-    left: 0;
-    }
-    .cardwrap:hover::after{
-    left: 0;
-    }
-    .cardwrap1::before{
-            top: 0%;
-            right: -100%;
-    }
-    .cardwrap1::after{
-   top: 0%;
-    right: -100%;
-
-    }
-    .cardwrap1:hover::before{
-        right: 0;
-    }
-    .cardwrap1:hover::after{
-            right: 0;
     }
 } 

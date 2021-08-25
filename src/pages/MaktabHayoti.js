@@ -51,11 +51,11 @@ export default class MaktabHayoti extends Component {
     const { data } = this.state;
     return (
       <div>
-        {this.state.loading === true ? (
+        {this.state.loading === true ? 
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
-        ) : (
+         : 
           <>
             <div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
@@ -717,7 +717,7 @@ export default class MaktabHayoti extends Component {
               </Row>
             </Container>
           </>
-        )}
+        }
       </div>
     );
   }
