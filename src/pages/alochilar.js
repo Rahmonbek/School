@@ -100,8 +100,8 @@ export default class Alochilar extends Component {
   render() {
     return (
       <div>
-        <div className={styles.headerSliderText}>
-          <h3 style={{ fontFamily: "font", fontWeight: "900" }}>Maktab Hayoti</h3>
+        <div className={styles.headerSliderText} style={{ width: "120%" }}>
+          <h3 style={{ fontFamily: "font", fontWeight: "900", fontSize: "90px", marginRight: "auto", marginLeft: "auto" }}>Maktab a'lochilari</h3>
           <div className={styles.headerIcons}>
             <a href="#1">
               <DownCircleOutlined style={{ fontSize: "40px", color: "white" }} className={styles.headerIcon} />
