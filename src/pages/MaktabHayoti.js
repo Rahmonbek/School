@@ -30,7 +30,6 @@ import myImage from "../img/360.jpeg";
 import Global from "../host/Global";
 import { url } from "../host/Host";
 
-
 export default class MaktabHayoti extends Component {
   state = {
     loading: true,
@@ -40,19 +39,19 @@ export default class MaktabHayoti extends Component {
     Aos.init({
       duration: 2000,
     });
-          
-  var a=window.location.href.split('/')
-  var v=a[a.length-1]
-            axios.get(`${url}/school-by-admin/${v}`).then(res=>{
-        this.setState({ loading: false, data: res.data });
-      });
+
+    var a = window.location.href.split("/");
+    var v = a[a.length - 1];
+    axios.get(`${url}/school-by-admin/${v}`).then((res) => {
+      this.setState({ loading: false, data: res.data });
+    });
   }
 
   render() {
     const { data } = this.state;
     return (
       <div>
-        {this.state.loading===true?(
+        {this.state.loading === true ? (
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>

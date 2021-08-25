@@ -1,4 +1,4 @@
-export const data = [
+export const info = [
   { viloyat: "Toshkent", tuman: "Yakkasaroy", nomi: "13-maktab" },
   { viloyat: "Namangan", tuman: "Chust", nomi: "15-maktab" },
   { viloyat: "Toshkent", tuman: "Olmazor", nomi: "16-maktab" },
