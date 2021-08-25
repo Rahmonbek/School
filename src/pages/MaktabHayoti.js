@@ -59,7 +59,7 @@ export default class MaktabHayoti extends Component {
     const { data } = this.state;
     return (
       <div>
-        {this.state.loader ? (
+        {this.state.loading===true?(
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
