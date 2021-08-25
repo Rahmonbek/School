@@ -1,5 +1,5 @@
 import Global from "./Global";
-import { httpRequest, idMaktab, url } from "./Host";
+import { httpRequest,  url } from "./Host";
 
 export const getSchool = () => {
   var config = {
@@ -10,7 +10,7 @@ export const getSchool = () => {
 };
 export const getNews = () => {
   var config = {
-    url: `${url}/new/${idMaktab}/`,
+    url: `${url}/new/${Global.schoolId}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -18,7 +18,7 @@ export const getNews = () => {
 
 export const getEvents = () => {
   var config = {
-    url: `${url}/event/${idMaktab}/`,
+    url: `${url}/event/${Global.schoolId}/`,
     method: "get",
   };
   return httpRequest(config);
@@ -93,7 +93,7 @@ export const getPupils = (id) => {
 
 export const getExcellent = (id) => {
   var config = {
-    url: `${url}/excellent/${idMaktab}/`,
+    url: `${url}/excellent/${Global.schoolId}/`,
     method: "get",
   };
   return httpRequest(config);

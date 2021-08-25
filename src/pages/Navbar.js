@@ -11,14 +11,19 @@ import { AOS } from "aos";
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 import axios from "axios";
 import { url, user } from "../host/Host";
+import Global from "../host/Global";
 export default class NavBar extends Component {
   state={
     school:null,
+    id:null,
   }
 getSchool=()=>{
-    axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+  var a=window.location.href.split('/')
+  var v=a[a.length-1]
+            axios.get(`${url}/school-by-admin/${v}`).then(res=>{
         this.setState({
             school:res.data,
+            id:v
         })
     })
 }
@@ -36,12 +41,12 @@ componentDidMount(){
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/hayot/uz"><p className='navLink'>Maktab hayoti</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/qabul/uz"><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/alochilar/uz"><p className='navLink'>Maktab alochilari</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/uz/${this.state.id}`}><p className='navLink'>Bosh sahifa</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/hayot/uz/${this.state.id}`}><p className='navLink'>Maktab hayoti</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/qabul/uz/${this.state.id}`}><p className='navLink'>Qabul</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/yangiliklar/uz/${this.state.id}`}><p className='navLink'>Yangiliklar</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/rahbariyat/uz/${this.state.id}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/alochilar/uz/${this.state.id}`}><p className='navLink'>Maktab alochilari</p></NavLink>
                                     {/* <div className={style.bayroqlar}>
                                <Link to='/uz'><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>

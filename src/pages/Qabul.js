@@ -11,6 +11,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import axios from 'axios';
 import { url, user } from '../host/Host';
 import FadeLoader from "react-spinners/FadeLoader";
+import Global from '../host/Global';
 
 class Qabul extends React.Component {
         state={
@@ -21,7 +22,10 @@ class Qabul extends React.Component {
           }
    
           getSchool=()=>{
-            axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+              
+  var a=window.location.href.split('/')
+  var v=a[a.length-1]
+            axios.get(`${url}/school-by-admin/${v}`).then(res=>{
                 this.setState({
                     school:res.data,
               loader:false,

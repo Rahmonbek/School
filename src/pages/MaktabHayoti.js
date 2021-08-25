@@ -23,8 +23,13 @@ import "aos/dist/aos.css";
 import { FadeLoader } from "react-spinners";
 import { Carousel } from "antd";
 import axios from "axios";
+<<<<<<< Updated upstream
 import { Pannellum } from "pannellum-react";
 import myImage from "../img/360.jpeg";
+=======
+import Global from "../host/Global";
+import { url } from "../host/Host";
+>>>>>>> Stashed changes
 
 export default class MaktabHayoti extends Component {
   state = {
@@ -35,10 +40,18 @@ export default class MaktabHayoti extends Component {
     Aos.init({
       duration: 2000,
     });
+<<<<<<< Updated upstream
     axios
       .get("http://maktab2.herokuapp.com/school-by-admin/137/")
       .then((res) => {
         this.setState({ loading: false, data: res.data });
+=======
+     var a=window.location.href.split('/')
+  var v=a[a.length-1]
+            axios.get(`${url}/school-by-admin/${v}`).then(res=>{
+      
+        this.setState({loading:false, data: res.data });
+>>>>>>> Stashed changes
       });
   }
 

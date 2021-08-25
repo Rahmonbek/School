@@ -31,6 +31,7 @@ import { url, user } from '../host/Host'
 import axios from 'axios'
 import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
 import YouTube from 'react-youtube'
+import Global from '../host/Global'
 
 
 
@@ -43,7 +44,7 @@ id:0,
 school:null,
   }
 getSchool=()=>{
-    axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+    axios.get(`${url}/school-by-admin/${Global.user}`).then(res=>{
         this.setState({
             school:res.data,
       loader:false,
@@ -127,12 +128,12 @@ getSchool=()=>{
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{backgroundColor: 'white'}} />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/hayot/uz"><p className='navLink'>Maktab haqida</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/qabul/uz"><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to="/alochilar/uz"><p className='navLink'>Maktab alochilari</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/uz/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/uz/${Global.user}`}><p className='navLink'>Maktab haqida</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/uz/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/yangiliklar/uz/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/rahbariyat/uz/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/alochilar/uz/${Global.user}`}><p className='navLink'>Maktab alochilari</p></NavLink>
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
@@ -143,7 +144,7 @@ getSchool=()=>{
                     <Container>
                     <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
                     <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
-                     <Link to="/hayot/uz"><Button className='buttonn' >Maktab hayoti</Button></Link>
+                     <Link to={`/hayot/uz/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
                     <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
@@ -160,7 +161,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm1:rasm1} className={style.image} />
                         <div className={style.overlay}>
-                            <Link style={{color:'white'}} to="/yutuqlar/uz">
+                            <Link style={{color:'white'}} to={`/yutuqlar/uz/${Global.user}`}>
                             <FontAwesomeIcon icon={faSchool} className={style.icon} />
                             <h3>Yutuqlarimiz</h3>
                             <p>Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish uchun qulay imkoniyat bor</p>
@@ -172,7 +173,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm2:rasm2} className={style.image} />
                         <div className={style.overlay}>
-                        <Link style={{color:'white'}} to="/yangiliklar/uz">
+                        <Link style={{color:'white'}} to={`/yangiliklar/uz/${Global.user}`}>
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
                             <h3>Yangiliklar</h3>
                             <p>Maktabimizga doir bo'lgan yangiliklardan xabardor bo'ling</p>
@@ -184,7 +185,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm3:rasm3} className={style.image} />
                         <div className={style.overlay}>
-                        <Link style={{color:'white'}} to="/gallery/uz">
+                        <Link style={{color:'white'}} to={`/gallery/uz/${Global.user}`}>
                             <FontAwesomeIcon icon={faDoorOpen} className={style.icon} />
                             <h3>Fotolavhalar</h3>
                             <p>Endi siz maktabimizning fotolavhalarini ko'rishingiz mumkin</p>
@@ -198,7 +199,7 @@ getSchool=()=>{
                     <Col xs={12} sm={12} md={4} lg={4} className={style.col}>
                         <h3>Maktabga video sayohat</h3>
                         {/* <img src={rasm1} className={style.img}/> */}
-                        <YouTube videoId={this.state.school!==null?this.state.school.video.slice(this.state.school.video.indexOf("youtu.be/")+9):''} opts={{ 
+                        <YouTube videoId={this.state.school!==null?this.state.school.video!==null?this.state.school.video.slice(this.state.school.video.indexOf("youtu.be/")+9):'':''} opts={{ 
       width: '100%',
       height:"100%",
       playerVars: {
@@ -236,7 +237,7 @@ return(
                             </Col>
                         </Row>
 
-                        <Link to="/yangiliklar/uz"><button className={style.buttoncha}><span>Barchasini o'qish</span></button></Link>
+                        <Link to={`/yangiliklar/uz/${Global.user}`}><button className={style.buttoncha}><span>Barchasini o'qish</span></button></Link>
                     </Col>
                 </Row>
             </div>
