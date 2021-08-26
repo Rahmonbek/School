@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import "aos";
 import style from "./Navbar.module.css";
-import flagUZ from "../img/flagUZ.png";
-import flagRU from "../img/flagRU.png";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavbarContainer } from "./StyleNavbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import {  faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { AOS } from "aos";
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
 import axios from "axios";
@@ -34,30 +31,30 @@ componentDidMount(){
     return (
       <div>
         <div>
-        <NavbarContainer>
-                    <Navbar collapseOnSelect expand="lg">
+        
+                    <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                         <Container>
                             <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to={`/${this.state.id}`} style={{color:'gold', fontSize:"24px",fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginTop:'0px',padding:'0',width:'50px',backgroundColor: 'white'}} />
-                            <Navbar.Collapse id="responsive-navbar-nav">
-                                <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/${this.state.id}`}><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/hayot/${this.state.id}`}><p className='navLink'>Maktab hayoti</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/qabul/${this.state.id}`}><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/yangiliklar/${this.state.id}`}><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/rahbariyat/${this.state.id}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to={`/alochilar/${this.state.id}`}><p className='navLink'>Maktab alochilari</p></NavLink>
+                            <Navbar.Toggle  style={{color:' rgba(0, 0, 0, 0)'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white'}}></i>
+</Navbar.Toggle>
+                            <Navbar.Collapse id="responsive-navbar-nav" style={{width:'100%',color:'white'}}>
+                                <Nav className={style.meauto} >
+                                    <NavLink  to={`/${this.state.id}`}><p className={style.navLink}>Bosh sahifa</p></NavLink>
+                                    <NavLink  to={`/hayot/${this.state.id}`}><p className={style.navLink}>Maktab hayoti</p></NavLink>
+                                    <NavLink  to={`/qabul/${this.state.id}`}><p className={style.navLink}>Qabul</p></NavLink>
+                                    <NavLink  to={`/yangiliklar/${this.state.id}`}><p className={style.navLink}>Yangiliklar</p></NavLink>
+                                    <NavLink  to={`/rahbariyat/${this.state.id}`}><p className={style.navLink}>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink  to={`/alochilar/${this.state.id}`}><p className={style.navLink}>Maktab alochilari</p></NavLink>
                                     {/* <div className={style.bayroqlar}>
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
                           </div> */}
-                                <Link  style={{marginLeft:'100px'}}  to='/login' className='kirish'><FontAwesomeIcon style={{display:'inline-block',marginTop:'30px'}} icon={faUserCircle} className='userIcon' />  Kirish</Link>
+                                <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link>
 </Nav>
                                 
                             </Navbar.Collapse>
                             </Container>
                             </Navbar>
-                            </NavbarContainer>
           {/* <NavbarContainer>
             <Navbar collapseOnSelect expand="lg">
               <Container>
