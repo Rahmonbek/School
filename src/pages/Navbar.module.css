@@ -102,6 +102,7 @@ z-index:4555444;}
 }
 .meauto .userIcon{
     color: white;
+    text-shadow: 0px 0px 40px white;
     font-size: 1.3rem;
     cursor: pointer;
     margin-left: 3px;
@@ -124,15 +125,10 @@ z-index:4555444;}
 .meauto{
    
     margin-top: -4px;
-    background-color:#02024e48;
+    background-color:#02024ec0;
     text-align:center;
 }   
    
-
-
-
-
-
 
 @media (max-width: 786px){
 .meauto  .kirish{
@@ -179,7 +175,7 @@ z-index:4555444;}
 }
 
 @media (min-width:993px){
-    .meauto{ width:60vw;
+    .meauto{ width:70vw;
         background-color:transparent;
     }
     .kirish{
@@ -188,7 +184,7 @@ z-index:4555444;}
     }
 }
 @media (min-width:1200px){
-    .meauto{ width:64vw;
+    .meauto{ width:80vw;
         margin-left:30px;
         margin-top:15px;
     }
