@@ -20,7 +20,6 @@ import flagRU from '../img/flagRU.png'
 import '../App.css'
 
 import { Link, NavLink } from 'react-router-dom'
-import video1 from '../video/My School _ Educational Video For Kids _ Periwinkle (720p).mp4'
 import BoshSahifaDavomi from './BoshSahifaDavomi'
 import MaktabTadbirlari from './MaktabTadbirlari'
 import Footer from './Footer'

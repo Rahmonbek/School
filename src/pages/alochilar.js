@@ -94,13 +94,14 @@ export default class Alochilar extends Component {
     this.getExcellents();
     this.getPupil();
     this.setState({ loader: false });
+    console.log(123);
   }
 
   render() {
     return (
       <div>
-        <div className={styles.headerSliderText}>
-          <h3 style={{ fontFamily: "font", fontWeight: "900" }}>Maktab Hayoti</h3>
+        <div className={styles.headerSliderText} style={{ width: "120%" }}>
+          <h3 style={{ fontFamily: "font", fontWeight: "900", fontSize: "90px", marginRight: "auto", marginLeft: "auto" }}>Maktab a'lochilari</h3>
           <div className={styles.headerIcons}>
             <a href="#1">
               <DownCircleOutlined style={{ fontSize: "40px", color: "white" }} className={styles.headerIcon} />
@@ -152,29 +153,12 @@ export default class Alochilar extends Component {
                           <b>Sinfi: </b>
                           {classes.class_number}-{classes.class_char} sinf
                         </p>
-                        <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div>
+                        {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
                       </div>
                     </div>
                   );
                 })
               : ""}
-            {/* <div className={style.card}>
-              <div className={style.image}>
-                <img src={item.image} alt="" />
-              </div>
-              <div className={style.content}>
-                <p>
-                  <b>O'quvchi: </b> {item.full_name}
-                </p>
-                <p>
-                  <b>Tug'ulgan sanasi: </b> {item.birth_day}
-                </p>
-                <p>
-                  Sinfi: <b>10-B sinf</b>
-                </p>
-                <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

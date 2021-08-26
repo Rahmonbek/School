@@ -57,6 +57,10 @@ export default class Yangiliklar extends Component {
       
     }).catch(err=>{
       console.log(err)
+    
+      this.setState({
+        loader:false
+      })
     })
   }
   componentDidMount(){

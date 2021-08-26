@@ -151,14 +151,20 @@ padding: 0px;
 ::-webkit-scrollbar-track {
   border: 5px solid white;
   background-color: #b2bec3;
+ border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #dfe6e9;
+  border-radius: 10px;
+
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #74b9ff;
   border-radius: 10px;
+}
+.ant-carousel{
+  background-color: transparent !important;
 }
