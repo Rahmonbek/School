@@ -311,7 +311,7 @@ export default class MaktabHayoti extends Component {
                             : `Talabalar shaharchasida sayohat qilishning ko'plab
                             variantlari mavjud.`}
                         </h2>
-                        <h4  style={{width:'80%', marginLeft:'10%', height:"150px", overflowY:
+                        <h4  style={{width:'80%', marginLeft:'10%', height:"200px", overflowY:
         'auto'}}>
                           {data.m_h_k_t !== null && data !== null
                             ? data.m_h_k_t
