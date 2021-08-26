@@ -36,7 +36,7 @@ componentDidMount(){
         
                     <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                         <Container>
-                             <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer' }}><Link to={`/${this.state.id}`} style={{color:'gold', }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand>
+                             <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer', }}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand>
                             <Navbar.Toggle  style={{color:' rgba(0, 0, 0, 0)'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white'}}></i>
 </Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav" style={{width:'100%',color:'white'}}>
