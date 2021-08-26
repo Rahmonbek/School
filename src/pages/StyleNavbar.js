@@ -14,13 +14,11 @@ export const NavbarContainer = styled.div`
         color: white;
         font-size: 1.6rem;
         font-weight: 600;
-    }
+    }   
 
-   
     .me-auto{
         width:100%;
         background-color:rgba(0,0,0,0.7);
-        margin-left: 15%;
         text-align:center;
         .navLink{
             display: inline-block;
@@ -85,7 +83,6 @@ export const NavbarContainer = styled.div`
             font-size: 2rem;
         }
         .me-auto{
-            margin-top:30px;
             margin-left:0;
         }
     }
@@ -111,8 +108,7 @@ export const NavbarContainer = styled.div`
     @media (min-width:993px){
         .me-auto{
             background-color:transparent;
-            margin-top:9px;
-            margin-left:-20px;
+            
         }
         .kirish{
             margin-top:-20px;
