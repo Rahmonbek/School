@@ -35,7 +35,7 @@ export default class Students extends Component {
   }
   render() {
     const { Header } = Layout;
-    return (
+    return Global.teacherId !== null ? (
       <div className={style.yutuq}>
         <Container>
           <Layout>
@@ -105,6 +105,8 @@ export default class Students extends Component {
           </Row>
         </Container>
       </div>
+    ) : (
+      (window.location.href = "/")
     );
   }
 }

@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import style from "../../css/TeacherCss/Students.module.css";
 import { getSpec, getStaffBySchool } from "../../host/Config";
+import Global from "../../host/Global";
 import yuksak from "../../img/alish.png";
 import gimnastika from "../../img/rayhon.jpeg";
 
@@ -37,7 +38,7 @@ export default class Teachers extends Component {
     this.getSpec();
   }
   render() {
-    return (
+    return Global.teacherId !== null ? (
       <div className={style.yutuq}>
         <Container>
           <Row>
@@ -78,6 +79,8 @@ export default class Teachers extends Component {
           </Row>
         </Container>
       </div>
+    ) : (
+      (window.location.href = "/")
     );
   }
 }

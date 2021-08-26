@@ -53,7 +53,7 @@ export default class Yutuqlar extends Component {
     this.getPupils();
   }
   render() {
-    return (
+    return Global.teacherId !== null ? (
       <div className={style.yutuq}>
         <Container>
           <Row>
@@ -118,6 +118,8 @@ export default class Yutuqlar extends Component {
           )}
         </Container>
       </div>
+    ) : (
+      (window.location.href = "/")
     );
   }
 }

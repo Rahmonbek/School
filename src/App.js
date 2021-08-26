@@ -26,125 +26,124 @@ import { url } from "./host/Host";
 import { FadeLoader } from "react-spinners";
 import SelectMap from "./pages/Error";
 export default class App extends Component {
-state={
-  loader:true,
-  error:false
-}
+  state = {
+    loader: true,
+    error: false,
+  };
   componentDidMount() {
     window.scrollTo(0, 0);
-  var a=window.location.href.split('/')
-  var v=a[a.length-1]
+    var a = window.location.href.split("/");
+    var v = a[a.length - 1];
 
-axios.get(`${url}/school-by-admin/${v}`).then(res=>{
+    axios
+      .get(`${url}/school-by-admin/${v}`)
+      .then((res) => {
+        Global.schoolId = res.data.id;
+        Global.user = a[a.length - 1];
+        this.setState({
+          loader: false,
+        });
+        console.log(Global.user, Global.schoolId);
+      })
+      .catch((err) => {
+        console.log("scmkscmskcm");
 
-  Global.schoolId=res.data.id
-  Global.user=a[a.length-1]
-  this.setState({
-    loader:false
-  })
-  console.log(Global.user, Global.schoolId)
-}).catch(err=>{
- console.log('scmkscmskcm')
- 
-  this.setState({error:true, loader:false})
-})
- 
-  
+        this.setState({ error: true, loader: false });
+      });
   }
 
   render() {
     return (
       <div>
-{
-    this.state.loader?<div className="loaderT">
-<FadeLoader
-
- color='blue' loading={this.state.loader} size={120} />        
-
-    </div>:
-this.state.error?<SelectMap/>:
-        <BrowserRouter>
-          <Switch>
-            {/* <Route exact path="/register/">
+        {this.state.loader ? (
+          <div className="loaderT">
+            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+          </div>
+        ) : this.state.error ? (
+          <SelectMap />
+        ) : (
+          <BrowserRouter>
+            <Switch>
+              {/* <Route exact path="/register/">
               <Register />
             </Route> */}
-            <Route path="/login/uz">
-              <Login />
-            </Route>
-            {/* <Route path="/cabinet/parents/">
+              <Route path="/login">
+                <Login />
+              </Route>
+              {/* <Route path="/cabinet/parents/">
               <ParentCabinet />
             </Route> */}
-            <Route path="/cabinet/teacher/bolim/">
-              <TeacherCabinet />
-            </Route>
+              <Route path="/cabinet/teacher/bolim/">
+                <TeacherCabinet />
+              </Route>
 
-            <Route path="/cabinet/teacher/rahbar/">
-              <Main />
-            </Route>
+              <Route path="/cabinet/teacher/rahbar/">
+                <Main />
+              </Route>
 
-            <Route exact path="/qabul/:id">
-              <NavBar />
-              <Qabul />
-              <Footer />
-            </Route>
+              <Route exact path="/qabul/:id">
+                <NavBar />
+                <Qabul />
+                <Footer />
+              </Route>
 
-            <Route exact path="/rahbariyat/:id">
-              <NavBar />
-              <Maktabmamuriyati />
-              <Footer />
-            </Route>
+              <Route exact path="/rahbariyat/:id">
+                <NavBar />
+                <Maktabmamuriyati />
+                <Footer />
+              </Route>
 
-            <Route exact path="/yangiliklar/:id">
-              <NavBar />
-              <Yangiliklar />
-              <Footer />
-            </Route>
+              <Route exact path="/yangiliklar/:id">
+                <NavBar />
+                <Yangiliklar />
+                <Footer />
+              </Route>
 
-            <Route exact path="/hayot/:id">
-              <NavBar />
-              <MaktabHayoti />
-              <Footer />
-            </Route>
+              <Route exact path="/hayot/:id">
+                <NavBar />
+                <MaktabHayoti />
+                <Footer />
+              </Route>
 
-            <Route exact path="/alochilar/:id">
-              <NavBar />
-              <Alochilar />
-              <Footer />
-            </Route>
+              <Route exact path="/alochilar/:id">
+                <NavBar />
+                <Alochilar />
+                <Footer />
+              </Route>
 
-            <Route exact path="/gallery/:id">
-              <NavBar />
-              <Gallery />
-              <Footer />
-            </Route>
+              <Route exact path="/gallery/:id">
+                <NavBar />
+                <Gallery />
+                <Footer />
+              </Route>
 
-            <Route exact path="/yutuqlar/:id">
-              <NavBar />
-              <Yutuqlarimiz />
-              <Footer />
-            </Route>
+              <Route exact path="/yutuqlar/:id">
+                <NavBar />
+                <Yutuqlarimiz />
+                <Footer />
+              </Route>
 
-            <Route exact path="/maktaboshxonasi/:id">
-              <NavBar />
-              <MaktabOshxonasi />
-              <Footer />
-            </Route>
-            <Route exact path="/tadbirlar/:id">
-              <NavBar />
-              <Tadbirlar />
-              <Footer />
-            </Route>
+              <Route exact path="/maktaboshxonasi/:id">
+                <NavBar />
+                <MaktabOshxonasi />
+                <Footer />
+              </Route>
+              <Route exact path="/tadbirlar/:id">
+                <NavBar />
+                <Tadbirlar />
+                <Footer />
+              </Route>
 
-         
-            <Route exact path="/:id">
-              <BoshSahifa />
-            </Route>
-            <Route path="*">
-              <Error />
-            </Route>
-          </Switch>
-        </BrowserRouter>
-        }      </div>
+              <Route exact path="/:id">
+                <BoshSahifa />
+              </Route>
+              <Route path="*">
+                <Error />
+              </Route>
+            </Switch>
+          </BrowserRouter>
+        )}{" "}
+      </div>
     );
   }
 }

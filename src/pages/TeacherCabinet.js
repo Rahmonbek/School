@@ -96,135 +96,130 @@ export default class ParentCabinet extends Component {
       <div>
         <BrowserRouter>
           <HeaderTeacher />
-         
-              <Switch>
-                <Route exact path="/cabinet/teacher/bolim/chat">
-                  <Chat />
-                </Route>
-                <Route exact path="/cabinet/teacher/bolim/yutuqlar">
-                  <Yutuqlar />
-                </Route>
 
-                <Route exact path="/cabinet/teacher/bolim/dars_reja">
-                  <Plan />
-                </Route>
-                <Route exact path="/cabinet/teacher/bolim/students">
-                  <Sinfdoshlar />
-                </Route>
-                <Route exact path="/cabinet/teacher/bolim/oqituvchilar">
-                  <Teachers />
-                </Route>
-                <Route exact path="/cabinet/teacher/bolim/rahbar">
-                  <Rahbar />
-                </Route>
+          <Switch>
+            <Route exact path="/cabinet/teacher/bolim/chat">
+              <Chat />
+            </Route>
+            <Route exact path="/cabinet/teacher/bolim/yutuqlar">
+              <Yutuqlar />
+            </Route>
 
-                <Route exact path="/cabinet/teacher/bolim">
-                  <Box />
-                  <div className="container py-4">
+            <Route exact path="/cabinet/teacher/bolim/dars_reja">
+              <Plan />
+            </Route>
+            <Route exact path="/cabinet/teacher/bolim/students">
+              <Sinfdoshlar />
+            </Route>
+            <Route exact path="/cabinet/teacher/bolim/oqituvchilar">
+              <Teachers />
+            </Route>
+            <Route exact path="/cabinet/teacher/bolim/rahbar">
+              <Rahbar />
+            </Route>
+
+            <Route exact path="/cabinet/teacher/bolim">
+              <Box />
+              <div className="container py-4">
+                <div className="row">
+                  <div className="col-md-12">
                     <div className="row">
-                      <div className="col-md-12">
-                        <div className="row">
-                          <div className="col-md-10 mx-auto">
-                            <div className="card" style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" }}>
-                              <div className="card-header">
-                                <h3 className="mb-0">Xodim ma'lumotlari</h3>
-                              </div>
-                              <div className="card-body">
-                                <Form>
-                                  <div className="row">
-                                    <div className="col-xl-3">
-                                      <Form.Group className="mb-3" controlId="image">
-                                        <Form.Label>Rasm</Form.Label>
-                                        <Input onChange={this.customRequest} type="file" required={false} style={{ marginBottom: "20px" }} accept="image/jpg, image/jpeg, image/png" />
-                                      </Form.Group>
-                                      <div className="w-100" style={{ position: "relative" }}>
-                                        {ImageDemo(this.state.teacher.image)}
-                                      </div>
-                                      <Form.Group className="mb-3" controlId="fullname">
-                                        <Form.Label>F.I.Sh.</Form.Label>
-                                        <Form.Control placeholder="F.I.Sh." defaultValue={this.state.teacher.full_name} />
-                                      </Form.Group>
-                                      <Form.Group className="mb-3" controlId="phone">
-                                        <Form.Label>Telefon raqam</Form.Label>
-                                        <Form.Control placeholder="Telefon raqam" maxLength="20" defaultValue={this.state.teacher.phone} />
-                                      </Form.Group>
-                                    </div>
-                                    <div className="col-xl-9">
-                                      <Form.Group className="mb-3" controlId="position">
-                                        <Form.Label>Soha</Form.Label>
-                                        <Form.Control placeholder="Soha" defaultValue={this.state.teacher.position} />
-                                      </Form.Group>
-                                      <Form.Group className="mb-3" controlId="speciality">
-                                        <Form.Label>Mutaxassislik</Form.Label>
-                                        <Select placeholder="Mutaxassislik" value={this.state.speciality !== [] ? this.state.speciality : ""} mode="multiple" style={{ width: "100%" }} onChange={this.handleChange} optionLabelProp="label">
-                                          {this.state.options !== null
-                                            ? this.state.options.map((item) => {
-                                                return (
-                                                  <Option value={item.id} label={item.name}>
-                                                    {item.name}
-                                                  </Option>
-                                                );
-                                              })
-                                            : ""}
-                                        </Select>
-                                      </Form.Group>
-                                      <Form.Group className="mb-3" controlId="description">
-                                        <Form.Label>Qo'shimcha ma'lumot</Form.Label>
-                                        <Form.Control as="textarea" placeholder="Soha" style={{ height: 150 }} defaultValue={this.state.teacher.position} />
-                                      </Form.Group>
-                                    </div>
+                      <div className="col-md-10 mx-auto">
+                        <div className="card" style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" }}>
+                          <div className="card-header">
+                            <h3 className="mb-0">Xodim ma'lumotlari</h3>
+                          </div>
+                          <div className="card-body">
+                            <Form>
+                              <div className="row">
+                                <div className="col-xl-3">
+                                  <Form.Group className="mb-3" controlId="image">
+                                    <Form.Label>Rasm</Form.Label>
+                                    <Input onChange={this.customRequest} type="file" required={false} style={{ marginBottom: "20px" }} accept="image/jpg, image/jpeg, image/png" />
+                                  </Form.Group>
+                                  <div className="w-100" style={{ position: "relative" }}>
+                                    {ImageDemo(this.state.teacher.image)}
                                   </div>
-                                  <Button variant="danger" as="input" type="reset" value="Bekor qilish" />
-                                  <Button variant="primary" onClick={this.editStaff} style={{ marginLeft: "15px" }}>
-                                    Saqlash
-                                  </Button>
-                                </Form>
-                             
+                                  <Form.Group className="mb-3" controlId="fullname">
+                                    <Form.Label>F.I.Sh.</Form.Label>
+                                    <Form.Control placeholder="F.I.Sh." defaultValue={this.state.teacher.full_name} />
+                                  </Form.Group>
+                                  <Form.Group className="mb-3" controlId="phone">
+                                    <Form.Label>Telefon raqam</Form.Label>
+                                    <Form.Control placeholder="Telefon raqam" maxLength="20" defaultValue={this.state.teacher.phone} />
+                                  </Form.Group>
+                                </div>
+                                <div className="col-xl-9">
+                                  <Form.Group className="mb-3" controlId="position">
+                                    <Form.Label>Soha</Form.Label>
+                                    <Form.Control placeholder="Soha" defaultValue={this.state.teacher.position} />
+                                  </Form.Group>
+                                  <Form.Group className="mb-3" controlId="speciality">
+                                    <Form.Label>Mutaxassislik</Form.Label>
+                                    <Select placeholder="Mutaxassislik" value={this.state.speciality !== [] ? this.state.speciality : ""} mode="multiple" style={{ width: "100%" }} onChange={this.handleChange} optionLabelProp="label">
+                                      {this.state.options !== null
+                                        ? this.state.options.map((item) => {
+                                            return (
+                                              <Option value={item.id} label={item.name}>
+                                                {item.name}
+                                              </Option>
+                                            );
+                                          })
+                                        : ""}
+                                    </Select>
+                                  </Form.Group>
+                                  <Form.Group className="mb-3" controlId="description">
+                                    <Form.Label>Qo'shimcha ma'lumot</Form.Label>
+                                    <Form.Control as="textarea" placeholder="Soha" style={{ height: 150 }} defaultValue={this.state.teacher.position} />
+                                  </Form.Group>
+                                </div>
                               </div>
-                           
-                            </div>
+                              <Button variant="danger" as="input" type="reset" value="Bekor qilish" />
+                              <Button variant="primary" onClick={this.editStaff} style={{ marginLeft: "15px" }}>
+                                Saqlash
+                              </Button>
+                            </Form>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div style={{width:"86%", marginTop:'50px', marginLeft:'7%' }}>
-                    <Container>
-                  
-                            <Form onSubmit={this.addLesson}  style={{backgroundColor:'white', padding:'20px', boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px', marginBottom:'30px'}}>
-                                  <Row>
-                                    <Col lg={7}>
-                                      <Form.Group controlId="pass" className="mb-3">
-                                        <Form.Label style={{ borderBottom: "1px solid black", marginBottom: "20px", fontSize: "16px" }}>Yangi parol kiriting</Form.Label>
-                                        <Form.Control name="password" type={this.state.input ? "password" : "text"} required={true} />
-                                      </Form.Group>
-                                    </Col>
-                                    <Col lg={5} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                      <Button
-                                        style={{ position: "relative", top: "20px" }}
-                                        variant="danger"
-                                        onClick={() => {
-                                          this.setState({ input: !this.state.input });
-                                        }}
-                                      >
-                                        Parolni ko'rish
-                                      </Button>
-                                      <Button style={{ position: "relative", marginLeft: "10px", top: "20px" }} variant="primary" type="submit">
-                                        Parolni saqlash
-                                      </Button>
-                                    </Col>
-                                  </Row>
-                                </Form>
-                           
-                            </Container> </div>
                   </div>
-                </Route>
-              </Switch>
-           
-           
+                </div>
+                <div style={{ width: "86%", marginTop: "50px", marginLeft: "7%" }}>
+                  <Container>
+                    <Form onSubmit={this.addLesson} style={{ backgroundColor: "white", padding: "20px", boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px", marginBottom: "30px" }}>
+                      <Row>
+                        <Col lg={7}>
+                          <Form.Group controlId="pass" className="mb-3">
+                            <Form.Label style={{ borderBottom: "1px solid black", marginBottom: "20px", fontSize: "16px" }}>Yangi parol kiriting</Form.Label>
+                            <Form.Control name="password" type={this.state.input ? "password" : "text"} required={true} />
+                          </Form.Group>
+                        </Col>
+                        <Col lg={5} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <Button
+                            style={{ position: "relative", top: "20px" }}
+                            variant="danger"
+                            onClick={() => {
+                              this.setState({ input: !this.state.input });
+                            }}
+                          >
+                            Parolni ko'rish
+                          </Button>
+                          <Button style={{ position: "relative", marginLeft: "10px", top: "20px" }} variant="primary" type="submit">
+                            Parolni saqlash
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Form>
+                  </Container>{" "}
+                </div>
+              </div>
+            </Route>
+          </Switch>
         </BrowserRouter>
       </div>
     ) : (
-      <Redirect to="/login/uz" />
+      (window.location.href = "/")
     );
   }
 }
