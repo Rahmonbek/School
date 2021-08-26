@@ -36,16 +36,17 @@ componentDidMount(){
         
                     <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                         <Container>
-                            <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to='/uz' style={{color:'gold', fontSize:"24px",fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                            <Navbar.Collapse >
-                                <Nav className="me-auto" >
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/uz"><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/hayot/uz"><p className='navLink'>Maktab hayoti</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/qabul/uz"><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/yangiliklar/uz"><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/rahbariyat/uz"><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', marginTop:'4px'}} to="/alochilar/uz"><p className='navLink'>Yutuqlar</p></NavLink>
+                             <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to={`/${this.state.id}`} style={{color:'gold', fontSize:"24px",fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
+                            <Navbar.Toggle  style={{color:' rgba(0, 0, 0, 0)'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',marginTop:'-5px'}}></i>
+</Navbar.Toggle>
+                            <Navbar.Collapse id="responsive-navbar-nav" style={{width:'100%',color:'white'}}>
+                                <Nav className={style.meauto} >
+                                    <NavLink  to={`/${this.state.id}`}><p className={style.navLink}>Bosh sahifa</p></NavLink>
+                                    <NavLink  to={`/hayot/${this.state.id}`}><p className={style.navLink}>Maktab hayoti</p></NavLink>
+                                    <NavLink  to={`/qabul/${this.state.id}`}><p className={style.navLink}>Qabul</p></NavLink>
+                                    <NavLink  to={`/yangiliklar/${this.state.id}`}><p className={style.navLink}>Yangiliklar</p></NavLink>
+                                    <NavLink  to={`/rahbariyat/${this.state.id}`}><p className={style.navLink}>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink  to={`/alochilar/${this.state.id}`}><p className={style.navLink}>Maktab alochilari</p></NavLink>
                                     {/* <div className={style.bayroqlar}>
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
