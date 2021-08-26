@@ -36,17 +36,17 @@ componentDidMount(){
         
                     <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                         <Container>
-                            <Navbar.Brand><p className={style.maktabLogo} style={{ cursor:'pointer', marginTop:'8px', }}><Link to={`/${this.state.id}`} style={{color:'gold', fontSize:"24px",fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></p></Navbar.Brand>
-                            <Navbar.Toggle  style={{color:' rgba(0, 0, 0, 0)'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',marginTop:'-5px'}}></i>
+                            <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer', }}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand>
+                            <Navbar.Toggle  style={{color:' rgba(0, 0, 0, 0)'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.8rem',color:'white',paddingTop:'4px'}}></i>
 </Navbar.Toggle>
-                            <Navbar.Collapse id="responsive-navbar-nav" style={{width:'100%',color:'white'}}>
+                            <Navbar.Collapse id="responsive-navbar-nav" style={{width:'100%',color:'white',marginTop:'10px'}}>
                                 <Nav className={style.meauto} >
-                                    <NavLink  to={`/${this.state.id}`}><p className={style.navLink}>Bosh sahifa</p></NavLink>
-                                    <NavLink  to={`/hayot/${this.state.id}`}><p className={style.navLink}>Maktab hayoti</p></NavLink>
-                                    <NavLink  to={`/qabul/${this.state.id}`}><p className={style.navLink}>Qabul</p></NavLink>
-                                    <NavLink  to={`/yangiliklar/${this.state.id}`}><p className={style.navLink}>Yangiliklar</p></NavLink>
-                                    <NavLink  to={`/rahbariyat/${this.state.id}`}><p className={style.navLink}>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink  to={`/alochilar/${this.state.id}`}><p className={style.navLink}>Maktab alochilari</p></NavLink>
+                                    <NavLink  to={`/${this.state.id}`}><span className={style.navLink}>Bosh sahifa</span></NavLink>
+                                    <NavLink  to={`/hayot/${this.state.id}`}><span className={style.navLink}>Maktab hayoti</span></NavLink>
+                                    <NavLink  to={`/qabul/${this.state.id}`}><span className={style.navLink}>Qabul</span></NavLink>
+                                    <NavLink  to={`/yangiliklar/${this.state.id}`}><span className={style.navLink}>Yangiliklar</span></NavLink>
+                                    <NavLink  to={`/rahbariyat/${this.state.id}`}><span className={style.navLink}>Maktab ma'muriyati</span></NavLink>
+                                    <NavLink  to={`/alochilar/${this.state.id}`}><span className={style.navLink}>Maktab alochilari</span></NavLink>
                                     {/* <div className={style.bayroqlar}>
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
