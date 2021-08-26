@@ -256,7 +256,7 @@ export default class MaktabHayoti extends Component {
                         <Image
                           src={
                             data !== null && data.m_h_t !== null
-                              ? data.t
+                              ? data.m_h_t
                               : school5
                           }
                           className={styles.secondImage}
@@ -283,13 +283,7 @@ export default class MaktabHayoti extends Component {
                             paradizmatik. Bu jumlaning qovurilgan qismlari uchib
                             ketadigan jannat matikasi mamlakati.`}
                         </p>
-                        <h1>Parking</h1>
-                        <p>
-                          Kompusning g'arbiy qismida 1000 dan ortiq to'xtash
-                          joylari mavjud va 24 soat xavfsizlik bilan ishlaydi.
-                          Hammasi nazorat ostida ekanligiga ishonch hosil
-                          qilamiz.
-                        </p>
+                        
                       </Col>
                     </Row>
                   </Container>
@@ -311,13 +305,14 @@ export default class MaktabHayoti extends Component {
                     ></Pannellum>
                     <div className="paramumic_data">
                       <div>
-                        <h2>
+                        <h2 style={{width:'80%', marginLeft:'10%'}}>
                           {data.m_h_k_h !== null && data !== null
                             ? data.m_h_k_h
                             : `Talabalar shaharchasida sayohat qilishning ko'plab
                             variantlari mavjud.`}
                         </h2>
-                        <h4>
+                        <h4  style={{width:'80%', marginLeft:'10%', height:"150px", overflowY:
+        'auto'}}>
                           {data.m_h_k_t !== null && data !== null
                             ? data.m_h_k_t
                             : `Talabalar shaharchasida sayohat qilishning ko'plab

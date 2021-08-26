@@ -170,7 +170,7 @@ getSchool=()=>{
 
                 <div className={style.ikki}>
                     <div className={style.containercha}>
-                        <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm2:rasm2} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c2!==null?this.state.school.b_c2:rasm2:rasm2} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to={`/yangiliklar/${Global.user}`}>
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
@@ -182,7 +182,7 @@ getSchool=()=>{
                 </div>
                 <div className={style.uch}>
                     <div className={style.containercha}>
-                        <img src={this.state.school!==null?this.state.school.b_c1!==null?this.state.school.b_c1:rasm3:rasm3} className={style.image} />
+                        <img src={this.state.school!==null?this.state.school.b_c3!==null?this.state.school.b_c3:rasm3:rasm3} className={style.image} />
                         <div className={style.overlay}>
                         <Link style={{color:'white'}} to={`/gallery/${Global.user}`}>
                             <FontAwesomeIcon icon={faDoorOpen} className={style.icon} />

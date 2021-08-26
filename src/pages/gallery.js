@@ -17,7 +17,9 @@ state={
        loader:true,    
 }
 getSchool=()=>{
-       axios.get(`${url}/school-by-admin/${user}`).then(res=>{
+  var a = window.location.href.split("/");
+  var v = a[a.length - 1];
+  axios.get(`${url}/school-by-admin/${v}`).then((res) => {
            this.setState({
                school:res.data,
          loader:false,
@@ -53,7 +55,7 @@ return(<div>
         </div>
       
        <Container>
-        <Row>
+        <Row style={{justifyContent:'center'}}>
         <Col lg={6} md={6} cm={12}>
         <div class={style.imagewrapper} >
   <img alt=" " class={style.image1} src={this.state.school!==null?this.state.school.foto1!==null?this.state.school.foto1:img2:img2}  />
@@ -89,10 +91,10 @@ return(<div>
                </Col>
                <Col lg={6} md={6} cm={12}>
                <div class={style.imagewrapper} >
-  <img alt=" " class={style.image1} src={this.state.school!==null?this.state.school.foto4!==null?this.state.school.foto4:img6:img6}  />
-  <img alt=" " class={style.image2} src={this.state.school!==null?this.state.school.foto4!==null?this.state.school.foto4:img6:img6}  />
-  <img alt=" " class={style.image3} src={this.state.school!==null?this.state.school.foto4!==null?this.state.school.foto4:img6:img6}  />
-  <img alt=" " class={style.image4} src={this.state.school!==null?this.state.school.foto4!==null?this.state.school.foto4:img6:img6}  />
+  <img alt=" " class={style.image1} src={this.state.school!==null?this.state.school.foto6!==null?this.state.school.foto6:img6:img6}  />
+  <img alt=" " class={style.image2} src={this.state.school!==null?this.state.school.foto6!==null?this.state.school.foto6:img6:img6}  />
+  <img alt=" " class={style.image3} src={this.state.school!==null?this.state.school.foto6!==null?this.state.school.foto6:img6:img6}  />
+  <img alt=" " class={style.image4} src={this.state.school!==null?this.state.school.foto6!==null?this.state.school.foto6:img6:img6}  />
 </div>          
                </Col>
                <Col lg={6} md={12} cm={12}>
@@ -101,6 +103,15 @@ return(<div>
   <img alt=" " class={style.image2} src={this.state.school!==null?this.state.school.foto5!==null?this.state.school.foto5:img6:img6}  />
   <img alt=" " class={style.image3} src={this.state.school!==null?this.state.school.foto5!==null?this.state.school.foto5:img6:img6}  />
   <img alt=" " class={style.image4} src={this.state.school!==null?this.state.school.foto5!==null?this.state.school.foto5:img6:img6}  />
+</div>    
+                      
+               </Col>
+               <Col lg={6} md={12} cm={12}>
+               <div class={style.imagewrapper} >
+  <img alt=" " class={style.image1} src={this.state.school!==null?this.state.school.foto7!==null?this.state.school.foto7:img6:img6}  />
+  <img alt=" " class={style.image2} src={this.state.school!==null?this.state.school.foto7!==null?this.state.school.foto7:img6:img6}  />
+  <img alt=" " class={style.image3} src={this.state.school!==null?this.state.school.foto7!==null?this.state.school.foto7:img6:img6}  />
+  <img alt=" " class={style.image4} src={this.state.school!==null?this.state.school.foto7!==null?this.state.school.foto7:img6:img6}  />
 </div>    
                       
                </Col>
