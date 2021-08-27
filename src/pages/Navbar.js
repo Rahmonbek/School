@@ -51,7 +51,7 @@ componentDidMount(){
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
                           </div> */}
-                                <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link>
+                                {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
 </Nav>
                                 
                             </Navbar.Collapse>

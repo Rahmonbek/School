@@ -23,29 +23,55 @@ state={
   orin1:null,
   orin2:null,
   orin3:null,
+  kutubxona:null,
+  psixolog:null,
+  kasaba:null,
+  yetakchi:null,
+  chqbt:null,
   loader:true,
+
   
 }
 getStaff=()=>{
   axios.get(`${url}/staff-by-school/${Global.schoolId}/`).then(res=>{
-    var direktor=null
-  var orin1=null
-  var orin2=null
-  var orin3=null
+    var direktor=[]
+    var orin1=[]
+    var orin2=[]
+    var orin3=[]
+    var kutubxona=[]
+    var psixolog=[]
+    var kasaba=[]
+    var yetakchi=[]
+    var chqbt=[]
     res.data.map(item=>{
       if(item.speciality.length!==0){
         item.speciality.map(item1=>{
+          if(item1===2){
+            direktor.push(item)
+          }
           if(item1===3){
-            direktor=item
+            orin1.push(item)
           }
           if(item1===4){
-            orin1=item
+            orin2.push(item)
           }
           if(item1===5){
-            orin2=item
+            orin3.push(item)
           }
           if(item1===6){
-            orin3=item
+            kutubxona.push(item)
+          }
+          if(item1===7){
+            psixolog.push(item)
+          }
+          if(item1===8){
+            kasaba.push(item)
+          }
+          if(item1===9){
+            yetakchi.push(item)
+          }
+          if(item1===10){
+            chqbt.push(item)
           }
         })
       }
@@ -53,9 +79,14 @@ getStaff=()=>{
     })
     this.setState({
       direktor:direktor,
-  orin1:orin1,
-  orin2:orin2,
-  orin3:orin3,
+      orin1:orin1,
+      orin2:orin2,
+      orin3:orin3,
+      kutubxona:kutubxona,
+      psixolog:psixolog,
+      kasaba:kasaba,
+      yetakchi:yetakchi,
+      chqbt:chqbt,
 loader:false,    
 })
 
@@ -92,71 +123,266 @@ loader:false,
          : 
             <>  <br/><br/><br/>
             <Car style={{position:'relative', top:'-20px'}}>
-            <Car.Item>
-    <img
-      className="d-block w-100"
-      style={{height:'90vh'}}
-      src={this.state.direktor!==null?this.state.direktor.image!==null?this.state.direktor.image:school1:''}
-      alt="First slide"
-    />
-    <Car.Caption>
-      
+            {this.state.direktor!==null?this.state.direktor.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
     </Car.Caption>
-  </Car.Item>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      style={{height:'90vh'}}
-      src={this.state.orin1!==null?this.state.orin1.image!==null?this.state.orin1.image:'':''}
-      alt="First slide"
-    />
-    <Car.Caption>
-      
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.orin1!==null?this.state.orin1.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
     </Car.Caption>
-  </Car.Item>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      style={{height:'90vh'}}
-      src={this.state.orin2!==null?this.state.orin2.image!==null?this.state.orin2.image:'':''}
-      alt="Second slide"
-    />
-
-    <Car.Caption>
-      
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.orin2!==null?this.state.orin2.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
     </Car.Caption>
-  </Car.Item>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      style={{height:'90vh'}}
-      src={this.state.orin3!==null?this.state.orin3.image!==null?this.state.orin3.image:'':''}
-      alt="Third slide"
-    />
-
-    <Car.Caption>
-      
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.orin3!==null?this.state.orin3.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
     </Car.Caption>
-  </Car.Item>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.psixolog!==null?this.state.psixolog.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
+    </Car.Caption>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.kasaba!==null?this.state.kasaba.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
+    </Car.Caption>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
+    </Car.Caption>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.chqbt!==null?this.state.chqbt.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+    </Car.Caption>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+         </Car.Caption>
+       </Car.Item>}
+   
+       {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
+             return(
+              <Car.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Car.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+    </Car.Caption>
+  </Car.Item>)
+           }):   <Car.Item>
+           <img
+             className="d-block w-100"
+             style={{height:'90vh'}}
+             src={school1}
+             alt="First slide"
+           />
+           <Car.Caption>
+             
+           <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+         </Car.Caption>
+       </Car.Item>}
+   
 </Car>
                 <Container>
                     <Row>
-                    <Col lg={12}>
+                    {this.state.direktor!==null?this.state.direktor.map(item=>{
+             return(
+               <Col lg={12}>
                             <div className={styles.carddirektor} data-aos="zoom-in-up">
                                 <Row>
                                     <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={this.state.direktor!==null?this.state.direktor.image!==null?this.state.direktor.image:school1:''}/>
+                                        <img src={item.image}/>
                                         <p style={{textAlign:'center'}}>Maktab direktori</p>
                                     </Col>
                                     <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
                                       <Row>  
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>  {this.state.orin1!==null?this.state.direktor.full_name:''}</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
@@ -165,7 +391,7 @@ loader:false,
                                       
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.direktor.position:''}</span>
+                                      <span className={styles.direktor}>{item.position}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
@@ -177,25 +403,29 @@ loader:false,
                                         </Col> */}
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.direktor.phone:''}</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
                                         </Col>
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.direktor.description:''}</span>
+                                      <span className={styles.direktor}>{item.description}</span>
                                         </Col>
                                      </Row>
                                     </Col>
                                 </Row>
                             </div>
-                        </Col>
-                        <Col lg={12}>
+                        </Col>)
+           }):""}
+   
+       {this.state.orin1!==null?this.state.orin1.map(item=>{
+             return(
+               <Col lg={12}>
                             <div className={styles.carddirektor} data-aos="zoom-in-up">
                                 <Row>
                                     <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
                                       <Row>  
                                       <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>  {this.state.orin1!==null?this.state.orin1.full_name:''}</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
@@ -204,7 +434,7 @@ loader:false,
                                       
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin1.position:''}</span>
+                                      <span className={styles.direktor}>{item.position}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
@@ -216,33 +446,37 @@ loader:false,
                                         </Col> */}
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin1.phone:''}</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
                                         </Col>
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin1.description:''}</span>
+                                      <span className={styles.direktor}>{item.description}</span>
                                         </Col>
                                      </Row>
                                     </Col>
                                     <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={this.state.orin1!==null?this.state.orin1.image!==null?this.state.orin1.image:'':''}/>
+                                        <img src={item.image}/>
                                         <p style={{textAlign:'center'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
                                     </Col>
                                 </Row>
                             </div>
-                        </Col>
-                        <Col lg={12}>
+                        </Col>)
+           }):""}
+   
+       {this.state.orin2!==null?this.state.orin2.map(item=>{
+             return(
+               <Col lg={12}>
                             <div className={styles.carddirektor} data-aos="zoom-in-up">
                                 <Row>
                                     <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={this.state.orin2!==null?this.state.orin2.image!==null?this.state.orin2.image:'':''}/>
+                                        <img src={item.image}/>
                                         <p style={{textAlign:'center'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
                                     </Col>
                                     <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
                                       <Row>  
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>  {this.state.orin1!==null?this.state.orin2.full_name:''}</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
@@ -251,7 +485,7 @@ loader:false,
                                       
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin2.position:''}</span>
+                                      <span className={styles.direktor}>{item.position}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
@@ -263,25 +497,29 @@ loader:false,
                                         </Col> */}
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin2.phone:''}</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
                                         </Col>
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{this.state.orin1!==null?this.state.orin2.description:''}</span>
+                                      <span className={styles.direktor}>{item.description}</span>
                                         </Col>
                                      </Row>
                                     </Col>
                                 </Row>
                             </div>
-                        </Col>
-                        <Col lg={12}>
+                        </Col>)
+           }):""}
+   
+       {this.state.orin3!==null?this.state.orin3.map(item=>{
+             return(
+               <Col lg={12}>
                             <div className={styles.carddirektor} data-aos="zoom-in-up">
                                 <Row>
                                     <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
                                       <Row>  
                                       <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>F.I.O:</span>
-                                      <span className={styles.direktor}>  {this.state.orin3!==null?this.state.orin3.full_name:''}</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
@@ -290,7 +528,7 @@ loader:false,
                                       
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Mutaxasisligi:</span>
-                                      <span className={styles.direktor}>{this.state.orin3!==null?this.state.orin3.position:''}</span>
+                                      <span className={styles.direktor}>{item.position}</span>
                                         </Col>
                                         {/* <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
@@ -302,85 +540,433 @@ loader:false,
                                         </Col> */}
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Telefon raqami:</span>
-                                      <span className={styles.direktor}>{this.state.orin3!==null?this.state.orin3.phone:''}</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
                                         </Col>
                                         <Col lg={12} style={{marginBottom:'5px'}}>
                                         <span className={styles.direktorbr}>Qo'shimcha:</span>
-                                      <span className={styles.direktor}>{this.state.orin3!==null?this.state.orin3.description:''}</span>
+                                      <span className={styles.direktor}>{item.description}</span>
                                         </Col>
                                      </Row>
                                     </Col>
                                     <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                                        <img src={this.state.orin3!==null?this.state.orin3.image!==null?this.state.orin3.image:'':''}/>
+                                        <img src={item.image}/>
                                         <p style={{textAlign:'center'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
                                     </Col>
                                 </Row>
                             </div>
+                        </Col>)
+           }):""}
+   
+       {this.state.psixolog!==null?this.state.psixolog.map(item=>{
+             return(
+               <Col lg={12}>
+                            <div className={styles.carddirektor} data-aos="zoom-in-up">
+                                <Row>
+                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                                        <img src={item.image}/>
+                                        <p style={{textAlign:'center'}}>Maktab amaliyotchi psixologi</p>
+                                    </Col>
+                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
+                                      <Row>  
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>F.I.O:</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
+                                      <span className={styles.direktor}> 1974-yil</span>
+                                        </Col> */}
+                                      
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
+                                      <span className={styles.direktor}>{item.position}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
+                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>E-mail pochta:</span>
+                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
+                                        </Col> */}
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Telefon raqami:</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
+                                      <span className={styles.direktor}>{item.description}</span>
+                                        </Col>
+                                     </Row>
+                                    </Col>
+                                </Row>
+                            </div>
                         </Col>
-                     
+              )
+           }):""}
+   
+       {this.state.kasaba!==null?this.state.kasaba.map(item=>{
+             return(
+               <Col lg={12}>
+                            <div className={styles.carddirektor} data-aos="zoom-in-up">
+                                <Row>
+                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
+                                      <Row>  
+                                      <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>F.I.O:</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
+                                      <span className={styles.direktor}> 1974-yil</span>
+                                        </Col> */}
+                                      
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
+                                      <span className={styles.direktor}>{item.position}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
+                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>E-mail pochta:</span>
+                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
+                                        </Col> */}
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Telefon raqami:</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
+                                      <span className={styles.direktor}>{item.description}</span>
+                                        </Col>
+                                     </Row>
+                                    </Col>
+                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                                        <img src={item.image}/>
+                                        <p style={{textAlign:'center'}}>Kasaba uyushma raisi</p>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
+              )
+           }):""}
+   
+       {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
+             return(
+                 <Col lg={12}>
+                            <div className={styles.carddirektor} data-aos="zoom-in-up">
+                                <Row>
+                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                                        <img src={item.image}/>
+                                        <p style={{textAlign:'center'}}>Kutubxona mudirasi</p>
+                                    </Col>
+                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
+                                      <Row>  
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>F.I.O:</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
+                                      <span className={styles.direktor}> 1974-yil</span>
+                                        </Col> */}
+                                      
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
+                                      <span className={styles.direktor}>{item.position}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
+                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>E-mail pochta:</span>
+                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
+                                        </Col> */}
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Telefon raqami:</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
+                                      <span className={styles.direktor}>{item.description}</span>
+                                        </Col>
+                                     </Row>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
+             )
+           }):""}
+   
+       {this.state.chqbt!==null?this.state.chqbt.map(item=>{
+             return(
+                 <Col lg={12}>
+                            <div className={styles.carddirektor} data-aos="zoom-in-up">
+                                <Row>
+                                    <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px'}}>
+                                      <Row>  
+                                      <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>F.I.O:</span>
+                                      <span className={styles.direktor}>{item.full_name}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
+                                      <span className={styles.direktor}> 1974-yil</span>
+                                        </Col> */}
+                                      
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Mutaxasisligi:</span>
+                                      <span className={styles.direktor}>{item.position}</span>
+                                        </Col>
+                                        {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
+                                      <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>E-mail pochta:</span>
+                                      <span className={styles.direktor}>alisherovich@gmail.com</span>
+                                        </Col> */}
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Telefon raqami:</span>
+                                      <span className={styles.direktor}>{item.phone}</span>
+                                        </Col>
+                                        <Col lg={12} style={{marginBottom:'5px'}}>
+                                        <span className={styles.direktorbr}>Qo'shimcha:</span>
+                                      <span className={styles.direktor}>{item.description}</span>
+                                        </Col>
+                                     </Row>
+                                    </Col>
+                                    <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                                        <img src={item.image}/>
+                                        <p style={{textAlign:'center'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
+             )
+           }):""}
+   
+       {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
+             return(
+              <Col lg={12}>
+              <div className={styles.carddirektor} data-aos="zoom-in-up">
+                  <Row>
+                      <Col lg={4} style={{border:'1px solid #0F4C81',backgroundColor:'#0F4C81',height:'400px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                          <img src={item.image}/>
+                          <p style={{textAlign:'center'}}>Boshlang'ich tashkilot yoshlar yetakchisi</p>
+                      </Col>
+                      <Col className={styles.cardwrap} lg={8} style={{border:'1px solid #0F4C81',backgroundColor:'#FCFCFC',paddingTop:'60px', height:'400px', overflowY:'auto'}}>
+                        <Row>  
+                          <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>F.I.O:</span>
+                        <span className={styles.direktor}>{item.full_name}</span>
+                          </Col>
+                          {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>Tug'ilgan sanasi:</span>
+                        <span className={styles.direktor}> 1974-yil</span>
+                          </Col> */}
+                        
+                          <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>Mutaxasisligi:</span>
+                        <span className={styles.direktor}>{item.position}</span>
+                          </Col>
+                          {/* <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>Bitirgan oliygohi:</span>
+                        <span className={styles.direktor}>O'zbekiston Miliiy Universiteti</span>
+                          </Col>
+                          <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>E-mail pochta:</span>
+                        <span className={styles.direktor}>alisherovich@gmail.com</span>
+                          </Col> */}
+                          <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>Telefon raqami:</span>
+                        <span className={styles.direktor}>{item.phone}</span>
+                          </Col>
+                          <Col lg={12} style={{marginBottom:'5px'}}>
+                          <span className={styles.direktorbr}>Qo'shimcha:</span>
+                        <span className={styles.direktor}>{item.description}</span>
+                          </Col>
+                       </Row>
+                      </Col>
+                  </Row>
+              </div>
+          </Col>
+             )
+           }):""}
+   
+                  
                         <Col lg={12}>
 
                         <Carousel autoplay
                        className={styles.sliderComment}
                        
                         >
-                       <div>
+{this.state.direktor!==null?this.state.direktor.map(item=>{
+             return(
+               <div>
                        <article className='review' data-aos="zoom-in-up">
       <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={this.state.direktor!==null?this.state.direktor.image!==null?this.state.direktor.image:school1:''} className={styles.personimg} />
+        <img src={item.image} className={styles.personimg} />
         <span className={styles.quoteicon}>
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className={styles.author}>{this.state.orin1!==null?this.state.direktor.full_name:''}</h4>
+      <h4 className={styles.author}>{item.full_name}</h4>
       <p className={styles.job}>Maktab direktori</p>
       <br/>
       
     </article>
                        </div>
-                       <div>
+            
+)}):''}               
+{this.state.orin1!==null?this.state.orin1.map(item=>{
+             return(
+               <div>
                        <article className='review' data-aos="zoom-in-up">
       <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={this.state.orin1!==null?this.state.orin1.image!==null?this.state.orin1.image:'':''} className={styles.personimg} />
+        <img src={item.image} className={styles.personimg} />
         <span className={styles.quoteicon}>
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className={styles.author}>{this.state.orin1!==null?this.state.orin1.full_name:''}</h4>
+      <h4 className={styles.author}>{item.full_name}</h4>
       <p className={styles.job}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
       <br/>
       
     </article>
-                       </div>   
-                       <div>
+                       </div>
+            
+)}):''}       
+{this.state.orin2!==null?this.state.orin2.map(item=>{
+             return(
+               <div>
                        <article className='review' data-aos="zoom-in-up">
       <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={this.state.orin2!==null?this.state.orin2.image!==null?this.state.orin2.image:'':''} className={styles.personimg} />
+        <img src={item.image} className={styles.personimg} />
         <span className={styles.quoteicon}>
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className={styles.author}>{this.state.orin1!==null?this.state.orin2.full_name:''}</h4>
+      <h4 className={styles.author}>{item.full_name}</h4>
       <p className={styles.job}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
       <br/>
       
     </article>
                        </div>
-                       <div>
+            
+)}):''}       
+{this.state.orin3!==null?this.state.orin3.map(item=>{
+             return(
+               <div>
                        <article className='review' data-aos="zoom-in-up">
       <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
-        <img src={this.state.orin3!==null?this.state.orin3.image!==null?this.state.orin3.image:'':''} className={styles.personimg} />
+        <img src={item.image} className={styles.personimg} />
         <span className={styles.quoteicon}>
           <FaQuoteRight />
         </span>
       </div>
-      <h4 className={styles.author}>{this.state.orin3!==null?this.state.orin3.full_name:''}</h4>
+      <h4 className={styles.author}>{item.full_name}</h4>
       <p className={styles.job}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
       <br/>
       
     </article>
                        </div>
-                    </Carousel>
+            
+)}):''}       
+{this.state.psixolog!==null?this.state.psixolog.map(item=>{
+             return(
+               <div>
+                       <article className='review' data-aos="zoom-in-up">
+      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
+        <img src={item.image} className={styles.personimg} />
+        <span className={styles.quoteicon}>
+          <FaQuoteRight />
+        </span>
+      </div>
+      <h4 className={styles.author}>{item.full_name}</h4>
+      <p className={styles.job}>Maktab amaliyotchi psixologi</p>
+      <br/>
+      
+    </article>
+                       </div>
+            
+)}):''}       
+{this.state.kasaba!==null?this.state.kasaba.map(item=>{
+             return(
+               <div>
+                       <article className='review' data-aos="zoom-in-up">
+      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
+        <img src={item.image} className={styles.personimg} />
+        <span className={styles.quoteicon}>
+          <FaQuoteRight />
+        </span>
+      </div>
+      <h4 className={styles.author}>{item.full_name}</h4>
+      <p className={styles.job}>Kasaba uyushma raisi</p>
+      <br/>
+      
+    </article>
+                       </div>
+            
+)}):''}       
+{this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
+             return(
+               <div>
+                       <article className='review' data-aos="zoom-in-up">
+      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
+        <img src={item.image} className={styles.personimg} />
+        <span className={styles.quoteicon}>
+          <FaQuoteRight />
+        </span>
+      </div>
+      <h4 className={styles.author}>{item.full_name}</h4>
+      <p className={styles.job}>Kutubxona mudirasi</p>
+      <br/>
+      
+    </article>
+                       </div>
+            
+)}):''}       
+{this.state.chqbt!==null?this.state.chqbt.map(item=>{
+             return(
+               <div>
+                       <article className='review' data-aos="zoom-in-up">
+      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
+        <img src={item.image} className={styles.personimg} />
+        <span className={styles.quoteicon}>
+          <FaQuoteRight />
+        </span>
+      </div>
+      <h4 className={styles.author}>{item.full_name}</h4>
+      <p className={styles.job}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+      <br/>
+      
+    </article>
+                       </div>
+            
+)}):''}       
+{this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
+             return(
+               <div>
+                       <article className='review' data-aos="zoom-in-up">
+      <div className={styles.imgcontainer} style={{marginTop:'10px'}}>
+        <img src={item.image} className={styles.personimg} />
+        <span className={styles.quoteicon}>
+          <FaQuoteRight />
+        </span>
+      </div>
+      <h4 className={styles.author}>{item.full_name}</h4>
+      <p className={styles.job}>Boshlang'ich tashkilot yoshlar yetakchisi</p>
+      <br/>
+      
+    </article>
+                       </div>
+            
+)}):''}       
+                                           </Carousel>
                         </Col>
 
                     </Row>

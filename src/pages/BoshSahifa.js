@@ -113,7 +113,7 @@ getSchool=()=>{
                             
                         </div>
                         {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
-                        <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link>
+                        {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
                     </Container>
                 </div>
             </ContainerDashboard>
@@ -128,7 +128,7 @@ getSchool=()=>{
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="me-auto"   >
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab haqida</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab hayoti</p></NavLink>
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/yangiliklar/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/rahbariyat/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
@@ -143,7 +143,7 @@ getSchool=()=>{
                     <Container>
                     <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
                     <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
-                     <Link to={`/hayot/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
+                     <Link to={`/hayot/${Global.user}`}><Button className='buttonn'>Maktab hayoti</Button></Link>
                     </Container>
                     <img style={{height:'100vh'}} src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
@@ -204,7 +204,7 @@ getSchool=()=>{
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 0,}}} className={style.video}  />
-                        <p className={style.pp}>Maktabimizga virtual sayohat qiling va siz bizning maktab shahardagi eng yaxshilaridan biri ekanligiga ishonch hosil qilasiz. Videoni ko'ring!</p>
+                        <p className={style.pp}>Maktabimizga virtual sayohat qiling va siz bizning maktabimiz haqida ko'proq malumotga ega bo'ling.</p>
                     </Col>
 
                     <Col xs={12} sm={12} md={8} lg={8} className={style.col}>

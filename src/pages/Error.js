@@ -2,6 +2,7 @@ import "../css/Error.css";
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
 import axios from "axios";
+import { url } from "../host/Host";
 
 function SelectMap() {
   const [cities, setCities] = useState([]);
@@ -12,11 +13,11 @@ function SelectMap() {
   const [AllProvinces, setAllProvinces] = useState([]);
 
   useEffect(() => {
-    axios.get("http://maktab2.herokuapp.com/region/").then((res) => {
+    axios.get(`${url}/region/`).then((res) => {
       setData(res.data);
       setAllProvinces([...new Set(res.data.map((item) => item.address))]);
     });
-    axios.get("http://maktab2.herokuapp.com/school/").then((res) => {
+    axios.get(`${url}/school/`).then((res) => {
       setSchool(res.data);
     });
 
