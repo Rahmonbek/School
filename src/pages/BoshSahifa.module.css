@@ -99,7 +99,7 @@
     text-align: center;
     align-items: center;
     display: flex;
-    margin-left: auto;
+    margin-left: -auto;
 }
 .bir{
     width: 31%;
@@ -212,7 +212,7 @@
         display: block;
         height: 500px;
         width: 97%;
-        margin-left: auto;
+        margin-left: -auto;
     }
     .registericon{
         top:0px !important;
@@ -265,12 +265,12 @@
         width: 95%;
     }
     .ikki{
-        margin: auto;
+        margin: -auto;
         height: 300px;
         width: 95%;
     }
     .uch{
-        margin: auto;
+        margin: -auto;
         height: 300px;
         width: 95%;
     }
@@ -558,7 +558,7 @@ justify-content: center;
         font-weight: 600;
     }
     
-    .meauto   .navLink{
+    .me-auto   .navLink{
        
             display: inline-block;
             color: white;
@@ -570,7 +570,7 @@ justify-content: center;
           
         }
     
-        .meauto .navLink::after {
+        .me-auto .navLink::after {
             display:block;
             content: '';
             border-bottom: solid 3px white;  
@@ -578,21 +578,21 @@ justify-content: center;
             transition: transform 400ms ease-in-out;
         }
         
-    .meauto .navLink:hover::after {
+    .me-auto .navLink:hover::after {
             transform: scaleX(1);
         }
     
-    .meauto .searchIcon{
+    .me-auto .searchIcon{
         color: white;
         font-size: 1.6rem;
         cursor: pointer;
         transition: 0.5s ease;
     }
     
-    .meauto .searchIcon:hover{
+    .me-auto .searchIcon:hover{
         color: red;
     }
-    .meauto .userIcon{
+    .me-auto .userIcon{
         color: white;
         text-shadow: 0px 0px 40px white;
         font-size: 1.3rem;
@@ -606,13 +606,13 @@ justify-content: center;
         font-size: 1.2rem;
         display:inline-block;
     }
-    .meauto .kirish:hover{
+    .me-auto .kirish:hover{
         border-top: 0;
     }
     
     
     
-    .meauto{
+    .me-auto{
       margin-top:10px;
         background-color:#02024ec0;
         text-align:center;
@@ -621,20 +621,20 @@ justify-content: center;
        
     
     @media (max-width: 786px){
-    .meauto  .kirish{
+    .me-auto  .kirish{
             margin: 0px;
             padding: 0px;
             font-size: 2rem;
            
         }
-    .meauto  .userIcon{
+    .me-auto  .userIcon{
             margin-left: 20px;
             font-size: 2rem;
            
         }
     
     
-        .meauto .navLink{ 
+        .me-auto .navLink{ 
             font-size: 1.6rem;
             margin-top: 0px;
            
@@ -643,29 +643,29 @@ justify-content: center;
     
     @media (max-width: 992px){
         
-        .meauto .navLink{ 
+        .me-auto .navLink{ 
             font-size: 1.6rem;
             padding:10px;
             margin: 0px;
             }
-        .meauto .kirish{
+        .me-auto .kirish{
             padding:0px;
             margin: 0px;
                 font-size: 2rem;
         }
-        .meauto .userIcon{
+        .me-auto .userIcon{
             margin-left: 20px;
             font-size: 2rem;
             padding-top:-10px;
         }
       
-        .meauto{
+        .me-auto{
             margin-left:0;
         }
     }
     
     @media (min-width:993px){
-        .meauto{ width:70vw;
+        .me-auto{ width:70vw;
             background-color:transparent;
         }
         .kirish{
@@ -674,7 +674,8 @@ justify-content: center;
         }
     }
     @media (min-width:1200px){
-        .meauto{ width:80vw;
+        .me-auto{ 
+            width:80vw;
             margin-left:30px;
         }
         .kirish{

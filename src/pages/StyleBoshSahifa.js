@@ -136,29 +136,27 @@ export const NavbarContainer = styled.div`
         font-weight: 600;
     }
     .me-auto{
-        margin-left: 3%;
-        .navLink{
+         .navLink{
             display: inline-block;
             color: white;
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: 1px;
             margin-left: 5px;
-            margin-top: 5px;
+            
         }
         .navLink::after {
             display:block;
             content: '';
             border-bottom: solid 3px red;  
             transform: scaleX(0);  
-            transition: transform 400ms ease-in-out;
+            transition: transform 500ms ease-in-out;
         }
         .navLink:hover::after {
             transform: scaleX(1);
             //transition: width .1s;
         }
     }
-    
     @media (max-width: 992px){
         .userIcon{
             margin-left: 20px;
@@ -215,7 +213,7 @@ export const XushKelibsiz = styled.div`
             padding: 5px 10px;
         }
     }
-    @media (max-width: 400px){
+    @media (max-width: 500px){
         h1{
             margin-top: 0%;
             font-size: 2.3rem;

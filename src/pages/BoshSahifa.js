@@ -124,9 +124,9 @@ getSchool=()=>{
                     <Navbar collapseOnSelect expand="lg" >
                         <Container>
                             <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{backgroundColor: 'white'}} />
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav">
-                                <Nav className="me-auto" >
+                                <Nav className="me-auto"  >
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab haqida</p></NavLink>
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
