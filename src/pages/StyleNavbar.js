@@ -72,6 +72,10 @@ export const NavbarContainer = styled.div`
     @media (max-width: 786px){
         .kirish{
             margin-left: -60px;
+position:relative;
+top:-10px;
+
+
         }
         .userIcon{
             margin-left: 20px;
