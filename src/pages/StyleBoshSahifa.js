@@ -53,49 +53,68 @@ export const ContainerDashboard = styled.div`
         .userIcon:hover{
             color: blue;
         }
-        @media (max-width: 1000px){
+        @media (max-width: 786px){
+            .kirish{
+                margin-left: -60px;
+    position:relative;
+    top:-10px;
+    
+    
+            }
             .userIcon{
-                margin-left: 99%;
+                margin-left: 20px;
+                font-size: 2rem;
+            }
+            .searchIcon{
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 2rem;
+            }
+            .me-auto{
+                margin-left:0;
             }
         }
-        @media (max-width: 820px){
+        @media (max-width: 992px){
+            .kirish{
+                margin-top:-15px;
+                margin-left:-60px;
+            }
             .userIcon{
-                margin-left: 99%;
-                font-size: 1.6rem;
-                margin-top: 5px;
+                margin-left: 20px;
+                font-size: 2rem;
+            }
+            .searchIcon{
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 2rem;
+            }
+            .me-auto{
+                margin-top:30px;
+                margin-left:0;
             }
         }
-
-        @media (max-width: 768px){
-            .userIcon{
-                margin-left: 90%;
-                font-size: 1.6rem;
-                margin-top: 5px;
+        @media (min-width:993px){
+            .me-auto{
+                background-color:transparent;
+                
+            }
+            .kirish{
+                margin-top:-20px;
+    
             }
         }
+        @media (min-width:1200px){
+            .me-auto{
+                margin-left:50px;
+                margin-top:15px;
+            }
+            .kirish{
+                margin-top:-15px;
+                margin-right:-40px;
+                
+            }
         
-        @media (max-width: 680px){
-            .userIcon{
-                margin-left: 85%;
-                font-size: 1.6rem;
-                margin-top: 5px;
-            }
-        }
         
-        @media (max-width: 580px){
-            .userIcon{
-                margin-left: 80%;
-                font-size: 1.6rem;
-                margin-top: 5px;
-            }
-        }
-        
-        @media (max-width: 500px){
-            .userIcon{
-                margin-left: 90%;
-                font-size: 1.6rem;
-                margin-top: 5px;
-            }
         }
         @media (max-width: 1000px) {
             .first{
@@ -196,6 +215,7 @@ export const XushKelibsiz = styled.div`
             font-size: 3.54rem;
             letter-spacing: 2px;
         }
+        
         .buttonn{
             font-size: 1.3rem;
             letter-spacing: 1.5px;

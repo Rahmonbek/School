@@ -1,13 +1,13 @@
 /* .wrapper{
     margin-top: 0;
     background-color: black;
-    height: 90vh;
+    height: 00vh;
     border-bottom: 2px solid black;
 } */
 .fer{background-color:rgba(0, 0, 0, 0.302);  height: 90.5vh;}
 .dashboard{
-    margin-top: 0;
-    height: 90.5vh;
+    margin-top: -10px;
+    height:100vh;
     border-bottom: 2px solid black;
     text-align: center;
     /* opacity: 0.6; */
@@ -54,25 +54,31 @@
 }
 @media screen and (max-width: 992px){
     .wrapper{
-        height: 150vh;
+        height: 100vh;
     }
     .iconEmail{
         margin-top:-5px ;
     }
     .dashboard{
-        height: 150vh;
+        height: 100vh;
     }
     .usericon{
         margin-top: 15px;
     }
 }
+@media screen and (max-width: 1000px){
+    .fer{top:-20px !important; }
+    
+}
 @media screen and (max-width: 800px){
     .wrapper{
-        height: 140vh;
+        height: 100vh;
     }
+    /* .fer{height:92.5vh} */
     .dashboard{
-        height: 140vh;
+        height: 100vh;
     }
+    .fer img{height:95.5vh !important; }
     .yuqori .iconEmail{
         margin-top:3px ;
         margin-left: 20px;
@@ -81,10 +87,10 @@
 
 @media screen and (max-width: 600px){
     .wrapper{
-        height: 130vh;
+        height: 100vh;
     }
     .dashboard{
-        height: 130vh;
+        height: 100vh;
     }
   
 }
