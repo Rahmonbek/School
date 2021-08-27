@@ -181,6 +181,13 @@ export const NavbarContainer = styled.div`
             margin-left: 20px;
             font-size: 2rem;
         }
+       .me-auto{
+           position:absolute;
+           width:100%;
+           background:#02024ec0;
+           left:0px;
+        } 
+
         .searchIcon{
             margin-left: 20px;
             margin-right: 20px;
