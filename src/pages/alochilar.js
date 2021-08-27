@@ -13,7 +13,7 @@ import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import { getExcellent, getPupil } from "../host/Config";
-import { idMaktab, url } from "../host/Host";
+import {url } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 
 export default class Alochilar extends Component {
@@ -29,30 +29,34 @@ export default class Alochilar extends Component {
   };
 
   getExcellents = () => {
+    var a = window.location.href.split("/");
+    var v = a[a.length - 1];
     axios
-      .get(`${url}/excellent/${idMaktab}/`)
+      .get(`${url}/excellent/${v}/`)
       .then((res) => {
         this.setState({
           excellent: res.data,
+         
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+       
+      });
+    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+      this.setState({ data: res.data });
+    });
+    axios
+      .get(`${url}/class-by-school/${v}/`)
+      .then((res) => {
+        this.setState({
+          class: res.data,
           loader:false
         });
       })
       .catch((err) => {
         console.log(err);
         this.setState({loader:false})
-      });
-    axios.get("http://maktab2.herokuapp.com/school-by-admin/137/").then((res) => {
-      this.setState({ data: res.data });
-    });
-    axios
-      .get(`${url}/class-by-school/${idMaktab}/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
       });
   };
 
@@ -111,32 +115,74 @@ export default class Alochilar extends Component {
 
     </div>:
 <>
-        <div className={styles.headerSliderText} style={{ width: "120%" }}>
-          <h3 style={{ fontFamily: "font", fontWeight: "900", fontSize: "90px", marginRight: "auto", marginLeft: "auto" }}>Maktab a'lochilari</h3>
-          <div className={styles.headerIcons}>
-            <a href="#1">
-              <DownCircleOutlined style={{ fontSize: "40px", color: "white" }} className={styles.headerIcon} />
-            </a>
-          </div>
-        </div>
-        <Carousel autoplay className={styles.sliderHeader}>
-          <div>
-            <Image src={this.state.data !== null && this.state.data.m_h_h1 !== null ? this.state.data.m_h_h1 : school1} className={styles.headerImage} />
-          </div>
-          <div>
-            <Image src={this.state.data !== null && this.state.data.m_h_h2 !== null ? this.state.data.m_h_h2 : school1} className={styles.headerImage} />
-          </div>
-          <div>
-            <Image src={this.state.data !== null && this.state.data.m_h_h3 !== null ? this.state.data.m_h_h3 : school3} className={styles.headerImage} />
-          </div>
-          <div>
-            <Image src={this.state.data !== null && this.state.data.m_h_h4 !== null ? this.state.data.m_h_h4 : school4} className={styles.headerImage} />
-          </div>
-          <div>
-            <Image src={this.state.data !== null && this.state.data.m_h_h5 !== null ? this.state.data.m_h_h5 : school5} className={styles.headerImage} />
-          </div>
-        </Carousel>
-        <div style={{ width: "100%", backgroundColor: "white" }}>
+        <div className={styles.headerSliderText}>
+              <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
+                Maktab A'lochilari
+              </h3>
+              <div className={styles.headerIcons}>
+                <a href="#1">
+                  <DownCircleOutlined
+                    style={{ fontSize: "40px", color: "white" }}
+                    className={styles.headerIcon}
+                  />
+                </a>
+              </div>
+            </div>
+            <Carousel autoplay className={styles.sliderHeader}>
+            <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h4 !== null
+                      ? this.state.data.m_h_h4
+                      : school4
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+            
+            <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h3 !== null
+                      ? this.state.data.m_h_h3
+                      : school3
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h5 !== null
+                      ? this.state.data.m_h_h5
+                      : school5
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+            
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h1 !== null
+                      ? this.state.data.m_h_h1
+                      : school1
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h2 !== null
+                      ? this.state.data.m_h_h2
+                      : school1
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+            </Carousel>
+  <div style={{ width: "100%", backgroundColor: "white" }}>
           <br />
           <br />
           <br />

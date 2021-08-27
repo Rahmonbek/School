@@ -154,22 +154,22 @@ componentDidMount(){
                       </div>
                       
                       <div className={styles.jarayon_text}>
-                          <h3>2. Formani to'ldiring</h3>
+                          <h3>2. Ariza yozing</h3>
                           <div className={styles.line}></div>
                           <p>
 
-                              {this.state.school!==null?this.state.school.q_j_forma!==null?this.state.school.q_j_forma:"Ro'yxatdan o'tishdagi formani to'ldirish haqida ma'lumot":"Ro'yxatdan o'tishdagi formani to'ldirish haqida ma'lumot"} 
+                              {this.state.school!==null?this.state.school.q_j_forma!==null?this.state.school.q_j_forma:"Ro'yxatdan o'tishdagi ariza haqida ma'lumot":"Ro'yxatdan o'tishdagi ariza haqida ma'lumot"} 
 
                           {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
                       </div>
 
                       <div className={styles.jarayon_text}>
-                          <h3>3. Ro'yxatdan o'tishni ko'zdan kechiring</h3>
+                          <h3>3. Arizani ko'zdan kechiring</h3>
                           <div className={styles.line}></div>
                           <p>
 
-                          {this.state.school!==null?this.state.school.q_j_koz!==null?this.state.school.q_j_koz:"Ro'yxatdan o'tishni ko'zdan kechirish haqida ma'lumot":"Ro'yxatdan o'tishni ko'zdan kechirish haqida ma'lumot"} 
+                          {this.state.school!==null?this.state.school.q_j_koz!==null?this.state.school.q_j_koz:"Arizani ko'zdan kechirish haqida ma'lumot":"Arizani ko'zdan kechirish haqida ma'lumot"} 
 
                           {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>
@@ -188,11 +188,11 @@ componentDidMount(){
                       </div>
                       
                       <div className={styles.jarayon_text}>
-                          <h3>5. Intervyu jarayoni</h3>
+                          <h3>5. Suhbat jarayoni</h3>
                           <div className={styles.line}></div>
                           <p>
 
-                          {this.state.school!==null?this.state.school.q_j_intervyu!==null?this.state.school.q_j_intervyu:"Intervyu jarayoni haqida ma'lumot":"Intervyu jarayoni haqida ma'lumot"} 
+                          {this.state.school!==null?this.state.school.q_j_intervyu!==null?this.state.school.q_j_intervyu:"Suhbat jarayoni haqida ma'lumot":"Suhbat jarayoni haqida ma'lumot"} 
 
                           {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                           </p>

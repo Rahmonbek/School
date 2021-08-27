@@ -30,7 +30,7 @@ componentDidMount() {
                             <h2>Maktab ma'lumoti</h2>
                             <p>{this.state.data!==null?this.state.data.address:''}</p>
                             <p style={{marginBottom: '0'}}><a className={style.navLink} href={`mailto: ${this.state.data!==null?this.state.data.email:'#'}`}>{this.state.data!==null?this.state.data.email:'#'}</a></p>
-                            <p><a className={style.navLink} href={`tel: ${this.state.data!==null?this.state.data.phone:'#'}`}>{this.state.data!==null?this.state.data.phone:''}</a></p>  
+                            <br/><p><a className={style.navLink} href={`tel: ${this.state.data!==null?this.state.data.phone:'#'}`}>{this.state.data!==null?this.state.data.phone:''}</a></p>  
                         </Col>
                         <Col xs={4} sm={12} md={6} lg={4} className={style.ulLi}>
                             <h2>Bizning maktab</h2>

@@ -103,13 +103,13 @@ getSchool=()=>{
                 <div className='yuqori'>
                     <Container>
                         <div className="first" style={{ marginTop:'5px'}}>
-                        <FontAwesomeIcon icon={faEnvelope} className='iconEmail' />
-                            <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
+                        <FontAwesomeIcon style={{color:"red", position:'relative', top:'3px'}} icon={faEnvelope} className='iconEmail' />
+                             <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
                         </div>
 
                         <div className={style.second} style={{ marginTop:'5px',right:'140px'}}>
                            
-                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
+                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon  style={{color:"red"}} icon={faPhone} className='iconEmail' /> {this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
                         </div>
                         {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
@@ -141,9 +141,11 @@ getSchool=()=>{
                 
                 <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
                     <Container>
-                    <h1 className={style.headingName} style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
-                    <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
-                     <Link to={`/hayot/${Global.user}`}><Button className='buttonn'>Maktab hayoti</Button></Link>
+                    <h1 className={style.headingName} style={{fontSize:'40px', position:'relative', top:'-100px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/><br/>
+                    <p style={{fontSize:'34px'}}>{this.state.school!==null?this.state.school.type!==null?this.state.school.school_number+" - "+this.state.school.type:this.state.school.school_number+' - maktab ':""}</p></h1>                        
+                    
+                                            
+                     <Link to={`/hayot/${Global.user}`} style={{position:'relative', top:'-100px'}}><Button className='buttonn'>Maktab hayoti</Button></Link>
                     </Container>
                     <img style={{height:'100vh'}} src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
@@ -200,7 +202,7 @@ getSchool=()=>{
                         {/* <img src={rasm1} className={style.img}/> */}
                         <YouTube videoId={this.state.school!==null?this.state.school.video!==null?this.state.school.video.slice(this.state.school.video.indexOf("youtu.be/")+9):'':''} opts={{ 
       width: '100%',
-      height:"100%",
+      height:"250px",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 0,}}} className={style.video}  />
