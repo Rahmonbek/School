@@ -14,6 +14,7 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import { getExcellent, getPupil } from "../host/Config";
 import { idMaktab, url } from "../host/Host";
+import { FadeLoader } from "react-spinners";
 
 export default class Alochilar extends Component {
   state = {
@@ -33,10 +34,12 @@ export default class Alochilar extends Component {
       .then((res) => {
         this.setState({
           excellent: res.data,
+          loader:false
         });
       })
       .catch((err) => {
         console.log(err);
+        this.setState({loader:false})
       });
     axios.get("http://maktab2.herokuapp.com/school-by-admin/137/").then((res) => {
       this.setState({ data: res.data });
@@ -100,6 +103,14 @@ export default class Alochilar extends Component {
   render() {
     return (
       <div>
+        {
+    this.state.loader?<div className="loaderT">
+<FadeLoader
+
+ color='blue' loading={this.state.loader} size={120} />        
+
+    </div>:
+<>
         <div className={styles.headerSliderText} style={{ width: "120%" }}>
           <h3 style={{ fontFamily: "font", fontWeight: "900", fontSize: "90px", marginRight: "auto", marginLeft: "auto" }}>Maktab a'lochilari</h3>
           <div className={styles.headerIcons}>
@@ -161,6 +172,7 @@ export default class Alochilar extends Component {
               : ""}
           </div>
         </div>
+</>}
       </div>
     );
   }

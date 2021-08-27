@@ -111,16 +111,16 @@ export default class Yangiliklar extends Component {
                               )
                             })
                           } */}
-    <div >
+    <div className="sliderIMG">
       <h3 style={contentStyle} className={styles.carusel1} ></h3>
     </div>
-    <div >
+    <div className="sliderIMG">
       <h3 style={contentStyle} className={styles.carusel2}></h3>
     </div>
-    <div >
+    <div className="sliderIMG">
       <h3 style={contentStyle} className={styles.carusel3}></h3>
     </div>
-    <div >
+    <div className="sliderIMG">
       <h3 style={contentStyle} className={styles.carusel4}></h3>
     </div>
   </Carousel>
