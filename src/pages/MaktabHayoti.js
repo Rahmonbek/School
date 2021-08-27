@@ -254,6 +254,7 @@ export default class MaktabHayoti extends Component {
                       </Col>
                       <Col lg={4} md={12} sm={12} className={styles.transport}>
                         <Image
+                        style={{width:'100%'}}
                           src={
                             data !== null && data.m_h_t !== null
                               ? data.m_h_t
