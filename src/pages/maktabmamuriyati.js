@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from '../css/maktabmamuriyati.module.css'
-// import Carousel from "react-multi-carousel";
+// import Car from "react-multi-Car";
 // import "react-multi-carousel/lib/styles.css";
-import { Carousel } from 'antd';
+import { Carousel  as Car } from 'antd';
 import school1 from '../img/school19.jpg'
 import school2 from '../img/school20.jpg'
 import school3 from '../img/school25.jpg'
@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
-import {Carousel as Car} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
 import Global from '../host/Global';
 import { FadeLoader } from 'react-spinners';
 
@@ -122,251 +122,251 @@ loader:false,
           </div>
          : 
             <>  <br/><br/><br/>
-            <Car style={{position:'relative', top:'-20px'}}>
+            <Carousel style={{position:'relative', top:'-20px'}}>
             {this.state.direktor!==null?this.state.direktor.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.orin1!==null?this.state.orin1.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.orin2!==null?this.state.orin2.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.orin3!==null?this.state.orin3.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.psixolog!==null?this.state.psixolog.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.kasaba!==null?this.state.kasaba.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.chqbt!==null?this.state.chqbt.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
        {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
              return(
-              <Car.Item>
+              <Carousel.Item>
       <img
         className="d-block w-100"
         style={{height:'90vh'}}
         src={item.image}
         alt="First slide"
       />
-      <Car.Caption>
+      <Carousel.Caption>
         
       <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-    </Car.Caption>
-  </Car.Item>)
-           }):   <Car.Item>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):   <Carousel.Item>
            <img
              className="d-block w-100"
              style={{height:'90vh'}}
              src={school1}
              alt="First slide"
            />
-           <Car.Caption>
+           <Carousel.Caption>
              
            <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
-         </Car.Caption>
-       </Car.Item>}
+         </Carousel.Caption>
+       </Carousel.Item>}
    
-</Car>
+</Carousel>
                 <Container>
                     <Row>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{
@@ -800,7 +800,7 @@ loader:false,
                   
                         <Col lg={12}>
 
-                        <Carousel autoplay
+                        <Car autoplay
                        className={styles.sliderComment}
                        
                         >
@@ -966,7 +966,7 @@ loader:false,
                        </div>
             
 )}):''}       
-                                           </Carousel>
+                                           </Car>
                         </Col>
 
                     </Row>
