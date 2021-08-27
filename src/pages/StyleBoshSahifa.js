@@ -217,6 +217,7 @@ export const XushKelibsiz = styled.div`
             font-size: 3.54rem;
             letter-spacing: 2px;
         }
+        
         .buttonn{
             font-size: 1.3rem;
             letter-spacing: 1.5px;

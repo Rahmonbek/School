@@ -145,7 +145,7 @@ getSchool=()=>{
                     <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
                      <Link to={`/hayot/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
-                    <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
+                    <img style={{height:'100vh'}} src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
                 </XushKelibsiz>
 {/* 
                 <div className={style.bayroqlar}>
