@@ -282,6 +282,7 @@ body {
   }
   .headerSliderText h3 {
     margin-left: 0px !important;
+    font-size: 70px !important;
   }
   .headerIcons {
     margin-top: 0px !important;
@@ -312,7 +313,17 @@ body {
     padding: 0 5% !important;
     width: 96% !important;
     padding-right: 2% !important;
+  } 
+  .box:hover {
+    flex: 1 1 100%;
   }
+  .panoraName{
+    font-size: 30px !important;
+  }
+  .panoraText{
+    font-size: 23px !important;
+  }
+  
 }
 @media screen and (min-width: 567px) {
   .headerSliderText {
@@ -323,6 +334,13 @@ body {
   }
   .headerSliderText h3 {
     margin-left: 0px !important;
+    font-size: 80px !important;
+  }
+  .panoraName{
+    font-size: 30px !important;
+  }
+  .panoraText{
+    font-size: 23px !important;
   }
   .headerIcons {
     margin-top: 0px !important;
@@ -341,6 +359,12 @@ body {
     margin-right: 15px !important;
     width: 95% !important;
     padding-right: 2% !important;
+  }
+  .transporttext h1{
+    font-size: 25px !important;
+  }
+  .transporttext p{
+    font-size: 20px !important;
   }
   .PannellumReactContainer::before {
     font-size: 35px;
@@ -445,7 +469,7 @@ body {
     width: 65% !important;
   }
   .transporttext p {
-    margin-bottom: 30px !important;
+    margin-bottom: 35px !important;
   }
   .cardBolimlar {
     margin-top: 80px !important;
@@ -510,6 +534,12 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 100 !important;
+  }
+  .transporttext h1{
+    font-size: 35px !important;
+  }
+  .transporttext p{
+    font-size: 23px !important;
   }
   @keyframes icondonw {
     0% {

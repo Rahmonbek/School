@@ -253,8 +253,11 @@
         top:-15px !important;
         right:20px !important;
     }
+    .overlay{
+        opacity: 1;
+    }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 566px) {
     .container{
         height: 940px;
     }
@@ -279,6 +282,9 @@
         right:70px !important;
     }
    
+     .overlay{
+         opacity: 1;
+     }
   
 }
 @media screen and (max-width: 400px) {
@@ -502,12 +508,21 @@
        right:150px;
          margin-right: 15px;
      }
+     .headingName{
+        margin-top: 140px !important;
+    }
 }
 @media (min-width:1025px){
     .bayroqlar{
         top: 15px;
         left: 64% !important;
         
+    }
+    .headingName{
+        margin-top: 140px !important;
+    }
+    .second{
+        margin-left: -5% !important;
     }
    
 }
@@ -526,6 +541,9 @@
         left: 80%;
         
     }
+    .headingName{
+        margin-top: 140px !important;
+    }
    
 }
 
@@ -539,6 +557,9 @@
        top: -15px;
         float: right;
         margin-right: 15px;
+    }
+    .headingName{
+        margin-top: 140px !important;
     }
 }
 
