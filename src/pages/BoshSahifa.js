@@ -107,7 +107,7 @@ getSchool=()=>{
                             <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
                         </div>
 
-                        <div className="second" style={{ marginTop:'5px',right:'140px'}}>
+                        <div className={style.second} style={{ marginTop:'5px',right:'140px'}}>
                            
                             <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon icon={faPhone} className='iconEmail' />{this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
@@ -141,7 +141,7 @@ getSchool=()=>{
                 
                 <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
                     <Container>
-                    <h1 style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
+                    <h1 className={style.headingName} style={{fontSize:'40px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/>{this.state.school!==null?this.state.school.school_number+' - maktab ':""}</h1>                        
                     <h1 style={{fontSize:'30px'}}> {this.state.school!==null?this.state.school.type:""}</h1>                        
                      <Link to={`/hayot/${Global.user}`}><Button className='buttonn' >Maktab hayoti</Button></Link>
                     </Container>
