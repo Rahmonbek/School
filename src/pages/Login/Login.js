@@ -48,33 +48,37 @@ export default class Login extends Component {
       });
   };
   render() {
-    return this.state.login === false ? (
-      <div className={style.formDiv}>
-        <div className={style.loginBox}>
-          <h2>Tizimga kirish</h2>
-          <Form className={style.From} onSubmit={this.loginVeb}>
-            <Form.Group className={style.userBox}>
-              <Form.Control style={{ outline: "none" }} className={style.Forminput} type="text" name="username" required={true} />
-              <Form.Label className={style.formLabel}>Login</Form.Label>
-            </Form.Group>
-            <Form.Group className={style.userBox}>
-              <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
-              <Form.Label className={style.formLabel}>Parol</Form.Label>
-            </Form.Group>
-            <Link to={`/${Global.user}`}>Bosh sahifaga qaytish</Link>
-            <br />
-            <Button className={style.sub} type="submit">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Kirish
-            </Button>
-          </Form>
+    return Global.schoolId !== null ? (
+      this.state.login === false ? (
+        <div className={style.formDiv}>
+          <div className={style.loginBox}>
+            <h2>Tizimga kirish</h2>
+            <Form className={style.From} onSubmit={this.loginVeb}>
+              <Form.Group className={style.userBox}>
+                <Form.Control style={{ outline: "none" }} className={style.Forminput} type="text" name="username" required={true} />
+                <Form.Label className={style.formLabel}>Login</Form.Label>
+              </Form.Group>
+              <Form.Group className={style.userBox}>
+                <Form.Control style={{ outline: "none" }} className={style.Forminput} type="password" name="password" required={true} />
+                <Form.Label className={style.formLabel}>Parol</Form.Label>
+              </Form.Group>
+              <Link to={`/${Global.user}`}>Bosh sahifaga qaytish</Link>
+              <br />
+              <Button className={style.sub} type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Kirish
+              </Button>
+            </Form>
+          </div>
         </div>
-      </div>
+      ) : (
+        <Redirect to="/cabinet/teacher/bolim" />
+      )
     ) : (
-      <Redirect to="/cabinet/teacher/bolim" />
+      <Redirect to="/" />
     );
   }
 }
