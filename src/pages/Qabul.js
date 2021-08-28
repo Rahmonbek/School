@@ -300,7 +300,7 @@ componentDidMount(){
                         </div>
                     </div>
                 </Container>
-                </div>    }</div>
+                </div>   }</div>
         )
     }
 }

@@ -107,7 +107,7 @@ getSchool=()=>{
                              <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
                         </div>
 
-                        <div className={style.second} style={{ marginTop:'5px',right:'140px'}}>
+                        <div className="second" style={{ marginTop:'5px',right:'140px'}}>
                            
                             <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon  style={{color:"red"}} icon={faPhone} className='iconEmail' /> {this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             
@@ -123,7 +123,7 @@ getSchool=()=>{
                 <NavbarContainer>
                     <Navbar collapseOnSelect expand="lg" >
                         <Container fluid style={{padding:'10px'}}>
-                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
+                            <Navbar.Brand  style={{marginLeft:'150px'}}><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className={style.meauto}   >

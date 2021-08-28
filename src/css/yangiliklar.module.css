@@ -119,9 +119,9 @@ color: gray !important;}
 .body_card{
     cursor: pointer;
 }
-/* .body_card:hover{
+.body_card:hover{
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
-
+}
 
 .tadbir1{
     margin-bottom: 10%;
@@ -240,7 +240,6 @@ color: gray !important;}
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px !important;
     }
     .recent_news img{
         width: 355px;
@@ -286,8 +285,6 @@ color: gray !important;}
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px !important;
-
     }
     .recent_news img{
         width: 410px;
@@ -310,8 +307,6 @@ color: gray !important;}
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px ;
-        
     }
 }
 @media (min-width:993px) and (max-width:1200px){

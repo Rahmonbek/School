@@ -8,9 +8,6 @@ box-sizing: border-box;
 body{
     background-color: white !important;
 }
-.qabulHeader{
-    width: 100% !important;
-}
 .text_q{
     font-family:  'Lobster', cursive ;
     
@@ -67,7 +64,7 @@ box-shadow: 0 20px 30px rgba(0,0,0,.5);
 
 
 .talim{
-    width: 100% !important;
+    width: 100%;
     height: 550px;
     background-image: url(../img/talim.jpg);
     background-attachment: fixed;
@@ -194,7 +191,6 @@ box-shadow: 0 20px 30px rgba(0,0,0,.5);
 
 
 .muddat{
-    width: 100% !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 500px;
     padding: 3%;
@@ -279,9 +275,7 @@ background-color:#FFF ;
             .text_q{
                 padding-left: 0px;
             }
-            .text_q h1{
-                font-size: 50px !important;
-            }
+            
         
         .tavsilotlar{
             height: max-content !important;
@@ -324,11 +318,11 @@ background-color:#FFF ;
           height: auto;
       }
       .hujjat{
-        width: 100%;
+        width: 500px;
       }
     .hujjat_text{
        left: 0px;
-       width: 90%;
+       width: 430px;
     }
 
     .muddat_item{
@@ -340,17 +334,6 @@ background-color:#FFF ;
         padding-top: 30px;
         text-align: center;
     }
-    .muddat_text1{
-        width: 90% !important;
-        margin-bottom: 20px;
-    }
-    .muddat_text2{
-        width: 90% !important;
-        margin-bottom: 20px;
-
-    }.muddat_text3{
-        width: 90% !important;
-    }
     }
 
     @media (min-width:567px) and (max-width:768px){
@@ -359,28 +342,15 @@ background-color:#FFF ;
         }
         .text_q{
             padding-left: 0px;
-            margin-top: 50px !important;
         }
         
-        .text_q h1{
-            font-size: 60px !important;
-        }
+    
     .tavsilotlar{
         height: max-content !important;
         
     }
     
-    .muddat_text1{
-        width: 90% !important;
-        margin-bottom: 20px;
-    }
-    .muddat_text2{
-        width: 90% !important;
-        margin-bottom: 20px;
-
-    }.muddat_text3{
-        width: 90% !important;
-    }
+   
     .tavsilot img{
     width: 100% !important;
     }
@@ -441,14 +411,14 @@ background-color:#FFF ;
         .text_q{
             padding-left: 20px;
         }
-        .text_q h1{
-            font-size: 60px !important;
-        }
+        
     
     .tavsilotlar{
         height: max-content !important;
         
     }
+    
+   
     .tavsilot img{
     width: 100% !important;
     }
