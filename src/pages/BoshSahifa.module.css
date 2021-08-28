@@ -4,19 +4,6 @@
     height: 90vh;
     border-bottom: 2px solid black;
 } */
-.meauto{
-    width: 94% !important;
-    margin: 0 !important;
-    position: absolute;
-    padding-top:50px;
-    background-color:#02024e !important;
-    text-align:center;
-    padding-bottom:15px;
-    z-index: 1111111111 !important;
-    margin-right: 20px !important;
-    height: 60vh;
-   
-}  
 .fer{background-color:rgba(0, 0, 0, 0.302);  height: 90.5vh;}
 .dashboard{
     margin-top: 0;

@@ -52,7 +52,6 @@ margin-left: 10px;
 
 }
 .Navbar{
-width: 100% !important;
 background-color:#02024e;
 padding-top: 0px;
 height:80px;
@@ -63,9 +62,7 @@ width:100%;
 z-index:4555444;
 display: flex;
 align-items: center;
-justify-content: center;
-z-index: 111111111111 !important;
-}
+justify-content: center;}
 
 .maktabLogo{
     margin-top: 5px;
@@ -132,9 +129,9 @@ z-index: 111111111111 !important;
 
 .meauto{
     padding-top:10px;
-    background-color:#02024e !important;
+    background-color:#02024ec0;
     text-align:center;
-    padding-bottom:15px;
+    padding-bottom:15px ;
 }   
    
 

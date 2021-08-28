@@ -214,9 +214,7 @@ export default class MaktabHayoti extends Component {
                       </Col>
                       <Col lg={12}>
                         <div className={styles.container}>
-                          <Row>
-                            <Col xs={12} sm={12} md={12} lg={4}>
-                            <div className={styles.box}>
+                          <div className={styles.box}>
                             <Image
                               src={
                                 data !== null && data.m_h_navruz !== null
@@ -228,9 +226,7 @@ export default class MaktabHayoti extends Component {
                             />
                             <span>Navro'z bayrami</span>
                           </div>
-                            </Col>
-                            <Col xs={12} sm={12} md={12} lg={4}>
-                            <div className={styles.box}>
+                          <div className={styles.box}>
                             <Image
                               src={
                                 data !== null && data.m_h_mustaqillik !== null
@@ -242,9 +238,7 @@ export default class MaktabHayoti extends Component {
                             />
                             <span>Mustaqillik kuni</span>
                           </div>
-                            </Col>
-                            <Col xs={12} sm={12} md={12} lg={4} >
-                            <div className={styles.box}>
+                          <div className={styles.box}>
                             <Image
                               src={
                                 data !== null && data.m_h_bitiruv !== null
@@ -256,8 +250,6 @@ export default class MaktabHayoti extends Component {
                             />
                             <span>Bitiruv tadbiri</span>
                           </div>
-                            </Col>
-                          </Row>
                         </div>
                       </Col>
                       <Col lg={4} md={12} sm={12} className={styles.transport}>
@@ -269,7 +261,7 @@ export default class MaktabHayoti extends Component {
                               : school5
                           }
                           className={styles.secondImage}
-                          // data-aos="zoom-in-up"
+                          data-aos="zoom-in-up"
                         />
                       </Col>
                       <Col

@@ -12,7 +12,7 @@ import axios from 'axios';
 import { url, user } from '../host/Host';
 import FadeLoader from "react-spinners/FadeLoader";
 import Global from '../host/Global';
-import school5 from '../img/word-image-12.jpeg'
+
 class Qabul extends React.Component {
         state={
         loader:true,
@@ -48,21 +48,31 @@ componentDidMount(){
                     <FadeLoader
                      color='blue' loading={this.state.loader} size={120} />        
                     
-                        </div>:<div style={{overflowX:'hidden'}}> 
+                        </div>:<div style={{width:'100vw'}}> 
                 
 
 
-               <div className={styles.header} style={{overflowX:'hidden'}}>  
-                 <img src={school5}/>
-                 <div className={styles.headerImg} style={{overflowX:'hidden'}}>
-                     <h1>Qabul uchun ariza topshiring</h1>
-                 </div>
+               <div className={styles.qabulHeader} style={{backgroundColor:'#318CE7', width:'100%', }}>
+                           <Container style={{padding:'0'}}>
+                    <div style={{width:'100%', height:'100vh', position:'relative'}} >
+                    <Row >
+                        <Col lg={6} md={12} sm={12}> <div data-aos="fade-right" className={styles.text_q}>
+                        <h1 >Qabul uchun ariza topshiring</h1>
+                       <img src='https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg' style={{boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',width:'200px', height:'200px', borderRadius:'50%',marginLeft:'30%', marginTop:'10%'}} />
+                            </div></Col>
+                        <Col lg={6} md={12} sm={12} className={styles.img} data-aos="zoom-in-up" >
+                       
+                            <img src={shakl} className={styles.back} style={{width:'450px', height:'450px', bottom:'0px', position:'absolute'}}/>
+                            <img src={students} className={styles.main} style={{position:'absolute', bottom:'-100px',  height:'625px'}} />
+                        </Col>
+                    </Row>
+                    </div>
+                </Container>
                </div>
-               
 
                
-               <div className={styles.tavsilotlar} style={{overflowX:'hidden'}}>
-               <Container fluid style={{padding:'0'}}>
+               <div className={styles.tavsilotlar}>
+               <Container>
                     <Row>
                     <Col lg={4} md={12} sm={12} className={styles.tavsilot}>
             <img src={this.state.school!==null?this.state.school.q!==null?this.state.school.q: tav_img:tav_img}  data-aos="zoom-in-up"/>
@@ -83,8 +93,8 @@ componentDidMount(){
                 </Container>
                </div>
 
-                <div className={styles.talim} style={{overflowX:'hidden'}}>
-                    <Container fluid style={{padding:'0'}}>
+                <div className={styles.talim}>
+                    <Container>
                         <Row>
                             <Col lg={4} md={12} sm={12}><div className={styles.info} style={{backgroundColor:'white'}} data-aos="zoom-in-up">
                             <div style={{width:'70px', height:'70px', borderRadius:'50%', backgroundColor:'white', margin:'auto', justifyContent:'center', alignItems:'center',display:'flex', marginTop:'-60px', border:'3px solid #318CE7'}}>
@@ -127,11 +137,11 @@ componentDidMount(){
                 </div>
 
                 <div className={styles.jarayon}>
-                <Container fluid style={{padding:'0'}}>
+                <Container fluid >
                     <h1 style={{textAlign:'center', fontFamily:'Lobster', fontSize:'50px'}}>Qabul jarayoni</h1>
                     <div className={styles.line} style={{marginLeft:'auto', marginRight:'auto'}}></div>
                   <Row >
-                      <Col lg={4} md={12} sm={12} style={{padding:'0'}}>
+                      <Col lg={4} md={12} sm={12}>
                       <div className={styles.jarayon_text}>
                          <h3>1. Onlayn royxatdan o'ting</h3>
                          <div className={styles.line}></div>
@@ -165,8 +175,8 @@ componentDidMount(){
                           </p>
                       </div>
                       </Col>
-                      <Col style={{padding:'0'}} lg={4} md={12} sm={12}><div className={styles.jarayon_img}><img src={jarayon}/></div></Col>
-                      <Col style={{padding:'0'}} lg={4} md={12} sm={12}>
+                      <Col lg={4} md={12} sm={12}><div className={styles.jarayon_img}><img src={jarayon}/></div></Col>
+                      <Col lg={4} md={12} sm={12}>
                       <div className={styles.jarayon_text}>
                          <h3>4. Kerakli hujjatlarni to'plang</h3>
                          <div className={styles.line}></div>
@@ -205,9 +215,9 @@ componentDidMount(){
 
 
                 <div className={styles.tavsilotlar} style={{height:'580px'}} >
-                <Container fluid style={{padding:'0'}}>
+                <Container>
                     <Row>
-                    <Col style={{padding:'0'}} lg={4} md={12} sm={12} className={styles.tavsilot}>
+                    <Col lg={4} md={12} sm={12} className={styles.tavsilot}>
             <img src={this.state.school!==null?this.state.school.q_imtihon_r!==null?this.state.school.q_imtihon_r: talab:talab}  data-aos="zoom-in-up"/>
             </Col>
             <Col lg={8} md={12} sm={12} className={styles.tavsilottext} data-aos="zoom-in-up" style={{height:'570px'}}>
@@ -233,7 +243,7 @@ componentDidMount(){
                 
 
                 <div className={styles.muddat} data-aos="fade-up">
-                   <Container fluid style={{padding:'0'}}>
+                   <Container>
                        <h1 style={{textAlign:'center', fontFamily:'Lobster', fontSize:'40px'}}>Imtixon muddatlari</h1>
                        <div className={styles.line} style={{marginLeft:'auto', marginRight:'auto'}}></div>
                        <Row>
@@ -263,7 +273,7 @@ componentDidMount(){
 
 
 
-                <Container fluid style={{padding:'0'}}>
+                <Container>
                     <div className={styles.hujjat} >
                         <div className={styles.hujjat_text} data-aos="fade-right">
                             <h3>Kerakli hujjatlar</h3>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import style from './Footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faTelegram, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom'
 export default class Footer extends Component {
  state={ 
        data: [],
-}
+};
 componentDidMount() {
  
   var a = window.location.href.split("/");
@@ -25,15 +25,14 @@ componentDidMount() {
         return (
             <div>
                 <div className={style.container}>
-                   <Container fluid style={{padding:'0'}}>
-                   <Row>
-                        <Col xs={12} sm={12} md={6} lg={4} className={style.logoUchun}>
+                    <Row>
+                        <Col xs={4} sm={12} md={6} lg={4} className={style.logoUchun}>
                             <h2>Maktab ma'lumoti</h2>
                             <p>{this.state.data!==null?this.state.data.address:''}</p>
                             <p style={{marginBottom: '0'}}><a className={style.navLink} href={`mailto: ${this.state.data!==null?this.state.data.email:'#'}`}>{this.state.data!==null?this.state.data.email:'#'}</a></p>
                             <br/><p><a className={style.navLink} href={`tel: ${this.state.data!==null?this.state.data.phone:'#'}`}>{this.state.data!==null?this.state.data.phone:''}</a></p>  
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
+                        <Col xs={4} sm={12} md={6} lg={4} className={style.ulLi}>
                             <h2>Bizning maktab</h2>
                             <ul>
                                 <li><NavLink className={style.navLink} to={`/${Global.user}`}><p>Bosh sahifa</p></NavLink>
@@ -46,7 +45,7 @@ componentDidMount() {
                                     </li>
                             </ul>
                         </Col>
-                        <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
+                        <Col xs={4} sm={12} md={6} lg={4} className={style.ulLi}>
                             <h2>Maktabdagi hayot</h2>
                             <ul>
                                 <li> <NavLink className={style.navLink}  to={`/yangiliklar/${Global.user}`}><p>Yangiliklar</p></NavLink></li>
@@ -56,7 +55,6 @@ componentDidMount() {
                         </Col>
                         
                     </Row>
-                   </Container>
                 </div>
               </div>
         )

@@ -18,9 +18,8 @@ export const NavbarContainer = styled.div`
 
     .me-auto{
         width:100%;
+        background-color:rgba(0,0,0,0.7);
         text-align:center;
-        background-color:#02024e;
-        z-index:111111111 !important;
         .navLink{
             display: inline-block;
             color: white;
