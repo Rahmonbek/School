@@ -18,7 +18,7 @@ import tadbir3 from '../img/tadbir3.jfif'
 import tadbir4 from '../img/tadbir4.jfif'
 import styles from '../css/yangiliklar.module.css'
 
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Aos from 'aos';
@@ -29,15 +29,25 @@ import { Carousel } from 'antd';
 import { getEvents } from '../host/Config'
 import FadeLoader from "react-spinners/FadeLoader";
 
+import { Container, Row, Col, Image } from "react-bootstrap";
+import axios from 'axios'
+import { url } from '../host/Host'
+// import { Carousel } from "antd";
 
 export default class Yangiliklar extends Component {
   state={
     events:[],
     id:0,
-    loader:true
+    loader:true,
+    data:null
   }  
   
   getEvents=()=>{
+    var a = window.location.href.split("/");
+    var v = a[a.length - 1];
+    axios.get(`${url}/school-by-admin/${v}`).then((res) => {
+      this.setState({ loading: false, data: res.data });
+    });
     getEvents().then(res=>{
    
       console.log(res.data)
@@ -102,32 +112,58 @@ export default class Yangiliklar extends Component {
                 <div className={styles.headerSliderText}>
                         <h3 style={{fontFamily: 'Lobster'}}>Maktabimiz so'ngi tadbirlari bilan tanishing</h3>
                         </div>
-                <Carousel autoplay>
-
-                {/* {
-                            this.state.events.map(item=>{
-                              return(
-                                <div>
-                                <img src={item.image} style={{width:'100%', height:'100vh'}} className={styles.headerImage}/>                   
-                                </div>
-                                
-                              )
-                            })
-                          } */}
-    <div >
-      <h3 style={contentStyle} className={styles.carusel1} ></h3>
-    </div>
-    <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel2}></h3>
-    </div>
-    <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel3}></h3>
-    </div>
-    <div style={{backgroundImage:`${yangilik2}`}}>
-      <h3 style={contentStyle} className={styles.carusel4}></h3>
-    </div>
-  </Carousel>
-                {/* ==================Section===================== */}
+                        <Carousel autoplay className={styles.sliderHeader}>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h1 !== null
+                      ? this.state.data.m_h_h1
+                      : new1
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h2 !== null
+                      ? this.state.data.m_h_h2
+                      : new2
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h3 !== null
+                      ? this.state.data.m_h_h3
+                      : new3
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h4 !== null
+                      ? this.state.data.m_h_h4
+                      : new4
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    this.state.data !== null && this.state.data.m_h_h5 !== null
+                      ? this.state.data.m_h_h5
+                      : new5
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+            </Carousel>
 
                 <Container fluid >
                     <div className={styles.yangi}><h1 style={{fontSize:'60px'}} data-aos="fade-up">Tadbirlar</h1></div>

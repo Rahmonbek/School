@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styles from "../css/maktabHayoti.module.css";
 import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { Carousel } from "antd";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
@@ -21,7 +23,6 @@ import { BiStop, BiRightArrowAlt } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FadeLoader } from "react-spinners";
-import { Carousel } from "antd";
 import axios from "axios";
 
 import { Pannellum } from "pannellum-react";

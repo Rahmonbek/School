@@ -119,12 +119,12 @@ getSchool=()=>{
                 </div>
             </ContainerDashboard>
 
-            <div className={style.dashboard}>
-               <div className={style.fer} style={{backgroundColor:'transparent'}}>
+            <div className={style.dashboard}  style={{backgroundColor:'transparent',}}>
+               <div className={style.fer} style={{backgroundColor:'transparent',}}>
                 <NavbarContainer>
-                    <Navbar collapseOnSelect expand="lg">
+                    <Navbar collapseOnSelect expand="lg" style={{zIndex:'345'}}>
                         <Container fluid style={{padding:'10px'}} >
-                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>
+                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer', }}>
                                 {/* {this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"} */}
                                 </p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginLeft:'10px',color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
@@ -142,14 +142,14 @@ getSchool=()=>{
                     </Navbar>
                 </NavbarContainer>
                 
-                   <div className={sty.head}>
+                   <div className={sty.head} >
                 <div className={sty.head_item}>
                    <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={sty.temur}/>
                    </div>
                   <br/>
-                   <div className={sty.headText}>
+                   <div className={sty.headText} style={{zIndex:'304'}}>
                        <h1 style={{color:'white'}}>{this.state.school!==null?this.state.school.school_number:''} - {this.state.school!==null?this.state.school.type:''}</h1>
-                       <NavLink style={{color:'white', textDecoration:'none',cursor:'pointer',}} to={`/hayot/${Global.user}`}><button style={{ zIndex:'34'}}>Maktab hayoti</button> </NavLink> 
+                       <NavLink style={{color:'white', textDecoration:'none',cursor:'pointer',zIndex:'304'}} to={`/hayot/${Global.user}`}><button>Maktab hayoti</button> </NavLink> 
                    </div>
                    </div>
                     
