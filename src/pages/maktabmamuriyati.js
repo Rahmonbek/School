@@ -10,13 +10,14 @@ import school4 from '../img/school13.jpg'
 import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
-import {FadeLoader} from 'react-spinners'
+// import {FadeLoader} from 'react-spinners'
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
+import {Carousel} from 'react-bootstrap'
 import Global from '../host/Global';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel'
+import { FadeLoader } from 'react-spinners';
+
 export default class Maktabmamuriyati extends Component {
 state={
   direktor:null,
@@ -122,128 +123,152 @@ loader:false,
           </div>
          : 
             <>  <br/><br/><br/>
-            <Carousel>
-                
-                {this.state.direktor!==null?this.state.direktor.map(item=>{
+            <Carousel style={{position:'relative', top:'-20px'}}>
+            {this.state.direktor!==null?this.state.direktor.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Maktab direktori</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Maktab direktori</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.orin1!==null?this.state.orin1.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.orin2!==null?this.state.orin2.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.orin3!==null?this.state.orin3.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.psixolog!==null?this.state.psixolog.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Maktab amaliyotchi psixologi</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Maktab amaliyotchi psixologi</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.kasaba!==null?this.state.kasaba.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Kasaba uyushma raisi</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Kasaba uyushma raisi</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.kutubxona!==null?this.state.kutubxona.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Kutubxona mudirasi</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Kutubxona mudirasi</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.chqbt!==null?this.state.chqbt.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
        {this.state.yetakchi!==null?this.state.yetakchi.map(item=>{
              return(
-               <div>
-                    <img src={item.image} />
-                    
-      <p className="legend">Maktab direktori</p>
-   </div>)
-           }):  <div>
-                    <img src={school1} />
-                    
-      <p className="legend">Maktab direktori</p>
-   </div>}
+              <Carousel.Item>
+      <img
+        className="d-block w-100"
+        style={{height:'90vh'}}
+        src={item.image}
+        alt="First slide"
+      />
+      <Carousel.Caption>
+        
+      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+    </Carousel.Caption>
+  </Carousel.Item>)
+           }):""}
    
-
-            </Carousel>
-          
+</Carousel>
                 <Container>
                     <Row>
                     {this.state.direktor!==null?this.state.direktor.map(item=>{

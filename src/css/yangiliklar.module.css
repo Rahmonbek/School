@@ -114,9 +114,9 @@ color: gray !important;}
 .body_card{
     cursor: pointer;
 }
-/* .body_card:hover{
+.body_card:hover{
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
-
+}
 
 .tadbir1{
     margin-bottom: 10%;
@@ -213,34 +213,19 @@ color: gray !important;}
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px !important;
     }
     .recent_news img{
         width: 355px;
         height: 250px !important;
     }
-    .headerSliderText h3{
-        font-size: 40px !important;
-    }
-    .yangi h1{
-        font-size: 35px !important;
-    }
 }
 
 @media (min-width:567px) and (max-width:767px){
-    .headerSliderText h3{
-        font-size: 50px !important;
-    }
-    .yangi h1{
-        font-size: 40px !important;
-    }
     .news img{
         height: 350px;
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px !important;
-
     }
     .recent_news img{
         width: 410px;
@@ -249,28 +234,14 @@ color: gray !important;}
 }
 
 @media (min-width:768px) and (max-width:992px){
-    .headerSliderText h3{
-        font-size: 50px !important;
-    }
-    .yangi h1{
-        font-size: 40px !important;
-    }
     .body_card:hover{
         box-shadow: none;
     }
     .recent_news{
         margin: auto;
-        margin-bottom: 20px ;
-        
     }
 }
 @media (min-width:993px) and (max-width:1200px){
-    .headerSliderText h3{
-        font-size: 60px !important;
-    }
-    .yangi h1{
-        font-size: 40px !important;
-    }
     .news img{
         height: 350px;
     }
@@ -289,12 +260,6 @@ color: gray !important;}
     /* .news img{
         height: 400px;
     } */
-    .headerSliderText h3{
-        font-size: 60px !important;
-    }
-    .yangi h1{
-        font-size: 40px !important;
-    }
     .body_card h5{
         font-size: 18px;
     }

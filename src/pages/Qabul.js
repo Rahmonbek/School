@@ -48,12 +48,12 @@ componentDidMount(){
                     <FadeLoader
                      color='blue' loading={this.state.loader} size={120} />        
                     
-                        </div>:<div style={{width:'100vw'}}> 
+                        </div>:<> 
                 
 
 
-               <div className={styles.qabulHeader} style={{backgroundColor:'#318CE7', width:'100%', }}>
-                           <Container style={{padding:'0'}}>
+               <div style={{backgroundColor:'#318CE7', width:'100%', }}>
+                           <Container>
                     <div style={{width:'100%', height:'100vh', position:'relative'}} >
                     <Row >
                         <Col lg={6} md={12} sm={12}> <div data-aos="fade-right" className={styles.text_q}>
@@ -300,7 +300,7 @@ componentDidMount(){
                         </div>
                     </div>
                 </Container>
-                </div>    }</div>
+                </>    }</div>
         )
     }
 }

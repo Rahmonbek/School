@@ -100,8 +100,8 @@ export default class Yangiliklar extends Component {
                         </div>   
 
                         <Carousel autoplay>
-                        {/* {
-                            this.state.news.map(item=>{
+                        {
+                            this.state.news!==null?this.state.news.map(item=>{
                               return(
                                 <div>
                                 <img src={item.image} style={{width:'100%', height:'100vh',zIndex:'-100'}} className={styles.headerImage}/> 
@@ -109,20 +109,8 @@ export default class Yangiliklar extends Component {
                                 </div>
                                 
                               )
-                            })
-                          } */}
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel1} ></h3>
-    </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel2}></h3>
-    </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel3}></h3>
-    </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel4}></h3>
-    </div>
+                            }):''
+                          }
   </Carousel>
                 {/* ==================Section===================== */}
 

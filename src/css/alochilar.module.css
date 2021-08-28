@@ -47,9 +47,6 @@
     line-height: 34px;
     border-radius: 17px;
 }
-.sarlavha{
-    font-size: 40px !important;
-}
 @media(min-width:520px){
     .line{
         width: 30%;
