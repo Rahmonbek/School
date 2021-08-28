@@ -10,6 +10,7 @@ import school4 from '../img/school13.jpg'
 import {Container,Row,Col} from 'react-bootstrap'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
+import {FadeLoader} from 'react-spinners'
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 import axios from 'axios';
 import { url } from '../host/Host';
