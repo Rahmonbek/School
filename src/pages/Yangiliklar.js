@@ -77,7 +77,6 @@ export default class Yangiliklar extends Component {
     render() {
       const contentStyle = {
         width: '100%',
-        height: '97vh',
         objectFit: 'cover',
         color: '#fff',
         lineHeight: '30vh',
@@ -99,7 +98,7 @@ export default class Yangiliklar extends Component {
                         <h3 style={{fontFamily: 'Lobster', zIndex:'100'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3> 
                         </div>   
 
-                        <Carousel autoplay>
+                        <Carousel autoplay className={styles.sliderContainer}>
                         {/* {
                             this.state.news.map(item=>{
                               return(
@@ -111,17 +110,20 @@ export default class Yangiliklar extends Component {
                               )
                             })
                           } */}
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel1} ></h3>
+    <div className={styles.sliderIMG}>
+      <img  src={new1}/>
     </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel2}></h3>
+    <div className={styles.sliderIMG}>
+    <img  src={new2}/>
+      
     </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel3}></h3>
+    <div className={styles.sliderIMG}>
+    <img  src={new3}/>
+
     </div>
-    <div className="sliderIMG">
-      <h3 style={contentStyle} className={styles.carusel4}></h3>
+    <div className={styles.sliderIMG}>
+    <img  src={new4}/>
+
     </div>
   </Carousel>
                 {/* ==================Section===================== */}
