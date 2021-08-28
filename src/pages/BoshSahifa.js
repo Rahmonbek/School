@@ -126,20 +126,20 @@ getSchool=()=>{
                             <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav">
-                                <Nav className="me-auto"   >
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab hayoti</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/qabul/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/yangiliklar/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/rahbariyat/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
-                                    <NavLink style={{marginLeft:'20px', color:'white'}} to={`/alochilar/${Global.user}`}><p className='navLink'>Maktab alochilari</p></NavLink>
+                                <Nav className={style.meauto}  >
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/${Global.user}`}><p className='navLink'>Bosh sahifa</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/hayot/${Global.user}`}><p className='navLink'>Maktab hayoti</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/qabul/${Global.user}`}><p className='navLink'>Qabul</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/yangiliklar/${Global.user}`}><p className='navLink'>Yangiliklar</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/rahbariyat/${Global.user}`}><p className='navLink'>Maktab ma'muriyati</p></NavLink>
+                                    <NavLink style={{marginLeft:'20px', color:'white',marginBottom:'10px'}} to={`/alochilar/${Global.user}`}><p className='navLink'>Maktab alochilari</p></NavLink>
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
                     </Navbar>
                 </NavbarContainer>
                 
-                <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
+                <XushKelibsiz  style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
                     <Container>
                     <h1 className={style.headingName} style={{fontSize:'40px', position:'relative', top:'-100px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/><br/>
                     <p style={{fontSize:'34px'}}>{this.state.school!==null?this.state.school.type!==null?this.state.school.school_number+" - "+this.state.school.type:this.state.school.school_number+' - maktab ':""}</p></h1>                        

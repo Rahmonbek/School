@@ -110,9 +110,9 @@ body {
   font-family: "Lobster", cursive;
 }
 .box > img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
+  width: 100%;
+  height: 400px !important;
+  object-fit: cover !important;
   transition: all 0.5s !important;
 }
 
@@ -130,7 +130,7 @@ body {
 }
 .transport img {
   width: 120% !important;
-  height: 500px;
+  height: 500px !important;
   z-index: 3 !important;
   object-fit: cover;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
@@ -291,8 +291,12 @@ body {
   .iconPath {
     display: none;
   }
+  .transport{
+    padding-top: 1000px !important;
+  }
   .transport img {
     width: 100% !important;
+    height: 400px !important;
   }
   .transporttext {
     margin-top: 50px !important;
@@ -348,6 +352,9 @@ body {
   }
   .iconPath {
     display: none;
+  }
+  .transport{
+    padding-top: 1000px !important;
   }
   .transport img {
     width: 100% !important;
