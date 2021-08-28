@@ -179,3 +179,16 @@ padding: 0px;
 .ant-carousel{
   background-color: transparent !important;
 }
+.maktabLogo{
+  margin-left: 200px !important;
+}
+.carTur{height:100vh}
+.carTur img{height:100vh !important}
+
+@media (max-width:700px){
+  .maktabLogo{
+    margin-left:30px !important;
+  }
+  .carTur{height:70vh}
+.carTur img{height:70vh !important}
+}

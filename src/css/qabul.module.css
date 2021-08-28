@@ -201,6 +201,7 @@ box-shadow: 0 20px 30px rgba(0,0,0,.5);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .muddat_item{
     display: flex;
     justify-content: center;
@@ -332,7 +333,11 @@ background-color:#FFF ;
     .muddat{
         height: 630px;
         padding-top: 30px;
+        padding-left:10px;
         text-align: center;
+    }
+    .muddat_item{
+        margin:auto !important;
     }
     }
 

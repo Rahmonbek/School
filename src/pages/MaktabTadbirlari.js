@@ -96,7 +96,7 @@ export default class MaktabTadbirlari extends Component {
                         }
                         
                     </Row>
-                    <Link to={`/tadbirlar/uz/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
+                    <Link to={`/tadbirlar/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     
                 </div>
             </div>

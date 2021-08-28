@@ -244,7 +244,7 @@ componentDidMount(){
 
                 <div className={styles.muddat} data-aos="fade-up">
                    <Container fluid style={{padding:'0'}}>
-                       <h1 style={{textAlign:'center', fontFamily:'Lobster', fontSize:'40px'}}>Imtixon muddatlari</h1>
+                       <h1 style={{textAlign:'center', fontFamily:'Lobster', fontSize:'40px'}}>Ma'lumotlar</h1>
                        <div className={styles.line} style={{marginLeft:'auto', marginRight:'auto'}}></div>
                        <Row>
                            <div className={styles.muddat_item}>

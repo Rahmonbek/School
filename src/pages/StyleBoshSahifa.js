@@ -198,6 +198,7 @@ export const NavbarContainer = styled.div`
 
 export const XushKelibsiz = styled.div`
     margin-top: 5%;
+    height:10vh;
     h1{
         margin-top: 5%;
         font-size: 4rem;
@@ -217,12 +218,16 @@ export const XushKelibsiz = styled.div`
         font-weight: bold;
         letter-spacing: 2px;
     }
+    
+    img{
+        height:100%;
+    }
     @media (max-width: 800px){
+       height:500px
         h1{
             font-size: 3.54rem;
             letter-spacing: 2px;
         }
-        
         .buttonn{
             font-size: 1.3rem;
             letter-spacing: 1.5px;

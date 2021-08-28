@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import rasm1 from '../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg'
 import rasm2 from '../img/mira-kireeva-xTq26wLo5do-unsplash.jpg'
 import rasm3 from '../img/javier-trueba-iQPr1XkF5F0-unsplash.jpg'
+import sty from './sty.module.css'
 import rasm41 from '../img/1.jpg'
 import rasm42 from '../img/2.jpg'
 import rasm43 from '../img/3.jpg'
@@ -119,11 +120,13 @@ getSchool=()=>{
             </ContainerDashboard>
 
             <div className={style.dashboard}>
-               <div className={style.fer}>
+               <div className={style.fer} style={{backgroundColor:'transparent'}}>
                 <NavbarContainer>
-                    <Navbar collapseOnSelect expand="lg" >
-                        <Container fluid style={{padding:'10px'}}>
-                            <Navbar.Brand  style={{marginLeft:'150px'}}><p className='maktabLogo' style={{cursor:'pointer'}}>{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</p></Navbar.Brand>
+                    <Navbar collapseOnSelect expand="lg">
+                        <Container fluid style={{padding:'10px'}} >
+                            <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer'}}>
+                                {/* {this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"} */}
+                                </p></Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginLeft:'10px',color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className={style.meauto}   >
@@ -139,17 +142,18 @@ getSchool=()=>{
                     </Navbar>
                 </NavbarContainer>
                 
-                <XushKelibsiz style={{backgroundColor:'rgba(0, 0, 0, 0.254)', width:'100%', height:'100vh',marginTop:'-190px',paddingTop:'190px'}}>
-                    <Container fluid style={{padding:'10px'}}>
-                    <h1 className={style.headingName} style={{marginLeft:'20px',fontSize:'40px', position:'relative', top:'-100px'}}> {this.state.school!==null?this.state.school.school_name:""}<br/><br/>
-                    <p style={{fontSize:'34px'}}>{this.state.school!==null?this.state.school.type!==null?this.state.school.school_number+" - "+this.state.school.type:this.state.school.school_number+' - maktab ':""}</p></h1>                        
+                   <div className={sty.head}>
+                <div className={sty.head_item}>
+                   <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={sty.temur}/>
+                   </div>
+                  <br/>
+                   <div className={sty.headText}>
+                       <h1 style={{color:'white'}}>{this.state.school!==null?this.state.school.school_number:''} - {this.state.school!==null?this.state.school.type:''}</h1>
+                       <NavLink style={{color:'white', textDecoration:'none',cursor:'pointer',}} to={`/hayot/${Global.user}`}><button style={{ zIndex:'34'}}>Maktab hayoti</button> </NavLink> 
+                   </div>
+                   </div>
                     
-                                            
-                     <Link to={`/hayot/${Global.user}`} style={{position:'relative', top:'-100px'}}><Button className='buttonn'>Maktab hayoti</Button></Link>
-                    </Container>
-                    <img style={{height:'100vh'}} src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={style.temur}/>
-                </XushKelibsiz>
-{/* 
+{/* fer
                 <div className={style.bayroqlar}>
                     <Link to=''><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
                     <Link to='/ru'><img style={{marginTop:'7px'}} src={flagRU} /></Link>
@@ -174,7 +178,7 @@ getSchool=()=>{
                     <div className={style.containercha}>
                         <img src={this.state.school!==null?this.state.school.b_c2!==null?this.state.school.b_c2:rasm2:rasm2} className={style.image} />
                         <div className={style.overlay}>
-                        <Link style={{color:'white'}} to={`/yangiliklar/${Global.user}`}>
+                        <Link style={{color:'white'}} to={`/togaraklar/${Global.user}`}>
                             <FontAwesomeIcon icon={faNewspaper} className={style.icon} />
                             <h3>Yangiliklar</h3>
                             <p>Maktabimizga doir bo'lgan yangiliklardan xabardor bo'ling</p>

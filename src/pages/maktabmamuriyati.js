@@ -60,16 +60,19 @@ getStaff=()=>{
             orin3.push(item)
           }
           if(item1===6){
-            kutubxona.push(item)
-          }
-          if(item1===7){
+            
             psixolog.push(item)
           }
+          if(item1===7){
+            yetakchi.push(item)
+          }
           if(item1===8){
-            kasaba.push(item)
+          
+            kutubxona.push(item)
           }
           if(item1===9){
-            yetakchi.push(item)
+          
+            kasaba.push(item)
           }
           if(item1===10){
             chqbt.push(item)
@@ -123,7 +126,7 @@ loader:false,
           </div>
          : 
             <>  <br/><br/><br/>
-            <Carousel style={{position:'relative', top:'-20px'}}>
+            <Carousel style={{position:'relative', top:'-20px'}} className="carTur">
             {this.state.direktor!==null?this.state.direktor.map(item=>{
              return(
               <Carousel.Item>
