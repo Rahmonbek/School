@@ -613,14 +613,40 @@ justify-content: center;
     
     
     .meauto{
-      margin-top:10px;
-        background-color:#02024ec0;
+      margin-top:-10px;
+        background-color:#02024ec0 !important;
         text-align:center;
-        width: 100%;
+        width: calc(100% - 20px);
     }   
        
+    @media screen and (max-width:566px) {
+        .meauto{
+            position: absolute;
+            background-color:#02024ec0 !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
+    }
     
     @media (max-width: 786px){
+        .meauto{
+            position: absolute !important;
+            background-color:#02024e !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
     .meauto  .kirish{
             margin: 0px;
             padding: 0px;
@@ -642,7 +668,18 @@ justify-content: center;
     }
     
     @media (max-width: 992px){
-        
+        .meauto{
+            position: absolute !important;
+            background-color:#02024e !important;
+            height: 70vh !important;
+            z-index: 1111111111 !important;
+            padding-top: 50px;
+            margin-bottom: 10px
+                }
+                .meauto .navLink{
+                    margin-bottom: 10px;
+                    font-size: 18px !important;
+                }
         .meauto .navLink{ 
             font-size: 1.6rem;
             padding:10px;
@@ -665,9 +702,16 @@ justify-content: center;
     }
     
     @media (min-width:993px){
-        .meauto{ width:70vw;
-            background-color:transparent;
+        .meauto{ 
+            text-align: center;
+            width:80vw;
+            background-color:transparent !important; 
         }
+        .meauto .navLink{ 
+            font-size: 1.1rem;
+            padding:10px;
+            margin: 0px;
+            }
         .kirish{
             margin-top:30px;
     

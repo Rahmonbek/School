@@ -26,13 +26,13 @@ componentDidMount() {
             <div>
                 <div className={style.container}>
                     <Row>
-                        <Col xs={4} sm={12} md={6} lg={4} className={style.logoUchun}>
+                        <Col xs={12} sm={12} md={6} lg={4} className={style.logoUchun}>
                             <h2>Maktab ma'lumoti</h2>
                             <p>{this.state.data!==null?this.state.data.address:''}</p>
                             <p style={{marginBottom: '0'}}><a className={style.navLink} href={`mailto: ${this.state.data!==null?this.state.data.email:'#'}`}>{this.state.data!==null?this.state.data.email:'#'}</a></p>
                             <br/><p><a className={style.navLink} href={`tel: ${this.state.data!==null?this.state.data.phone:'#'}`}>{this.state.data!==null?this.state.data.phone:''}</a></p>  
                         </Col>
-                        <Col xs={4} sm={12} md={6} lg={4} className={style.ulLi}>
+                        <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
                             <h2>Bizning maktab</h2>
                             <ul>
                                 <li><NavLink className={style.navLink} to={`/${Global.user}`}><p>Bosh sahifa</p></NavLink>
@@ -45,7 +45,7 @@ componentDidMount() {
                                     </li>
                             </ul>
                         </Col>
-                        <Col xs={4} sm={12} md={6} lg={4} className={style.ulLi}>
+                        <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
                             <h2>Maktabdagi hayot</h2>
                             <ul>
                                 <li> <NavLink className={style.navLink}  to={`/yangiliklar/${Global.user}`}><p>Yangiliklar</p></NavLink></li>

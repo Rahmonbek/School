@@ -110,9 +110,9 @@ body {
   font-family: "Lobster", cursive;
 }
 .box > img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
+  width: 100%;
+  height: 400px !important;
+  object-fit: cover !important;
   transition: all 0.5s !important;
 }
 
