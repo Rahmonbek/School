@@ -94,7 +94,7 @@ export default class Yangiliklar extends Component {
                 {/* ============Header============== */}
 
                 
-                <div className={styles.headerSliderText} style={{fontFamily: 'Lobster', zIndex:'100'}}>
+                <div className={styles.headerSliderText} style={{fontFamily: 'Lobster', zIndex:'100', paddingTop:'60px'}}>
                         <h3 style={{fontFamily: 'Lobster', zIndex:'100'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3> 
                         </div>   
 

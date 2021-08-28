@@ -278,17 +278,17 @@ componentDidMount(){
                         <div className={styles.hujjat_text} data-aos="fade-right">
                             <h3>Kerakli hujjatlar</h3>
                             <div className={styles.line} ></div>
-                            <p>
-                            <b>1.</b> 
+                            <p style={{padding:'10px'}}>
+                                <b>1.</b> 
                             {this.state.school!==null?this.state.school.q_hujjat_t1!==null?this.state.school.q_hujjat_t1:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
                             {/* O‘quvchining tug‘ilganligi haqida guvohnoma (pdf-10Mb oshmagan holatda). */}
                             </p>
-                            <p>
+                            <p style={{padding:'10px'}}>
                                 <b>2.</b> 
                                 {this.state.school!==null?this.state.school.q_hujjat_t2!==null?this.state.school.q_hujjat_t2:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
                                 {/* 2019-2020 o‘quv yilini “4”va “5” baholarga bitirganligini tasdiqlovchi o‘quvchining tabeli. Maktab direktori tomonidan tasdiqlangan bo‘lishi kerak (pdf-10Mb oshmagan holatda). */}
                             </p>
-                            <p>
+                            <p style={{padding:'10px'}}>
                                 <b>3.</b>  
                                 {this.state.school!==null?this.state.school.q_hujjat_t3!==null?this.state.school.q_hujjat_t3:"Kerakli hujjatlar to'g'risida ma'lumot":"Kerakli hujjatlar to'g'risida ma'lumot"}
                                 {/* 3/4 Rasm (jpg/png/jpeg-formatida). */}
