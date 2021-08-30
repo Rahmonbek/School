@@ -1,4 +1,4 @@
-import { faDoorOpen, faEnvelope, faNewspaper, faPhone, faSchool, faSearch, faSignInAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faDoorOpen, faEnvelope, faNewspaper, faPhone, faSchool, faSearch, faSignInAlt, faUserCircle,} from '@fortawesome/free-solid-svg-icons'
 import React, { Component } from 'react'
 import { ContainerDashboard, XushKelibsiz} from './StyleBoshSahifa'
 import style from './BoshSahifa.module.css'
@@ -107,10 +107,32 @@ getSchool=()=>{
                         <FontAwesomeIcon style={{color:"red", position:'relative', top:'3px'}} icon={faEnvelope} className='iconEmail' />
                              <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
                         </div>
-<div>
-    <a style={{color:'#FFF', fontSize:'20px', color:'white'}} href="https://t.me/samarqand_33_maktab"></a>
+                      
+                        <div class="iconsHead">
+    <a target="_blank" style={{ fontSize:'25px',}} href="https://t.me/samarqand_33_maktab">
+       
+        <i class="fab fa-telegram"></i>
+        </a>
+
+
+    <a target="_blank" style={{ fontSize:'25px',}} href="https://www.instagram.com/33_maktab_official/">
+    <i class="fab fa-instagram"></i>
+        
+    </a>
+
+
+    <a target="_blank" style={{ fontSize:'25px',}} href="https://t.me/samarqand_33_maktab">
+    <i class="fab fa-facebook"></i>
+        
+        </a>
+
+
+    <a target="_blank" style={{ fontSize:'25px', }} href="https://t.me/samarqand_33_maktab">
+    <i class="fab fa-youtube"></i>
+        
+        </a>
 </div>
-                        <div className="second" style={{ marginTop:'5px',right:'140px'}}>
+                        <div className="second" style={{ marginTop:'-65px',right:'140px'}}>
                            
                             <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon  style={{color:"red"}} icon={faPhone} className='iconEmail' /> {this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
                             

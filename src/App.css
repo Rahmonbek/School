@@ -184,11 +184,31 @@ padding: 0px;
 }
 .carTur{height:100vh}
 .carTur img{height:100vh !important}
+.iconsHead a{color:red; cursor:pointer;}
 
+.iconsHead{
+
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  width:20%;
+  margin-left:40%;
+  height:70px;
+}
+.yuqori{
+  z-index: 5678 !important;
+}
+.iconsHead a:hover{color:white}
 @media (max-width:700px){
   .maktabLogo{
     margin-left:30px !important;
   }
   .carTur{height:60vh}
 .carTur img{height:60vh !important}
+.iconsHead{
+  height:40px; 
+  width:40%;
+  margin-left:30%;
+}
+.iconsHead a{color:white}
 }
