@@ -230,6 +230,9 @@ padding: 0px;
   .maktabLogo{
     margin-left:30px !important;
   }
+  #vaqt{display: none;}
+  .gerbHead p{font-size: 18px;}
+  .yuqori{height:70px !important;}
   .difkif{display: inline-block;}
   .carTur{height:60vh}
 .carTur img{height:60vh !important}
