@@ -8,8 +8,9 @@ import her2 from '../img/h2.jpg'
 import her3 from '../img/h3.jpg'
 import her4 from '../img/h4.jpg'
 import her5 from '../img/h5.png'
+import "./form.css"
 import her6 from '../img/h6.png'
-import {Map} from "rea"
+import {Clusterer, GeolocationControl, Map, Placemark, RouteButton, TrafficControl, TypeSelector, YMaps, ZoomControl} from "react-yandex-maps"
 import 'react-multi-carousel/lib/styles.css';
 import rasm3 from '../img/13.jpg'
 import Carousel from 'react-multi-carousel';
@@ -195,13 +196,15 @@ export default class MaktabTadbirlari extends Component {
                   <Col lg={6} md={12} sm={12}>
             
                   <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
+            <div className="mapsr">
             
           <YMaps key={"uz_UZ"} query={{ lang: "uz_UZ" }}>
             <Map
-              width="100vw"
-              height="95vh"
+              width="100%"
+              height="300px"
+// style={{marginLeft:"10%"}}
               state={{
-                center:[],
+                center:[39.651698, 66.971870],
                 zoom:13,
               }}
             >
@@ -212,7 +215,7 @@ export default class MaktabTadbirlari extends Component {
                 >
                   <Placemark
                     key={-1}
-                    geometry={[]}
+                    geometry={[39.651698, 66.971870]}
                     options={{
                       iconLayout: "default#image",
                      }}
@@ -222,7 +225,7 @@ export default class MaktabTadbirlari extends Component {
                     modules={["geoObject.addon.hint"]}
                   />
                 </Clusterer>
-              }
+              
               <GeolocationControl options={{ float: "left" }} />
               <TypeSelector options={{ float: "right" }} />
               <TrafficControl options={{ float: "right" }} />
@@ -230,6 +233,24 @@ export default class MaktabTadbirlari extends Component {
               <ZoomControl options={{ float: "left" }} />
             </Map>
           </YMaps>
+          <br/><br/>
+          </div>
+                  </Col>
+                  <Col lg={6} md={12} sm={12}>
+            
+                  <h1 className={style.sarlavha}>Murojat qilish</h1>
+                  
+<div className="formFER"></div>
+<div className="container">
+  <div className="brand-logo"></div>
+  <div className="brand-title">TWITTER</div>
+  <div className="inputs">
+    <label>EMAIL</label>
+    <input type="email" placeholder="example@test.com" />
+    <button type="submit">LOGIN</button>
+  </div>
+  
+</div>
                   </Col>
                 </Row>
                 </div>

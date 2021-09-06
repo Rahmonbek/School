@@ -225,7 +225,7 @@ padding: 0px;
   align-items: center;
   font-size:24px;
 }
-
+.mapsr{padding:30px}
 @media (max-width:700px){
   .maktabLogo{
     margin-left:30px !important;
