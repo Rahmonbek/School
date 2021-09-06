@@ -124,9 +124,12 @@ export default class BoshSahifaDavomi extends Component {
                         </Row>
   
                     </Container>
-
-        
-          <div className={style.tana} >
+                                    
+                </div>
+                <Container fluid>
+                <Row>
+                        <Col lg={6} md={12} sm={12}>
+                        <div className={style.tana} >
           <br/>
               <br/>
           <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
@@ -141,41 +144,127 @@ export default class BoshSahifaDavomi extends Component {
                   var pupil = this.setPupils(item.pupil);
                   var classes = this.echoClasses(pupil.clas);
                   return (
-
-<Col lg={6} md={12} sm={12} >
-<div style={{padding:'10px'}}>
-<div className={style.card}>
-<div className={style.qizil}>Bizning faxrimiz</div>
-    <Row>
-                      <Col lg={5}>
-                        <img src={pupil.image !== null ? pupil.image : school2} alt="" />
-                      </Col>
-                      <Col lg={7}>
-                        <p style={{fontSize:'20px', fontWeight:'bold', color:'black'}}>
-                         {pupil.full_name}
-                        </p>
+                    <Col lg={6} md={6} sm={12}>
+                        <div className={style.card} style={{marginTop: '10px'}}>
+                        <div className={style.qizil}>Bizning faxrimiz</div>
+                            <img src={pupil.image !== null ? pupil.image : school2} alt="" />
+                            <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+                                {pupil.full_name}
+                            </p>
+                            <p style={{fontSize:'18px', color:'black', textAlign: 'center'}}>
+                                {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
+                            </p>
+                        </div>
+                    </Col>
+// (<div style={{padding:'10px'}}>
+// <div className={style.card}>
+// <div className={style.qizil}>Bizning faxrimiz</div>
+//     <Row>
+//                       <Col lg={5}>
+//                         <img src={pupil.image !== null ? pupil.image : school2} alt="" />
+//                       </Col>
+//                       <Col lg={7}>
+//                         <p style={{fontSize:'20px', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+//                          {pupil.full_name}
+//                         </p>
                        
-                        <p style={{fontSize:'18px', color:'black'}}>
+//                         <p style={{fontSize:'18px', color:'black'}}>
                          
-                          {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
-                        </p>
+//                           {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
+//                         </p>
                                                
-                        {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                      </Col>
-                      </Row>
-                      <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
-                          Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                      </p>
-                    </div>
-                    </div>
-                    </Col>);
+//                         {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
+//                       </Col>
+//                       </Row>
+//                       {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
+//                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
+//                       </p> */}
+//                     </div>
+//                     </div>)
+                    );
   
                 })
               : ""}
           </Row>
           </Container>
           </div>
-                </div>
+                        </Col>
+                        <Col lg={6} md={12} sm={12}>
+                            <div className={style.tana} >
+                                <br/><br/>
+                                    <h1 className={style.sarlavha}>O'qituvchilar doskasi</h1>
+                                    <Container>
+                                        {/* <div className={style.line}></div> */}
+                                        <br/>
+                                        <Row>  
+                                            <Col lg={6} md={6} sm={12}>
+                                                <div className={style.card} style={{marginTop: '10px'}}>
+                                                    <div className={style.bayroq}></div>
+                                                    <img src={school2} alt="" />
+                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+                                                        Eshmatov Toshmat Teshayevich
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Mutaxassislik: </b> Ingliz tili
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Qisqacha ma'lumot: </b>dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                            <Col lg={6} md={6} sm={12}>
+                                                <div className={style.card} style={{marginTop: '10px'}}>
+                                                    <div className={style.bayroq}></div>
+                                                    <img src={school2} alt="" />
+                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+                                                        Eshmatov Toshmat Teshayevich
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Mutaxassislik: </b> Ingliz tili
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                            <Col lg={6} md={6} sm={12}>
+                                                <div className={style.card} style={{marginTop: '10px'}}>
+                                                    <div className={style.bayroq}></div>
+                                                    <img src={school2} alt="" />
+                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+                                                        Eshmatov Toshmat Teshayevich
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Mutaxassislik: </b> Ingliz tili
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                            <Col lg={6} md={6} sm={12}>
+                                                <div className={style.card} style={{marginTop: '10px'}}>
+                                                    <div className={style.bayroq}></div>
+                                                    <img src={school2} alt="" />
+                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
+                                                        Eshmatov Toshmat Teshayevich
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Mutaxassislik: </b> Ingliz tili
+                                                    </p>
+                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
+                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </div>
+                            </Col>
+                        </Row>
+
+                </Container>
+
             </div>
         )
     }
