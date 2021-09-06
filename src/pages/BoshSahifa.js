@@ -30,7 +30,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from '../host/Config'
 import { url, user } from '../host/Host'
 import axios from 'axios'
-import Clock from 'react-live-clock';
+// import Clock from 'react-live-clock';
 import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
 import YouTube from 'react-youtube'
 import Global from '../host/Global'
@@ -108,7 +108,9 @@ getSchool=()=>{
 
     <img src={gerb}/>
 <p>Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan davlat umumta'lim maktabi</p>   
-<div className="vaqt"> <Clock format={'HH:mm:ss'} interval={1000} ticking={true} /></div> 
+<div className="vaqt"> 
+{/* <Clock format={'HH:mm:ss'} interval={1000} ticking={true} /> */}
+</div> 
                    
                         {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
                         {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
