@@ -1,41 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
 
-.fromFER .container {
+.formFER .container {
   position: relative;
-  width: 350px;
-  height: 500px;
+  width: 450px;
+  height: 600px;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  background: transparent;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.fromFER .brand-logo {
+.formFER .brand-logo {
   height: 100px;
   width: 100px;
-  background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+  background: url("https://e7.pngegg.com/pngimages/736/317/png-clipart-tashkent-emblem-of-uzbekistan-coat-of-arms-symbol-flag-of-uzbekistan-usa-gerb-miscellaneous-emblem.png");
+background-size: 100%;
   margin: auto;
   border-radius: 50%;
   box-sizing: border-box;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.fromFER .brand-title {
+.formFER .brand-title {
   margin-top: 10px;
   font-weight: 900;
   font-size: 1.8rem;
-  color: #1DA1F2;
+  color: #2939ab;
   letter-spacing: 1px;
 }
 
-.fromFER .inputs {
+.formFER .inputs {
   text-align: left;
   margin-top: 30px;
 }
 
-.fromFER label,.fromFER input,.fromFER button {
+.formFER label,.formFER input,.formFER button {
   display: block;
   width: 100%;
   padding: 0;
@@ -44,44 +45,75 @@
   box-sizing: border-box;
 }
 
-.fromFER label {
+.formFER label {
   margin-bottom: 4px;
+
 }
 
-.fromFER label:nth-of-type(2) {
+.formFER label:nth-of-type(2) {
   margin-top: 12px;
 }
 
-.fromFER input::placeholder {
+.formFER input::placeholder, .formFER textarea::placeholder {
   color: gray;
 }
 
-.fromFER input {
-  background: #ecf0f3;
-  padding: 10px;
-  padding-left: 20px;
-  height: 50px;
-  font-size: 14px;
-  border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
-}
-
-.fromFER button {
+.formFER input {
+    background: #cbeeff85;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    margin-bottom:10px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+  .formFER textarea {
+    background: #c0eafe59;
+    padding: 10px;
+    outline:none;
+    padding-left: 20px;
+    height: 130px;
+    width:100%;
+    font-size: 14px;
+    border-radius: 20px;
+    border:none;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+.formFER button {
   margin-top: 20px;
-  background: #1DA1F2;
+  background: #0a95cae0;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
+  letter-spacing:2px;
+  color:black;
   font-weight: 900;
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
 }
 
-.fromFER button:hover {
+.formFER button:hover {
   box-shadow: none;
+  
 }
+.formFER{
+    margin: 0;
+  width: 100%;
+  height: 700px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: poppins;
 
-.fromFER a {
+}
+.formFER a {
   position: absolute;
   font-size: 8px;
   bottom: 4px;
@@ -93,7 +125,7 @@
   padding: 2px;
 }
 
-.fromFER h1 {
+.formFER h1 {
   position: absolute;
   top: 0;
   left: 0;

@@ -9,6 +9,7 @@ import her3 from '../img/h3.jpg'
 import her4 from '../img/h4.jpg'
 import her5 from '../img/h5.png'
 import "./form.css"
+import yil from "../img/yil.jpg"
 import her6 from '../img/h6.png'
 import {Clusterer, GeolocationControl, Map, Placemark, RouteButton, TrafficControl, TypeSelector, YMaps, ZoomControl} from "react-yandex-maps"
 import 'react-multi-carousel/lib/styles.css';
@@ -197,11 +198,11 @@ export default class MaktabTadbirlari extends Component {
             
                   <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
             <div className="mapsr">
-            
+            <br/>
           <YMaps key={"uz_UZ"} query={{ lang: "uz_UZ" }}>
             <Map
               width="100%"
-              height="300px"
+              height="400px"
 // style={{marginLeft:"10%"}}
               state={{
                 center:[39.651698, 66.971870],
@@ -227,30 +228,39 @@ export default class MaktabTadbirlari extends Component {
                 </Clusterer>
               
               <GeolocationControl options={{ float: "left" }} />
-              <TypeSelector options={{ float: "right" }} />
-              <TrafficControl options={{ float: "right" }} />
+             
               <RouteButton options={{ float: "right" }} />
               <ZoomControl options={{ float: "left" }} />
             </Map>
           </YMaps>
-          <br/><br/>
+          <br/>
+          <img className="yil" src={yil}/>
+          <br/>
           </div>
                   </Col>
                   <Col lg={6} md={12} sm={12}>
             
                   <h1 className={style.sarlavha}>Murojat qilish</h1>
                   
-<div className="formFER"></div>
+<div className="formFER">
 <div className="container">
   <div className="brand-logo"></div>
-  <div className="brand-title">TWITTER</div>
+  {/* <div className="brand-title">TWITTER</div> */}
   <div className="inputs">
-    <label>EMAIL</label>
-    <input type="email" placeholder="example@test.com" />
-    <button type="submit">LOGIN</button>
+    <form>
+    <label>F.I.O.</label>
+    <input type="text" placeholder="Ism Familiya Otchistva" />
+    <label>Telefon raqam</label>
+    <input type="text" placeholder="+998 99 999 99 99" />
+    <label>Murojat</label>
+    <textarea placeholder="Murojat matni...">
+     
+    </textarea>
+    <button type="submit">Yuborish</button>
+    </form>
   </div>
   
-</div>
+</div></div>
                   </Col>
                 </Row>
                 </div>
