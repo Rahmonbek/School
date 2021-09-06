@@ -127,13 +127,12 @@ export default class BoshSahifaDavomi extends Component {
 
         
           <div className={style.tana} >
-
+          <br/>
+              <br/>
+          <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
+        
           <Container>
-              <br/>
-              <br/>
-          <h1 className={style.sarlavha} style={{color:'black', fontFamily: "'Lobster',cursive",
-    textAlign:'center', fontSize:'34px'}}>A'lochilar doskasi</h1>
-          <div className={style.line}></div>
+          {/* <div className={style.line}></div> */}
           <br/>
           
          <Row>  

@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import style from './MaktabTadbirlari.module.css'
-import rasm1 from '../img/11.jpg'
-import rasm2 from '../img/12.jpg'
+import school from '../img/gerb.jpg'
+import her2 from '../img/h2.jpg'
+import her3 from '../img/h3.jpg'
+import her4 from '../img/h4.jpg'
+import her5 from '../img/h5.png'
+import her6 from '../img/h6.png'
+
+import 'react-multi-carousel/lib/styles.css';
 import rasm3 from '../img/13.jpg'
+import Carousel from 'react-multi-carousel';
+import {Tooltip} from "antd"
+
 import { faClock, faMapMarkerAlt, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import {getEvents} from '../host/Config'
 import Global from '../host/Global'
@@ -51,6 +60,26 @@ export default class MaktabTadbirlari extends Component {
          this.getEvents();
         }
     render() {
+        const responsive = {
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 6
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 5
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 3
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 2
+            }
+          }
+          
         return (
             <div>
                 <div className={style.container}>
@@ -62,8 +91,8 @@ export default class MaktabTadbirlari extends Component {
                                 key<3?(
                                         <Col xs={12} sm={12} md={4} lg={4} style={{marginTop: '15px'}}>
                             <div className={style.flipBox}>
-                                <div class={style.flipBoxInner}>
-                                    <div class={style.flipBoxFront}>
+                                <div className={style.flipBoxInner}>
+                                    <div className={style.flipBoxFront}>
                                         <img src={item.image} alt="Paris" />
                                     </div>
                                     <div className={style.flipBoxBack}>
@@ -99,6 +128,70 @@ export default class MaktabTadbirlari extends Component {
                     <Link to={`/tadbirlar/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     
                 </div>
+                <h1 className={style.sarlavha}> </h1>
+           
+
+                <div className="sliderHomiy"> 
+                <Carousel responsive={responsive}
+                    autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                    autoPlaySpeed={3000}
+                    infinite={true}
+                    
+                    
+                    >
+           <div   style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}} >
+                 <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://president.uz/oz" target="_blank">
+      <img src={school}/></a>
+                            </div>
+                            <p>O'zbekiston Respublikasi Prezidentining rasmiy veb-sayti</p>
+                 </div><div style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}}>    
+                     
+                   <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://www.gov.uz/uz" target="_blank">
+      <img src={her2}/></a>
+                            </div>
+                            <p>O'zbekiston Respublikasining Hukumat portali</p>
+                 </div><div style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}}>    
+                     
+                   <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://lex.uz/" target="_blank">
+      <img src={her3}/></a>
+                            </div>
+                            <p>O'zbekiston Respublikasi qonun hujjatlari milliy bazasi</p>
+                 </div><div style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}}>    
+                     
+                   <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://my.gov.uz/oz" target="_blank">
+      <img src={her4}/></a>
+                            </div>
+                            <p>Interaktiv davlat xizmatlarining Yagona portali</p>
+                 </div>
+                 <div style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}}>    
+                     
+                   <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://www.uzedu.uz/" target="_blank">
+      <img src={her5}/></a>
+                            </div>
+                            <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
+                            </div> 
+                 <div  style={{display:'flex', flexDirection:'column', padding:'20px', alingItems:'center'}}>
+                      
+                   <div className="toolpat" style={{backgroundColor:'white'}}>
+                                <a href="https://ittower.uz/" target="_blank">
+      <img src={her6}/></a>
+                            </div>
+                            <p>IT Tower firmasi </p>
+                     
+                            </div>
+                            
+                 
+
+                   </Carousel>                          
+
+                </div>
+                         
+                {/* <h1 className={style.sarlavha}> </h1> */}
             </div>
         )
     }
