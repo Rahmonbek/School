@@ -246,6 +246,7 @@ export default class BoshSahifaDavomi extends Component {
                                 style={{
                                   fontSize: "20px",
                                   marginTop: "20px",
+                                  marginLeft:'20px',
                                   fontWeight: "bold",
                                   color: "black",
                                 }}
@@ -253,8 +254,8 @@ export default class BoshSahifaDavomi extends Component {
                                 Muxlisova Munisa Mahmudovna
                               </p>
 
-                              <p style={{ fontSize: "18px", color: "black" }}>
-                                Ingliz tili
+                              <p style={{ fontSize: "18px", color: "black", marginLeft:'20px' }}>
+                                Ingliz tili o'qituvchisi
                               </p>
 
                               {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
@@ -272,22 +273,23 @@ export default class BoshSahifaDavomi extends Component {
                           <div className={style.bayroq}></div>
                           <Row>
                             <Col lg={5}>
-                              <img src={ustoz1} alt="" />
+                              <img src={ustoz2} alt="" />
                             </Col>
                             <Col lg={7}>
                               <p
                                 style={{
                                   fontSize: "20px",
                                   marginTop: "20px",
+                                  marginLeft:'20px',
                                   fontWeight: "bold",
                                   color: "black",
                                 }}
                               >
-                                Muxlisova Munisa Mahmudovna
+                                Hamidova Shahnoza Elmurodovna
                               </p>
 
-                              <p style={{ fontSize: "18px", color: "black" }}>
-                                Ingliz tili
+                              <p style={{ fontSize: "18px", color: "black", marginLeft:'20px' }}>
+                                Ona tili o'qituvchisi
                               </p>
 
                               {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}

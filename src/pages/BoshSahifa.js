@@ -168,6 +168,7 @@ getSchool=()=>{
 
             <div className={style.dashboard}  style={{backgroundColor:'transparent',}}>
                <div className={style.fer} style={{backgroundColor:'transparent',}}>
+              <div>
                <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                         <Container>
                              {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
@@ -191,7 +192,7 @@ getSchool=()=>{
                             </Navbar.Collapse>
                             </Container>
                             </Navbar>
-
+                            </div>
 
                 
                    <div className={sty.head} >

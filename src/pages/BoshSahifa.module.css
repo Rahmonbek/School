@@ -897,15 +897,19 @@ margin-left: 10px;
     }
 
 }
+
 .Navbar{
-background-color:#02024e;
+    position:sticky !important;
+    top:0px !important;
+    
+    background-color:#02024e;
+margin-top: 0px;
 padding-top: 0px;
 height:60px;
-position:sticky !important;
-top:0px !important;
 width:100%;
 z-index:4555444;
 display: flex;
+
 align-items: center;
 justify-content: center;}
 

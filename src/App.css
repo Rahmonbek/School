@@ -214,8 +214,11 @@ padding: 0px;
 #vaqt{
   background-color:transparent;
   color:white;
+  font-weight: bold;
   width:13%;
-  height:70px;
+  border-left:5px solid white;
+  border-bottom:5px solid white;
+  height:69px;
   position:absolute;
   top:0px; 
   right:0%;
