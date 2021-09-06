@@ -16,7 +16,7 @@ export default class BoshSahifaDavomi extends Component {
                                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
                                 <p>Biz o'quvchiarimizga shunchaki ta'lim beribgina qolmasdan, shu bilan birga ularga kelajakdagi muvaffaqiyatlar va kareralarida o'z o'rnilarini topish sirlarini o'rgatamiz</p>
                                 <ButtonWrapper>
-                                    <button className='btn drawBorder'>Hoziroq ariza topshiring</button>
+                                    <button className='btn drawBorder'><a style={{textDecoration:'none', color:'white'}} href="https://my.maktab.uz/" target="_blank">Hoziroq ariza topshiring</a></button>
                                 </ButtonWrapper>
                             </Col>
                         </Row>

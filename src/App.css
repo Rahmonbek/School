@@ -199,16 +199,24 @@ padding: 0px;
   z-index: 5678 !important;
 }
 .iconsHead a:hover{color:white}
+.difkif{display: none;}
 @media (max-width:700px){
   .maktabLogo{
     margin-left:30px !important;
   }
+  .difkif{display: inline-block;}
   .carTur{height:60vh}
 .carTur img{height:60vh !important}
 .iconsHead{
   height:40px; 
-  width:40%;
-  margin-left:30%;
+  width:80%;
+  margin-left:10%;
+  display: flex;
+  justify-content:space-around;
 }
 .iconsHead a{color:white}
+.iconsHead a:hover{color:red}
+
 }
+
+

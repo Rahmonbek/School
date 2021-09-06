@@ -109,6 +109,10 @@ getSchool=()=>{
                         </div>
                       
                         <div class="iconsHead">
+                        <a target="_blank" className="difkif" href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`}>
+                        <FontAwesomeIcon  icon={faEnvelope}  style={{ fontSize:'25px', position:'relative', top:'3px'}}  />
+        
+        </a>
     <a target="_blank" style={{ fontSize:'25px',}} href="https://t.me/samarqand_33_maktab">
        
         <i class="fab fa-telegram"></i>
@@ -121,16 +125,21 @@ getSchool=()=>{
     </a>
 
 
-    <a target="_blank" style={{ fontSize:'25px',}} href="https://t.me/samarqand_33_maktab">
+    <a target="_blank" style={{ fontSize:'25px',}} href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/">
     <i class="fab fa-facebook"></i>
         
         </a>
 
 
-    <a target="_blank" style={{ fontSize:'25px', }} href="https://t.me/samarqand_33_maktab">
+    <a target="_blank" style={{ fontSize:'25px', }} href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg">
     <i class="fab fa-youtube"></i>
         
         </a>
+
+        <a target="_blank"  className="difkif" href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`}>
+        <FontAwesomeIcon icon={faPhone} style={{ fontSize:'25px',}} />
+        
+        </a>       
 </div>
                         <div className="second" style={{ marginTop:'-65px',right:'140px'}}>
                            
