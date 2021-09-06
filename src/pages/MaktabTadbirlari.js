@@ -64,11 +64,11 @@ export default class MaktabTadbirlari extends Component {
             superLargeDesktop: {
               // the naming can be any, depends on you.
               breakpoint: { max: 4000, min: 3000 },
-              items: 6
+              items: 7
             },
             desktop: {
               breakpoint: { max: 3000, min: 1024 },
-              items: 5
+              items: 6
             },
             tablet: {
               breakpoint: { max: 1024, min: 464 },
@@ -128,7 +128,7 @@ export default class MaktabTadbirlari extends Component {
                     <Link to={`/tadbirlar/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     
                 </div>
-                <h1 className={style.sarlavha}> </h1>
+                <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
            
 
                 <div className="sliderHomiy"> 
@@ -190,8 +190,8 @@ export default class MaktabTadbirlari extends Component {
                    </Carousel>                          
 
                 </div>
-                         
-                {/* <h1 className={style.sarlavha}> </h1> */}
+                <br/><br/>
+                <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
             </div>
         )
     }

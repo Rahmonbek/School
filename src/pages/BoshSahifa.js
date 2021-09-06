@@ -34,6 +34,7 @@ import axios from 'axios'
 import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
 import YouTube from 'react-youtube'
 import Global from '../host/Global'
+import { Clock } from './Clock'
 
 
 
@@ -44,6 +45,7 @@ loader:true,
 news:[],
 id:0,
 school:null,
+clock:'00 : 00 : 00',
   }
 getSchool=()=>{
     axios.get(`${url}/school-by-admin/${Global.user}`).then(res=>{
@@ -87,9 +89,12 @@ getSchool=()=>{
       
       this.getNews()
       this.getSchool()
+      setInterval(()=>{
+        this.setState({clock:Clock()})
+    },1000)
   }
     render() {
-    
+       
     return (
 
         <div>
@@ -101,55 +106,61 @@ getSchool=()=>{
 
     </div>:
     <div>
+       
           {/* <NavBar/> */}
           <ContainerDashboard >
-                <div className='yuqori'>
-                    <Container className="gerbHead">
+  
+                <div className='yuqori' style={{backgroundColor:'transparent',
+  }}>
+                    <div className="gerbHead" style={{width:'100%'}}>
 
     <img src={gerb}/>
 <p>Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan davlat umumta'lim maktabi</p>   
-<div className="vaqt"> 
-{/* <Clock format={'HH:mm:ss'} interval={1000} ticking={true} /> */}
-</div> 
+  
                    
                         {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
                         {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
-                    </Container>
+                    </div>
+                    <div id="vaqt"> 
+{this.state.clock}
+
+</div> 
                 </div>
             </ContainerDashboard>
+          
             <div className="iconsHead">
                        <div>
-                       <Tooltip placement="left" title="ittower01@gmail.com">  <a target="_blank" className="ahref"  href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`}>
+                       <Tooltip placement="left" title="ittower01@gmail.com">  <a target="_blank" style={{borderRadius:"10px 0px 0px 0px"}} className="ahref"  href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`}>
                         <FontAwesomeIcon  icon={faEnvelope}  style={{ fontSize:'25px'}}  />
         
                         </a></Tooltip></div>
        <div> 
-    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://t.me/samarqand_33_maktab">
+    <a target="_blank" style={{borderTop:" 1px solid blue"}} className="ahref" href="https://t.me/samarqand_33_maktab">
        
         <i className="fab fa-telegram"></i>
         </a>
 
 </div><div>
-    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.instagram.com/33_maktab_official/">
+    <a target="_blank" style={{borderTop:" 1px solid blue"}} className="ahref" href="https://www.instagram.com/33_maktab_official/">
     <i className="fab fa-instagram"></i>
         
     </a>
 
 </div><div>
-    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/">
+    <a target="_blank" style={{borderTop:" 1px solid blue"}} className="ahref" href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/">
     <i className="fab fa-facebook"></i>
         
         </a>
 
 </div> 
 <div>
-    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg">
+    <a target="_blank" style={{borderTop:" 1px solid blue"}} className="ahref" href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg">
     <i className="fab fa-youtube"></i>
         
         </a>
 </div>
 <div>
-<Tooltip placement="left" title="+998 93 082 03 72">    <a target="_blank" className="ahref" style={{borderTop:" 1px solid lightgrey"}}   href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`}>
+<Tooltip placement="left" title="+998 93 082 03 72">    <a target="_blank"  className="ahref" style={{borderTop:" 1px solid blue", }}   href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`}>
         <FontAwesomeIcon icon={faPhone} style={{ fontSize:'25px',}} />
         
         </a>       </Tooltip>
@@ -183,8 +194,8 @@ getSchool=()=>{
                    <img src={this.state.school!==null?this.state.school.b_r1!==null?this.state.school.b_r1:headerT:headerT} className={sty.temur}/>
                    </div>
                   <br/>
-                   <div className={sty.headText} style={{zIndex:'304'}}>
-                       <NavLink style={{color:'white', textDecoration:'none',cursor:'pointer',zIndex:'304'}} to={`/hayot/${Global.user}`}><button>Maktab hayoti</button> </NavLink> 
+                   <div className={sty.headText} style={{zIndex:'304', }}>
+                       <NavLink style={{color:'white', textDecoration:'none', cursor:'pointer',zIndex:'304'}} to={`/hayot/${Global.user}`}><button>Maktab hayoti</button> </NavLink> 
                    </div>
                    </div>
                     
