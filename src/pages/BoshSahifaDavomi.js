@@ -3,6 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap'
 import style from './BoshSahifaDavomi.module.css'
 import { ButtonWrapper } from './StyleBoshSahifa'
 import school1 from "../img/school1.jpg";
+import ustoz1 from "../img/ustoz1.jpg";
+import ustoz2 from "../img/ustoz2.jpg";
 import school2 from "../img/school2.jpg";
 import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
@@ -200,60 +202,30 @@ export default class BoshSahifaDavomi extends Component {
                                             <Col lg={6} md={6} sm={12}>
                                                 <div className={style.card} style={{marginTop: '10px'}}>
                                                     <div className={style.bayroq}></div>
-                                                    <img src={school2} alt="" />
+                                                    <img src={ustoz1} alt="" />
                                                     <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                                                        Eshmatov Toshmat Teshayevich
+                                                        Eshmatova Toshmatoy Teshayevna
                                                     </p>
                                                     <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
                                                         <b>Mutaxassislik: </b> Ingliz tili
                                                     </p>
                                                     <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Qisqacha ma'lumot: </b>dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                        <b>Qisqacha ma'lumot: </b>Maktab direktori 
                                                     </p>
                                                 </div>
                                             </Col>
                                             <Col lg={6} md={6} sm={12}>
                                                 <div className={style.card} style={{marginTop: '10px'}}>
                                                     <div className={style.bayroq}></div>
-                                                    <img src={school2} alt="" />
+                                                    <img src={ustoz2} alt="" />
                                                     <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                                                        Eshmatov Toshmat Teshayevich
+                                                        Muxlisova Munisa Mahmudovna
                                                     </p>
                                                     <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
                                                         <b>Mutaxassislik: </b> Ingliz tili
                                                     </p>
                                                     <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
-                                                    </p>
-                                                </div>
-                                            </Col>
-                                            <Col lg={6} md={6} sm={12}>
-                                                <div className={style.card} style={{marginTop: '10px'}}>
-                                                    <div className={style.bayroq}></div>
-                                                    <img src={school2} alt="" />
-                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                                                        Eshmatov Toshmat Teshayevich
-                                                    </p>
-                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Mutaxassislik: </b> Ingliz tili
-                                                    </p>
-                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
-                                                    </p>
-                                                </div>
-                                            </Col>
-                                            <Col lg={6} md={6} sm={12}>
-                                                <div className={style.card} style={{marginTop: '10px'}}>
-                                                    <div className={style.bayroq}></div>
-                                                    <img src={school2} alt="" />
-                                                    <p style={{fontSize:'20px', textAlign: 'center', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                                                        Eshmatov Toshmat Teshayevich
-                                                    </p>
-                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Mutaxassislik: </b> Ingliz tili
-                                                    </p>
-                                                    <p style={{fontSize:'18px', color:'black', marginLeft: '15px'}}>
-                                                        <b>Qisqacha ma'lumot: </b> dsadsadasd dsadasdasdas dasdasdsadas dsadasdasd dasdasdasdasdas dasdasdasdasdas dsadasdasdasdasdasdas dasdasdasdasda dsadasdasdas
+                                                        <b>Qisqacha ma'lumot: </b> Maktab direktor o'rinbosari
                                                     </p>
                                                 </div>
                                             </Col>
