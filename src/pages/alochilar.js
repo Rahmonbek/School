@@ -6,12 +6,12 @@ import { DownCircleOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import axios from "axios";
-import Aos from "aos";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
 import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
+import Aos from "aos";
 import { getExcellent, getPupil } from "../host/Config";
 import {url } from "../host/Host";
 import { FadeLoader } from "react-spinners";
@@ -32,7 +32,7 @@ export default class Alochilar extends Component {
     var a = window.location.href.split("/");
     var v = a[a.length - 1];
     axios
-      .get(`${url}/excellent/${v}/`)
+      .get(`${url}/excellent/`)
       .then((res) => {
         this.setState({
           excellent: res.data,
