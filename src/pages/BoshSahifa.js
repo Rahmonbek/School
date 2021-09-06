@@ -9,6 +9,7 @@ import rasm1 from '../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg'
 import rasm2 from '../img/mira-kireeva-xTq26wLo5do-unsplash.jpg'
 import rasm3 from '../img/javier-trueba-iQPr1XkF5F0-unsplash.jpg'
 import sty from './sty.module.css'
+import gerb from "../img/pngegg.png"
 import rasm41 from '../img/1.jpg'
 import rasm42 from '../img/2.jpg'
 import rasm43 from '../img/3.jpg'
@@ -19,7 +20,7 @@ import flagUZ from '../img/flagUZ.png'
 import flagRU from '../img/flagRU.png'
 
 import '../App.css'
-
+import {Tooltip} from 'antd'
 import { Link, NavLink } from 'react-router-dom'
 import BoshSahifaDavomi from './BoshSahifaDavomi'
 import MaktabTadbirlari from './MaktabTadbirlari'
@@ -29,6 +30,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from '../host/Config'
 import { url, user } from '../host/Host'
 import axios from 'axios'
+import Clock from 'react-live-clock';
 import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
 import YouTube from 'react-youtube'
 import Global from '../host/Global'
@@ -102,55 +104,54 @@ getSchool=()=>{
           {/* <NavBar/> */}
           <ContainerDashboard >
                 <div className='yuqori'>
-                    <Container>
-                        <div className="first" style={{ marginTop:'5px'}}>
-                        <FontAwesomeIcon style={{color:"red", position:'relative', top:'3px'}} icon={faEnvelope} className='iconEmail' />
-                             <a href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`} style={{color:'#FFF', fontSize:'20px'}}>{this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}</a>
-                        </div>
-                      
-                        <div class="iconsHead">
-                        <a target="_blank" className="difkif" href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`}>
-                        <FontAwesomeIcon  icon={faEnvelope}  style={{ fontSize:'25px', position:'relative', top:'3px'}}  />
-        
-        </a>
-    <a target="_blank" style={{ fontSize:'25px',}} href="https://t.me/samarqand_33_maktab">
-       
-        <i class="fab fa-telegram"></i>
-        </a>
+                    <Container className="gerbHead">
 
-
-    <a target="_blank" style={{ fontSize:'25px',}} href="https://www.instagram.com/33_maktab_official/">
-    <i class="fab fa-instagram"></i>
-        
-    </a>
-
-
-    <a target="_blank" style={{ fontSize:'25px',}} href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/">
-    <i class="fab fa-facebook"></i>
-        
-        </a>
-
-
-    <a target="_blank" style={{ fontSize:'25px', }} href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg">
-    <i class="fab fa-youtube"></i>
-        
-        </a>
-
-        <a target="_blank"  className="difkif" href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`}>
-        <FontAwesomeIcon icon={faPhone} style={{ fontSize:'25px',}} />
-        
-        </a>       
-</div>
-                        <div className="second" style={{ marginTop:'-65px',right:'140px'}}>
-                           
-                            <a href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`} style={{color:'#FFF', fontSize:'20px', color:'white'}}> <FontAwesomeIcon  style={{color:"red"}} icon={faPhone} className='iconEmail' /> {this.state.school!==null?this.state.school.phone:"+1-3435-2356-222"}</a>
-                            
-                        </div>
+    <img src={gerb}/>
+<p>Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan davlat umumta'lim maktabi</p>   
+<div className="vaqt"> <Clock format={'HH:mm:ss'} interval={1000} ticking={true} /></div> 
+                   
                         {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
                         {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
                     </Container>
                 </div>
             </ContainerDashboard>
+            <div className="iconsHead">
+                       <div>
+                       <Tooltip placement="left" title="ittower01@gmail.com">  <a target="_blank" className="ahref"  href={`mailto: ${this.state.school!==null?this.state.school.email:'ittower01@gmail.com'}`}>
+                        <FontAwesomeIcon  icon={faEnvelope}  style={{ fontSize:'25px'}}  />
+        
+                        </a></Tooltip></div>
+       <div> 
+    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://t.me/samarqand_33_maktab">
+       
+        <i className="fab fa-telegram"></i>
+        </a>
+
+</div><div>
+    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.instagram.com/33_maktab_official/">
+    <i className="fab fa-instagram"></i>
+        
+    </a>
+
+</div><div>
+    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/">
+    <i className="fab fa-facebook"></i>
+        
+        </a>
+
+</div> 
+<div>
+    <a target="_blank" style={{borderTop:" 1px solid lightgrey"}} className="ahref" href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg">
+    <i className="fab fa-youtube"></i>
+        
+        </a>
+</div>
+<div>
+<Tooltip placement="left" title="+998 93 082 03 72">    <a target="_blank" className="ahref" style={{borderTop:" 1px solid lightgrey"}}   href={`tel: ${this.state.school!==null?this.state.school.phone:'+998 93 082 03 72'}`}>
+        <FontAwesomeIcon icon={faPhone} style={{ fontSize:'25px',}} />
+        
+        </a>       </Tooltip>
+        </div></div>
 
             <div className={style.dashboard}  style={{backgroundColor:'transparent',}}>
                <div className={style.fer} style={{backgroundColor:'transparent',}}>
@@ -160,7 +161,7 @@ getSchool=()=>{
                             <Navbar.Brand><p className='maktabLogo' style={{cursor:'pointer', }}>
                                 {/* {this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"} */}
                                 </p></Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginLeft:'10px',color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i class="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{marginLeft:'10px',color: ' rgba(0, 0, 0, 0)',border:'none'}} ><i className="fa fa-bars" aria-hidden="true" style={{fontSize:'1.6rem',color:'white',position:'relative',top:'-10px'}}></i></Navbar.Toggle>
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className={style.meauto}   >
                                     <NavLink style={{marginLeft:'20px', color:'white'}} to={`/${Global.user}`}><p className={style.navLink}>Bosh sahifa</p></NavLink>
@@ -181,7 +182,6 @@ getSchool=()=>{
                    </div>
                   <br/>
                    <div className={sty.headText} style={{zIndex:'304'}}>
-                       <h1 style={{color:'white'}}>{this.state.school!==null?this.state.school.school_number:''} - {this.state.school!==null?this.state.school.type:''}</h1>
                        <NavLink style={{color:'white', textDecoration:'none',cursor:'pointer',zIndex:'304'}} to={`/hayot/${Global.user}`}><button>Maktab hayoti</button> </NavLink> 
                    </div>
                    </div>
@@ -262,7 +262,7 @@ return(
     </Col>
     <Col xs={9} sm={9} md={9} lg={9} className={style.colNews} style={{paddingLeft:'10px', paddingRight:'8px'}}>
         <p>{item.title}</p>
-        <h5><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}</h5>
+        <h5><i style={{marginRight:'10px'}} className="far fa-calendar-alt"></i>{item.published_time.substring(0, 10)}</h5>
         
     </Col>
     </Row>
