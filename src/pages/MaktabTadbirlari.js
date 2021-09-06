@@ -9,7 +9,7 @@ import her3 from '../img/h3.jpg'
 import her4 from '../img/h4.jpg'
 import her5 from '../img/h5.png'
 import her6 from '../img/h6.png'
-
+import {Map} from "rea"
 import 'react-multi-carousel/lib/styles.css';
 import rasm3 from '../img/13.jpg'
 import Carousel from 'react-multi-carousel';
@@ -191,8 +191,48 @@ export default class MaktabTadbirlari extends Component {
 
                 </div>
                 <br/><br/>
-                <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
-            </div>
+                <Row>
+                  <Col lg={6} md={12} sm={12}>
+            
+                  <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
+            
+          <YMaps key={"uz_UZ"} query={{ lang: "uz_UZ" }}>
+            <Map
+              width="100vw"
+              height="95vh"
+              state={{
+                center:[],
+                zoom:13,
+              }}
+            >
+                <Clusterer
+                  options={{
+                    groupByCoordinates: false,
+                  }}
+                >
+                  <Placemark
+                    key={-1}
+                    geometry={[]}
+                    options={{
+                      iconLayout: "default#image",
+                     }}
+                    properties={{
+                      hintContent: `<h6><b className="personStyle">33 - maktab</b></h6>`,
+                    }}
+                    modules={["geoObject.addon.hint"]}
+                  />
+                </Clusterer>
+              }
+              <GeolocationControl options={{ float: "left" }} />
+              <TypeSelector options={{ float: "right" }} />
+              <TrafficControl options={{ float: "right" }} />
+              <RouteButton options={{ float: "right" }} />
+              <ZoomControl options={{ float: "left" }} />
+            </Map>
+          </YMaps>
+                  </Col>
+                </Row>
+                </div>
         )
     }
 }
