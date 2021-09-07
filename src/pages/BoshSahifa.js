@@ -106,7 +106,7 @@ export default class BoshSahifa extends Component {
                 style={{ backgroundColor: "transparent" }}
               >
                 <div className="gerbHead" style={{ width: "100%" }}>
-                  <img src={gerb} />
+                  <img src={gerb} alt="" />
                   <p>
                     Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan
                     davlat umumta'lim maktabi
@@ -272,6 +272,7 @@ export default class BoshSahifa extends Component {
                             : headerT
                           : headerT
                       }
+                      alt=""
                       className={sty.temur}
                     />
                   </div>
