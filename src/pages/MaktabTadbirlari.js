@@ -194,7 +194,7 @@ export default class MaktabTadbirlari extends Component {
                 </div>
                 <br/><br/>
                 <Row>
-                  <Col lg={6} md={12} sm={12}>
+                  <Col lg={6} md={12} sm={12} className="fgr">
             
                   <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
             <div className="mapsr">
@@ -238,7 +238,7 @@ export default class MaktabTadbirlari extends Component {
           <br/>
           </div>
                   </Col>
-                  <Col lg={6} md={12} sm={12}>
+                  <Col lg={6} md={12} sm={12} className="fgr">
             
                   <h1 className={style.sarlavha}>Murojat qilish</h1>
                   

@@ -8,7 +8,7 @@
 .dashboard{
     margin-top: 0;
     height: 90.5vh;
-    border-bottom: 2px solid black;
+    
     text-align: center;
     /* opacity: 0.6; */
     
@@ -114,7 +114,8 @@
     height: 350px;
     /* background-color: gray; */
     /* border-bottom: 2px solid black; */
-    margin-bottom: 5%;
+    margin-bottom: 30px;
+    margin-top: 50px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -902,7 +903,7 @@ margin-left: 10px;
     position:sticky !important;
     top:0px !important;
     
-    background-color:#02024e;
+    background-color:rgba(1, 1, 60, 0.871);
 margin-top: 0px;
 padding-top: 0px;
 height:60px;

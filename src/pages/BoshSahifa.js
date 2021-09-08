@@ -35,6 +35,7 @@ import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
+import maktab from '../img/1 g.jpg';
 import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from "../host/Config";
 import { url, user } from "../host/Host";
@@ -66,8 +67,12 @@ export default class BoshSahifa extends Component {
     getNews()
       .then((res) => {
         if (window.location.href.indexOf("id=") === -1) {
+          var a=window.location.href.split('/')
+          var v=a[a.length-1]
+        
           this.setState({
             news: res.data,
+            id:v
           });
         } else {
           this.setState({
@@ -265,13 +270,14 @@ export default class BoshSahifa extends Component {
                   <div className={sty.head_item}>
                     <br />
                     <img
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.b_r1 !== null
-                            ? this.state.school.b_r1
-                            : headerT
-                          : headerT
-                      }
+                    src={maktab}
+                      // src={
+                      //   this.state.school !== null
+                      //     ? this.state.school.b_r1 !== null
+                      //       ? this.state.school.b_r1
+                      //       : headerT
+                      //     : headerT
+                      // }
                       alt=""
                       className={sty.temur}
                     />

@@ -144,7 +144,7 @@ export default class BoshSahifaDavomi extends Component {
                 <br />
                 <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
 
-                <Container>
+                <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
                   <br />
 
@@ -229,7 +229,7 @@ export default class BoshSahifaDavomi extends Component {
                 <br />
                 <br />
                 <h1 className={style.sarlavha}>O'qituvchilar doskasi</h1>
-                <Container>
+                <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
                   <br />
                   <Row>
@@ -249,6 +249,7 @@ export default class BoshSahifaDavomi extends Component {
                                   marginLeft:'20px',
                                   fontWeight: "bold",
                                   color: "black",
+                                  width:'80%',
                                 }}
                               >
                                 Muxlisova Munisa Mahmudovna
@@ -283,6 +284,7 @@ export default class BoshSahifaDavomi extends Component {
                                   marginLeft:'20px',
                                   fontWeight: "bold",
                                   color: "black",
+                                  width:'80%',
                                 }}
                               >
                                 Hamidova Shahnoza Elmurodovna
