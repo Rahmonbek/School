@@ -61,12 +61,13 @@ body {
   margin-right: 30px;
 }
 .container {
-  background-image: url("../img/background.jpg");
+  background-image: url(../img/bgr.png);
   width: 100%;
-  height: 80vh;
+  height: 500px;
+  background-size: 100% 500px;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-position: left;
+  /* background-position: center center; */
+  /* background-position: left top; */
 }
 .container h1 {
   color: white;
@@ -93,10 +94,15 @@ body {
     margin-top: 2%;
     font-size: 1.2rem;
   }
+  .container{
+    height: 450px;
+    background-size: 100% 450px;
+  }
 }
 @media (max-width: 768px) {
   .container {
     height: 55vh;
+    background-image:url(../img/bgr1.png)
   }
   .container p {
     font-size: 1.2rem;
