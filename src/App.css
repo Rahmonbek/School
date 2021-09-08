@@ -8,6 +8,7 @@ body {
 }
 * {
   box-sizing: border-box;
+/* z-index: 3445; */
 }
 .load {
   width: 100%;
@@ -194,20 +195,24 @@ html {
   margin-left: 200px !important;
 }
 .carTur {
-  height: 100vh;
+  height: 110vh;
+  top:-15vh
 }
 .carTur img {
-  height: 100vh !important;
+  height: 110vh !important;
 }
 
 .yuqori {
   z-index: 5678 !important;
   background-image: url(./img/naqsh.jpg);
   background-size: 100px 70px;
+  position: fixed !important;
+  top:0px !important;
 }
 .difkif {
   display: none;
 }
+.yuqori{z-index: -1 !important;}
 .iconsHead {
   background-color: white !important;
   z-index: 345;
@@ -262,6 +267,18 @@ html {
 .ahref:hover {
   color: red;
 }
+.carg{width:100%; z-index: -55 !important;  position: relative;}
+.carg img{width:100%; height:100%;  z-index: -55 !important;}
+.gth{height:50px; margin-top:540px}
+.carg_img{position: relative;  z-index: -55 !important; width:100%; height: 590px;}
+.carg_item{ width:100%; height:590; position: fixed; top:50px;}
+.yozuvT{position: absolute; top:0px; left:0px; width:100%; padding-top:250px; z-index: -1;height: 590px; background-color: rgba(0, 0, 0, 0.597);}
+.yozuvT h4{font-size: 18px; letter-spacing: 4px; text-align: center; color:white; text-shadow: 1px 1px 5px black; display: block;}
+.yozuvT h1{font-size: 65px; letter-spacing: 6px; text-align:center; color:white; display: block; text-shadow: 1px 1px 5px black; font-family: "Arial Black";}
+.yozuvT button{border:none; z-index: 22; background-color:rgb(7, 20, 116); color:white; padding:10px 20px; border-radius: 20px; font-size: 16px; letter-spacing: 2px;}
+.carg_img::before{position: absolute; z-index: -1;  top:0px; left:0px; width:100%; height:100%; content: ""; background-color: rgba(0, 0, 0, 0.542);}
+.yozuvT button:hover{background-color: darkred;}
+
 #vaqt {
   display:none !important;
   background-color: transparent;
@@ -280,8 +297,15 @@ html {
   align-items: center;
   font-size: 24px;
 }
+.oq{width:100%; height:700px; position: sticky; top:0px; z-index:232;}
 .mapsr {
   padding: 30px;
+}
+@media (max-width:900px) and (min-width:701px){
+  .yuqori{
+
+    height:70px !important;
+  }
 }
 @media (max-width: 700px) {
   .maktabLogo {
@@ -290,24 +314,36 @@ html {
   #vaqt {
     display: none;
   }
+   .carg_img, .carg_item{
+    height:350px
+  }
+.gth{ margin-top:300px}
+
   .gerbHead p {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 18px;
+    margin-top: 10px;
   }
   .iconsHead {
     right: 10px !important;
   }
+  .yozuvT h1{font-size: 30px;}
+  .yozuvT h4{font-size: 18px;}
+  .yozuvT {padding-top:150px;height:350px}
+
   .yuqori {
     height: 70px !important;
+    
   }
+  
   .difkif {
     display: inline-block;
   }
   .carTur {
-    height: 60vh;
+    height: 65vh;
+    top:-10vh;
   }
   .carTur img {
-    height: 60vh !important;
+    height: 65vh !important;
   }
 .container{width:100%;}
 .fgr{width:100%; overflow: hidden; box-sizing: border-box;}

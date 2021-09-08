@@ -89,7 +89,9 @@ body{
     margin-bottom: 50px;
     text-align: center;
    
-    background-color:white;
+    background-color:rgba(20, 6, 111, 0.35);
+    background-image:url(../img/bag.png) ;
+    background-attachment: fixed;
     color:  hsl(209, 61%, 16%);
     line-height: 1.5;
     font-size: 0.875rem;

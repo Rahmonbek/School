@@ -44,7 +44,12 @@ export default class MaktabHayoti extends Component {
     var a = window.location.href.split("/");
     var v = a[a.length - 1];
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
-      this.setState({ loading: false, data: res.data });
+      this.setState({  data: res.data });
+      setTimeout(()=>{
+        this.setState({
+          loading: false,
+        })
+      }, 2000)
     });
   }
 
@@ -303,7 +308,7 @@ export default class MaktabHayoti extends Component {
                     <Pannellum
                       className={styles.PannellumReact}
                       width="100%"
-                      height="450px"
+                      height="500px"
                       image={myImage}
                       pitch={10}
                       yaw={180}
@@ -322,7 +327,7 @@ export default class MaktabHayoti extends Component {
                             variantlari mavjud.`}
                         </h2>
                         <h4  style={{width:'80%', marginLeft:'10%', height:"200px", overflowY:
-        'auto'}}>
+        'auto', display:'flex', alignItems:'center'}}>
                           {data.m_h_k_t !== null && data !== null
                             ? data.m_h_k_t
                             : `Talabalar shaharchasida sayohat qilishning ko'plab

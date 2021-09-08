@@ -77,6 +77,7 @@ getStaff=()=>{
           if(item1===10){
             chqbt.push(item)
           }
+
         })
       }
 
@@ -91,8 +92,13 @@ getStaff=()=>{
       kasaba:kasaba,
       yetakchi:yetakchi,
       chqbt:chqbt,
-loader:false,    
+   
 })
+setTimeout(()=>{
+  this.setState({
+    loader:false})
+  }, 4000)
+
 
   }).catch(err=>{
     
@@ -126,7 +132,7 @@ loader:false,
           </div>
          : 
             <>  <br/><br/><br/>
-            <Carousel style={{position:'relative', top:'-20px'}} className="carTur">
+            <Carousel style={{position:'relative',}} className="carTur">
             {this.state.direktor!==null?this.state.direktor.map(item=>{
              return(
               <Carousel.Item>
@@ -138,12 +144,12 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px',  width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
    
-       {this.state.orin1!==null?this.state.orin1.map(item=>{
+       {/* {this.state.orin1!==null?this.state.orin1.map(item=>{
              return(
               <Carousel.Item>
       <img
@@ -154,7 +160,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>O'quv va tarbiyaviy ishlar bo'yicha direktor o'rinbosari</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -170,7 +176,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -186,7 +192,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Ma'muriy-xo’jalik ishlar bo'yicha direktor o'rinbosari</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -202,7 +208,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Maktab amaliyotchi psixologi</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -218,7 +224,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Kasaba uyushma raisi</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -234,7 +240,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Kutubxona mudirasi</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -250,7 +256,7 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Chaqiruvga qadar boshlang‘ich tayyorgarlik rahbari</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
@@ -266,11 +272,11 @@ loader:false,
       />
       <Carousel.Caption>
         
-      <p style={{backgroundColor:'#00000091', padding:'10px', position:'relative', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
+      <p style={{backgroundColor:'#000000b3', padding:'10px', position:'relative',top:'-20px', width:'100%', fontSize:'24px',  color:'white'}}>Maktab direktori</p>
     </Carousel.Caption>
   </Carousel.Item>)
            }):""}
-   
+    */}
 </Carousel>
                 <Container>
                     <Row>
@@ -707,7 +713,7 @@ loader:false,
 
                         <Car autoplay
                        className={styles.sliderComment}
-                       
+                      //  style={{backgroundColor:'lightgrey'}}
                         >
 {this.state.direktor!==null?this.state.direktor.map(item=>{
              return(

@@ -548,15 +548,6 @@
 }
 
 
-.Navbar{
-    background-color:#02024ec0;
-    height:68px;
-    width:100%;
-    z-index:4555444;
-display: flex;
-justify-content: center;
-}
-
 .Navbar .maktabLogo{
         color: white;
         font-size: 1.6rem;
@@ -619,7 +610,7 @@ justify-content: center;
     
     .meauto{
       margin-top:-10px;
-        background-color:#02024ec0 !important;
+        background-color:rgba(0, 0, 0, 0.398) !important;
         text-align:center;
         width: calc(100% - 20px);
     }   
@@ -627,7 +618,7 @@ justify-content: center;
     @media screen and (max-width:566px) {
         .meauto{
             position: absolute;
-            background-color:#02024ec0 !important;
+            background-color:rgba(0, 0, 0, 0.398) !important;
             height: 70vh !important;
             z-index: 1111111111 !important;
             padding-top: 50px;
@@ -762,7 +753,6 @@ justify-content: center;
         font-weight: 600;
         font-size: 1.2rem;
     }
-
 .userIcon{
     color: white;
     font-size: 2rem;
@@ -891,6 +881,11 @@ margin-left: 10px;
         margin-left: 0px !important;
     }
 }
+.container, .containerRow{
+    background-color: white !important;
+    padding-top: 30px;
+}
+.containerRow{margin-top: -30px; padding-top:30px;}
 @media screen and (min-width:1200px) {
     .bayroqlar{
         margin-left: 50px !important;
@@ -899,20 +894,6 @@ margin-left: 10px;
 
 }
 
-.Navbar{
-    position:sticky !important;
-    top:0px !important;
-    
-    background-color:rgba(1, 1, 60, 0.871);
-margin-top: 0px;
-padding-top: 0px;
-height:60px;
-width:100%;
-z-index:4555444;
-display: flex;
-
-align-items: center;
-justify-content: center;}
 
 .maktabLogo{
     margin-top: 5px;
@@ -985,27 +966,6 @@ justify-content: center;}
 }   
    
 
-@media (max-width: 786px){
-.meauto  .kirish{
-        margin: 0px;
-        padding: 10px;
-        font-size: 1.3rem;
-       
-    }
-.Navbar{background-color:transparent ;}
-    .meauto  .userIcon{
-        margin-left: 20px;
-        font-size: 1.3rem;
-       
-    }
-
-.meauto{position: relative; top:60px;}
-    .meauto .navLink{ 
-        font-size: 1.3rem;
-        margin-top: 0px;
-       
-        }
-}
 
 @media (max-width: 992px){
     
@@ -1048,3 +1008,40 @@ justify-content: center;}
 
 
 }
+.Navbar{
+    position:fixed !important;
+    top:90px !important;
+    z-index: -1 !important;
+    background-color:transparent;
+margin-top: 0px;
+padding-top: 0px;
+padding-left: 17%;
+height:60px;
+width:100%;
+
+display: flex;
+/* z-index: 1; */
+
+align-items: center;
+justify-content: center;}
+
+@media (max-width: 786px){
+    .meauto  .kirish{
+            margin: 0px;
+            padding: 10px;
+            font-size: 1.3rem;
+           
+        }
+        .meauto  .userIcon{
+            margin-left: 20px;
+            font-size: 1.3rem;
+           
+        }
+    .Navbar{z-index: 355 !important;}
+    .meauto{position: relative; top:60px;}
+        .meauto .navLink{ 
+            font-size: 1.3rem;
+            margin-top: 0px;
+           
+            }
+    }

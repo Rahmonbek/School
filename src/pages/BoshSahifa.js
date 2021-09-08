@@ -27,9 +27,11 @@ import rasm45 from "../img/5.jpg";
 import rasm46 from "../img/6.jpg";
 import flagUZ from "../img/flagUZ.png";
 import flagRU from "../img/flagRU.png";
-
+import bg1t from '../img/bg1t.jpg'
+import bg2t from '../img/bg2t.jpg'
+import bg3t from '../img/bg3t.jpg'
 import "../App.css";
-import { Tooltip } from "antd";
+import { Tooltip, Carousel } from "antd";
 import { Link, NavLink } from "react-router-dom";
 import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
@@ -91,11 +93,23 @@ export default class BoshSahifa extends Component {
   componentDidMount() {
     this.getNews();
     this.getSchool();
+    window.addEventListener('load', ()=>{
+      this.setState({
+        loader:false
+      })
+    });
     setInterval(() => {
       this.setState({ clock: Clock() });
     }, 1000);
   }
   render() {
+    const propse = {
+      dots: true,
+      infinite: true,
+      speed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     return (
       <div>
         {this.state.loader ? (
@@ -206,26 +220,17 @@ export default class BoshSahifa extends Component {
                 </Tooltip>
               </div>
             </div>
-
-            <div
-              className={style.dashboard}
-              style={{ backgroundColor: "transparent" }}
-            >
-              <div
-                className={style.fer}
-                style={{ backgroundColor: "transparent" }}
-              >
-                <div>
-                  <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
+            <div>
+                <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                     <Container>
                       {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
                       <Navbar.Toggle
-                        style={{ borderColor: "#03036a", outline: "none" }}
+                        style={{ backgroundColor:"darkblue", outline: "none", }}
                       >
                         <i
                           class="fa fa-bars"
                           aria-hidden="true"
-                          style={{ fontSize: "1.6rem", color: "#03036a" }}
+                          style={{ fontSize: "1.6rem", color: "white" }}
                         ></i>
                       </Navbar.Toggle>
                       <Navbar.Collapse
@@ -265,68 +270,48 @@ export default class BoshSahifa extends Component {
                     </Container>
                   </Navbar>
                 </div>
-
-                <div className={sty.head}>
-                  <div className={sty.head_item}>
-                    <br />
-                    <img
-                    src={maktab}
-                      // src={
-                      //   this.state.school !== null
-                      //     ? this.state.school.b_r1 !== null
-                      //       ? this.state.school.b_r1
-                      //       : headerT
-                      //     : headerT
-                      // }
-                      alt=""
-                      className={sty.temur}
-                    />
-                  </div>
-                  <br />
-                  {/* <div className={sty.headText} style={{zIndex:'304', }}>
-                       <NavLink style={{color:'white', textDecoration:'none', cursor:'pointer',zIndex:'304'}} to={`/hayot/${Global.user}`}><button>Maktab hayoti</button> </NavLink> 
-                   </div> */}
-                </div>
-
-                {/* fer
-                <div className={style.bayroqlar}>
-                    <Link to=''><img style={{marginTop:'7px'}} src={flagUZ} /></Link>
-                    <Link to='/ru'><img style={{marginTop:'7px'}} src={flagRU} /></Link>
-                </div> */}
-              </div>
-            </div>
-
+  
+<div className="gth">
+                 <div className="carg" style={{ zIndex:'-345'}}>
+                   <div className="carg_item">
+                 <Carousel autoplay effect="fade" style={{zIndex:'-234'}} {...propse}>
+    <div className="carg_img">
+     <img src={
+       maktab
+                        //  this.state.school !== null
+                        //    ? this.state.school.b_r1 !== null
+                        //      ? this.state.school.b_r1
+                        //      : headerT
+                        //    : headerT
+                       }/>
+    </div>
+    <div className="carg_img">
+     <img src={
+                     bg1t
+                       }/>
+    </div>
+    <div className="carg_img">
+     <img src={bg2t
+                       }/>
+    </div>
+   
+  </Carousel>
+  <div className="yozuvT">
+    <h4>XUSH KELIBSIZ</h4>
+    <br/>
+    <h1>MAKTABIMIZGA</h1>
+    {/* <button>MAKTAB HAYOTI</button> */}
+  </div>
+  
+  </div>      </div>    
+                    
+                   
+  </div>
+    
+{/* <div className="oq"></div> */}
             <div className={style.container}>
               <div className={style.bir}>
-                <div className={style.containercha}>
-                  <img
-                    src={
-                      this.state.school !== null
-                        ? this.state.school.b_c1 !== null
-                          ? this.state.school.b_c1
-                          : rasm1
-                        : rasm1
-                    }
-                    className={style.image}
-                  />
-                  <div className={style.overlay}>
-                    <Link
-                      style={{ color: "white" }}
-                      to={`/yutuqlar/${Global.user}`}
-                    >
-                      <FontAwesomeIcon icon={faSchool} className={style.icon} />
-                      <h3>Yutuqlarimiz</h3>
-                      <p>
-                        Sizda bizning maktabimiz yutuqlari bilan tanishib
-                        chiqish uchun qulay imkoniyat bor
-                      </p>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className={style.ikki}>
-                <div className={style.containercha}>
+              <div className={style.containercha}>
                   <img
                     src={
                       this.state.school !== null
@@ -340,7 +325,7 @@ export default class BoshSahifa extends Component {
                   <div className={style.overlay}>
                     <Link
                       style={{ color: "white" }}
-                      to={`/togaraklar/${Global.user}`}
+                      to={`/yangiliklar/${Global.user}`}
                     >
                       <FontAwesomeIcon
                         icon={faNewspaper}
@@ -354,6 +339,36 @@ export default class BoshSahifa extends Component {
                     </Link>
                   </div>
                 </div>
+              </div>
+
+              <div className={style.ikki}>
+              
+              <div className={style.containercha}>
+                  <img
+                    src={
+                      this.state.school !== null
+                        ? this.state.school.b_c1 !== null
+                          ? this.state.school.b_c1
+                          : rasm1
+                        : rasm1
+                    }
+                    className={style.image}
+                  />
+                  <div className={style.overlay}>
+                    {/* <Link
+                      style={{ color: "white" }}
+                      to={`/yutuqlar/${Global.user}`}
+                    > */}
+                      <FontAwesomeIcon icon={faSchool} className={style.icon} />
+                      <h3>Yutuqlarimiz</h3>
+                      <p>
+                        Sizda bizning maktabimiz yutuqlari bilan tanishib
+                        chiqish uchun qulay imkoniyat bor
+                      </p>
+                    {/* </Link> */}
+                  </div>
+                </div>
+              
               </div>
               <div className={style.uch}>
                 <div className={style.containercha}>

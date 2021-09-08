@@ -117,9 +117,9 @@ export default class BoshSahifaDavomi extends Component {
                 <h1>Qabul uchun ariza topshiring</h1>
                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
                 <p>
-                  Biz o'quvchiarimizga shunchaki ta'lim beribgina qolmasdan, shu
-                  bilan birga ularga kelajakdagi muvaffaqiyatlar va kareralarida
-                  o'z o'rnilarini topish sirlarini o'rgatamiz
+                  Biz o'quvchilarimizga shunchaki ta'lim beribgina qolmasdan, shu
+                  bilan birga ularga kelajakda
+                  o'z o'rnilarini topishlariga yordam beramiz.
                 </p>
                 <ButtonWrapper>
                   <button className="btn drawBorder">
@@ -136,13 +136,13 @@ export default class BoshSahifaDavomi extends Component {
             </Row>
           </Container>
         </div>
-        <Container fluid>
+        <Container fluid style={{backgroundColor:'white'}}>
           <Row>
             <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
                 <br />
                 <br />
-                <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
+                <h1 className={style.sarlavha} style={{fontSize:'28px'}}>A'lochilar doskasi</h1>
 
                 <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
@@ -228,7 +228,7 @@ export default class BoshSahifaDavomi extends Component {
               <div className={style.tana}>
                 <br />
                 <br />
-                <h1 className={style.sarlavha}>O'qituvchilar doskasi</h1>
+                <h1 className={style.sarlavha} style={{fontSize:'28px'}}>O'qituvchilar doskasi</h1>
                 <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
                   <br />

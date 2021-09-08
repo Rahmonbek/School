@@ -22,8 +22,13 @@ getSchool=()=>{
   axios.get(`${url}/school-by-admin/${v}`).then((res) => {
            this.setState({
                school:res.data,
-         loader:false,
+    
            })
+           setTimeout(()=>{
+             this.setState({
+               loader:false})
+             }, 4000)
+           
            console.log(res.data)
        }).catch(err=>{console.log(err) })
        

@@ -36,12 +36,15 @@ export default class Alochilar extends Component {
       .then((res) => {
         this.setState({
           excellent: res.data,
-         
+          loader:false
         });
       })
       .catch((err) => {
         console.log(err);
-       
+        this.setState({
+          // excellent: res.data,
+          loader:false
+        });
       });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
       this.setState({ data: res.data });
@@ -51,12 +54,13 @@ export default class Alochilar extends Component {
       .then((res) => {
         this.setState({
           class: res.data,
-          loader:false
+          
         });
+       
       })
       .catch((err) => {
         console.log(err);
-        this.setState({loader:false})
+        // this.setState({loader:false})
       });
   };
 
@@ -88,6 +92,7 @@ export default class Alochilar extends Component {
       this.state.class.map((item1) => {
         if (item1.id === id) {
           classes = item1;
+          
         }
       });
     }
@@ -100,8 +105,11 @@ export default class Alochilar extends Component {
     });
     this.getExcellents();
     this.getPupil();
-    this.setState({ loader: false });
-    console.log(123);
+    window.addEventListener('load', ()=>{
+      // this.setState({
+      //   loader:false
+      // })
+    });
   }
 
   render() {

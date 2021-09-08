@@ -84,7 +84,7 @@ export default class MaktabTadbirlari extends Component {
           
         return (
             <div>
-                <div className={style.container}>
+                <div className={style.container} style={{backgroundColor:'white' ,marginTop:'-10px'}}>
                     <h2>Maktab tadbirlari</h2>
                     <Row style={{textAlign: 'center'}}>
                         {
@@ -130,10 +130,11 @@ export default class MaktabTadbirlari extends Component {
                     <Link to={`/tadbirlar/${Global.user}`} className={style.barchasiniKurish}>Hamma tadbirlarni ko'rish -&gt;</Link>
                     
                 </div>
-                <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
+                <div  style={{backgroundColor:'white'}}>
+                <h1 className={style.sarlavha} > Bizning hamkorlarimiz</h1>
            
 
-                <div className="sliderHomiy"> 
+                <div className="sliderHomiy"  style={{backgroundColor:'white'}}> 
                 <Carousel responsive={responsive}
                     autoPlay={this.props.deviceType !== "mobile" ? true : false}
                     autoPlaySpeed={3000}
@@ -191,9 +192,9 @@ export default class MaktabTadbirlari extends Component {
 
                    </Carousel>                          
 
-                </div>
-                <br/><br/>
-                <Row>
+                </div></div>
+          
+                <Row  style={{backgroundColor:'white', paddingTop:'40px'}}>
                   <Col lg={6} md={12} sm={12} className="fgr">
             
                   <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
