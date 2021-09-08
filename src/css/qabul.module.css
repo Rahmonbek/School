@@ -18,6 +18,7 @@ body{
 .text_q h1{
    font-size: 70px;
    text-align: center;
+   font-family: 'Lobster',cursive;
 }
 
 .tavsilotlar{
@@ -31,17 +32,17 @@ body{
     z-index: 3;
 }
 .tavsilot img{
-width: 120% !important;
+width: 100% !important;
 height: 300px;
 z-index: 3 !important;
 object-fit: cover;
 box-shadow: 0 20px 30px rgba(0,0,0,.5);
-
+margin-left: 10% !important;
 
 }
 .tavsilottext{
   padding-left: 8% !important;
-  padding-top: 5%;
+  padding-top: 5% !important;
   background-color: #318CE7;
   height: 530px !important;
   padding-right: 5% !important;
@@ -127,8 +128,8 @@ box-shadow: 0 20px 30px rgba(0,0,0,.5);
     height: 200px;
     margin-top: 2%;
     margin-bottom: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
     text-align: justify;
 }
 .jarayon_text h3{
@@ -275,6 +276,10 @@ background-color:#FFF ;
             }
             .text_q{
                 padding-left: 0px;
+               
+            }
+            .text_q h1{
+                font-size: 60px !important;
             }
             
         
@@ -286,9 +291,12 @@ background-color:#FFF ;
        
         .tavsilot img{
         width: 100% !important;
+       margin-left: 0px !important;
         }
         .tavsilottext{
           height: auto;
+          padding-left: 6% !important;
+          padding-right: 8% !important;
         }
         
         .tavsilottext h3{
@@ -328,17 +336,17 @@ background-color:#FFF ;
 
     .muddat_item{
         display: inline-block;
-        margin-left: 30px !important;
+      margin-left:9%!important;
+      margin-right: auto !important;
     }
     .muddat{
         height: 630px;
         padding-top: 30px;
         padding-left:10px;
         text-align: center;
+        
     }
-    .muddat_item{
-        margin:auto !important;
-    }
+ 
     }
 
     @media (min-width:567px) and (max-width:768px){
@@ -349,7 +357,10 @@ background-color:#FFF ;
             padding-left: 0px;
         }
         
-    
+        .tavsilottext h3{
+            font-size: 25px;
+            
+          } 
     .tavsilotlar{
         height: max-content !important;
         
@@ -357,8 +368,9 @@ background-color:#FFF ;
     
    
     .tavsilot img{
-    width: 100% !important;
-    }
+        width: 100% !important;
+       margin-left: 0px !important;
+        }
     .tavsilottext{
       height: auto;
     }
@@ -424,9 +436,10 @@ background-color:#FFF ;
     }
     
    
-    .tavsilot img{
-    width: 100% !important;
-    }
+     .tavsilot img{
+        width: 100% !important;
+       margin-left: 0px !important;
+        }
     .tavsilottext{
       height: auto;
     }
@@ -468,7 +481,7 @@ background-color:#FFF ;
 
 .muddat_item{
     display: inline-block;
-    margin-left: 130px !important;
+    margin-left: 20% !important;
 }
 .muddat{
     height: 630px;

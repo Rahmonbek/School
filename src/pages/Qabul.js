@@ -63,7 +63,7 @@ componentDidMount(){
                         <Col style={{padding:'0'}} lg={6} md={12} sm={12} className={styles.img} data-aos="zoom-in-up" >
                        
                             <img src={shakl} className={styles.back} style={{width:'450px', height:'450px', bottom:'0px', position:'absolute'}}/>
-                            <img src={students} className={styles.main} style={{position:'absolute', bottom:'-100px',  height:'625px'}} />
+                            <img src={students} className={styles.main} style={{position:'absolute', bottom:'-50px',  height:'625px'}} />
                         </Col>
                     </Row>
                     </div>
