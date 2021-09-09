@@ -107,10 +107,10 @@ export default class BoshSahifa extends Component {
     }, 1000);
   }
   render() {
-    const propse = {
+    const props = {
       dots: true,
       infinite: true,
-      speed: 2000,
+      speed: 7000,
       slidesToShow: 1,
       slidesToScroll: 1
     };
@@ -278,7 +278,7 @@ export default class BoshSahifa extends Component {
 <div className="gth">
                  <div className="carg" style={{ zIndex:'-345'}}>
                    <div className="carg_item">
-                 <Carousel autoplay effect="fade" style={{zIndex:'-234'}} {...propse}>
+                 <Carousel autoplay effect="fade" style={{zIndex:'-234', }} {...props}>
     <div className="carg_img">
      <img src={
        maktab
@@ -300,14 +300,14 @@ export default class BoshSahifa extends Component {
     </div>
    
   </Carousel>
+  
+  </div>      </div>    
   <div className="yozuvT">
     <h4>XUSH KELIBSIZ</h4>
     <br/>
     <h1>MAKTABIMIZGA</h1>
     {/* <button>MAKTAB HAYOTI</button> */}
   </div>
-  
-  </div>      </div>    
                     
                    
   </div>
@@ -423,7 +423,7 @@ export default class BoshSahifa extends Component {
                     }
                     opts={{
                       width: "100%",
-                      height: "250px",
+                      height: "300px",
                       playerVars: {
                         // https://developers.google.com/youtube/player_parameters
                         autoplay: 0,

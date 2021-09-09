@@ -203,16 +203,17 @@ html {
 }
 
 .yuqori {
-  z-index: 5678 !important;
+  z-index: 3434 !important;
   background-image: url(./img/naqsh.jpg);
   background-size: 100px 70px;
+/* background-attachment: fixed; */
   position: fixed !important;
   top:0px !important;
 }
 .difkif {
   display: none;
 }
-.yuqori{z-index: -1 !important;}
+/* .yuqori{z-index: -1 !important;} */
 .iconsHead {
   background-color: white !important;
   z-index: 345;
@@ -227,7 +228,7 @@ html {
     rgba(0, 0, 0, 0.1) 0px -79px 30px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 6px;
-  right: 10px !important;
+  right: 0px !important;
 
   /* justify-content:space-around; */
 }
@@ -267,12 +268,12 @@ html {
 .ahref:hover {
   color: red;
 }
-.carg{width:100%; z-index: -55 !important;  position: relative;}
-.carg img{width:100%; height:100%;  z-index: -55 !important;}
+.carg{width:100%; z-index: -5325 !important;  position: relative;}
+.carg img{width:100%; height:100%;  z-index: -542345 !important;}
 .gth{height:50px; margin-top:540px}
-.carg_img{position: relative;  z-index: -55 !important; width:100%!; height: 590px;}
+.carg_img{position: relative;  z-index: -52435 !important; width:100%!; height: 590px;}
 .carg_item{ width: 100vw; height:590px; position: fixed; top:50px;}
-.yozuvT{position: absolute; top:0px; left:0px; width:100%; padding-top:250px; z-index: -1;height: 590px; background-color: rgba(0, 0, 0, 0.597);}
+.yozuvT{position: absolute; top:50px; left:0px; width:100%; padding-top:250px; z-index: 0; height: 590px; background-color: rgba(0, 0, 0, 0.597);}
 .yozuvT h4{font-size: 18px; letter-spacing: 4px; text-align: center; color:white; text-shadow: 1px 1px 5px black; display: block;}
 .yozuvT h1{font-size: 65px; letter-spacing: 6px; text-align:center; color:white; display: block; text-shadow: 1px 1px 5px black; font-family: "Arial Black";}
 .yozuvT button{border:none; z-index: 22; background-color:rgb(7, 20, 116); color:white; padding:10px 20px; border-radius: 20px; font-size: 16px; letter-spacing: 2px;}
@@ -316,7 +317,7 @@ html {
     display: none;
   }
    .carg_img, .carg_item{
-    height:350px
+    height:325px
   }
 .gth{ margin-top:300px}
 
@@ -326,7 +327,7 @@ html {
   }
   .yozuvT h1{font-size: 30px;}
   .yozuvT h4{font-size: 18px;}
-  .yozuvT {padding-top:150px;height:350px}
+  .yozuvT {padding-top:150px;height:325px; top:25px}
 
   .yuqori {
     height: 70px !important;
@@ -387,7 +388,19 @@ body{width:100%; overflow-x: hidden;}
 }
 
 @media (max-width: 450px) {
- .yozuvT, .carg_img, .carg_item{
-    height:300px !important
-  }
-}
+  .yozuvT, .carg_img, .carg_item{
+     height:300px !important
+   }
+ }
+ 
+ @media (min-width: 1500px) {
+  .yozuvT, .carg_img, .carg_item{
+     height:900px;
+
+    }
+    .yozuvT{
+      height:740px
+    }
+    /* .container{margin-top: 200px;} */
+ }
+ 

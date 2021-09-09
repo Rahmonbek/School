@@ -54,7 +54,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{width:'100%', overflowX:'hidden' }}>
         {this.state.loader ? (
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />

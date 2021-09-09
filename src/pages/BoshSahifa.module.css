@@ -241,6 +241,7 @@
 @media screen and (max-width: 750px) {
     .container{
         height: 580px;
+        margin-top:0px;
     }
     .bir, .ikki{
         height: 250px;
@@ -699,7 +700,7 @@
     @media (min-width:993px){
         .meauto{ 
             text-align: center;
-            width:80vw;
+            width:100%;
             background-color:transparent !important; 
         }
         .meauto .navLink{ 
@@ -999,7 +1000,7 @@ margin-left: 10px;
     }
 }
 @media (min-width:1200px){
-    .meauto{ width:80vw;
+    .meauto{ width:100%;
        padding-top: 10px;
     }
     .kirish{
@@ -1011,9 +1012,9 @@ margin-left: 10px;
 
 }
 .Navbar{
-    position:fixed !important;
+    position:absolute !important;
     top:90px !important;
-    z-index: -1 !important;
+    z-index: 234 !important;
     background-color:transparent;
 margin-top: 0px;
 padding-top: 0px;height:60px;
@@ -1038,6 +1039,7 @@ justify-content: center;}
            
         }
     .Navbar{z-index: 33455 !important;
+       
 top:70px !important;     
     }
   
@@ -1048,8 +1050,29 @@ top:70px !important;
  z-index: 3443;          
             }
     }
-@media (max-width:500px){
-    .Navbar{
-        padding-left: 0px;
+    @media (max-width:500px){
+        .Navbar{
+            padding-left: 0px;
+        }
     }
-}
+
+    @media (max-width:786px){
+        .Navbar{
+            /* z-index: 2323; */
+            position:fixed !important;
+            
+        }
+    }
+
+    @media (min-width:1500px){
+        
+        .container{
+            margin-top: 200px;
+            height:500px;
+        }
+        .containercha, .image, .bir, .ikki, .uch{
+            height: 400px;
+        }
+        .rasm{height:100px !important;}
+        /* .containerRow{margin-top: 200px;} */
+    }
