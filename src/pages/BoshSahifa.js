@@ -27,9 +27,9 @@ import rasm45 from "../img/5.jpg";
 import rasm46 from "../img/6.jpg";
 import flagUZ from "../img/flagUZ.png";
 import flagRU from "../img/flagRU.png";
-import bg1t from '../img/bg1t.jpg'
-import bg2t from '../img/bg2t.jpg'
-import bg3t from '../img/bg3t.jpg'
+import bg1t from "../img/bg1t.jpg";
+import bg2t from "../img/bg2t.jpg";
+import bg3t from "../img/bg3t.jpg";
 import "../App.css";
 import { Tooltip, Carousel } from "antd";
 import { Link, NavLink } from "react-router-dom";
@@ -37,7 +37,7 @@ import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
-import maktab from '../img/1 g.jpg';
+import maktab from "../img/1 g.jpg";
 import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from "../host/Config";
 import { url, user } from "../host/Host";
@@ -60,25 +60,24 @@ export default class BoshSahifa extends Component {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
       this.setState({
         school: res.data,
-       
       });
-      setTimeout(()=>{
+      setTimeout(() => {
         this.setState({
-          loader:false
-        })
-      },2000)
+          loader: false,
+        });
+      }, 2000);
     });
   };
   getNews = () => {
     getNews()
       .then((res) => {
         if (window.location.href.indexOf("id=") === -1) {
-          var a=window.location.href.split('/')
-          var v=a[a.length-1]
-        
+          var a = window.location.href.split("/");
+          var v = a[a.length - 1];
+
           this.setState({
             news: res.data,
-            id:v
+            id: v,
           });
         } else {
           this.setState({
@@ -97,10 +96,10 @@ export default class BoshSahifa extends Component {
   componentDidMount() {
     this.getNews();
     this.getSchool();
-    window.addEventListener('load', ()=>{
+    window.addEventListener("load", () => {
       this.setState({
-        loader:false
-      })
+        loader: false,
+      });
     });
     setInterval(() => {
       this.setState({ clock: Clock() });
@@ -112,7 +111,7 @@ export default class BoshSahifa extends Component {
       infinite: true,
       speed: 7000,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
     return (
       <div>
@@ -126,7 +125,7 @@ export default class BoshSahifa extends Component {
             <ContainerDashboard>
               <div
                 className="yuqori"
-                style={{ backgroundColor: "transparent", width:'100vw' }}
+                style={{ backgroundColor: "transparent", width: "100vw" }}
               >
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
@@ -224,98 +223,97 @@ export default class BoshSahifa extends Component {
                 </Tooltip>
               </div>
             </div>
-            <div style={{width: '100vw'}}>
-                <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
-                    <Container fluid>
-                      {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
-                      <Navbar.Toggle
-                        style={{ backgroundColor:"darkblue", outline: "none", }}
-                      >
-                        <i
-                          class="fa fa-bars"
-                          aria-hidden="true"
-                          style={{ fontSize: "1.6rem", color: "white" }}
-                        ></i>
-                      </Navbar.Toggle>
-                      <Navbar.Collapse
-                        id="responsive-navbar-nav"
-                        style={{ width: "60%", color: "white" }}
-                      >
-                        <Nav className={style.meauto}>
-                          <NavLink to={`/${this.state.id}`}>
-                            <span className={style.navLink}>Bosh sahifa</span>
-                          </NavLink>
-                          <NavLink to={`/hayot/${this.state.id}`}>
-                            <span className={style.navLink}>Maktab hayoti</span>
-                          </NavLink>
-                          <NavLink to={`/qabul/${this.state.id}`}>
-                            <span className={style.navLink}>Qabul</span>
-                          </NavLink>
-                          <NavLink to={`/yangiliklar/${this.state.id}`}>
-                            <span className={style.navLink}>Yangiliklar</span>
-                          </NavLink>
-                          <NavLink to={`/rahbariyat/${this.state.id}`}>
-                            <span className={style.navLink}>
-                              Maktab ma'muriyati
-                            </span>
-                          </NavLink>
-                          <NavLink to={`/alochilar/${this.state.id}`}>
-                            <span className={style.navLink}>
-                              Maktab alochilari
-                            </span>
-                          </NavLink>
-                          {/* <div className={style.bayroqlar}>
+            <div style={{ width: "100vw" }}>
+              <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
+                <Container fluid>
+                  {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
+                  <Navbar.Toggle
+                    style={{ backgroundColor: "darkblue", outline: "none" }}
+                  >
+                    <i
+                      class="fa fa-bars"
+                      aria-hidden="true"
+                      style={{ fontSize: "1.6rem", color: "white" }}
+                    ></i>
+                  </Navbar.Toggle>
+                  <Navbar.Collapse
+                    id="responsive-navbar-nav"
+                    style={{ width: "60%", color: "white" }}
+                  >
+                    <Nav className={style.meauto}>
+                      <NavLink to={`/${this.state.id}`}>
+                        <span className={style.navLink}>Bosh sahifa</span>
+                      </NavLink>
+                      <NavLink to={`/hayot/${this.state.id}`}>
+                        <span className={style.navLink}>Maktab hayoti</span>
+                      </NavLink>
+                      <NavLink to={`/qabul/${this.state.id}`}>
+                        <span className={style.navLink}>Qabul</span>
+                      </NavLink>
+                      <NavLink to={`/yangiliklar/${this.state.id}`}>
+                        <span className={style.navLink}>Yangiliklar</span>
+                      </NavLink>
+                      <NavLink to={`/rahbariyat/${this.state.id}`}>
+                        <span className={style.navLink}>
+                          Maktab ma'muriyati
+                        </span>
+                      </NavLink>
+                      <NavLink to={`/alochilar/${this.state.id}`}>
+                        <span className={style.navLink}>Maktab alochilari</span>
+                      </NavLink>
+                      {/* <div className={style.bayroqlar}>
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
                               <Link to='/ru'><img src={flagRU} /></Link>
                           </div> */}
-                          {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
-                        </Nav>
-                      </Navbar.Collapse>
-                    </Container>
-                  </Navbar>
-                </div>
-  
-<div className="gth">
-                 <div className="carg" style={{ zIndex:'-345'}}>
-                   <div className="carg_item">
-                 <Carousel autoplay effect="fade" style={{zIndex:'-234', }} {...props}>
-    <div className="carg_img">
-     <img src={
-       maktab
-                        //  this.state.school !== null
-                        //    ? this.state.school.b_r1 !== null
-                        //      ? this.state.school.b_r1
-                        //      : headerT
-                        //    : headerT
-                       }/>
-    </div>
-    <div className="carg_img">
-     <img src={
-                     bg1t
-                       }/>
-    </div>
-    <div className="carg_img">
-     <img src={bg2t
-                       }/>
-    </div>
-   
-  </Carousel>
-  
-  </div>      </div>    
-  <div className="yozuvT">
-    <h4>XUSH KELIBSIZ</h4>
-    <br/>
-    <h1>MAKTABIMIZGA</h1>
-    {/* <button>MAKTAB HAYOTI</button> */}
-  </div>
-                    
-                   
-  </div>
-    
-{/* <div className="oq"></div> */}
+                      {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </div>
+
+            <div className="gth">
+              <div className="carg" style={{ zIndex: "-345" }}>
+                <div className="carg_item">
+                  <Carousel
+                    autoplay
+                    effect="scrollx"
+                    style={{ zIndex: "-234" }}
+                    {...props}
+                  >
+                    <div className="carg_img">
+                      <img
+                        src={
+                          maktab
+                          //  this.state.school !== null
+                          //    ? this.state.school.b_r1 !== null
+                          //      ? this.state.school.b_r1
+                          //      : headerT
+                          //    : headerT
+                        }
+                      />
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg1t} />
+                    </div>
+                    <div className="carg_img">
+                      <img src={bg2t} />
+                    </div>
+                  </Carousel>
+                </div>{" "}
+              </div>
+              <div className="yozuvT">
+                <h4>XUSH KELIBSIZ</h4>
+                <br />
+                <h1>MAKTABIMIZGA</h1>
+                {/* <button>MAKTAB HAYOTI</button> */}
+              </div>
+            </div>
+
+            {/* <div className="oq"></div> */}
             <div className={style.container}>
               <div className={style.bir}>
-              <div className={style.containercha}>
+                <div className={style.containercha}>
                   <img
                     src={
                       this.state.school !== null
@@ -346,8 +344,7 @@ export default class BoshSahifa extends Component {
               </div>
 
               <div className={style.ikki}>
-              
-              <div className={style.containercha}>
+                <div className={style.containercha}>
                   <img
                     src={
                       this.state.school !== null
@@ -363,16 +360,15 @@ export default class BoshSahifa extends Component {
                       style={{ color: "white" }}
                       to={`/yutuqlar/${Global.user}`}
                     > */}
-                      <FontAwesomeIcon icon={faSchool} className={style.icon} />
-                      <h3>Yutuqlarimiz</h3>
-                      <p>
-                        Sizda bizning maktabimiz yutuqlari bilan tanishib
-                        chiqish uchun qulay imkoniyat bor
-                      </p>
+                    <FontAwesomeIcon icon={faSchool} className={style.icon} />
+                    <h3>Yutuqlarimiz</h3>
+                    <p>
+                      Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish
+                      uchun qulay imkoniyat bor
+                    </p>
                     {/* </Link> */}
                   </div>
                 </div>
-              
               </div>
               <div className={style.uch}>
                 <div className={style.containercha}>
