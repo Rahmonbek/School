@@ -193,8 +193,8 @@ export default class MaktabTadbirlari extends Component {
                    </Carousel>                          
 
                 </div></div>
-          
-                <Row  style={{backgroundColor:'white', paddingTop:'40px'}}>
+          <div style={{width: '100%'}}>
+          <Row  style={{backgroundColor:'white', paddingTop:'40px', maxWidth: '100% !important'}}>
                   <Col lg={6} md={12} sm={12} className="fgr">
             
                   <h1 className={style.sarlavha}>Bizning manzilimiz</h1>
@@ -264,6 +264,8 @@ export default class MaktabTadbirlari extends Component {
 </div></div>
                   </Col>
                 </Row>
+          </div>
+                
                 </div>
         )
     }

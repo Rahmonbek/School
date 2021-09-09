@@ -1,5 +1,5 @@
 body {
-  width: 100% !important;
+  width: 100%;
   overflow-x: hidden !important;
 
   padding: 0;
@@ -227,7 +227,7 @@ html {
     rgba(0, 0, 0, 0.1) 0px -79px 30px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 6px;
-  right: 0px !important;
+  right: 10px !important;
 
   /* justify-content:space-around; */
 }
@@ -270,8 +270,8 @@ html {
 .carg{width:100%; z-index: -55 !important;  position: relative;}
 .carg img{width:100%; height:100%;  z-index: -55 !important;}
 .gth{height:50px; margin-top:540px}
-.carg_img{position: relative;  z-index: -55 !important; width:100%; height: 590px;}
-.carg_item{ width:100%; height:590; position: fixed; top:50px;}
+.carg_img{position: relative;  z-index: -55 !important; width:100%!; height: 590px;}
+.carg_item{ width: 100vw; height:590px; position: fixed; top:50px;}
 .yozuvT{position: absolute; top:0px; left:0px; width:100%; padding-top:250px; z-index: -1;height: 590px; background-color: rgba(0, 0, 0, 0.597);}
 .yozuvT h4{font-size: 18px; letter-spacing: 4px; text-align: center; color:white; text-shadow: 1px 1px 5px black; display: block;}
 .yozuvT h1{font-size: 65px; letter-spacing: 6px; text-align:center; color:white; display: block; text-shadow: 1px 1px 5px black; font-family: "Arial Black";}
@@ -306,6 +306,7 @@ html {
 
     height:70px !important;
   }
+
 }
 @media (max-width: 700px) {
   .maktabLogo {
@@ -322,9 +323,6 @@ html {
   .gerbHead p {
     font-size: 18px;
     margin-top: 10px;
-  }
-  .iconsHead {
-    right: 10px !important;
   }
   .yozuvT h1{font-size: 30px;}
   .yozuvT h4{font-size: 18px;}
@@ -380,4 +378,16 @@ body{width:100%; overflow-x: hidden;}
 .yil {
   width: 100%;
   margin-top: 30px;
+}
+@media (max-width:500px){
+  .gerbHead p {
+    font-size: 14px;
+    margin-top: 10px;
+  }  
+}
+
+@media (max-width: 450px) {
+ .yozuvT, .carg_img, .carg_item{
+    height:300px !important
+  }
 }

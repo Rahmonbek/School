@@ -60,9 +60,13 @@ export default class BoshSahifa extends Component {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
       this.setState({
         school: res.data,
-        loader: false,
+       
       });
-      console.log(res.data);
+      setTimeout(()=>{
+        this.setState({
+          loader:false
+        })
+      },2000)
     });
   };
   getNews = () => {
@@ -122,7 +126,7 @@ export default class BoshSahifa extends Component {
             <ContainerDashboard>
               <div
                 className="yuqori"
-                style={{ backgroundColor: "transparent" }}
+                style={{ backgroundColor: "transparent", width:'100vw' }}
               >
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
@@ -220,9 +224,9 @@ export default class BoshSahifa extends Component {
                 </Tooltip>
               </div>
             </div>
-            <div>
+            <div style={{width: '100vw'}}>
                 <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
-                    <Container>
+                    <Container fluid>
                       {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
                       <Navbar.Toggle
                         style={{ backgroundColor:"darkblue", outline: "none", }}
@@ -235,7 +239,7 @@ export default class BoshSahifa extends Component {
                       </Navbar.Toggle>
                       <Navbar.Collapse
                         id="responsive-navbar-nav"
-                        style={{ width: "100%", color: "white" }}
+                        style={{ width: "60%", color: "white" }}
                       >
                         <Nav className={style.meauto}>
                           <NavLink to={`/${this.state.id}`}>

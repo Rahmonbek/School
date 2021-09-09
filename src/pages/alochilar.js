@@ -113,6 +113,7 @@ export default class Alochilar extends Component {
   }
 
   render() {
+    const { data } = this.state;
     return (
       <div>
         {
@@ -123,7 +124,7 @@ export default class Alochilar extends Component {
 
     </div>:
 <>
-        <div className={styles.headerSliderText}>
+<div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
                 Maktab A'lochilari
               </h3>
@@ -137,22 +138,31 @@ export default class Alochilar extends Component {
               </div>
             </div>
             <Carousel autoplay className={styles.sliderHeader}>
-            <div>
+              <div>
                 <Image
                   src={
-                    this.state.data !== null && this.state.data.m_h_h4 !== null
-                      ? this.state.data.m_h_h4
-                      : school4
+                    data !== null && data.m_h_h1 !== null
+                      ? data.m_h_h1
+                      : school1
                   }
                   className={styles.headerImage}
                 />
               </div>
-            
-            <div>
+              <div>
                 <Image
                   src={
-                    this.state.data !== null && this.state.data.m_h_h3 !== null
-                      ? this.state.data.m_h_h3
+                    data !== null && data.m_h_h2 !== null
+                      ? data.m_h_h2
+                      : school1
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    data !== null && data.m_h_h3 !== null
+                      ? data.m_h_h3
                       : school3
                   }
                   className={styles.headerImage}
@@ -161,35 +171,25 @@ export default class Alochilar extends Component {
               <div>
                 <Image
                   src={
-                    this.state.data !== null && this.state.data.m_h_h5 !== null
-                      ? this.state.data.m_h_h5
+                    data !== null && data.m_h_h4 !== null
+                      ? data.m_h_h4
+                      : school4
+                  }
+                  className={styles.headerImage}
+                />
+              </div>
+              <div>
+                <Image
+                  src={
+                    data !== null && data.m_h_h5 !== null
+                      ? data.m_h_h5
                       : school5
                   }
                   className={styles.headerImage}
                 />
               </div>
-            
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h1 !== null
-                      ? this.state.data.m_h_h1
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    this.state.data !== null && this.state.data.m_h_h2 !== null
-                      ? this.state.data.m_h_h2
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
             </Carousel>
+
   <div style={{ width: "100%", backgroundColor: "white" }}>
           <br />
           <br />
