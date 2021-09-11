@@ -15,7 +15,7 @@ import styles from "../css/alochilar.module.css";
 
 import { getExcellent, getPupil } from "../host/Config";
 
-import { url } from "../host/Host";
+import { url, user } from "../host/Host";
 import Global from "../host/Global";
 
 export default class BoshSahifaDavomi extends Component {
@@ -31,8 +31,8 @@ export default class BoshSahifaDavomi extends Component {
   };
 
   getExcellents = () => {
-    var a = window.location.href.split("/");
-    var v = a[a.length - 1];
+    // var a = window.location.href.split("/");
+    var v = user;
     axios
       .get(`${url}/excellent/`)
       .then((res) => {
@@ -117,9 +117,9 @@ export default class BoshSahifaDavomi extends Component {
                 <h1>Qabul uchun ariza topshiring</h1>
                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
                 <p>
-                  Biz o'quvchilarimizga shunchaki ta'lim beribgina qolmasdan, shu
-                  bilan birga ularga kelajakda
-                  o'z o'rnilarini topishlariga yordam beramiz.
+                  Biz o'quvchilarimizga shunchaki ta'lim beribgina qolmasdan,
+                  shu bilan birga ularga kelajakda o'z o'rnilarini topishlariga
+                  yordam beramiz.
                 </p>
                 <ButtonWrapper>
                   <button className="btn drawBorder">
@@ -136,13 +136,15 @@ export default class BoshSahifaDavomi extends Component {
             </Row>
           </Container>
         </div>
-        <Container fluid style={{backgroundColor:'white'}}>
+        <Container fluid style={{ backgroundColor: "white" }}>
           <Row>
             <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
                 <br />
                 <br />
-                <h1 className={style.sarlavha} style={{fontSize:'28px'}}>A'lochilar doskasi</h1>
+                <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
+                  A'lochilar doskasi
+                </h1>
 
                 <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
@@ -228,7 +230,9 @@ export default class BoshSahifaDavomi extends Component {
               <div className={style.tana}>
                 <br />
                 <br />
-                <h1 className={style.sarlavha} style={{fontSize:'28px'}}>O'qituvchilar doskasi</h1>
+                <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
+                  O'qituvchilar doskasi
+                </h1>
                 <Container className={style.back}>
                   {/* <div className={style.line}></div> */}
                   <br />
@@ -246,16 +250,22 @@ export default class BoshSahifaDavomi extends Component {
                                 style={{
                                   fontSize: "20px",
                                   marginTop: "20px",
-                                  marginLeft:'20px',
+                                  marginLeft: "20px",
                                   fontWeight: "bold",
                                   color: "black",
-                                  width:'80%',
+                                  width: "80%",
                                 }}
                               >
                                 Muxlisova Munisa Mahmudovna
                               </p>
 
-                              <p style={{ fontSize: "18px", color: "black", marginLeft:'20px' }}>
+                              <p
+                                style={{
+                                  fontSize: "18px",
+                                  color: "black",
+                                  marginLeft: "20px",
+                                }}
+                              >
                                 Ingliz tili o'qituvchisi
                               </p>
 
@@ -281,16 +291,22 @@ export default class BoshSahifaDavomi extends Component {
                                 style={{
                                   fontSize: "20px",
                                   marginTop: "20px",
-                                  marginLeft:'20px',
+                                  marginLeft: "20px",
                                   fontWeight: "bold",
                                   color: "black",
-                                  width:'80%',
+                                  width: "80%",
                                 }}
                               >
                                 Hamidova Shahnoza Elmurodovna
                               </p>
 
-                              <p style={{ fontSize: "18px", color: "black", marginLeft:'20px' }}>
+                              <p
+                                style={{
+                                  fontSize: "18px",
+                                  color: "black",
+                                  marginLeft: "20px",
+                                }}
+                              >
                                 Ona tili o'qituvchisi
                               </p>
 

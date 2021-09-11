@@ -13,8 +13,9 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import Aos from "aos";
 import { getExcellent, getPupil } from "../host/Config";
-import {url } from "../host/Host";
+import { url, user } from "../host/Host";
 import { FadeLoader } from "react-spinners";
+import Global from "../host/Global";
 
 export default class Alochilar extends Component {
   state = {
@@ -29,21 +30,21 @@ export default class Alochilar extends Component {
   };
 
   getExcellents = () => {
-    var a = window.location.href.split("/");
-    var v = a[a.length - 1];
+    // var a = window.location.href.split("/");
+    var v = user;
     axios
       .get(`${url}/excellent/`)
       .then((res) => {
         this.setState({
           excellent: res.data,
-          loader:false
+          loader: false,
         });
       })
       .catch((err) => {
         console.log(err);
         this.setState({
           // excellent: res.data,
-          loader:false
+          loader: false,
         });
       });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
@@ -54,9 +55,7 @@ export default class Alochilar extends Component {
       .then((res) => {
         this.setState({
           class: res.data,
-          
         });
-       
       })
       .catch((err) => {
         console.log(err);
@@ -105,7 +104,7 @@ export default class Alochilar extends Component {
     });
     this.getExcellents();
     this.getPupil();
-    window.addEventListener('load', ()=>{
+    window.addEventListener("load", () => {
       // this.setState({
       //   loader:false
       // })
@@ -116,15 +115,13 @@ export default class Alochilar extends Component {
     const { data } = this.state;
     return (
       <div>
-        {
-    this.state.loader?<div className="loaderT">
-<FadeLoader
-
- color='blue' loading={this.state.loader} size={120} />        
-
-    </div>:
-<>
-<div className={styles.headerSliderText}>
+        {this.state.loader ? (
+          <div className="loaderT">
+            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+          </div>
+        ) : (
+          <>
+            <div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
                 Maktab A'lochilari
               </h3>
@@ -190,46 +187,49 @@ export default class Alochilar extends Component {
               </div>
             </Carousel>
 
-  <div style={{ width: "100%", backgroundColor: "white" }}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
-          <div className={style.line}></div>
-          <div className={style.tana}>
-            {this.state.excellent !== []
-              ? this.state.excellent.map((item) => {
-                  var pupil = this.setPupils(item.pupil);
-                  var classes = this.echoClasses(pupil.clas);
-                  return (
-                    <div className={style.card}>
-                      <div className={style.image}>
-                        <img src={pupil.image !== null ? pupil.image : school2} alt="" />
-                      </div>
-                      <div className={style.content}>
-                        <p>
-                          <b>O'quvchi: </b> {pupil.full_name}
-                        </p>
-                        <p>
-                          <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
-                        </p>
-                        <p>
-                          <b>Sinfi: </b>
-                          {this.echoClasses(pupil.clas).class_number} -
-                                  "{this.echoClasses(pupil.clas).class_char}"
-                                  sinf
-                        </p>
-                    
-                        {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                      </div>
-                    </div>
-                  );
-                })
-              : ""}
-          </div>
-        </div>
-</>}
+            <div style={{ width: "100%", backgroundColor: "white" }}>
+              <br />
+              <br />
+              <br />
+              <br />
+              <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
+              <div className={style.line}></div>
+              <div className={style.tana}>
+                {this.state.excellent !== []
+                  ? this.state.excellent.map((item) => {
+                      var pupil = this.setPupils(item.pupil);
+                      var classes = this.echoClasses(pupil.clas);
+                      return (
+                        <div className={style.card}>
+                          <div className={style.image}>
+                            <img
+                              src={pupil.image !== null ? pupil.image : school2}
+                              alt=""
+                            />
+                          </div>
+                          <div className={style.content}>
+                            <p>
+                              <b>O'quvchi: </b> {pupil.full_name}
+                            </p>
+                            <p>
+                              <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
+                            </p>
+                            <p>
+                              <b>Sinfi: </b>
+                              {this.echoClasses(pupil.clas).class_number} - "
+                              {this.echoClasses(pupil.clas).class_char}" sinf
+                            </p>
+
+                            {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
+                          </div>
+                        </div>
+                      );
+                    })
+                  : ""}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }

@@ -29,7 +29,7 @@ import { Pannellum } from "pannellum-react";
 import myImage from "../img/360.jpeg";
 
 import Global from "../host/Global";
-import { url } from "../host/Host";
+import { url, user } from "../host/Host";
 
 export default class MaktabHayoti extends Component {
   state = {
@@ -40,16 +40,15 @@ export default class MaktabHayoti extends Component {
     Aos.init({
       duration: 2000,
     });
-
-    var a = window.location.href.split("/");
-    var v = a[a.length - 1];
+    // var a = window.location.href.split("/");
+    var v = user;
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
-      this.setState({  data: res.data });
-      setTimeout(()=>{
+      this.setState({ data: res.data });
+      setTimeout(() => {
         this.setState({
           loading: false,
-        })
-      }, 2000)
+        });
+      }, 2000);
     });
   }
 
@@ -57,11 +56,11 @@ export default class MaktabHayoti extends Component {
     const { data } = this.state;
     return (
       <div>
-        {this.state.loading === true ? 
+        {this.state.loading === true ? (
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
-         : 
+        ) : (
           <>
             <div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
@@ -220,55 +219,53 @@ export default class MaktabHayoti extends Component {
                       </Col>
                       <Col lg={12}>
                         <Row>
-                          
-                            <Col  xs={12} sm={12} md={12} lg={4}>
+                          <Col xs={12} sm={12} md={12} lg={4}>
                             <div className={styles.box}>
-                            <Image
-                              src={
-                                data !== null && data.m_h_navruz !== null
-                                  ? data.m_h_navruz
-                                  : school1
-                              }
-                              className={styles.secondImage}
-                              data-aos="zoom-in-up"
-                            />
-                            <span>Navro'z bayrami</span>
-                          </div>
-                            </Col>
-                            <Col  xs={12} sm={12} md={12} lg={4}>
+                              <Image
+                                src={
+                                  data !== null && data.m_h_navruz !== null
+                                    ? data.m_h_navruz
+                                    : school1
+                                }
+                                className={styles.secondImage}
+                                data-aos="zoom-in-up"
+                              />
+                              <span>Navro'z bayrami</span>
+                            </div>
+                          </Col>
+                          <Col xs={12} sm={12} md={12} lg={4}>
                             <div className={styles.box}>
-                            <Image
-                              src={
-                                data !== null && data.m_h_mustaqillik !== null
-                                  ? data.m_h_mustaqillik
-                                  : school2
-                              }
-                              className={styles.secondImage}
-                              data-aos="zoom-in-up"
-                            />
-                            <span>Mustaqillik kuni</span>
-                          </div>
-                            </Col>
-                            <Col  xs={12} sm={12} md={12} lg={4}>
+                              <Image
+                                src={
+                                  data !== null && data.m_h_mustaqillik !== null
+                                    ? data.m_h_mustaqillik
+                                    : school2
+                                }
+                                className={styles.secondImage}
+                                data-aos="zoom-in-up"
+                              />
+                              <span>Mustaqillik kuni</span>
+                            </div>
+                          </Col>
+                          <Col xs={12} sm={12} md={12} lg={4}>
                             <div className={styles.box}>
-                            <Image
-                              src={
-                                data !== null && data.m_h_bitiruv !== null
-                                  ? data.m_h_bitiruv
-                                  : school4
-                              }
-                              className={styles.secondImage}
-                              data-aos="zoom-in-up"
-                            />
-                            <span>Bitiruv tadbiri</span>
-                          </div>
-                            </Col>
-                     
+                              <Image
+                                src={
+                                  data !== null && data.m_h_bitiruv !== null
+                                    ? data.m_h_bitiruv
+                                    : school4
+                                }
+                                className={styles.secondImage}
+                                data-aos="zoom-in-up"
+                              />
+                              <span>Bitiruv tadbiri</span>
+                            </div>
+                          </Col>
                         </Row>
                       </Col>
                       <Col lg={4} md={12} sm={12} className={styles.transport}>
                         <Image
-                        style={{width:'100%'}}
+                          style={{ width: "100%" }}
                           src={
                             data !== null && data.m_h_t !== null
                               ? data.m_h_t
@@ -298,7 +295,6 @@ export default class MaktabHayoti extends Component {
                             paradizmatik. Bu jumlaning qovurilgan qismlari uchib
                             ketadigan jannat matikasi mamlakati.`}
                         </p>
-                        
                       </Col>
                     </Row>
                   </Container>
@@ -320,14 +316,22 @@ export default class MaktabHayoti extends Component {
                     ></Pannellum>
                     <div className="paramumic_data">
                       <div>
-                        <h2 style={{width:'80%', marginLeft:'10%'}}>
+                        <h2 style={{ width: "80%", marginLeft: "10%" }}>
                           {data.m_h_k_h !== null && data !== null
                             ? data.m_h_k_h
                             : `Talabalar shaharchasida sayohat qilishning ko'plab
                             variantlari mavjud.`}
                         </h2>
-                        <h4  style={{width:'80%', marginLeft:'10%', height:"200px", overflowY:
-        'auto', display:'flex', alignItems:'center'}}>
+                        <h4
+                          style={{
+                            width: "80%",
+                            marginLeft: "10%",
+                            height: "200px",
+                            overflowY: "auto",
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                        >
                           {data.m_h_k_t !== null && data !== null
                             ? data.m_h_k_t
                             : `Talabalar shaharchasida sayohat qilishning ko'plab
@@ -727,7 +731,7 @@ export default class MaktabHayoti extends Component {
               </Row>
             </Container>
           </>
-        }
+        )}
       </div>
     );
   }

@@ -22,9 +22,10 @@ import MaktabTadbirlari from "./pages/MaktabTadbirlari";
 import Register from "./pages/Login/Register";
 import Global from "./host/Global";
 import axios from "axios";
-import { url } from "./host/Host";
+import { url, user } from "./host/Host";
 import { FadeLoader } from "react-spinners";
 import SelectMap from "./pages/Error";
+import Error404 from "./pages/Error404";
 export default class App extends Component {
   state = {
     loader: true,
@@ -32,29 +33,28 @@ export default class App extends Component {
   };
   componentDidMount() {
     window.scrollTo(0, 0);
-    var a = window.location.href.split("/");
-    var v = a[a.length - 1];
+    // var a = window.location.href.split("/");
+    var v = user;
 
     axios
       .get(`${url}/school-by-admin/${v}`)
       .then((res) => {
         Global.schoolId = res.data.id;
-        Global.user = a[a.length - 1];
+        Global.user = user;
         this.setState({
           loader: false,
         });
-        console.log(Global.user, Global.schoolId);
+        // console.log(Global.user, Global.schoolId);
       })
       .catch((err) => {
-        console.log("scmkscmskcm");
-
+        // console.log("scmkscmskcm");
         this.setState({ error: true, loader: false });
       });
   }
 
   render() {
     return (
-      <div style={{width:'100%', overflowX:'hidden' }}>
+      <div style={{ width: "100%", overflowX: "hidden" }}>
         {this.state.loader ? (
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
@@ -81,64 +81,64 @@ export default class App extends Component {
                 <Main />
               </Route>
 
-              <Route exact path="/qabul/:id">
+              <Route exact path="/qabul/">
                 <NavBar />
                 <Qabul />
                 <Footer />
               </Route>
 
-              <Route exact path="/rahbariyat/:id">
+              <Route exact path="/rahbariyat/">
                 <NavBar />
                 <Maktabmamuriyati />
                 <Footer />
               </Route>
 
-              <Route exact path="/yangiliklar/:id">
+              <Route exact path="/yangiliklar/">
                 <NavBar />
                 <Yangiliklar />
                 <Footer />
               </Route>
 
-              <Route exact path="/hayot/:id">
+              <Route exact path="/hayot/">
                 <NavBar />
                 <MaktabHayoti />
                 <Footer />
               </Route>
 
-              <Route exact path="/alochilar/:id">
+              <Route exact path="/alochilar/">
                 <NavBar />
                 <Alochilar />
                 <Footer />
               </Route>
 
-              <Route exact path="/gallery/:id">
+              <Route exact path="/gallery/">
                 <NavBar />
                 <Gallery />
                 <Footer />
               </Route>
 
-              <Route exact path="/yutuqlar/:id">
+              <Route exact path="/yutuqlar/">
                 <NavBar />
                 <Yutuqlarimiz />
                 <Footer />
               </Route>
 
-              <Route exact path="/maktaboshxonasi/:id">
+              <Route exact path="/maktaboshxonasi/">
                 <NavBar />
                 <MaktabOshxonasi />
                 <Footer />
               </Route>
-              <Route exact path="/tadbirlar/:id">
+              <Route exact path="/tadbirlar/">
                 <NavBar />
                 <Tadbirlar />
                 <Footer />
               </Route>
 
-              <Route exact path="/:id">
+              <Route exact path="/">
                 <BoshSahifa />
               </Route>
               <Route path="*">
-                <Error />
+                <Error404 />
               </Route>
             </Switch>
           </BrowserRouter>
