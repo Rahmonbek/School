@@ -64,7 +64,7 @@ export default class MaktabHayoti extends Component {
           <>
             <div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
-                Maktab Hayoti
+                Maktab hayoti
               </h3>
               <div className={styles.headerIcons}>
                 <a href="#1">
@@ -196,7 +196,7 @@ export default class MaktabHayoti extends Component {
                 <Col lg={11}>
                   <div className={styles.secondMain}>
                     <h1 className={styles.secondHeading} data-aos="zoom-in">
-                      Tadbirlar va Qadriyatlar
+                      Tadbirlar va qadriyatlar
                     </h1>
                   </div>
                   <Container fluid>
@@ -418,7 +418,7 @@ export default class MaktabHayoti extends Component {
                           height: "380px",
                         }}
                       >
-                        <h1>Maktab oshxonasi...</h1>
+                        <h1>Maktab oshxonasi</h1>
                         <p>
                           {data.m_h_oshxona_t !== null && data !== null
                             ? data.m_h_oshxona_t
@@ -518,7 +518,7 @@ export default class MaktabHayoti extends Component {
                           height: "380px",
                         }}
                       >
-                        <h1>Sanat & Madaniyat</h1>
+                        <h1>San'at & madaniyat</h1>
                         <p>
                           {data.m_h_musiqa_t !== null && data !== null
                             ? data.m_h_musiqa_t
@@ -616,7 +616,7 @@ export default class MaktabHayoti extends Component {
                           height: "380px",
                         }}
                       >
-                        <h1>Xavsizlik va qo'riqlash</h1>
+                        <h1>Xavfsizlik va qo'riqlash</h1>
                         <p>
                           {data.m_h_xavfsizlik_t !== null && data !== null
                             ? data.m_h_xavfsizlik_t
@@ -666,7 +666,7 @@ export default class MaktabHayoti extends Component {
                           height: "380px",
                         }}
                       >
-                        <h1>Soglik va Yaxshilik</h1>
+                        <h1>Sog'lik va salomatlik</h1>
                         <p>
                           {data.m_h_tibbiyot_t !== null && data !== null
                             ? data.m_h_tibbiyot_t

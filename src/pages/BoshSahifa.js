@@ -429,12 +429,12 @@ export default class BoshSahifa extends Component {
                   />
                   <p className={style.pp}>
                     Maktabimizga virtual sayohat qiling va siz bizning
-                    maktabimiz haqida ko'proq malumotga ega bo'ling.
+                    maktabimiz haqida ko'proq ma'lumotga ega bo'ling.
                   </p>
                 </Col>
 
                 <Col xs={12} sm={12} md={8} lg={8} className={style.col}>
-                  <h3>Maktab yangiliklari va o'zgarishlar</h3>
+                  <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
 
                   <Row>
                     <Col xs={12} sm={12} md={12} lg={12}>
