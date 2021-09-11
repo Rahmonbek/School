@@ -58,23 +58,17 @@ export default class Footer extends Component {
               <h2>Bizning maktab</h2>
               <ul>
                 <li>
-                  <NavLink className={style.navLink} to={`/${Global.user}`}>
+                  <NavLink className={style.navLink} to={`/`}>
                     <p>Bosh sahifa</p>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
-                    className={style.navLink}
-                    to={`/hayot/${Global.user}`}
-                  >
+                  <NavLink className={style.navLink} to={`/hayot/`}>
                     <p>Maktab hayoti</p>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
-                    className={style.navLink}
-                    to={`/qabul/${Global.user}`}
-                  >
+                  <NavLink className={style.navLink} to={`/qabul/`}>
                     <p>Qabul</p>
                   </NavLink>
                 </li>
@@ -85,28 +79,19 @@ export default class Footer extends Component {
               <ul>
                 <li>
                   {" "}
-                  <NavLink
-                    className={style.navLink}
-                    to={`/yangiliklar/${Global.user}`}
-                  >
+                  <NavLink className={style.navLink} to={`/yangiliklar/`}>
                     <p>Yangiliklar</p>
                   </NavLink>
                 </li>
                 <li>
                   {" "}
-                  <NavLink
-                    className={style.navLink}
-                    to={`/rahbariyat/${Global.user}`}
-                  >
+                  <NavLink className={style.navLink} to={`/rahbariyat/`}>
                     <p>Maktab ma'muriyati</p>
                   </NavLink>
                 </li>
                 <li>
                   {" "}
-                  <NavLink
-                    className={style.navLink}
-                    to={`/alochilar/${Global.user}`}
-                  >
+                  <NavLink className={style.navLink} to={`/alochilar/`}>
                     <p>Maktab alochilari</p>
                   </NavLink>
                 </li>

@@ -55,7 +55,7 @@ export default class NavBar extends Component {
                   }}
                 >
                   <Link
-                    to={`/${this.state.id}`}
+                    to={`/`}
                     style={{
                       color: "gold",
                       fontWeight: "bold",
@@ -80,22 +80,22 @@ export default class NavBar extends Component {
                 style={{ width: "100%", color: "white" }}
               >
                 <Nav className={style.meauto}>
-                  <NavLink to={`/${this.state.id}`}>
+                  <NavLink to={`/`}>
                     <span className={style.navLink}>Bosh sahifa</span>
                   </NavLink>
-                  <NavLink to={`/hayot/${this.state.id}`}>
+                  <NavLink to={`/hayot/`}>
                     <span className={style.navLink}>Maktab hayoti</span>
                   </NavLink>
-                  <NavLink to={`/qabul/${this.state.id}`}>
+                  <NavLink to={`/qabul/`}>
                     <span className={style.navLink}>Qabul</span>
                   </NavLink>
-                  <NavLink to={`/yangiliklar/${this.state.id}`}>
+                  <NavLink to={`/yangiliklar/`}>
                     <span className={style.navLink}>Yangiliklar</span>
                   </NavLink>
-                  <NavLink to={`/rahbariyat/${this.state.id}`}>
+                  <NavLink to={`/rahbariyat/`}>
                     <span className={style.navLink}>Maktab ma'muriyati</span>
                   </NavLink>
-                  <NavLink to={`/alochilar/${this.state.id}`}>
+                  <NavLink to={`/alochilar/`}>
                     <span className={style.navLink}>Maktab alochilari</span>
                   </NavLink>
                   {/* <div className={style.bayroqlar}>
