@@ -92,6 +92,8 @@ body{
     background-color:rgba(20, 6, 111, 0.35);
     background-image:url(../img/bag.png) ;
     background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
     color:  hsl(209, 61%, 16%);
     line-height: 1.5;
     font-size: 0.875rem;

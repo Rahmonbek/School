@@ -88,11 +88,11 @@ export default class Alochilar extends Component {
 
   echoClasses = (id) => {
     var classes = {};
+    console.log(id, this.state.class);
     if (this.state.class !== []) {
       this.state.class.map((item1) => {
         if (item1.id === id) {
           classes = item1;
-          
         }
       });
     }
@@ -216,8 +216,11 @@ export default class Alochilar extends Component {
                         </p>
                         <p>
                           <b>Sinfi: </b>
-                          {classes.class_number}-{classes.class_char} sinf
+                          {this.echoClasses(pupil.clas).class_number} -
+                                  "{this.echoClasses(pupil.clas).class_char}"
+                                  sinf
                         </p>
+                    
                         {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
                       </div>
                     </div>

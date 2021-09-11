@@ -107,9 +107,10 @@ export default class BoshSahifa extends Component {
   }
   render() {
     const props = {
-      dots: true,
+      dots: false,
       infinite: true,
-      speed: 7000,
+   
+      speed: 4000,
       slidesToShow: 1,
       slidesToScroll: 1,
     };
@@ -208,7 +209,7 @@ export default class BoshSahifa extends Component {
                   <a
                     target="_blank"
                     className="ahref"
-                    style={{ borderTop: " 1px solid blue" }}
+                    style={{ borderTop: " 1px solid blue", borderRadius:'0px 0px 0px 10px' }}
                     href={`tel: ${
                       this.state.school !== null
                         ? this.state.school.phone
@@ -217,7 +218,7 @@ export default class BoshSahifa extends Component {
                   >
                     <FontAwesomeIcon
                       icon={faPhone}
-                      style={{ fontSize: "25px" }}
+                      style={{ fontSize: "25px",  borderRadius:'0px 0px 0px 10px'  }}
                     />
                   </a>{" "}
                 </Tooltip>
@@ -277,7 +278,7 @@ export default class BoshSahifa extends Component {
                 <div className="carg_item">
                   <Carousel
                     autoplay
-                    effect="scrollx"
+                    effect="fade"
                     style={{ zIndex: "-234" }}
                     {...props}
                   >
