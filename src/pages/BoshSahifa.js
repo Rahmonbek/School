@@ -288,6 +288,9 @@ export default class BoshSahifa extends Component {
                     {...props}
                   >
                     <div className="carg_img">
+                      <img src={bg1t} />
+                    </div>
+                    <div className="carg_img">
                       <img
                         src={
                           maktab
@@ -300,9 +303,6 @@ export default class BoshSahifa extends Component {
                       />
                     </div>
                     <div className="carg_img">
-                      <img src={bg1t} />
-                    </div>
-                    <div className="carg_img">
                       <img src={bg2t} />
                     </div>
                   </Carousel>
@@ -310,9 +310,14 @@ export default class BoshSahifa extends Component {
               </div>
               <div className="yozuvT">
                 <h4>XUSH KELIBSIZ</h4>
-                <br />
+                {/* <br /> */}
                 <h1>MAKTABIMIZGA</h1>
-                {/* <button>MAKTAB HAYOTI</button> */}
+                <br />
+                <div className="yozuvBtn">
+                  <Link to="/hayot/">
+                    <Button>Maktab hayoti</Button>
+                  </Link>
+                </div>
               </div>
             </div>
 

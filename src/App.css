@@ -8,7 +8,7 @@ body {
 }
 * {
   box-sizing: border-box;
-/* z-index: 3445; */
+  /* z-index: 3445; */
 }
 .load {
   width: 100%;
@@ -196,7 +196,7 @@ html {
 }
 .carTur {
   height: 110vh;
-  top:-15vh
+  top: -15vh;
 }
 .carTur img {
   height: 110vh !important;
@@ -206,16 +206,15 @@ html {
   z-index: 3434 !important;
   background-image: url(./img/naqsh.jpg);
   background-size: 100px 70px;
-/* background-attachment: fixed; */
+  /* background-attachment: fixed; */
   position: fixed !important;
-  top:0px !important;
+  top: 0px !important;
 }
 .difkif {
   display: none;
 }
 /* .yuqori{z-index: -1 !important;} */
 .iconsHead {
-  
   z-index: 345;
   border-radius: 8px 0px 0px 8px;
   position: fixed;
@@ -223,7 +222,7 @@ html {
   display: flex;
   flex-direction: column;
   top: 150px;
-  
+
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   right: 0px !important;
 
@@ -267,20 +266,93 @@ html {
   color: white;
   background-color: rgb(9, 4, 102) !important;
 }
-.carg{width:100%; z-index: -5325 !important;  position: relative;}
-.carg img{width:100%; height:100%;  z-index: -542345 !important;}
-.gth{height:50px; margin-top:540px}
-.carg_img{position: relative;  z-index: -52435 !important; width:100%!; height: 590px;}
-.carg_item{ width: 100vw; height:590px; position: fixed; top:50px;}
-.yozuvT{position: absolute; top:50px; left:0px; width:100%; padding-top:250px; z-index: 0; height: 590px; background-color: rgba(0, 0, 0, 0.302);}
-.yozuvT h4{font-size: 18px; letter-spacing: 4px; text-align: center; color:white; text-shadow: 1px 1px 5px black; display: block;}
-.yozuvT h1{font-size: 65px; letter-spacing: 6px; text-align:center; color:white; display: block; text-shadow: 1px 1px 5px black; font-family: "Arial Black";}
-.yozuvT button{border:none; z-index: 22; background-color:rgb(7, 20, 116); color:white; padding:10px 20px; border-radius: 20px; font-size: 16px; letter-spacing: 2px;}
-.carg_img::before{position: absolute; z-index: -1;  top:0px; left:0px; width:100%; height:100%; content: ""; background-color: rgba(0, 0, 0, 0.542);}
-.yozuvT button:hover{background-color: darkred;}
+.carg {
+  width: 100%;
+  z-index: -5325 !important;
+  position: relative;
+}
+.carg img {
+  width: 100%;
+  height: 100%;
+  z-index: -542345 !important;
+}
+.gth {
+  height: 50px;
+  margin-top: 540px;
+}
+.carg_img {
+  position: relative;
+  z-index: -52435 !important;
+  width: 100%!;
+  height: 590px;
+}
+.carg_item {
+  width: 100vw;
+  height: 590px;
+  position: fixed;
+  top: 50px;
+}
+.yozuvT {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  padding-top: 250px;
+  z-index: 0;
+  height: 590px;
+  background-color: rgba(0, 0, 0, 0.302);
+}
+.yozuvT h4 {
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  display: block;
+}
+.yozuvT h1 {
+  font-size: 65px;
+  letter-spacing: 6px;
+  text-align: center;
+  color: white;
+  display: block;
+  text-shadow: 1px 1px 5px black;
+  font-family: "Arial Black";
+}
+.yozuvT button {
+  border: none;
+  z-index: 22;
+  background-color: rgb(7, 20, 116);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.yozuvT .yozuvBtn {
+  width: 165.61px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carg_img::before {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.542);
+}
+.yozuvT button:hover {
+  background-color: darkred;
+}
 
 #vaqt {
-  display:none !important;
+  display: none !important;
   background-color: transparent;
   color: white;
   font-weight: bold;
@@ -297,16 +369,20 @@ html {
   align-items: center;
   font-size: 24px;
 }
-.oq{width:100%; height:700px; position: sticky; top:0px; z-index:232;}
+.oq {
+  width: 100%;
+  height: 700px;
+  position: sticky;
+  top: 0px;
+  z-index: 232;
+}
 .mapsr {
   padding: 30px;
 }
-@media (max-width:900px) and (min-width:701px){
-  .yuqori{
-
-    height:70px !important;
+@media (max-width: 900px) and (min-width: 701px) {
+  .yuqori {
+    height: 70px !important;
   }
-
 }
 @media (max-width: 700px) {
   .maktabLogo {
@@ -315,37 +391,56 @@ html {
   #vaqt {
     display: none;
   }
-   .carg_img, .carg_item{
-    height:325px
+  .carg_img,
+  .carg_item {
+    height: 325px;
   }
-.gth{ margin-top:300px}
+  .gth {
+    margin-top: 300px;
+  }
 
   .gerbHead p {
     font-size: 18px;
     margin-top: 10px;
   }
-  .yozuvT h1{font-size: 30px;}
-  .yozuvT h4{font-size: 18px;}
-  .yozuvT {padding-top:150px;height:325px; top:25px}
+  .yozuvT h1 {
+    font-size: 30px;
+  }
+  .yozuvT h4 {
+    font-size: 18px;
+  }
+  .yozuvT {
+    padding-top: 130px;
+    height: 325px;
+    top: 25px;
+  }
 
   .yuqori {
     height: 70px !important;
-    
   }
-  
+
   .difkif {
     display: inline-block;
   }
   .carTur {
     height: 65vh;
-    top:-10vh;
+    top: -10vh;
   }
   .carTur img {
     height: 65vh !important;
   }
-.container{width:100%;}
-.fgr{width:100%; overflow: hidden; box-sizing: border-box;}
-body{width:100%; overflow-x: hidden;}
+  .container {
+    width: 100%;
+  }
+  .fgr {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 .sliderHomiy {
   width: 100%;
@@ -379,30 +474,40 @@ body{width:100%; overflow-x: hidden;}
   width: 100%;
   margin-top: 30px;
 }
-@media (max-width:500px){
+@media (max-width: 500px) {
   .gerbHead p {
     font-size: 14px;
     margin-top: 10px;
-  }  
+  }
+  .yozuvT .yozuvBtn {
+    margin-top: 15px;
+    width: 141.16px;
+  }
+  .yozuvT button {
+    font-size: 14px;
+    padding: 7px 14px;
+    border-radius: 14px;
+  }
 }
 
 @media (max-width: 450px) {
-   .carg_img, .carg_item{
-     height:275px !important
-   }
-   .yozuvT{
-     height:300px
-   }
- }
- 
- @media (min-width: 1500px) {
-  .yozuvT, .carg_img, .carg_item{
-     height:900px;
+  .carg_img,
+  .carg_item {
+    height: 275px !important;
+  }
+  .yozuvT {
+    height: 300px;
+  }
+}
 
-    }
-    .yozuvT{
-      height:740px
-    }
-    /* .container{margin-top: 200px;} */
- }
- 
+@media (min-width: 1500px) {
+  .yozuvT,
+  .carg_img,
+  .carg_item {
+    height: 900px;
+  }
+  .yozuvT {
+    height: 740px;
+  }
+  /* .container{margin-top: 200px;} */
+}
