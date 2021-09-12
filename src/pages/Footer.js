@@ -75,7 +75,7 @@ export default class Footer extends Component {
               </ul>
             </Col>
             <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
-              <h2>Maktabdagi hayot</h2>
+              <h2>Maktab hayoti</h2>
               <ul>
                 <li>
                   {" "}
@@ -92,7 +92,7 @@ export default class Footer extends Component {
                 <li>
                   {" "}
                   <NavLink className={style.navLink} to={`/alochilar/`}>
-                    <p>Maktab alochilari</p>
+                    <p>Maktab a'lochilari</p>
                   </NavLink>
                 </li>
               </ul>
