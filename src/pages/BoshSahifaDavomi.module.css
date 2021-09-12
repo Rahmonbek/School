@@ -94,15 +94,15 @@ body {
     margin-top: 2%;
     font-size: 1.2rem;
   }
-  .container{
+  .container {
     height: 450px;
     background-size: 100% 450px;
   }
 }
 @media (max-width: 768px) {
   .container {
-    height: 55vh;
-    background-image:url(../img/bgr1.png)
+    /* height: 55vh; */
+    background-image: url(../img/bgr1.png);
   }
   .container p {
     font-size: 1.2rem;
@@ -132,6 +132,9 @@ body {
     font-size: 0.9rem;
   }
 }
-@media (min-width:1500px){
-  .container{height:550px; background-size: 100% 100%;}
+@media (min-width: 1500px) {
+  .container {
+    height: 550px;
+    background-size: 100% 100%;
+  }
 }
