@@ -149,7 +149,7 @@ export default class MaktabTadbirlari extends Component {
             Hamma tadbirlarni ko'rish -&gt;
           </Link>
         </div>
-        <div style={{ backgroundColor: "white" }}>
+        <div style={{ backgroundColor: "white", marginTop:'-30px' }}>
           <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
 
           <div className="sliderHomiy" style={{ backgroundColor: "white" }}>
