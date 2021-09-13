@@ -312,7 +312,6 @@ export default class BoshSahifa extends Component {
                 <h4>XUSH KELIBSIZ</h4>
                 {/* <br /> */}
                 <h1>MAKTABIMIZGA</h1>
-                <br />
                 <div className="yozuvBtn">
                   <Link to="/hayot/">
                     <Button>Maktab hayoti</Button>
