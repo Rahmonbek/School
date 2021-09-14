@@ -265,7 +265,9 @@ export default class BoshSahifa extends Component {
                         </span>
                       </NavLink>
                       <NavLink to={`/alochilar/`}>
-                        <span className={style.navLink}>Maktab alochilari</span>
+                        <span className={style.navLink}>
+                          Maktab a'lochilari
+                        </span>
                       </NavLink>
                       {/* <div className={style.bayroqlar}>
                                <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>

@@ -518,7 +518,7 @@ export default class MaktabHayoti extends Component {
                           height: "380px",
                         }}
                       >
-                        <h1>San'at & madaniyat</h1>
+                        <h1>San'at va madaniyat</h1>
                         <p>
                           {data.m_h_musiqa_t !== null && data !== null
                             ? data.m_h_musiqa_t

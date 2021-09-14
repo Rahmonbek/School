@@ -149,7 +149,7 @@ export default class MaktabTadbirlari extends Component {
             Hamma tadbirlarni ko'rish -&gt;
           </Link>
         </div>
-        <div style={{ backgroundColor: "white", marginTop:'-30px' }}>
+        <div style={{ backgroundColor: "white", marginTop: "-30px" }}>
           <h1 className={style.sarlavha}> Bizning hamkorlarimiz</h1>
 
           <div className="sliderHomiy" style={{ backgroundColor: "white" }}>
@@ -304,7 +304,7 @@ export default class MaktabTadbirlari extends Component {
               </div>
             </Col>
             <Col lg={6} md={12} sm={12} className="fgr">
-              <h1 className={style.sarlavha}>Murojat qilish</h1>
+              <h1 className={style.sarlavha}>Murojaat qilish</h1>
 
               <div className="formFER">
                 <div className="container">
@@ -316,8 +316,8 @@ export default class MaktabTadbirlari extends Component {
                       <input type="text" placeholder="Ism Familiya Otchistva" />
                       <label>Telefon raqam</label>
                       <input type="text" placeholder="+998 99 999 99 99" />
-                      <label>Murojat</label>
-                      <textarea placeholder="Murojat matni..."></textarea>
+                      <label>Murojaat</label>
+                      <textarea placeholder="Murojaat matni..."></textarea>
                       <button type="submit">Yuborish</button>
                     </form>
                   </div>

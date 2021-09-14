@@ -288,7 +288,7 @@ class Qabul extends React.Component {
                 <Row>
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
                     <div className={styles.jarayon_text}>
-                      <h3>1. Onlayn royxatdan o'ting</h3>
+                      <h3>1. Onlayn ro'yxatdan o'ting</h3>
                       <div className={styles.line}></div>
                       <p>
                         {this.state.school !== null
