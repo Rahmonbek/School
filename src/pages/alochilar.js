@@ -51,16 +51,9 @@ export default class Alochilar extends Component {
       this.setState({ data: res.data });
     });
     axios
-      .get(`${url}/class-by-school/${idMaktab}/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        // this.setState({loader:false})
-      });
+      .get(`${url}/class/`)
+      .then((res) => this.setState({ class: res.data }))
+      .catch((err) => console.log(err));
   };
 
   getPupil = () => {

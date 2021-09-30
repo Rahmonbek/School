@@ -130,7 +130,8 @@ export default class BoshSahifa extends Component {
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
                   <p>
-                    Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur o'rganiladigan Davlat ixtisoslashtirilgan maktabi
+                    Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur
+                    o'rganiladigan Davlat ixtisoslashtirilgan maktabi
                   </p>
 
                   {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
@@ -142,7 +143,14 @@ export default class BoshSahifa extends Component {
 
             <div className="iconsHead">
               <div>
-                <Tooltip placement="left" title="ittower01@gmail.com">
+                <Tooltip
+                  placement="left"
+                  title={`${
+                    this.state.school !== null
+                      ? this.state.school.email
+                      : "ittower01@gmail.com"
+                  }`}
+                >
                   {" "}
                   <a
                     target="_blank"
@@ -166,7 +174,7 @@ export default class BoshSahifa extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid blue" }}
                   className="ahref"
-                  href="https://t.me/samarqand_33_maktab"
+                  href="https://t.me/Xorazm_5_maktab"
                 >
                   <i className="fab fa-telegram"></i>
                 </a>
@@ -176,7 +184,7 @@ export default class BoshSahifa extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid blue" }}
                   className="ahref"
-                  href="https://www.instagram.com/33_maktab_official/"
+                  href="https://www.instagram.com/5ummumtalimmaktabi/"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
@@ -186,7 +194,7 @@ export default class BoshSahifa extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid blue" }}
                   className="ahref"
-                  href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/"
+                  href="https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage"
                 >
                   <i className="fab fa-facebook"></i>
                 </a>
@@ -196,7 +204,7 @@ export default class BoshSahifa extends Component {
                   target="_blank"
                   style={{ borderTop: " 1px solid blue" }}
                   className="ahref"
-                  href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg"
+                  href="https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw"
                 >
                   <i className="fab fa-youtube"></i>
                 </a>
@@ -294,12 +302,11 @@ export default class BoshSahifa extends Component {
                     <div className="carg_img">
                       <img
                         src={
-                         
-                           this.state.school !== null
-                             ? this.state.school.b_r1 !== null
-                               ? this.state.school.b_r1
-                               : headerT
-                             : headerT
+                          this.state.school !== null
+                            ? this.state.school.b_r1 !== null
+                              ? this.state.school.b_r1
+                              : headerT
+                            : headerT
                         }
                       />
                     </div>
