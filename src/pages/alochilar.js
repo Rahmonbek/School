@@ -13,7 +13,7 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import Aos from "aos";
 import { getExcellent, getPupil } from "../host/Config";
-import { url, user } from "../host/Host";
+import { url, user, idMaktab } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 import Global from "../host/Global";
 
@@ -51,7 +51,7 @@ export default class Alochilar extends Component {
       this.setState({ data: res.data });
     });
     axios
-      .get(`${url}/class-by-school/${v}/`)
+      .get(`${url}/class-by-school/${idMaktab}/`)
       .then((res) => {
         this.setState({
           class: res.data,
@@ -87,7 +87,6 @@ export default class Alochilar extends Component {
 
   echoClasses = (id) => {
     var classes = {};
-    console.log(id, this.state.class);
     if (this.state.class !== []) {
       this.state.class.map((item1) => {
         if (item1.id === id) {
@@ -212,7 +211,7 @@ export default class Alochilar extends Component {
                               <b>O'quvchi: </b> {pupil.full_name}
                             </p>
                             <p>
-                              <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
+                              <b>Tug'ilgan sanasi: </b> {pupil.birth_day}
                             </p>
                             <p>
                               <b>Sinfi: </b>
