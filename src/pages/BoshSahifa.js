@@ -130,8 +130,7 @@ export default class BoshSahifa extends Component {
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
                   <p>
-                    Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan
-                    davlat umumta'lim maktabi
+                    Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur o'rganiladigan Davlat ixtisoslashtirilgan maktabi
                   </p>
 
                   {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
