@@ -294,12 +294,12 @@ export default class BoshSahifa extends Component {
                     <div className="carg_img">
                       <img
                         src={
-                          maktab
-                          //  this.state.school !== null
-                          //    ? this.state.school.b_r1 !== null
-                          //      ? this.state.school.b_r1
-                          //      : headerT
-                          //    : headerT
+                         
+                           this.state.school !== null
+                             ? this.state.school.b_r1 !== null
+                               ? this.state.school.b_r1
+                               : headerT
+                             : headerT
                         }
                       />
                     </div>
