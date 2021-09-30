@@ -22,7 +22,7 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import { getNews } from "../host/Config";
+import { getNews, getSchools } from "../host/Config";
 import FadeLoader from "react-spinners/FadeLoader";
 import { Carousel } from "antd";
 
@@ -33,6 +33,13 @@ export default class Yangiliklar extends Component {
     news: [],
     id: 0,
     loader: true,
+    school: [],
+  };
+
+  getSchool = () => {
+    getSchools()
+      .then((res) => this.setState({ school: res.data }))
+      .catch((err) => console.log(err));
   };
 
   getNews = () => {
@@ -55,7 +62,6 @@ export default class Yangiliklar extends Component {
       })
       .catch((err) => {
         console.log(err);
-
         this.setState({
           loader: false,
         });
@@ -66,6 +72,7 @@ export default class Yangiliklar extends Component {
       duration: 2000,
     });
     this.getNews();
+    this.getSchool();
   }
 
   // onclick_new=(link)=>{
@@ -116,16 +123,40 @@ export default class Yangiliklar extends Component {
                             })
                           } */}
               <div className={styles.sliderIMG}>
-                <img src={new1} />
+                <img
+                  src={
+                    this.state.school.b_r1 !== null
+                      ? this.state.school.b_r1
+                      : new1
+                  }
+                />
               </div>
               <div className={styles.sliderIMG}>
-                <img src={new2} />
+                <img
+                  src={
+                    this.state.school.b_c1 !== null
+                      ? this.state.school.b_c1
+                      : new2
+                  }
+                />
               </div>
               <div className={styles.sliderIMG}>
-                <img src={new3} />
+                <img
+                  src={
+                    this.state.school.b_c2 !== null
+                      ? this.state.school.b_c2
+                      : new3
+                  }
+                />
               </div>
               <div className={styles.sliderIMG}>
-                <img src={new4} />
+                <img
+                  src={
+                    this.state.school.b_c3 !== null
+                      ? this.state.school.b_c3
+                      : new4
+                  }
+                />
               </div>
             </Carousel>
             {/* ==================Section===================== */}
