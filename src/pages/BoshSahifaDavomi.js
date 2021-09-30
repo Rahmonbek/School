@@ -47,7 +47,7 @@ export default class BoshSahifaDavomi extends Component {
       this.setState({ data: res.data });
     });
     axios
-      .get(`${url}/class-by-school/${Global.schoolId}/`)
+      .get(`${url}/class/`)
       .then((res) => {
         this.setState({
           class: res.data,
