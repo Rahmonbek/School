@@ -3,7 +3,7 @@
   padding: 0px;
 }
 .tana {
-  width: 80%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -68,9 +68,6 @@
     margin-top: 7px;
     margin-left: 12px;
   }
-  /* .tana {
-    width: 100%;
-  } */
   .card {
     width: 500px;
     margin: 40px 30px;

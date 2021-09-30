@@ -415,7 +415,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>Maktab oshxonasi</h1>
@@ -464,7 +464,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>Sport mashg'ulotlari</h1>
@@ -515,7 +515,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>San'at va madaniyat</h1>
@@ -564,7 +564,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>Axborot texnologiyalari</h1>
@@ -613,7 +613,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>Xavfsizlik va qo'riqlash</h1>
@@ -663,7 +663,7 @@ export default class MaktabHayoti extends Component {
                           backgroundColor: "#0F4C81",
                           marginTop: "30px",
                           padding: "10%",
-                          height: "380px",
+                          height: "450px",
                         }}
                       >
                         <h1>Sog'lik va salomatlik</h1>
