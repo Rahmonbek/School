@@ -203,8 +203,8 @@ display: none;
   transform-origin: left;
 }
 .image1 {
-  clip-path: polygon(0 0, 0 32%, 28% 0);
-  transform: translate(1px, -60px);
+
+  transform: translate(0px, 0px);
   transition: transform 600ms ease;
   transform-origin: top;
 }
@@ -213,7 +213,7 @@ display: none;
 }
 .image2 {
   clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
-  transform: translate(-20px, -30px);
+  transform: translate(0px, 0px);
   transition: transform 600ms ease;
 }
 .imagewrapper:hover .image2 {
@@ -221,7 +221,7 @@ display: none;
 }
 .image3 {
   clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
-  transform: translate(-10px, 0px);
+  transform: translate(0px, 0px);
   transition: transform 600ms ease;
 }
 .imagewrapper:hover .image3 {
@@ -229,7 +229,7 @@ display: none;
 }
 .image4 {
   clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
-  transform: translate(-30px, 30px);
+  transform: translate(0px, 0px);
   transition: transform 600ms ease;
   transform-origin: top;
 }

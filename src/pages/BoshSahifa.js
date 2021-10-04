@@ -117,8 +117,9 @@ export default class BoshSahifa extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <FadeLoader color="blue" loading={this.state.loader} size={120} /><br/>
           </div>
+          
         ) : (
           <div>
             {/* <NavBar/> */}
