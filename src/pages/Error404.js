@@ -8,7 +8,7 @@ export default class Error404 extends Component {
         <div style={{ marginTop: "10%" }}>
           <h1>404 xatolik ro`y berdi</h1>
           <p className={style.zoomarea}>
-            <b>Bizda</b> hech qanday ma`lumot topilmadi.
+            <b>Saytda</b> hech qanday ma`lumot topilmadi.
           </p>
           <section className={style.errorcontainer}>
             <span>
