@@ -6,7 +6,9 @@ import { Rate } from 'antd';
 import { sinf11,sinf10,sinf9,sinf8,sinf7,sinf1,sinf2,sinf3,sinf4,sinf5,sinf6 } from './darslarjson'
 import 'antd/dist/antd.css';
 import { Tabs } from 'antd';
+import img from '../img/sinf1/atrof.jpg'
 const { TabPane } = Tabs;
+
 
 export default class Darsliklar extends Component {
 
@@ -22,11 +24,11 @@ export default class Darsliklar extends Component {
 
 
    <section style={{padding:'30px'}} ><h1>Darsliklar</h1>
-   <Tabs defaultActiveKey="11"  size="large">
+   <Tabs defaultActiveKey="1"  size="40px">
     <TabPane
       tab={
-        <span>
-          <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+          <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           1-sinf
         </span>
       }
@@ -52,8 +54,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           2-sinf
         </span>
       }
@@ -79,8 +81,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-        <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+        <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           3-sinf
         </span>
       }
@@ -106,8 +108,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           4-sinf
         </span>
       }
@@ -133,8 +135,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           5-sinf
         </span>
       }
@@ -160,8 +162,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           6-sinf
         </span>
       }
@@ -187,8 +189,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           7-sinf
         </span>
       }
@@ -214,8 +216,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           8-sinf
         </span>
       }
@@ -241,8 +243,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           9-sinf
         </span>
       }
@@ -268,8 +270,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           10-sinf
         </span>
       }
@@ -295,8 +297,8 @@ export default class Darsliklar extends Component {
     </TabPane>
     <TabPane
       tab={
-        <span>
-         <FaFolder style={{marginRight:'8px'}}/>
+        <span style={{fontSize:'24px'}}>
+         <FaFolder style={{marginRight:'8px', position:'relative',top:'-3px'}}/>
           11-sinf
         </span>
       }
