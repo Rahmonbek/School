@@ -23,12 +23,6 @@
     "url":"http://eduportal.uz/Umumiyfiles/darsliklar/11/biologiya_11_uzb.pdf"
 },
 {
-    "title":"Chaqiruvga qadar boshlangich tayyorgarlik",
-    "img":"https://www.test-uz.ru/images/books/11/3_preview.jpg",
-    "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-    "url":"http://eduportal.uz/Umumiyfiles/darsliklar/11/chaqiruvga_qadar_boshlangich_tayyorgarlik_11_uzb.pdf"
-},
-{
     "title":"Davlat va huquq asoslari",
     "img":"https://play-lh.googleusercontent.com/plYtsoj8ghvtD2F1Q_ralPxvVD1ftodAxA5clvU4_pe_OU3a8jBAGwBhSiQaG24J0eU",
     "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
