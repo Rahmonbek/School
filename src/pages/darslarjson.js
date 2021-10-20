@@ -184,12 +184,7 @@ export const sinf10=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/10/ingliz_tili_10_uzb.pdf"
     },
-    {
-        "title":"Jahon tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/LzPpXSI4f-PkROQ3EFAW4zMTK9GtyQ_96iaUUh69QDciaVazPMo_iqAA7F1osYB10me2hzGqkYbV8pcF7f0HvG_Um2JDL8Wu1MmV8IIKLdO1a8PpXHnQGPZ2u26201lQNExpyY40I0J6qC4IT_w77ER2lC3BAMls1eqThYcDyA1IkLJDnNG2sYo59N24Zl40-eogDi5yiipngBFJcSb4HcZOKbDtU22sXFauKm5P6FmkBOwoy9Qo3DGFUkGA8VCFNOgbsA",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/10/jahon_tarixi_10_uzb.pdf"
-    },
+  
     {
         "title":"Manaviyat asoslari",
         "img":"https://play-lh.googleusercontent.com/smOVfUtOMRwnZOJEvIKrHqebwthAj23d0pmhi5U3xJzcnyRbDWfDE471NsUa6dd6zhg=s200",
@@ -268,12 +263,7 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/jahon_ijtimoiy_iqtisodiy_geografiyasi_9_uzb.pdf"
     },
-    {
-        "title":"Jahon tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/n1MTINbBAMqZUKYVx0blYRAfu7D9_FqrQdkiN2NInsJJyHP-KTyZDcToHRkQTI5pEMJNwmkt9nYEQeF649REQ014GXa-swriW1jC5pkMc9w_SwuhXBSPVTCprRNoLYRQYcphLO5jO_yL4eikF1lukSkH5kFiIgKqESdlXK3CdXseQ-PkTedSrmnJpxPKBLFJ3XAo6ffHuwv5_Wti-jPzEhz6np-5jlxgkbXfE-23R9aYik6MuyfCGXeTbk2qpQvjmZ8f",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/jahon_tarixi_9_uzb.pdf"
-    },
+  
     {
         "title":"Kimyo",
         "img":"https://play-lh.googleusercontent.com/blfvSg_yvm1gaYmb9eqdHO8DPmuEsKkHiD5m_lx3pGKrYn7zgoxR7yxeiWwhJ9Hhj5Y",
@@ -286,24 +276,14 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/konstitutsiyaviy_huquq_asoslari_9_uzb.pdf"
     },
-    {
-        "title":"Milliy istiqlol g`oyasi",
-        "img":"https://lh3.googleusercontent.com/proxy/3KVEvOc-2HeYkZUzYq7X2tRtpsbKXjegyuNCPYAwsNXxuqyDuUZyhrcOQYMt86kQAH4rfRfe5YYshygY9YJemOb6KwaZdemC4E84HeKuNYwjxlUWvw",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/milliy_istiqlol_goyasi_9_uzb.pdf"
-    },
+  
     {
         "title":"O`zbekiston tarixi",
         "img":"https://play-lh.googleusercontent.com/Y0ddE1TBz9kGuBywX3694BRenhQBfOvKSzqkOXGyATk2d2yERJvupcSTwdjy3hrajQ",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/ozbekiston_tarixi_9_uzb.pdf"
     },
-    {
-        "title":"Rus tili",
-        "img":"https://play-lh.googleusercontent.com/g88fSEvwZFx0eyiQ24TcsvbMFsMA0PrAgdBw6BsT1HvdBA08PnTpGZyM9vnZAsCCqyM=s200",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/9/rus_tili_9_uzbqardosh.pdf"
-    },
+   
     {
         "title":"Ona tili",
         "img":"https://play-lh.googleusercontent.com/GfAKrwEq0BC6Dt7Dvc1M955y00lMhaumwLMRxMxsdLLlUiLO4ZREHtHLyfa-PhJ9bGM",
@@ -349,12 +329,7 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/geometriya_8_uzb.pdf"
     },
-    {
-        "title":"Kimyo",
-        "img":"https://lh3.googleusercontent.com/proxy/bO07H8oLad37uqmNk1sg3KErKofZpeAdK68LCelNnXQt8wrKv1rW28YJLFbnrK5UzSxMal8OFQdtUUMLvPYDEe8WTqYipeWc0liJ-xjhB8h_gwwJ_T7O",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/kimyo_8_uzb.pdf"
-    },
+    
     {
         "title":"Ijtimoiy iqtisodiy geografiya",
         "img":"https://play-lh.googleusercontent.com/X8hG7BTS4jlRf3Wh5_Ku_N9GePcfBYBM5N5ku_0ALzdFlMp74g0QMDKbxF165xNCW0gV",
@@ -379,12 +354,7 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/ingliz_tili_8_darslik.pdf"
     },
-    {
-        "title":"Jahon tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/WqRdwOMrNssZK8JIe-NeCxR88IFkIXN9QYNeC_4o1rLPApY_dJWGYJv5yuGDg4es7AOX1FrosfWx9Y4qqqxb-LQSbjn_OXGuX1usz_im9mnTd-B4IUarFqxr-a9yb_KUOSWN",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/jahon_tarixi_8_uzb.pdf"
-    },
+  
     {
         "title":"Jismoniy tarbiya",
         "img":"https://kitobxon.com/img_knigi/2674.jpg",
@@ -414,18 +384,6 @@ export const sinf9=[
         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsiMrdkFc8u3UUP6BjgZfoLbs33mbkSBPvWMXZHU6eBr218jAS5CulxyRDmmHVR7-RtZ4&usqp=CAU",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/ozbekiston_davlati_va_huquqi_asoslari_8_uzb.pdf"
-    },
-    {
-        "title":"O`zbekiston tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/ld_lHw1kDMScrHFsXb7xliAQujPAcLGVpm3IGk-hMvxwqie9yo5oOOAVfGS6PRID_9ilLmTTurLJjdMQfpgq--FGlmkVMUKXKJ0SBTnNU5Wld5arnd1ud0pTlf-yrUh0EBBE",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/ozbekiston_tarixi_8_uzb.pdf"
-    },
-    {
-        "title":"Rus tili",
-        "img":"https://lh3.googleusercontent.com/proxy/pTnDTgvCuwmkk8uAbY1scypvM84R2IMw8EpMD47viSpW-iovrd196W4vbuD4kz3-1VdrtaJ-IJnk4-lD4vCvava4_pyok_TX4PZMqisknne4YYm1GKU",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/8/rus_tili_8_uzbqardosh.pdf"
     },
     {
         "title":"Texnologiya",
@@ -461,12 +419,6 @@ export const sinf9=[
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/geografiya_7_uzb.pdf"
       },
-      {
-        "title":"Geometriya",
-        "img":"https://answers.uz/uploads/books/geometriya-7.jpeg",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/geometriya_7_uzb.pdf"
-    },
     {
         "title":"Ingliz tili",
         "img":"https://kitobxon.com/img_knigi/1214.jpg",
@@ -475,15 +427,9 @@ export const sinf9=[
     },
     {
         "title":"Informatika",
-        "img":"https://lh3.googleusercontent.com/proxy/roCBQ8iKdJkSfsDhpY7wX7A1gmSxRuwQ6hbXyOd4Wl3Gp5SCo3Srrtj9Pr3cW-dVLEIbnphYQlZG3TPra9RB7Hi1F7qvEaAvFEsVxqWCZkjEGfuqFZh3IQ",
+        "img":"http://online-maktab.uz/api/file/e946364e-3dcd-4859-a428-1bc0caaf4781",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/informatika_7_uzb.pdf"
-    },
-    {
-        "title":"Jahon tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/T2pq0lfPqW0MQHxVpMdm0MELLIaWp1TBNQZwOlIXOS8xZhbXij63p643pA_Jq9GTMT0MDtYimeK7I7-MB_Lejb79LT1gZyS_xAiFMWNenfBVCvYv4lsJrxCq97AOEA",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/jahon_tarixi_7_uzb.pdf"
     },
     {
         "title":"Jismoniy tarbiya",
@@ -498,12 +444,6 @@ export const sinf9=[
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/kimyo_7_uzb.pdf"
     },
     {
-        "title":"Milliy istiqlol g`oyasi",
-        "img":"https://lh3.googleusercontent.com/proxy/DGOUgngyP-XLgjd-MVkK_vrQLtGHl72bvGo3YtACmh9V7gEomWd90JeJ3zZLqg2w930vmsejUbqxjpOUe7h6ftQ3BjGeIjpAMj15GuNcjvoFvwJUg3CESIUNdA",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/milliy_istiqlol_goyasi_7_uzb.pdf"
-    },
-    {
         "title":"Musiqa",
         "img":"https://www.test-uz.ru/images/books/309/3_preview.jpg",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
@@ -511,7 +451,7 @@ export const sinf9=[
     },
     {
         "title":"Ona tili",
-        "img":"https://lh3.googleusercontent.com/proxy/yBZ0e1OddIFS6Nv-nGh34JMBLWZaikj5ytt9qj6wa78d6FnSxKWuzgpT4hra4z42IjEjOCXKLsDnuCfpsfyEoSHaOqX3UAPTbwQXK64qvC8",
+        "img":"https://apollo-olx.cdnvideo.ru/v1/files/6gvsebajxki42-UZ/image;s=3000x4000",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/ona_tili_7_uzb.pdf"
     },
@@ -541,7 +481,7 @@ export const sinf9=[
     },
     {
         "title":"Zoologiya",
-        "img":"https://lh3.googleusercontent.com/proxy/VmITSKdwCM-XpbdxLM_8NYxb9mAuf8v8iaHk58pgN3kYt688eFxlUam0YMZXbN1v5sCfjJ14EfBwSq6igJmxJIL70kYRO2SWfZy4V_Qbx0A2uCQ62OLdua57wAVeObjqHZH3bHSGIwYoXoo",
+        "img":"https://fayllar.org/2016-yil--soglom-ona-va-bola-yili-2016-yil--soglom-ona-va-bola/img0.jpg",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/7/zoologiya_7_uzb.pdf"
     },
@@ -574,7 +514,7 @@ export const sinf9=[
       },
       {
         "title":"Geografiya",
-        "img":"https://lh3.googleusercontent.com/proxy/U9f7dc4dVd1lMFlcgxQNqCLYO43VRowio_5fFvCkBT0gN_jseIPSKAkLoQa-df5s1KK8yxaJxl3t_n-HbuwVFaxBi9d7mktx4NR7o2mViNSPS-kvNU_4BkY",
+        "img":"https://cv01.twirpx.net/1433/1433593.jpg?t=20170306172415",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/geografiya_6_uzb.pdf"
     },
@@ -590,22 +530,12 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/ingliz_tili_6_uzb.pdf"
     },
-    {
-        "title":"Musiqa",
-        "img":"https://lh3.googleusercontent.com/proxy/jvXSIP3-FQ6W_GMOdmjakPngZGUyWvuwEVurjDOyI40xPDhB2-cbYwaOzMZ2DypLmDDTBWdcpc-TAGuSa37LVoH6whqOFapaAHDVWQDabdGeJiuVyKk",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/musiqa_6_uzb.pdf"
-    },
+  
 
-    {
-        "title":"Ona tili",
-        "img":"https://lh3.googleusercontent.com/proxy/JYp8y80NHbNhCtp_Ir8hlWDOqVR7FZer2vUnFNvO2VK-qFXWHj3F1XQ9zLeYTjY3ia8r903WljQsNEy0CmNCFYsxFTCas0xlW9WyEifnWXq_25DYOGhU8FclcENUL4Y",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/ona_tili_6_uzb.pdf"
-    },
+   
     {
         "title":"Qadimgi dunyo tarixi",
-        "img":"https://lh3.googleusercontent.com/proxy/nlPNQKAPW-v-QNjeasHMBuxuVY2qd7ToKv1K8h2uVSpTMGtABsw8iCzpt2O0PVsqxz7MaN0cjrBTixohN_C1xJ9GdPCdJNL7bNRN_1qx0nymJrk",
+        "img":"https://apollo-olx.cdnvideo.ru/v1/files/alc13fhnp5342-UZ/image;s=644x461",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/qadimgi_dunyo_tarixi_6_uzb.pdf"
     },
@@ -628,12 +558,7 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/texnologiya_6_uzb.pdf"
     },
-    {
-        "title":"Vatan tuygusi",
-        "img":"https://lh3.googleusercontent.com/proxy/WhwDvn9z8ahZ4QuI3vmyUPdnpRkMalbpOXqS4hAs9-apQ6wfZgUBThggPREPsaYABYCIHj4fuvsnqHMmBSSm4XEUwkagkOV_ionbRbyn8hdXIC57tA",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/6/vatan_tuygusi_6_uzb.pdf"
-    },
+  
    ]
    export const sinf5=[
     {
@@ -656,7 +581,7 @@ export const sinf9=[
       },
       {
           "title":"Ingliz tili",
-          "img":"https://lh3.googleusercontent.com/proxy/ghabR2D75qSfDEisQgRxGrM3PFirAFZcy9kp5KkYRMb4DTAfu7n8MuD7Xqr_cVYPT-d40uJDZ5Fi1pR_vVKqfoFyxDZk_A",
+          "img":"https://kitobxon.com/img_knigi/1172.jpg",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/ingliz_tili_5_uzb.pdf"
       },
@@ -668,15 +593,9 @@ export const sinf9=[
     },
     {
         "title":"Matematika 1-qism",
-        "img":"https://lh3.googleusercontent.com/proxy/foTC_GzloGe4UJkiAbAl31kUHsf8_hZSPUFY1ehVKLXgwEKwn5EYfjLDxDEaFkqqZovwAOu5v1VGEJzGmcutl99_-hSIRQJxnOF_N-Cu",
+        "img":"https://answers.uz/uploads/books/matematika-5-1-qism-2020.png",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/matematika_1qism_5_uzb.pdf"
-    },
-    {
-        "title":"Musiqa",
-        "img":"https://lh3.googleusercontent.com/proxy/3YpREkWJPl5syi9wTtCtlLCvHyE46c7XE273xdqCm-JCOuRHMR3ovIx-ikAUfVtmWGoaXeBCngYWagtmGvx-gvjHZbfcoHgvmW3YoOd-IdOfDD3w4M0",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/musiqa_5_uzb.pdf"
     },
     {
         "title":"Ona tili",
@@ -686,7 +605,7 @@ export const sinf9=[
     },
     {
         "title":"Rus tili",
-        "img":"https://lh3.googleusercontent.com/proxy/sijC5UO3l6ZQti1EbWMQKFlYo_rTZd03APkzzkfglGh7xCvbV9jyRyEblxd9zaOpavM4bVDE6m9ietegVURTfgF0itS5yjNR4N6j1E296gx4ANTwkfQ",
+        "img":"http://online-maktab.uz/api/file/8f51dada-be42-4989-8ddf-15cd63dbd0d1",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/rus_tili_5_uzb.pdf"
     },
@@ -702,12 +621,7 @@ export const sinf9=[
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/tasviriy_sanat_5_uzb.pdf"
     },
-    {
-        "title":"Vatan tuygusi",
-        "img":"https://lh3.googleusercontent.com/proxy/_VloDxhDjBXAjq_c60UGSzXA8ulMXXi03QDhVZ0VJEy6cf7X1FTa8nU1MgwhiV37gMYAjldl7V3pjFDsMHBrp5cDjSeZ6uAg8zwxYsWg34eK2rzx7g",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/5/vatan_tuygusi_5_uzb.pdf"
-    },
+ 
     {
         "title":"texnologiya",
         "img":"https://www.test-uz.ru/images/books/459/preview.jpg",
@@ -725,25 +639,25 @@ export const sinf9=[
       },
       {
           "title":"Matematika",
-          "img":"https://lh3.googleusercontent.com/proxy/yrZO-iNRk9_Qq2PasGTn-mQMbRe1FkYkz3sNrGtMAYTX0MlJOfOZbcyNTuO_3yAadwHAImJah7U82-WPTheMs5NLB-J5xgjwIsCVieNWgg",
+          "img":"https://eduportal.uz/Content/DocumentFiles/5b9135fc20474ea5b181d837b03b8e5e.png",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/matematika_4_uzb.pdf"
       },
       {
           "title":"Odobnoma",
-          "img":"https://lh3.googleusercontent.com/proxy/5K8M0h1u37RZhkJWvI7w-jG_kctOXjs_27cpuciE-167SZlPzoNuMRhFp-YGOdNbr49hLHb0V9otJIbExCd53lO9RFZK9ItNDV1AELX298K5CyJGDn1HFg",
+          "img":"https://www.test-uz.ru/images/books/363/3_preview.jpg",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/odobnoma_4_uzb.pdf"
       },
       {
           "title":"Ona tili",
-          "img":"https://lh3.googleusercontent.com/proxy/OBw11oLKAyJQEmDgNulOG9gDaUy4R8KJislg9S13_McYvazrpHD3KPL7b4rvuyaCnE5uGb-VBcZJ9yDCe1jAUYp9NubInZ28mjgtYI_fb3ozlpIKMP0",
+          "img":"https://eduportal.uz/Content/DocumentFiles/5b3f8f5077394996a6c7cd29ee9afd88.png",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/ona_tili_4_uzb.pdf"
       },
       {
         "title":"O`qish",
-        "img":"https://lh3.googleusercontent.com/proxy/2bp3rOVXv9dbX9-KeXy7nASypm2EyoOesVZFedvS883Ae34e7Yr7X7K5kMjRyRomi_MUpT5kdSSTsC-JsSh4uN1SqKODwDbd11_J6Y-FrluRYixI8nHTRw",
+        "img":"https://eduportal.uz/Content/DocumentFiles/d490c7e340994a9b9ba0a16fe946b40e.jpg",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/oqish_4_uzb.pdf"
     },
@@ -755,16 +669,11 @@ export const sinf9=[
     },
     {
         "title":"Tabiatshunoslik",
-        "img":"",
+        "img":"https://eduportal.uz/Content/DocumentFiles/5f84150802fd4cbeb2209d6b1ac728cd.png",
         "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
         "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/tabiatshunoslik_4_uzb.pdf"
     },
-    {
-        "title":"Tasviriy san`at",
-        "img":"https://eduportal.uz/Content/DocumentFiles/5f84150802fd4cbeb2209d6b1ac728cd.png",
-        "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
-        "url":"http://eduportal.uz/Umumiyfiles/darsliklar/4/tasviriy_sanat_4_uzb.pdf"
-    },
+
     {
         "title":"Texnologiya",
         "img":"https://yuz.uz/file/news/5470d57d8db513d1020ae0337b2103e1.jpg",
@@ -777,13 +686,13 @@ export const sinf9=[
    export const sinf3=[
     {
           "title":"Ona tili",
-          "img":"https://lh3.googleusercontent.com/proxy/LBKw4CoyWeoXUr_ujC2JglZkEXeslL9DKKskhxlFOlJO54RO67VER8bLKTuOafd_NH0VT8OpQqCoLlwgwjxbHW4",
+          "img":"https://www.eduportal.uz/Content/DocumentFiles/fcf08b1102654478bbc972af14779185.jpg",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/3/ona_tili_3_uzb.pdf"
       },
       {
           "title":"O`qish kitobi",
-          "img":"https://lh3.googleusercontent.com/proxy/sYU6YloaZqodmr4NQLJ6DntceGvlnt3pP61ORjlD_3k1pvPlacmXkW3zg2482dHzEVOdDkyxjs6Lfs3LuO3yFAo",
+          "img":"https://lh3.googleusercontent.com/proxy/HscsL8SSuLk9-WcL4oNBFKGWlZKlUW4uuRup4u3dMTqKgEgPEC10hjNyCBjci6Izf0ypD9Kq-3R28yUnx9hcnZBEYov_fSJyiS0UgxQel5SnawEWNw",
           "text":"  Biz bilan o`zizga kerakli bo`lgan darslik kitoblarizni telefon kampyuterlar uchun mo`ljallangan verziyalarini topishingiz mumkin. Kerakli kitobni tanlsh uxhun yuklab olish tugmasini bosing",
           "url":"http://eduportal.uz/Umumiyfiles/darsliklar/3/oqish_kitobi_3_uzb.pdf"
       },
