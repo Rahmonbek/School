@@ -47,6 +47,7 @@ import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 import YouTube from "react-youtube";
 import Global from "../host/Global";
 import { Clock } from "./Clock";
+import Darsliklar from "./Darsliklar";
 
 export default class BoshSahifa extends Component {
   state = {
@@ -506,6 +507,7 @@ export default class BoshSahifa extends Component {
                 </Col>
               </Row>
             </div>
+            <Darsliklar/>
             <BoshSahifaDavomi />
             <MaktabTadbirlari />
             <Footer />
