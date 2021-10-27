@@ -11,6 +11,11 @@ import her5 from "../img/h5.png";
 import "./form.css";
 import yil from "../img/yil.jpg";
 import her6 from "../img/h6.png";
+
+import axios from 'axios'
+import {url} from '../host/Host'
+import {message} from 'antd'
+
 import {
   Clusterer,
   GeolocationControl,
@@ -65,6 +70,26 @@ export default class MaktabTadbirlari extends Component {
   componentDidMount() {
     this.getEvents();
   }
+
+  sendMurojat=()=>{
+   
+    var name=document.getElementById('name').value
+    var phone=document.getElementById('phone').value
+    var text=document.getElementById('text').value
+    var config={
+      name,
+      phone,
+      text,
+      school:Global.schoolId
+    }
+    
+    axios.post(`${url}/murojaat/`, config).then(res=>{message.success('Murojaatingiz yuborildi');
+   name=document.getElementById('name').value=""
+   phone=document.getElementById('phone').value=""
+   text=document.getElementById('text').value=""}).catch(err=>{message.success('Murojaatingiz yuborilmadi')})
+  }
+
+
   render() {
     const responsive = {
       superLargeDesktop: {
@@ -311,7 +336,18 @@ export default class MaktabTadbirlari extends Component {
                   <div className="brand-logo"></div>
                   {/* <div className="brand-title">TWITTER</div> */}
                   <div className="inputs">
-                    <form>
+
+
+                  <form>
+                      <label>F.I.O.</label>
+                      <input type="text" id="name" placeholder="Ism Familiya Sharifi" />
+                      <label>Telefon raqam</label>
+                      <input type="text" id="phone" placeholder="+998 99 999 99 99" />
+                      <label>Murojaat</label>
+                      <textarea id="text" placeholder="Murojaat matni..."></textarea>
+                      <button type="button" onClick={this.sendMurojat}>Yuborish</button>
+                    </form>
+                    {/* <form>
                       <label>F.I.O.</label>
                       <input type="text" placeholder="Ism Familiya Sharifi" />
                       <label>Telefon raqam</label>
@@ -319,7 +355,8 @@ export default class MaktabTadbirlari extends Component {
                       <label>Murojaat</label>
                       <textarea placeholder="Murojaat matni..."></textarea>
                       <button type="submit">Yuborish</button>
-                    </form>
+                    </form> */}
+
                   </div>
                 </div>
               </div>
