@@ -15,7 +15,7 @@ import styles from "../css/alochilar.module.css";
 
 import { getExcellent, getPupil } from "../host/Config";
 
-import { url, user } from "../host/Host";
+import { idMaktab, url, user } from "../host/Host";
 import Global from "../host/Global";
 
 export default class BoshSahifaDavomi extends Component {
@@ -34,7 +34,7 @@ export default class BoshSahifaDavomi extends Component {
     // var a = window.location.href.split("/");
     var v = user;
     axios
-      .get(`${url}/excellent/`)
+      .get(`${url}/excellent/${idMaktab}`)
       .then((res) => {
         this.setState({
           excellent: res.data,
