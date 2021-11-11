@@ -56,12 +56,18 @@ export default class BoshSahifa extends Component {
     id: 0,
     school: null,
     clock: "00 : 00 : 00",
+  region:null
   };
   getSchool = () => {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
       this.setState({
         school: res.data,
       });
+      axios.get(`${url}/region/${res.data.region}`).then(res1=>{
+        this.setState({
+          region:res1.data
+        })
+      })
       setTimeout(() => {
         this.setState({
           loader: false,
@@ -132,8 +138,7 @@ export default class BoshSahifa extends Component {
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
                   <p>
-                    Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur
-                    o'rganiladigan Davlat ixtisoslashtirilgan maktabi
+                    {this.state.region!==null?this.state.region.address:''} {this.state.region!==null?this.state.region.region_name:''} tumani {this.state.school!==null?this.state.school.school_number:''} - {this.state.school!==null?this.state.school.type:''}
                   </p>
 
                   {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
