@@ -28,81 +28,38 @@ export default class Alochilar extends Component {
     school: null,
     class: [],
   };
-
-  getExcellents = () => {
-    // var a = window.location.href.split("/");
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          // excellent: res.data,
-          loader: false,
-        });
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+  getSchool=()=>{
+    axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
       this.setState({ data: res.data });
-    });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => this.setState({ class: res.data }))
-      .catch((err) => console.log(err));
-  };
-
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) => {
-        if (item1.id === id) {
-          pupil = item1;
-        }
+      axios.get(`${url}/excellent/`).then((res1) => {
+       var v=[]
+       res1.data.map(item=>{
+         if(item.school===res.data.id){
+           v.push(item)
+         }
+       })
+       
+        this.setState({ excellent: v });
+        setInterval(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
+     
       });
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    if (this.state.class !== []) {
-      this.state.class.map((item1) => {
-        if (item1.id === id) {
-          classes = item1;
-        }
-      });
-    }
-    return classes;
-  };
-
-  componentDidMount() {
-    Aos.init({
-      duration: 2000,
     });
-    this.getExcellents();
-    this.getPupil();
-    window.addEventListener("load", () => {
-      // this.setState({
-      //   loader:false
-      // })
-    });
+  
+   
+  
   }
-
+    componentDidMount() {
+      Aos.init({
+        duration: 2000,
+      });
+      // this.getExcellents();
+      this.getSchool();
+    }
+  
   render() {
     const { data } = this.state;
     return (
@@ -187,31 +144,29 @@ export default class Alochilar extends Component {
               <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
               <div className={style.line}></div>
               <div className={style.tana}>
-                {this.state.excellent !== []
+                {this.state.excellent.length !== 0
                   ? this.state.excellent.map((item) => {
-                      var pupil = this.setPupils(item.pupil);
-                      var classes = this.echoClasses(pupil.clas);
+                     
                       return (
                         <div className={style.card}>
                           <div className={style.image}>
                             <img
-                              src={pupil.image !== null ? pupil.image : school2}
+                              src={item.image !== null ? item.image : school2}
                               alt=""
                             />
                           </div>
-                          <div className={style.content}>
+                          <div className={style.content}  style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
                             <p>
-                              <b>O'quvchi: </b> {pupil.full_name}
+                              <b>O'quvchi: </b> {item.full_name}
                             </p>
-                            <p>
-                              <b>Tug'ilgan sanasi: </b> {pupil.birth_day}
-                            </p>
+                          
                             <p>
                               <b>Sinfi: </b>
-                              {this.echoClasses(pupil.clas).class_number} - "
-                              {this.echoClasses(pupil.clas).class_char}" sinf
+                              {item.clas}
                             </p>
-
+                            <p>
+                              <b>Tug'ilgan sanasi: </b> {item.birth_day}
+                            </p>
                             {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
                           </div>
                         </div>

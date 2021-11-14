@@ -31,77 +31,35 @@ export default class BoshSahifaDavomi extends Component {
   };
 
   getExcellents = () => {
-    // var a = window.location.href.split("/");
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+    axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
       this.setState({ data: res.data });
+      axios.get(`${url}/excellent/`).then((res1) => {
+       var v=[]
+       res1.data.map(item=>{
+         if(item.school===res.data.id){
+           v.push(item)
+         }
+       })
+       
+        this.setState({ excellent: v.slice(0, 2) });
+        setInterval(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
+     
+      });
     });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({ loader: false });
-      });
-  };
+  
+   };
 
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) => {
-        if (item1.id === id) {
-          pupil = item1;
-        }
-      });
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    if (this.state.class !== []) {
-      this.state.class.map((item1) => {
-        if (item1.id === id) {
-          classes = item1;
-        }
-      });
-    }
-    return classes;
-  };
-
+ 
   componentDidMount() {
     Aos.init({
       duration: 2000,
     });
     this.getExcellents();
-    this.getPupil();
-    this.setState({ loader: false });
-    console.log(123);
+   
   }
 
   render() {
@@ -149,10 +107,9 @@ export default class BoshSahifaDavomi extends Component {
                   <br />
 
                   <Row>
-                    {this.state.excellent !== [] && this.state.class !== []
+                    {this.state.excellent.length !== 0
                       ? this.state.excellent.map((item) => {
-                          var pupil = this.setPupils(item.pupil);
-                          var classes = this.echoClasses(pupil.clas);
+                         
                           return (
                             <Col lg={6} md={6} sm={12}>
                               <div
@@ -164,7 +121,7 @@ export default class BoshSahifaDavomi extends Component {
                                 </div>
                                 <img
                                   src={
-                                    pupil.image !== null ? pupil.image : school2
+                                    item.image !== null ? item.image : school2
                                   }
                                   alt=""
                                 />
@@ -177,7 +134,7 @@ export default class BoshSahifaDavomi extends Component {
                                     color: "black",
                                   }}
                                 >
-                                  {pupil.full_name}
+                                  {item.full_name}
                                 </p>
                                 <p
                                   style={{
@@ -186,37 +143,11 @@ export default class BoshSahifaDavomi extends Component {
                                     textAlign: "center",
                                   }}
                                 >
-                                  {this.echoClasses(pupil.clas).class_number} -
-                                  "{this.echoClasses(pupil.clas).class_char}"
-                                  sinf
+                                  {item.clas} 
                                 </p>
                               </div>
                             </Col>
-                            // (<div style={{padding:'10px'}}>
-                            // <div className={style.card}>
-                            // <div className={style.qizil}>Bizning faxrimiz</div>
-                            //     <Row>
-                            //                       <Col lg={5}>
-                            //                         <img src={pupil.image !== null ? pupil.image : school2} alt="" />
-                            //                       </Col>
-                            //                       <Col lg={7}>
-                            //                         <p style={{fontSize:'20px', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                            //                          {pupil.full_name}
-                            //                         </p>
-
-                            //                         <p style={{fontSize:'18px', color:'black'}}>
-
-                            //                           {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
-                            //                         </p>
-
-                            //                         {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                            //                       </Col>
-                            //                       </Row>
-                            //                       {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi.
-                            //                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                            //                       </p> */}
-                            //                     </div>
-                            //                     </div>)
+                        
                           );
                         })
                       : ""}
