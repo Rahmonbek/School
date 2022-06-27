@@ -1,10 +1,10 @@
 import axios from "axios";
 
-export const url = "http://143.244.209.138";
-export const idMaktab = "4";
-export const user = "9";
+export const url = "http://api.maktab.abrorjonaxmadov.uz";
+export const idMaktab = "11";
+export const user = "19";
 export const httpRequest = (config) => {
-  return axios({
-    ...config,
-  });
+    return axios({
+        ...config,
+    });
 };
